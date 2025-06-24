@@ -1,0 +1,3 @@
+__pycache__/*
+huggingface_models/*
+huggingface_models/bigcode_starcoderbase-1b/*

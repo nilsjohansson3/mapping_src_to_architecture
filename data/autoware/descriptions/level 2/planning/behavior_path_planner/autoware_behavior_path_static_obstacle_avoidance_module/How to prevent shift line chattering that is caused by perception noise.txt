@@ -1,0 +1,23 @@
+Since the object recognition result contains noise related to position, orientation and polygon shape, if the module uses the raw object recognition results in path generation, the output path will be directly affected by the noise. Therefore, in order to reduce the influence of the noise, this module generates a polygon for each target object, and the output path is generated based on that.
+
+![fig](./images/path_generation/envelope_polygon_rviz.png)
+
+The envelope polygon is a rectangle box, whose size depends on the object's polygon and buffer parameter `envelope_buffer_margin`. Additionally, it is always parallel to the reference path. When the module finds a target object for the first time, it initializes the polygon.
+
+```yaml
+        car:
+          ...
+          envelope_buffer_margin: 0.5                    [m] FOR DEVELOPER
+```
+
+![fig](./images/path_generation/envelope_polygon.png)
+
+The module creates a one-shot envelope polygon by using the latest object pose and raw polygon in every planning cycle. On the other hand, the module uses the envelope polygon information created in the last planning cycle in order to update the envelope polygon with consideration of the pose covariance.
+
+If the pose covariance is smaller than the threshold, the envelope polygon would be updated according to the following logic. If the one-shot envelope polygon is not within the previous envelope polygon, the module creates a new envelope polygon. Otherwise, it keeps the previous envelope polygon.
+
+![fig](./images/path_generation/polygon_update.png)
+
+When the pose covariance is larger than the threshold, it is compared with the maximum pose covariance of each object. If the value is smaller, the one-shot envelope polygon is used directly as the envelope polygon. Otherwise, it keeps the previous envelope polygon.
+
+By doing this process, the envelope polygon size and pose will converge even if perception output includes noise in object pose or shape.

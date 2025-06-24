@@ -1,0 +1,12 @@
+- **To Sensing**
+  - Projection information: Used to convert GNSS data from geodetic coordinate system to local coordinate system
+- **To Localization**
+  - Point cloud map: Used for LiDAR-based localization
+  - Vector map: Used for localization methods based on road markings, etc
+- **To Perception**
+  - Point cloud map: Used for obstacle segmentation by comparing LiDAR and point cloud map
+  - Vector map: Used for vehicle trajectory prediction
+- **To Planning**
+  - Vector map: Used for behavior planning
+- **To API layer**
+  - Projection information: Used to convert localization results from local coordinate system to geodetic coordinate system

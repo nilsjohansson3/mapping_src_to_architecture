@@ -1,0 +1,3 @@
+| Name             | Type                      | Description            |
+| ---------------- | ------------------------- | ---------------------- |
+| `~/output/image` | `sensor_msgs::msg::Image` | output image with ROIs |

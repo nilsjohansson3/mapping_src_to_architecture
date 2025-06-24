@@ -1,0 +1,9 @@
+If a collision is found, the velocity at the trajectory point is adjusted such that the resulting footprint would no longer collide with an obstacle:
+$velocity = \frac{dist\_to\_collision}{min\_ttc}$
+
+To prevent sudden deceleration of the ego vehicle, the parameter `max_deceleration` limits the deceleration relative to the current ego velocity.
+For a trajectory point occurring at a duration `t` in the future (calculated from the original velocity profile),
+the adjusted velocity cannot be set lower than $v_{current} - t * max\_deceleration$.
+
+Furthermore, a parameter `min_adjusted_velocity`
+provides a lower bound on the modified velocity.

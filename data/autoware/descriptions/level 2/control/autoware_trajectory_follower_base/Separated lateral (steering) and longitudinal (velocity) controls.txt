@@ -1,0 +1,6 @@
+This longitudinal controller assumes that the roles of lateral and longitudinal control are separated as follows.
+
+- Lateral control computes a target steering to keep the vehicle on the trajectory, assuming perfect velocity tracking.
+- Longitudinal control computes a target velocity/acceleration to keep the vehicle velocity on the trajectory speed, assuming perfect trajectory tracking.
+
+Ideally, dealing with the lateral and longitudinal control as a single mixed problem can achieve high performance. In contrast, there are two reasons to provide velocity controller as a stand-alone function, described below.

@@ -1,0 +1,1 @@
+- GNSS signals are blocked by surrounding objects, e.g., tunnels or buildings.

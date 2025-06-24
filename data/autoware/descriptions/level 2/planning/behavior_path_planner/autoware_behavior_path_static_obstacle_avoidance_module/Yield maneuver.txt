@@ -1,0 +1,14 @@
+Additionally, this module basically inserts a stop point in front of an avoidance target during yielding maneuvers in order to keep enough distance to avoid the target when it is safe to do so. If the shift side lane is congested, the ego stops at a point and waits.
+
+This feature can be enabled by setting the following parameter to `true`.
+
+```yaml
+yield:
+  enable: true  [-]
+```
+
+![fig](./images/safety_check/stop.png)
+
+But if the lateral margin is larger than `hard_margin` (or `hard_margin_for_parked_vehicle`), this module doesn't insert a stop point because the ego can pass the side of the object safely without an avoidance maneuver.
+
+![fig](./images/safety_check/not_stop.png)

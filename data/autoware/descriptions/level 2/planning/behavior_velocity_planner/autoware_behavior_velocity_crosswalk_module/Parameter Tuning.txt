@@ -1,0 +1,4 @@
+- Q. The ego's yield behavior is too conservative.
+  - A. Tune `ego_pass_later_margin` described in [Yield Decision](https://autowarefoundation.github.io/autoware.universe/pr-5583/planning/autoware_behavior_velocity_crosswalk_module/stuck-vehicle-detection)
+- Q. The ego's yield behavior is too aggressive.
+  - A. Tune `ego_pass_later_margin` described in [Yield Decision](https://autowarefoundation.github.io/autoware.universe/pr-5583/planning/autoware_behavior_velocity_crosswalk_module/stuck-vehicle-detection)

@@ -1,0 +1,20 @@
+You can save accel and brake map anytime with the following command.
+
+```sh
+ros2 service call /accel_brake_map_calibrator/update_map_dir tier4_vehicle_msgs/srv/UpdateAccelBrakeMap "path: '<accel/brake map directory>'"
+```
+
+You can also save accel and brake map in the default directory where Autoware reads accel_map.csv/brake_map.csv using the RViz plugin (AccelBrakeMapCalibratorButtonPanel) as following.
+
+1. Click _Panels_ tab, and select AccelBrakeMapCalibratorButtonPanel.
+
+   ![add_panel](./media/add_panel.png)
+
+2. Select the panel, and the button will appear at the bottom of RViz.
+
+   ![calibrator_button_panel](./media/calibrator_button_panel.png)
+
+3. Press the button, and the accel / brake map will be saved.
+   (The button cannot be pressed in certain situations, such as when the calibrator node is not running.)
+
+   ![push_calibration_button](./media/push_calibration_button.png)

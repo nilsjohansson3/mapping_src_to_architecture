@@ -1,0 +1,2 @@
+Here, we describe the policy of inner algorithms.
+The inner algorithms can be separated into two parts: The first decides whether to avoid the obstacles and the second cuts off the drivable area against the corresponding obstacle.

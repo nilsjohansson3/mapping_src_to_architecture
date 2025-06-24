@@ -1,0 +1,4 @@
+The `MPC` class (defined in `mpc.hpp`) provides the interface with the MPC algorithm.
+Once a vehicle model, a QP solver, and the reference trajectory to follow have been set
+(using `setVehicleModel()`, `setQPSolver()`, `setReferenceTrajectory()`), a lateral control command
+can be calculated by providing the current steer, velocity, and pose to function `calculateMPC()`.

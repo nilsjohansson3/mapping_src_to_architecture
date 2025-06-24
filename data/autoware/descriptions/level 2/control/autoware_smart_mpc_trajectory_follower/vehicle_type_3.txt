@@ -1,0 +1,10 @@
+This vehicle type is intended for a small vehicle.
+
+| Parameter           | value |
+| ------------------- | ----- |
+| wheel_base          | 1.335 |
+| acc_time_delay      | 0.3   |
+| steer_time_delay    | 0.3   |
+| acc_time_constant   | 0.3   |
+| steer_time_constant | 0.3   |
+| acc_scaling         | 1.5   |

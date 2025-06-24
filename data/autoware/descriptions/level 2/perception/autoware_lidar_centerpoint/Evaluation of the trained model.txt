@@ -1,0 +1,4 @@
+For evaluation purposes, we have included a sample dataset captured from the vehicle which consists of the following LiDAR sensors:
+1 x Velodyne VLS128, 4 x Velodyne VLP16, and 1 x Robosense RS Bpearl. This dataset comprises 600 LiDAR frames and encompasses 5 distinct classes, 6905 cars, 3951 pedestrians,
+75 cyclists, 162 buses, and 326 trucks 3D annotation. In the sample dataset, frames are annotated as 2 frames for each second. You can employ this dataset for a wide range of purposes,
+including training, evaluation, and fine-tuning of models. It is organized in the T4 format.

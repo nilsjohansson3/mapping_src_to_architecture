@@ -1,0 +1,13 @@
+You need to provide a YAML file, namely `map_projector_info.yaml` under the `map_path` directory. For `pointcloud_map_metadata.yaml`, please refer to the Readme of `map_loader`.
+
+```bash
+sample-map-rosbag
+├── lanelet2_map.osm
+├── pointcloud_map.pcd
+├── map_projector_info.yaml
+└── pointcloud_map_metadata.yaml
+```
+
+There are three types of transformations from latitude and longitude to XYZ coordinate system as shown in the figure below. Please refer to the following details for the necessary parameters for each projector type.
+
+![node_diagram](docs/map_projector_type.svg)

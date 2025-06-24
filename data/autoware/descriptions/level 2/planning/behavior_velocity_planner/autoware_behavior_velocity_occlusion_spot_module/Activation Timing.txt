@@ -1,0 +1,1 @@
+This module is activated if `launch_occlusion_spot` becomes true. To make pedestrian first zone map tag is one of the TODOs.

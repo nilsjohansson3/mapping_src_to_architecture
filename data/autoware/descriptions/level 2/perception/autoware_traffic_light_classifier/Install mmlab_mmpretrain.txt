@@ -1,0 +1,8 @@
+**Step 1.** Install mmpretrain from source
+
+```bash
+cd ~/
+git clone https://github.com/open-mmlab/mmpretrain.git
+cd mmpretrain
+pip install -U openmim && mim install -e .
+```

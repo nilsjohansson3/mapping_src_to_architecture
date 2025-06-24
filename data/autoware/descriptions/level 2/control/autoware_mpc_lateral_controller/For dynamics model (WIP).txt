@@ -1,0 +1,10 @@
+| Name          | Type   | Description                                 | Default value |
+| :------------ | :----- | :------------------------------------------ | :------------ |
+| cg_to_front_m | double | distance from baselink to the front axle[m] | 1.228         |
+| cg_to_rear_m  | double | distance from baselink to the rear axle [m] | 1.5618        |
+| mass_fl       | double | mass applied to front left tire [kg]        | 600           |
+| mass_fr       | double | mass applied to front right tire [kg]       | 600           |
+| mass_rl       | double | mass applied to rear left tire [kg]         | 600           |
+| mass_rr       | double | mass applied to rear right tire [kg]        | 600           |
+| cf            | double | front cornering power [N/rad]               | 155494.663    |
+| cr            | double | rear cornering power [N/rad]                | 155494.663    |

@@ -1,0 +1,9 @@
+For [stuck vehicle detection](stuck-vehicle-detection) and [collision detection](collision-detection), this module checks **car**, **bus**, **truck**, **trailer**, **motor cycle**, and **bicycle** type objects.
+
+Objects that satisfy all of the following conditions are considered as target objects (possible collision objects):
+
+- The center of the object is **within a certain distance** from the attention lane (threshold = `common.attention_area_margin`) .
+  - (Optional condition) The center of the object is in the **intersection area**.
+    - To deal with objects that is in the area not covered by the lanelets in the intersection.
+- The posture of object is **the same direction as the attention lane** (threshold = `common.attention_area_angle_threshold`).
+- Not being **in the adjacent lanes of ego**.

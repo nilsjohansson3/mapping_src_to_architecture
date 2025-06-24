@@ -1,0 +1,9 @@
+The vector cloud map must be supplied as a file with the following requirements:
+
+- It must be in [Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2) format, with [additional modifications required by Autoware](https://github.com/autowarefoundation/autoware_common/blob/main/tmp/lanelet2_extension/docs/lanelet2_format_extension.md).
+- It must contain the shape and position information of lanes, traffic lights, stop lines, crosswalks, parking spaces, and parking lots.
+- Except at the beginning or end of a road, each lanelet in the map must be correctly connected to its predecessor, successors, left neighbor, and right neighbor.
+- Each lanelet in the map must contain traffic rule information including its speed limit, right of way, traffic direction, associated traffic lights, stop lines, and traffic signs.
+- It must cover the entire operational area of the vehicle.
+
+For detailed specifications on Vector Map creation, please refer to [Vector Map Creation Requirement Specification document](./map-requirements/vector-map-requirements-overview/index.md).

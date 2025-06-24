@@ -1,0 +1,6 @@
+Since this function determines the base position by linear interpolation from the recently subscribed poses,
+topics that are published at a low frequency relative to the driving speed cannot be used.
+Inappropriate linear interpolation may result in bad optimization results.
+
+When using GNSS for base location, the regularization can have negative effects in tunnels, indoors, and near skyscrapers.
+This is because if the base position is far off from the true value, NDT scan matching may converge to inappropriate optimal position.

@@ -1,0 +1,3 @@
+| Name                    | Type                                             | Description                                        |
+| ----------------------- | ------------------------------------------------ | -------------------------------------------------- |
+| `twist_with_covariance` | `geometry_msgs::msg::TwistWithCovarianceStamped` | twist with covariance converted from VehicleReport |

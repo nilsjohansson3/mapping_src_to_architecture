@@ -1,0 +1,7 @@
+Moving obstacles such as other cars should not be considered by this module.
+These obstacles are detected by the perception modules and represented as polygons.
+Obstacles inside these polygons are ignored.
+
+Only dynamic obstacles with a velocity above parameter `obstacles.dynamic_obstacles_min_vel` are removed.
+
+To deal with delays and precision errors, the polygons can be enlarged with parameter `obstacles.dynamic_obstacles_buffer`.

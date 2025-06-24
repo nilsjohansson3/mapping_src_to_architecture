@@ -1,0 +1,12 @@
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam backgroundColor WHITE
+
+title NormalLaneChange::filterObjects Method Execution Flow
+
+start
+
+group "Filter Objects by Class" {
+while (has not finished iterating through predicted object list) is (TRUE)
+  if (current object type != param.object_types_to_check?) then (TRUE)

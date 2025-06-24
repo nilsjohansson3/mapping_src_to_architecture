@@ -1,0 +1,14 @@
+**Step 1.** Download and install Miniconda from the [official website](https://mmpretrain.readthedocs.io/en/latest/get_started.html).
+
+**Step 2.** Create a conda virtual environment and activate it
+
+```bash
+conda create --name train-shape-estimation python=3.8 -y
+conda activate train-shape-estimation
+```
+
+**Step 3.** Install PyTorch
+
+```bash
+conda install pytorch torchvision -c pytorch
+```

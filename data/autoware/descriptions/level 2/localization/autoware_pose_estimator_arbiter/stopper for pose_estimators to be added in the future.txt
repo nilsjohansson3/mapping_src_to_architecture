@@ -1,0 +1,12 @@
+The basic strategy is to realize ON/OFF switching by relaying the input or output topics of that pose_estimator.
+If pose_estimator involves time-series processing with heavy computations, it's not possible to pause and resume with just topic relaying.
+
+In such cases, there may not be generally applicable solutions, but the following methods may help:
+
+1. Completely stop and **reinitialize** time-series processing, as seen in the case of YabLoc.
+2. Subscribe to `localization/kinematic_state` and **keep updating states** to ensure that the estimation does not break (relying on the output of the active pose_estimator).
+3. The multiple pose_estimator **does not support** that particular pose_estimator.
+
+Please note that this issue is fundamental to realizing multiple pose_estimators, and it will arise regardless of the architecture proposed in this case.
+
+</details>

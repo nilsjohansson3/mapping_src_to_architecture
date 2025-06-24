@@ -1,0 +1,3 @@
+| Topic Name       | Description                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| ~/pointcloud_map | The topic containing the whole pointcloud map (only used when `enable_partial_load = false`) |

@@ -1,0 +1,17 @@
+These thresholds examine the difference in the roll, pitch, and yaw angles between the two poses.
+This threshold is a sum of "maximum angular error due to velocity scale factor error and bias error" and "pose estimation error tolerance".
+
+$$
+\tau_\phi = \tau_\theta = \tau_\psi = \left(\omega_{\rm max}\frac{\beta_\omega}{100} + b \right) \Delta t + \epsilon_\psi
+$$
+
+| Symbol             | Description                                                              | Unit          |
+| ------------------ | ------------------------------------------------------------------------ | ------------- |
+| $\tau_\phi$        | Threshold for the difference in the roll angle                           | ${\rm rad}$   |
+| $\tau_\theta$      | Threshold for the difference in the pitch angle                          | ${\rm rad}$   |
+| $\tau_\psi$        | Threshold for the difference in the yaw angle                            | ${\rm rad}$   |
+| $\omega_{\rm max}$ | Maximum angular velocity                                                 | ${\rm rad}/s$ |
+| $\beta_\omega$     | Scale factor tolerance for the maximum angular velocity                  | $\%$          |
+| $b$                | Bias tolerance of the angular velocity                                   | ${\rm rad}/s$ |
+| $\Delta t$         | Time interval                                                            | $s$           |
+| $\epsilon_\psi$    | Pose estimator (e. g. ndt_scan_matcher) error tolerance in the yaw angle | ${\rm rad}$   |

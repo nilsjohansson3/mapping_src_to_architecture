@@ -1,0 +1,22 @@
+```plantuml
+@startuml
+skinparam monochrome true
+
+title update current shift
+start
+if (absolute target velocity is less than threshold) then (yes)
+    :set previous shift;
+else(no)
+if (target velocity is positive) then (yes)
+    :set shift DRIVE;
+else
+    :set shift REVERSE;
+endif
+endif
+    :publish current shift;
+note right
+    publish shift for constant interval
+end note
+stop
+@enduml
+```

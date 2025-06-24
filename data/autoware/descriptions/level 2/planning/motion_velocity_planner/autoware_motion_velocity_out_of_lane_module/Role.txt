@@ -1,0 +1,3 @@
+There are cases where the ego vehicle footprint goes out of the driving lane,
+for example when taking a narrow turn with a large vehicle.
+The `out_of_lane` module adds deceleration and stop points to the ego trajectory in order to prevent collisions from occurring in these out of lane cases.

@@ -1,0 +1,4 @@
+| Name                      | Type   | Description                                                         | Default value |
+| :------------------------ | :----- | :------------------------------------------------------------------ | :------------ |
+| steering_lpf_cutoff_hz    | double | cutoff frequency of lowpass filter for steering output command [hz] | 3.0           |
+| error_deriv_lpf_cutoff_hz | double | cutoff frequency of lowpass filter for error derivative [Hz]        | 5.0           |

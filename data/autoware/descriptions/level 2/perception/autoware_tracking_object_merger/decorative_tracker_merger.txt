@@ -1,0 +1,8 @@
+In decorative_tracker_merger, we assume there are dominant tracking objects and sub tracking objects.
+The name `decorative` means that sub tracking objects are used to complement the main objects.
+
+Usually the dominant tracking objects are from LiDAR and sub tracking objects are from Radar or Camera.
+
+Here show the processing pipeline.
+
+![decorative_tracker_merger](./image/decorative_tracker_merger.drawio.svg)

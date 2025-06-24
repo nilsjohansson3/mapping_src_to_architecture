@@ -1,0 +1,3 @@
+| Name             | Type                            | Description                     |
+| ---------------- | ------------------------------- | ------------------------------- |
+| `/config_logger` | logging_demo::srv::ConfigLogger | service to modify logging level |

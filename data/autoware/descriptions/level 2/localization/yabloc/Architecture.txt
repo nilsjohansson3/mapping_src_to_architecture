@@ -1,0 +1,1 @@
+![node_diagram](docs/yabloc_architecture.drawio.svg)

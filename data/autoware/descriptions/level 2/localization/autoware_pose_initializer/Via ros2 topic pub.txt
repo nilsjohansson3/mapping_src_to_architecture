@@ -1,0 +1,20 @@
+```bash
+ros2 topic pub --once /initialpose geometry_msgs/msg/PoseWithCovarianceStamped "
+header:
+  frame_id: map
+pose:
+  pose:
+    position:
+      x: 89571.1640625
+      y: 42301.1875
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.28072773940524687
+      w: 0.9597874433062874
+"
+```
+
+It behaves the same as "initialpose (from rviz)".
+The position.z and the covariance will be overwritten by [ad_api_adaptors](https://github.com/autowarefoundation/autoware.universe/tree/main/system/default_ad_api_helpers/ad_api_adaptors), so there is no need to input them.

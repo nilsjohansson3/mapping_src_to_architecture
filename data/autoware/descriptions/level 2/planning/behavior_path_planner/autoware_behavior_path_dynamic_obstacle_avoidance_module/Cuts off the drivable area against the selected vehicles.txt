@@ -1,0 +1,4 @@
+For the selected obstacles to be avoided, the module cuts off the drivable area.
+As inputs to decide the shapes of cut-off polygons, poses of the obstacles are mainly used, assuming they move in parallel to the ego's path, instead of its predicted path.
+This design arises from that the predicted path of objects is not accurate enough to use the path modifications (at least currently).
+Furthermore, the output drivable area shape is designed as a rectangular cutout along the ego's path to make the computation scalar rather than planar.

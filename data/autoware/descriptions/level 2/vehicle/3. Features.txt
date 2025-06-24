@@ -1,0 +1,24 @@
+The Vehicle Interface component can provide the following features in functionality and capability:
+
+- Basic functions
+
+  - Converting Autoware control commands to vehicle specific command
+  - Converting vehicle specific status information (velocity, steering) to Autoware status message
+
+- Diagnostics
+  - List available features
+  - Provide a warning if the Control component tries to use a feature that is not available in the Vehicle Interface component
+
+Additional functionality and capability features may be added, depending on the vehicle hardware. Some example features are listed below:
+
+- Safety features
+  - Disengage autonomous driving via manual intervention.
+    - This can be done through the use of an emergency disengage button, or by a safety driver manually turning the steering wheel or pressing the brake
+- Optional controls
+  - Turn indicator
+  - Handbrake
+  - Headlights
+  - Hazard lights
+  - Doors
+  - Horn
+  - Wipers

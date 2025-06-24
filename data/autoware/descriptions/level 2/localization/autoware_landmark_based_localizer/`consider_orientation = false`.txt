@@ -1,0 +1,3 @@
+In this mode, the new self pose is calculated so that only the relative position is correct for x, y, and z.
+
+This method can not correct for orientation, but it is not affected by the orientation error of the landmark detection.

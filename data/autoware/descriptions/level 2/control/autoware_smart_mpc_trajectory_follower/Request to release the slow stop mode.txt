@@ -1,0 +1,6 @@
+If the predicted trajectory deviates too far from the target trajectory, the system enters a slow stop mode and the vehicle stops moving.
+To cancel the slow stop mode and make the vehicle ready to run again, run the following command:
+
+```bash
+ros2 topic pub /pympc_stop_mode_reset_request std_msgs/msg/String "data: ''" --once
+```

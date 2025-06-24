@@ -1,0 +1,3 @@
+At first, if the ego hasn't initiated an avoidance maneuver yet, this module limits maximum shift length and uses **ONLY** current lane during a red traffic signal. This prevents the ego from blocking other vehicles even if this module executes the avoidance maneuver and the ego is caught by a red traffic signal.
+
+![fig](./images/traffic_light/limit_shift_length.png)

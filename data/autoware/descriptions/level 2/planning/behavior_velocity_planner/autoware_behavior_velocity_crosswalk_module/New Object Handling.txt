@@ -1,0 +1,11 @@
+Due to the perception's limited performance where the tree or poll is recognized as a pedestrian or the tracking failure in the crowd or occlusion, even if the surrounding environment does not change, the new pedestrian (= the new ID's pedestrian) may suddenly appear unexpectedly.
+If this happens while the ego is going to pass the crosswalk, the ego will stop suddenly.
+
+To deal with this issue, the option `disable_yield_for_new_stopped_object` is prepared.
+If true is set, the yield decisions around the crosswalk with a traffic light will ignore the new stopped object.
+
+In the `pass_judge` namespace, the following parameters are defined.
+
+| Parameter                              |     | Type | Description                                                                                      |
+| -------------------------------------- | --- | ---- | ------------------------------------------------------------------------------------------------ |
+| `disable_yield_for_new_stopped_object` | [-] | bool | If set to true, the new stopped object will be ignored around the crosswalk with a traffic light |

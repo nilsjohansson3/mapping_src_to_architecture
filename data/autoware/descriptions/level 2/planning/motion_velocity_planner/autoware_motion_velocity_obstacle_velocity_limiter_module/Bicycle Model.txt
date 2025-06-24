@@ -1,0 +1,8 @@
+The bicycle model uses the constant heading, velocity, and steering of the vehicle at a trajectory point to simulate the future motion.
+The simulated forward motion corresponds to an arc around the circle of curvature associated with the steering.
+Uncertainty in the steering can be introduced with the `simulation.steering_offset` parameter which will generate a range of motion from a left-most to a right-most steering.
+This results in 3 curved lines starting from the same trajectory point.
+A parameter `simulation.nb_points` is used to adjust the precision of these lines, with a minimum of `2` resulting in straight lines and higher values increasing the precision of the curves.
+
+By default, the steering values contained in the trajectory message are used.
+Parameter `trajectory_preprocessing.calculate_steering_angles` allows to recalculate these values when set to `true`.

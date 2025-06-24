@@ -1,0 +1,2 @@
+This node is an outlier filter based on a occupancy grid map.
+Depending on the implementation of occupancy grid map, it can be called an outlier filter in time series, since the occupancy grid map expresses the occupancy probabilities in time series.

@@ -1,0 +1,1 @@
+{{ json_to_markdown("localization/ekf_localizer/schema/sub/diagnostics.sub_schema.json") }}

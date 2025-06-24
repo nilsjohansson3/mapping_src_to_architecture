@@ -1,0 +1,3 @@
+This module is launched when the number of avoidance target objects on **EGO DRIVING LANE** is greater than `execute_object_num`. If there are no avoidance targets in the ego driving lane or their number is less than the parameter, the obstacle is avoided by normal avoidance behavior (if the normal avoidance module is registered).
+
+![trigger_1](./images/avoidance_by_lc_trigger_1.svg)

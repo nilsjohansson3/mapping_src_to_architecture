@@ -1,0 +1,17 @@
+This module has four state transitions as shown below in order to handle special processing in a specific situation.
+
+- **DRIVE**
+  - Executes target velocity tracking by PID control.
+  - It also applies the delay compensation and slope compensation.
+- **STOPPING**
+  - Controls the motion just before stopping.
+  - Special sequence is performed to achieve accurate and smooth stopping.
+- **STOPPED**
+  - Performs operations in the stopped state (e.g. brake hold)
+- **EMERGENCY**.
+  - Enters an emergency state when certain conditions are met (e.g., when the vehicle has crossed a certain distance of a stop line).
+  - The recovery condition (whether or not to keep emergency state until the vehicle completely stops) or the deceleration in the emergency state are defined by parameters.
+
+The state transition diagram is shown below.
+
+![LongitudinalControllerStateTransition](./media/LongitudinalControllerStateTransition.drawio.svg)

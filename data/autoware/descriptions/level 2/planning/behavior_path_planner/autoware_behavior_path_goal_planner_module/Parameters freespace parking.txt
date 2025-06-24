@@ -1,0 +1,5 @@
+| Name                     | Unit | Type | Description                                                                                                          | Default value |
+| :----------------------- | :--- | :--- | :------------------------------------------------------------------------------------------------------------------- | :------------ |
+| enable_freespace_parking | [-]  | bool | This flag enables freespace parking, which runs when the vehicle is stuck due to e.g. obstacles in the parking area. | true          |
+
+See [freespace_planner](../autoware_freespace_planner/README.md) for other parameters.

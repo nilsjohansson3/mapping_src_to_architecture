@@ -1,0 +1,4 @@
+| Name                  | Type                                               | Description                  |
+| --------------------- | -------------------------------------------------- | ---------------------------- |
+| `~/output/rois`       | `tier4_perception_msgs::msg::TrafficLightRoiArray` | The detected accurate rois   |
+| `~/debug/exe_time_ms` | `tier4_debug_msgs::msg::Float32Stamped`            | The time taken for inference |

@@ -1,0 +1,11 @@
+Then, tune the weights of the MPC. One simple approach of tuning is to keep the weight for the lateral deviation (`weight_lat_error`) constant, and vary the input weight (`weight_steering_input`) while observing the trade-off between steering oscillation and control accuracy.
+
+Here, `weight_lat_error` acts to suppress the lateral error in path following, while `weight_steering_input` works to adjust the steering angle to a standard value determined by the path's curvature. When `weight_lat_error` is large, the steering moves significantly to improve accuracy, which can cause oscillations. On the other hand, when `weight_steering_input` is large, the steering doesn't respond much to tracking errors, providing stable driving but potentially reducing tracking accuracy.
+
+The steps are as follows:
+
+1. Set `weight_lat_error` = 0.1, `weight_steering_input` = 1.0 and other weights to 0.
+2. If the vehicle oscillates when driving, set `weight_steering_input` larger.
+3. If the tracking accuracy is low, set `weight_steering_input` smaller.
+
+If you want to adjust the effect only in the high-speed range, you can use `weight_steering_input_squared_vel`. This parameter corresponds to the steering weight in the high-speed range.

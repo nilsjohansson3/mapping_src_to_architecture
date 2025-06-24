@@ -1,0 +1,10 @@
+| Name                                   | Type                                          | Description                                            |
+| -------------------------------------- | --------------------------------------------- | ------------------------------------------------------ |
+| `/output/artag/image`                  | sensor_msgs::msg::Image                       | relayed ArTag input                                    |
+| `/output/yabloc/image`                 | sensor_msgs::msg::Image                       | relayed YabLoc input                                   |
+| `/output/eagleye/pose_with_covariance` | geometry_msgs::msg::PoseWithCovarianceStamped | relayed Eagleye output                                 |
+| `/output/ndt/pointcloud`               | sensor_msgs::msg::PointCloud2                 | relayed NDT input                                      |
+| `/output/debug/marker_array`           | visualization_msgs::msg::MarkerArray          | [debug topic] everything for visualization             |
+| `/output/debug/string`                 | visualization_msgs::msg::MarkerArray          | [debug topic] debug information such as current status |
+
+</details>

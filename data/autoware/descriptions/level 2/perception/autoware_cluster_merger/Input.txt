@@ -1,0 +1,4 @@
+| Name             | Type                                                     | Description         |
+| ---------------- | -------------------------------------------------------- | ------------------- |
+| `input/cluster0` | `tier4_perception_msgs::msg::DetectedObjectsWithFeature` | pointcloud clusters |
+| `input/cluster1` | `tier4_perception_msgs::msg::DetectedObjectsWithFeature` | pointcloud clusters |

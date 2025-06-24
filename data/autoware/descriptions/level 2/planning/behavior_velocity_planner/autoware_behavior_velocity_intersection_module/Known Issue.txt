@@ -1,0 +1,1 @@
+If ego go over the stop line for a certain distance, then it will not transit from STOP.

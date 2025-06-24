@@ -1,0 +1,5 @@
+```bash
+ros2 service call /localization/initialize tier4_localization_msgs/srv/InitializeLocalization
+```
+
+The GNSS estimated position is used as the initial guess, and the localization algorithm automatically estimates a more accurate position.

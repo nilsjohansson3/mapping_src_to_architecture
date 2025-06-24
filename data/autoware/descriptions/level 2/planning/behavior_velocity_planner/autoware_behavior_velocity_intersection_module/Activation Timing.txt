@@ -1,0 +1,4 @@
+This module is activated when the following conditions are met:
+
+- ego-lane has a `private` tag
+- ego-lane has a conflict with other no-private lanelets

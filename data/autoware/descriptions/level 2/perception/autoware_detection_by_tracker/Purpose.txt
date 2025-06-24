@@ -1,0 +1,5 @@
+This package feeds back the tracked objects to the detection module to keep it stable and keep detecting objects.
+![purpose](image/purpose.svg)
+
+The autoware detection by tracker takes as input an unknown object containing a cluster of points and a tracker.
+The unknown object is optimized to fit the size of the tracker so that it can continue to be detected.

@@ -1,0 +1,4 @@
+| Name                     | Type                    | Description                                        |
+| ------------------------ | ----------------------- | -------------------------------------------------- |
+| `~output/grid_map`       | grid_map_msgs::GridMap  | costmap as GridMap, values are from 0.0 to 1.0     |
+| `~output/occupancy_grid` | nav_msgs::OccupancyGrid | costmap as OccupancyGrid, values are from 0 to 100 |

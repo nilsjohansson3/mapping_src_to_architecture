@@ -1,0 +1,5 @@
+| Name           | Type   | Description                                       | Default value |
+| :------------- | :----- | :------------------------------------------------ | :------------ |
+| emergency_vel  | double | target velocity in EMERGENCY state [m/s]          | 0.0           |
+| emergency_acc  | double | target acceleration in an EMERGENCY state [m/s^2] | -5.0          |
+| emergency_jerk | double | target jerk in an EMERGENCY state [m/s^3]         | -3.0          |

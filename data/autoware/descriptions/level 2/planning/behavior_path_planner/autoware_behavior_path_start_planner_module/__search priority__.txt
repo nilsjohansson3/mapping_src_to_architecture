@@ -1,0 +1,10 @@
+If a safe path with sufficient clearance for static obstacles cannot be generated forward, a backward search from the vehicle's current position is conducted to locate a suitable start point for a pull out path generation.
+
+During this backward search, different policies can be applied based on `search_priority` parameters:
+
+Selecting `efficient_path` focuses on creating a shift pull out path, regardless of how far back the vehicle needs to move.
+Opting for `short_back_distance` aims to find a location with the least possible backward movement.
+
+![priority_order](./images/priority_order.drawio.svg)
+
+`PriorityOrder` is defined as a vector of pairs, where each element consists of a `size_t` index representing a start pose candidate index, and the planner type. The PriorityOrder vector is processed sequentially from the beginning, meaning that the pairs listed at the top of the vector are given priority in the selection process for pull out path generation.

@@ -1,0 +1,4 @@
+Here, we assume that the pointcloud maps are divided into grids.
+
+Given a query from a client node, the node sends a set of pointcloud maps that overlaps with the queried area.
+Please see [the description of `GetPartialPointCloudMap.srv`](https://github.com/autowarefoundation/autoware_msgs/tree/main/autoware_map_msgsgetpartialpointcloudmapsrv) for details.

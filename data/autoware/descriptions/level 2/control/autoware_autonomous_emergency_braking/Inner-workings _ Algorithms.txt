@@ -1,0 +1,15 @@
+AEB has the following steps before it outputs the emergency stop signal.
+
+1. Activate AEB if necessary.
+
+2. Generate a predicted path of the ego vehicle.
+
+3. Get target obstacles from the input point cloud and/or predicted object data.
+
+4. Estimate the closest obstacle speed.
+
+5. Collision check with target obstacles.
+
+6. Send emergency stop signals to `/diagnostics`.
+
+We give more details of each section below.

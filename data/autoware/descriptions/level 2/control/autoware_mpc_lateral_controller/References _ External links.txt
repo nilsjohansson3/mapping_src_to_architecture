@@ -1,0 +1,4 @@
+<!-- Optional -->
+
+- [1] Jarrod M. Snider, "Automatic Steering Methods for Autonomous Automobile Path Tracking",
+  Robotics Institute, Carnegie Mellon University, February 2009.

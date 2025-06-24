@@ -1,0 +1,26 @@
+<details>
+<summary>Click to show details</summary>
+
+The user can launch the desired pose_estimators by giving the pose_estimator names as a concatenation of underscores for the runtime argument `pose_source`.
+
+```bash
+ros2 launch autoware_launch logging_simulator.launch.xml \
+  map_path:=<your-map-path> \
+  vehicle_model:=sample_vehicle \
+  sensor_model:=awsim_sensor_kit \
+  pose_source:=ndt_yabloc_artag_eagleye
+```
+
+Even if `pose_source` includes an unexpected string, it will be filtered appropriately.
+Please see the table below for details.
+
+| given runtime argument                      | parsed autoware_pose_estimator_arbiter's param (pose_sources) |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| `pose_source:=ndt`                          | `["ndt"]`                                                     |
+| `pose_source:=nan`                          | `[]`                                                          |
+| `pose_source:=yabloc_ndt`                   | `["ndt","yabloc"]`                                            |
+| `pose_source:=yabloc_ndt_ndt_ndt`           | `["ndt","yabloc"]`                                            |
+| `pose_source:=ndt_yabloc_eagleye`           | `["ndt","yabloc","eagleye"]`                                  |
+| `pose_source:=ndt_yabloc_nan_eagleye_artag` | `["ndt","yabloc","eagleye","artag"]`                          |
+
+</details>

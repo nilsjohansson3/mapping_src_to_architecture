@@ -1,0 +1,3 @@
+/perception/occupancy_grid_map/obstacle/downsample/pointcloud
+/perception/occupancy_grid_map/<sensor_name>/raw/downsample/pointcloud
+```

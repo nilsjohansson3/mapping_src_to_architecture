@@ -1,0 +1,3 @@
+| Name        | Type                | Description                                                       |
+| ----------- | ------------------- | ----------------------------------------------------------------- |
+| `out/image` | `sensor_msgs/Image` | The image that detection bounding boxes and their UUIDs are drawn |

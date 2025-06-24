@@ -1,0 +1,7 @@
+The conditions for vehicle type objects and non-vehicle type objects are different. However, the main idea is that static objects on road shoulders within the planned path would be avoided.
+Below are some examples when an avoidance path is generated for vehicle type objects.
+
+- Vehicle stopping on ego lane while pulling over to the side of the road
+- Vehicle stopping on adjacent lane
+
+For more details refer to [vehicle type object](conditions-for-vehicle-type-objects) and [non-vehicle object](conditions-for-non-vehicle-type-objects).

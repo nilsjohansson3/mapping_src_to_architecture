@@ -1,0 +1,10 @@
+This vehicle type is intended for a small robot.
+
+| Parameter           | value |
+| ------------------- | ----- |
+| wheel_base          | 0.395 |
+| acc_time_delay      | 0.2   |
+| steer_time_delay    | 0.2   |
+| acc_time_constant   | 0.2   |
+| steer_time_constant | 0.2   |
+| acc_scaling         | 1.0   |

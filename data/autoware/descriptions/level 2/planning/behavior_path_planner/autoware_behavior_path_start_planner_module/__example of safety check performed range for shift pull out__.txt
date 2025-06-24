@@ -1,0 +1,7 @@
+Give an example of safety verification range for shift pull out. The safety check is performed from the start of the shift to the end of the shift. And if the vehicle footprint does not leave enough space for a rear vehicle to drive through, the safety check against dynamic objects is disabled.
+
+<figure markdown>
+  ![safety check performed range for shift pull out](images/collision_check_range_shift_pull_out.drawio.svg){width=1100}
+</figure>
+
+**As a note, no safety check is performed during backward movements. Safety verification commences at the point where the backward motion ceases.**

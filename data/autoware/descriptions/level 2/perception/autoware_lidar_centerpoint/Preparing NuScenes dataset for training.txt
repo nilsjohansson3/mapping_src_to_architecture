@@ -1,0 +1,16 @@
+**Step 1.** Download the NuScenes dataset from the [official website](https://www.nuscenes.org/download) and extract the dataset to a folder of your choice.
+
+**Note:** The NuScenes dataset is large and requires significant disk space. Ensure you have enough storage available before proceeding.
+
+**Step 2.** Create a symbolic link to the dataset folder
+
+```bash
+ln -s /path/to/nuscenes/dataset/ /path/to/mmdetection3d/data/nuscenes/
+```
+
+**Step 3.** Prepare the NuScenes data by running:
+
+```bash
+cd mmdetection3d
+python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes
+```

@@ -1,0 +1,25 @@
+Each stop lines are generated from interpolated path points to obtain precise positions.
+
+```plantuml
+@startuml
+entity IntersectionStopLines {
+  * closest_idx: size_t
+  closest path point index for ego
+  --
+  * stuck_stopline: size_t
+  stop line index on stuck vehicle detection
+  --
+  * default_stopline: size_t
+  If defined on the map, its index on the path. Otherwise generated before first_attention_stopline
+  --
+  * first_attention_stopline
+  The index of the first path point which is inside the attention area
+  --
+  * occlusion_peeking_stopline
+  The index of the path point for the peeking limit position
+  --
+  * pass_judge_line
+  The index of the path point which is before first_attention_stopline/occlusion_peeking_stopline by braking distance
+}
+@enduml
+```

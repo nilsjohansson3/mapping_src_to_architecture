@@ -1,0 +1,4 @@
+| Name              | Type                            | Description       |
+| ----------------- | ------------------------------- | ----------------- |
+| `~/input/points`  | `sensor_msgs::msg::PointCloud2` | reference points  |
+| `~/input/indices` | `pcl_msgs::msg::Indices`        | reference indices |

@@ -1,0 +1,11 @@
+- Get no_drivable_lane attribute on the path from lanelet2 map
+- The no drivable lane state machine starts in `INIT` state
+- Get the intersection points between path and no drivable lane polygon
+- Assign the state to `APPROACHING` toward a no drivable lane if:
+  - the distance from front of the ego vehicle till the first intersection point between the ego path and the no drivable lane polygon is more than the `stop_margin`
+- Assign the state to `INSIDE_NO_DRIVABLE_LANE` if:
+  - the first point of the ego path is inside the no drivable lane polygon, or
+  - the distance from front of the ego vehicle till the first intersection point between the ego path and the no drivable lane polygon is less than the `stop_margin`
+- Assign the state to `STOPPED` when the vehicle is completely stopped
+
+![no_drivable_lane_scenarios.svg](./docs/no_drivable_lane_scenarios.svg)

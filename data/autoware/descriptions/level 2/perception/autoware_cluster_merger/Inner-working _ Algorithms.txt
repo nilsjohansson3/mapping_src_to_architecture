@@ -1,0 +1,1 @@
+The clusters of merged topics are simply concatenated from clusters of input topics.

@@ -1,0 +1,5 @@
+The default logging severity level for `autoware_lidar_transfusion` is `info`. For debugging purposes, the developer may decrease severity level using `log_level` parameter:
+
+```bash
+ros2 launch autoware_lidar_transfusion lidar_transfusion.launch.xml log_level:=debug
+```

@@ -1,0 +1,7 @@
+| Name                                  | Type                                         | Description                                                 |
+| ------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| `input/predicted_particles`           | `yabloc_particle_filter::msg::ParticleArray` | predicted particles                                         |
+| `input/ll2_bounding_box`              | `sensor_msgs::msg::PointCloud2`              | road surface markings converted to line segments            |
+| `input/ll2_road_marking`              | `sensor_msgs::msg::PointCloud2`              | road surface markings converted to line segments            |
+| `input/projected_line_segments_cloud` | `sensor_msgs::msg::PointCloud2`              | projected line segments                                     |
+| `input/pose`                          | `geometry_msgs::msg::PoseStamped`            | reference to retrieve the area map around the self location |

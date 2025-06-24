@@ -1,0 +1,9 @@
+[1] Xuyang Bai, Zeyu Hu, Xinge Zhu, Qingqiu Huang, Yilun Chen, Hongbo Fu and Chiew-Lan Tai. "TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers." arXiv preprint arXiv:2203.11496 (2022). <!-- cspell:disable-line -->
+
+[2] <https://github.com/wep21/CUDA-TransFusion>
+
+[3] <https://github.com/open-mmlab/mmdetection3d>
+
+[4] <https://github.com/open-mmlab/OpenPCDet>
+
+[5] <https://www.nuscenes.org/nuscenes>

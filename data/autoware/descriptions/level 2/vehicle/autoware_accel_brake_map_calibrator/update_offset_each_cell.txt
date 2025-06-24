@@ -1,0 +1,5 @@
+Update by Recursive Least Squares(RLS) method using data close enough to each grid.
+
+**Advantage** : Only data close enough to each grid is used for calibration, allowing accurate updates at each point.
+
+**Disadvantage** : Calibration is time-consuming due to a large amount of data to be excluded.

@@ -1,0 +1,13 @@
+Create a new config file named **centerpoint_custom.param.yaml** under the config file directory of the autoware_lidar_centerpoint node. Sets the parameters of the config file like
+point_cloud_range, point_feature_size, voxel_size, etc. according to the training config file.
+
+```yaml
+/**:
+  ros__parameters:
+    class_names: ["CAR", "TRUCK", "BUS", "BICYCLE", "PEDESTRIAN"]
+    point_feature_size: 4
+    max_voxel_size: 40000
+    point_cloud_range: [-51.2, -51.2, -3.0, 51.2, 51.2, 5.0]
+    voxel_size: [0.2, 0.2, 8.0]
+    downsample_factor: 1
+    encoder_in_feature_size: 9

@@ -1,0 +1,5 @@
+<img src="./media/diagnostic_regularization_pose_subscriber_status.png" alt="drawing" width="600"/>
+
+| Name               | Description                   | Transition condition to Warning | Transition condition to Error |
+| ------------------ | ----------------------------- | ------------------------------- | ----------------------------- |
+| `topic_time_stamp` | the time stamp of input topic | none                            | none                          |

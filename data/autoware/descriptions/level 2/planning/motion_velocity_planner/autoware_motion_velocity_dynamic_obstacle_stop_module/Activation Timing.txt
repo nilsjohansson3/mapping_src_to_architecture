@@ -1,0 +1,1 @@
+This module is activated if the launch parameter `launch_dynamic_obstacle_stop_module` is set to true in the motion planning launch file.

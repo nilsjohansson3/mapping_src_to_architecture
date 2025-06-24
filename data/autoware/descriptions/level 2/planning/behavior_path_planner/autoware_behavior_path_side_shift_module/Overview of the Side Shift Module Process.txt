@@ -1,0 +1,7 @@
+1. Receive the required lateral offset input.
+2. Update the `requested_lateral_offset_` under the following conditions:
+   a. Verify if the last update time has elapsed.
+   b. Ensure the required lateral offset value is different from the previous one.
+3. Insert the shift points into the path if the side shift module's status is not in the SHIFTING status.
+
+Please be aware that `requested_lateral_offset_` is continuously updated with the latest values and is not queued.

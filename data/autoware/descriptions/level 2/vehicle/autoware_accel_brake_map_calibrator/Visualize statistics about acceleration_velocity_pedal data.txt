@@ -1,0 +1,13 @@
+The following command shows the statistics of the calibration:
+
+- mean value
+- standard deviation
+- number of data
+
+of all data in each map cell.
+
+```sh
+ros2 run autoware_accel_brake_map_calibrator view_statistics.py
+```
+
+![sample pic2](media/statistics_sample.png)

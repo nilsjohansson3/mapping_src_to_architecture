@@ -1,0 +1,10 @@
+Pull over distance is calculated by the speed, lateral deviation, and the lateral jerk.
+The lateral jerk is searched for among the predetermined minimum and maximum values, and the one satisfies ready conditions described above is output.
+
+1. Apply uniform offset to centerline of shoulder lane for ensuring margin
+2. In the section between merge start and end, path is shifted by a method that is used to generate avoidance path (four segmental constant jerk polynomials)
+3. Combine this path with center line of road lane
+
+![shift_parking](./images/shift_parking.drawio.svg)
+
+[shift_parking video](https://user-images.githubusercontent.com/39142679/178034101-4dc61a33-bc49-41a0-a9a8-755cce53cbc6.mp4)

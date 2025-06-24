@@ -1,0 +1,13 @@
+| Parameter                                     | Type   | Description                                                                          |
+| --------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| `.consider_wrong_direction_vehicle`           | bool   | [-] flag to detect objects in the wrong direction                                    |
+| `.collision_detection_hold_time`              | double | [s] hold time of collision detection                                                 |
+| `.min_predicted_path_confidence`              | double | [-] minimum confidence value of predicted path to use for collision detection        |
+| `.keep_detection_velocity_threshold`          | double | [s] ego velocity threshold for continuing collision detection before pass judge line |
+| `.velocity_profile.use_upstream`              | bool   | [-] flag to use velocity profile planned by upstream modules                         |
+| `.velocity_profile.minimum_upstream_velocity` | double | [m/s] minimum velocity of upstream velocity profile to avoid zero division           |
+| `.velocity_profile.default_velocity`          | double | [m/s] constant velocity profile when use_upstream is false                           |
+| `.velocity_profile.minimum_default_velocity`  | double | [m/s] minimum velocity of default velocity profile to avoid zero division            |
+| `.yield_on_green_traffic_light`               | -      | [-] [description](yield-on-green)                                                   |
+| `.ignore_amber_traffic_light`                 | -      | [-] [description](skip-on-amber)                                                    |
+| `.ignore_on_red_traffic_light`                | -      | [-] [description](skip-on-red)                                                      |

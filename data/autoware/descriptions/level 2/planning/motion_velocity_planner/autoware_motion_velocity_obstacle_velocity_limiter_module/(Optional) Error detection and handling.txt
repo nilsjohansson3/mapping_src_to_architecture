@@ -1,0 +1,6 @@
+The critical case for this node is when an obstacle is falsely detected very close to the trajectory such that
+the corresponding velocity suddenly becomes very low.
+This can cause a sudden brake and two mechanisms can be used to mitigate these errors.
+
+Parameter `min_adjusted_velocity` allow to set a minimum to the adjusted velocity, preventing the node to slow down the vehicle too much.
+Parameter `max_deceleration` allow to set a maximum deceleration (relative to the _current_ ego velocity) that the adjusted velocity would incur.

@@ -1,0 +1,3 @@
+| Name                  | Type                  | Description                       |
+| --------------------- | --------------------- | --------------------------------- |
+| `/yabloc_suspend_srv` | std_srv::srv::SetBool | service to stop or restart yabloc |

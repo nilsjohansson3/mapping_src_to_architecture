@@ -1,0 +1,18 @@
+This directory contains packages for landmark-based localization.
+
+Landmarks are, for example
+
+- AR tags detected by camera
+- Boards characterized by intensity detected by LiDAR
+
+etc.
+
+Since these landmarks are easy to detect and estimate pose, the ego pose can be calculated from the pose of the detected landmark if the pose of the landmark is written on the map in advance.
+
+Currently, landmarks are assumed to be flat.
+
+The following figure shows the principle of localization in the case of `ar_tag_based_localizer`.
+
+![principle](./doc_image/principle.png)
+
+This calculated ego pose is passed to the EKF, where it is fused with the twist information and used to estimate a more accurate ego pose.

@@ -1,0 +1,4 @@
+Obstacles for cruising, stopping and slowing down are selected in this order based on their pose and velocity.
+The obstacles not in front of the ego will be ignored.
+
+![determine_cruise_stop_slow_down](./media/determine_cruise_stop_slow_down.drawio.svg)

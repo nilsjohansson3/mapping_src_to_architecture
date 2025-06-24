@@ -1,0 +1,32 @@
+The avoidance path has two shift sections, whose start or end point position depends on the envelope polygon. The end point of the avoidance shift section and start point of the return shift section are fixed based on the envelope polygon and the other side edges are dynamically changed based on ego speed, shift length, lateral jerk constraints, etc.
+
+The lateral positions of the two points are decided so that there can be enough space (=lateral margin) between ego body and the most overhang point of the envelope polygon edge points. User can adjust lateral margin with the following parameters.
+
+```yaml
+        car:
+          ...
+          lateral_margin:
+            soft_margin: 0.3                             [m]
+            hard_margin: 0.2                             [m]
+            hard_margin_for_parked_vehicle: 0.7          [m]
+```
+
+The longitudinal positions depends on the envelope polygon, ego vehicle specification and the following parameters. The longitudinal distance between avoidance shift section end point and envelope polygon (=front longitudinal buffer) is the sum of `front_overhang` defined in `vehicle_info.param.yaml` and `longitudinal_margin` if the parameter `consider_front_overhang` is `true`. If `consider_front_overhang` is `false`, only `longitudinal_margin` is considered. Similarly, the distance between the return shift section start point and envelope polygon (=rear longitudinal buffer) is the sum of `rear_overhang` and `longitudinal_margin`.
+
+```yaml
+
+      target_object:
+        car:
+          ...
+          longitudinal_margin: 0.0                       [m]
+
+      ...
+      avoidance:
+        ...
+        longitudinal:
+          ...
+          consider_front_overhang: true                  [-]
+          consider_rear_overhang: true                   [-]
+```
+
+![fig](./images/path_generation/margin.png)

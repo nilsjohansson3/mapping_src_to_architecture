@@ -1,0 +1,5 @@
+| Name                            | Type                            | Description                                            |
+| ------------------------------- | ------------------------------- | ------------------------------------------------------ |
+| `~/input/points`                | `sensor_msgs::msg::PointCloud2` | reference points                                       |
+| `~/input/map`                   | `sensor_msgs::msg::PointCloud2` | map (in case static map loading)                       |
+| `/localization/kinematic_state` | `nav_msgs::msg::Odometry`       | current ego-vehicle pose (in case dynamic map loading) |

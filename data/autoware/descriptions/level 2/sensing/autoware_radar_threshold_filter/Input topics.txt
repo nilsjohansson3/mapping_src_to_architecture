@@ -1,0 +1,3 @@
+| Name        | Type                         | Description           |
+| ----------- | ---------------------------- | --------------------- |
+| input/radar | radar_msgs/msg/RadarScan.msg | Radar pointcloud data |

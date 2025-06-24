@@ -1,0 +1,4 @@
+- `~/input/objects` (`autoware_perception_msgs/msg/DetectedObjects.msg`)
+  - 3D detected objects.
+- `~/input/radar_objects` (`autoware_perception_msgs/msg/DetectedObjects.msg`)
+  - Radar objects. Note that frame_id need to be same as `~/input/objects`

@@ -1,0 +1,3 @@
+- Multiple radar detection
+
+`autoware_simple_object_merger` can be used for multiple radar detection. By combining them into one topic from multiple radar topics, the pipeline for faraway detection with radar can be simpler.

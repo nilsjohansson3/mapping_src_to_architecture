@@ -1,0 +1,5 @@
+Currently, the path shifting length is limited to 0.5 meters or less by `drivable_area_generation.max_lat_offset_to_avoid`.
+This is caused by the lack of functionality to work with other modules and the structure of the planning component.
+Due to this issue, this module can only handle situations where a small avoidance width is sufficient.
+This issue is the most significant for this module.
+In addition, the ability of this module to extend the drivable area as needed is also required.

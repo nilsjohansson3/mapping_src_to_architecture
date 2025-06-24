@@ -1,0 +1,2 @@
+- `~/output/objects` (`autoware_perception_msgs/msg/DetectedObjects.msg`)
+  - Merged objects combined from input topics.

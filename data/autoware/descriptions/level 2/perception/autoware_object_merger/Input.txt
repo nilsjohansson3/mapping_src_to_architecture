@@ -1,0 +1,4 @@
+| Name            | Type                                             | Description       |
+| --------------- | ------------------------------------------------ | ----------------- |
+| `input/object0` | `autoware_perception_msgs::msg::DetectedObjects` | detection objects |
+| `input/object1` | `autoware_perception_msgs::msg::DetectedObjects` | detection objects |

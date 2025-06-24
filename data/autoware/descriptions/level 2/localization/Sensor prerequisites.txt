@@ -1,0 +1,7 @@
+- Input data is not defective.
+  - Internal sensor observation such as IMU continuously keeps the proper frequency.
+- Input data has correct and exact time stamps.
+  - Estimated poses can be inaccurate or unstable if the timestamps are not exact.
+- Sensors are correctly mounted with exact positioning and accessible from TF.
+  - If the sensor positions are inaccurate, estimation results may be incorrect or unstable.
+  - A sensor calibration framework is required to properly obtain the sensor positions.

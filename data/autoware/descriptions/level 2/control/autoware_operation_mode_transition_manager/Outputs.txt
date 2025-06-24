@@ -1,0 +1,8 @@
+- /system/operation_mode/state [`autoware_adapi_v1_msgs/msg/OperationModeState`]: to inform the current operation mode
+- /control/autoware_operation_mode_transition_manager/debug_info [`autoware_operation_mode_transition_manager/msg/OperationModeTransitionManagerDebug`]: detailed information about the operation mode transition
+
+- /control/gate_mode_cmd [`tier4_control_msgs/msg/GateMode`]: to change the `vehicle_cmd_gate` state to use its features (to be removed)
+- /autoware/engage [`autoware_vehicle_msgs/msg/Engage`]:
+
+- /control/control_mode_request [`autoware_vehicle_msgs/srv/ControlModeCommand`]: to change the vehicle control mode (autonomous/manual)
+- /control/external_cmd_selector/select_external_command [`tier4_control_msgs/srv/ExternalCommandSelect`]:

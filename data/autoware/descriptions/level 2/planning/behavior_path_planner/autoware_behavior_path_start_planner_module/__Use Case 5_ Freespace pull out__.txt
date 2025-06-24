@@ -1,0 +1,7 @@
+If the map is annotated with the information that a free space path can be generated in situations where both shift and geometric pull out paths are impossible to create, a path based on the free space algorithm will be generated.
+
+<figure markdown>
+  ![freespace_path](images/freespace_pull_out.png){width=1100}
+</figure>
+
+**As a note, the patterns for generating these paths are based on default parameters, but as will be explained in the following sections, it is possible to control aspects such as making paths that involve reversing more likely to be generated, or making geometric paths more likely to be generated, by changing the path generation policy or adjusting the margin around static objects.**

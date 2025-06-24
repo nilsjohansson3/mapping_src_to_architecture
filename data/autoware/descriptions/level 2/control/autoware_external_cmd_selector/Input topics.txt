@@ -1,0 +1,10 @@
+| Name                                           | Type | Description                                             |
+| ---------------------------------------------- | ---- | ------------------------------------------------------- |
+| `/api/external/set/command/local/control`      | TBD  | Local. Calculated control value.                        |
+| `/api/external/set/command/local/heartbeat`    | TBD  | Local. Heartbeat.                                       |
+| `/api/external/set/command/local/shift`        | TBD  | Local. Gear shift like drive, rear and etc.             |
+| `/api/external/set/command/local/turn_signal`  | TBD  | Local. Turn signal like left turn, right turn and etc.  |
+| `/api/external/set/command/remote/control`     | TBD  | Remote. Calculated control value.                       |
+| `/api/external/set/command/remote/heartbeat`   | TBD  | Remote. Heartbeat.                                      |
+| `/api/external/set/command/remote/shift`       | TBD  | Remote. Gear shift like drive, rear and etc.            |
+| `/api/external/set/command/remote/turn_signal` | TBD  | Remote. Turn signal like left turn, right turn and etc. |

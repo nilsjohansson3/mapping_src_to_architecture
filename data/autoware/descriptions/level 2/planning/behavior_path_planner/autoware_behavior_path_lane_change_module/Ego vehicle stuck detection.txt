@@ -1,0 +1,4 @@
+| Name                        | Unit  | Type   | Description                                         | Default value |
+| :-------------------------- | ----- | ------ | --------------------------------------------------- | ------------- |
+| `stuck_detection.velocity`  | [m/s] | double | Velocity threshold for ego vehicle stuck detection  | 0.1           |
+| `stuck_detection.stop_time` | [s]   | double | Stop time threshold for ego vehicle stuck detection | 3.0           |

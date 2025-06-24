@@ -1,0 +1,14 @@
+The nodes within the pipeline report the pipeline latency time, indicating the duration from the sensor driver's pointcloud
+output to the node's output. This data is crucial for assessing the pipeline's health and efficiency.
+
+When running Autoware, you can monitor the pipeline latency times for each node in the pipeline by subscribing to the
+following ROS 2 topics:
+
+- `/sensing/lidar/LidarX/crop_box_filter_self/debug/pipeline_latency_ms`
+- `/sensing/lidar/LidarX/crop_box_filter_mirror/debug/pipeline_latency_ms`
+- `/sensing/lidar/LidarX/distortion_corrector/debug/pipeline_latency_ms`
+- `/sensing/lidar/LidarX/ring_outlier_filter/debug/pipeline_latency_ms`
+- `/sensing/lidar/concatenate_data_synchronizer/debug/sensing/lidar/LidarX/pointcloud/pipeline_latency_ms`
+
+These topics provide the pipeline latency times, giving insights into the delays at various stages of the pipeline
+from the sensor output of LidarX to each subsequent node.

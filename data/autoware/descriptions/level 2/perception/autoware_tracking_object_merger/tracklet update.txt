@@ -1,0 +1,9 @@
+Sub tracking objects are merged into dominant tracking objects.
+
+Depends on the tracklet input sensor state, we update the tracklet state with different rules.
+
+| state\priority             | 1st    | 2nd   | 3rd    |
+| -------------------------- | ------ | ----- | ------ |
+| Kinematics except velocity | LiDAR  | Radar | Camera |
+| Forward velocity           | Radar  | LiDAR | Camera |
+| Object classification      | Camera | LiDAR | Radar  |

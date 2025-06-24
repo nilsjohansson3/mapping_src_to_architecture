@@ -1,0 +1,5 @@
+Sampling based planning is decomposed into 3 successive steps:
+
+1. Sampling: candidate trajectories are generated.
+2. Pruning: invalid candidates are discarded.
+3. Selection: the best remaining valid candidate is selected.

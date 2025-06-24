@@ -1,0 +1,2261 @@
+Module,Text
+client,Performs the remote operation to the back-end.
+client,"Performs the entire operation routine: setting up connection to the back-end, performing the operation itself, and tearing down the connection."
+client,Gets the Objectify instance.
+client,Performs the remote operation to the back-end.
+client,Gets the query for the entities that need data migration.
+client,Returns the prefix for the log line.
+client,Checks whether data migration is needed.
+client,Causation: this method might be called in multiple threads if using transaction.
+client,"If true, the script will not perform actual data migration."
+client,Logs a line and persists it to the disk.
+client,Logs an error and persists it to the disk.
+client,Migrates the entity.
+client,Causation: this method might be called in multiple threads if using transaction.
+client,Stores the entity to save in a buffer and saves it later.
+client,Sets the criterias used in isMigrationNeeded(E entity) on whether migration is needed. Ran during initialization.
+client,Determines whether the migration should be done in a transaction.
+client,"Transaction is useful for data consistency. However, there are some limitations on operations inside a transaction. In addition, the performance of the script will also be affected."
+client,Performs the remote operation to the back-end.
+client,Returns the filter query.
+client,Returns the log prefix.
+client,Returns whether the account has been migrated.
+client,Logs a comment.
+client,Logs an error and persists it to the disk.
+client,Migrates the entity.
+client,"Always returns true, as the migration is needed for all entities from Datastore to CloudSQL."
+client,Set to true to preview the migration without actually performing it.
+client,"Always returns true, as the migration is needed for all entities from Datastore to CloudSQL."
+client,Set to true to preview the migration without actually performing it.
+client,"Queries for the latest SQL entity created, so that patching will only migrate newly created Datastore entities."
+client,Gets the query for the entities that need data migration.
+client,"If true, the script will not perform actual data migration."
+client,Performs the remote operation to the back-end.
+client,Gets a random instant.
+client,Gets the typical data bundle.
+client,Loads the data bundle from JSON file.
+client,Persists additional data.
+client,Persists the data to database.
+client,Sets up the dependencies needed for the DB layer.
+client,Sets up objectify service.
+client,Closes objectify service.
+client,Performs the remote operation to the back-end.
+client,Verify account fields.
+client,Performs the remote operation to the back-end.
+client,Verifies the number of notifications.
+client,Verifies the SQL connection.
+client,Calculate offset.
+client,"Lookup sql side, have all the sql entities for each sql entity, lookup datastore entity. If does not match, return failure."
+client,Run the operation.
+client,Compares the sqlEntity with the datastoreEntity.
+client,Generate the Datstore id of entity to compare with on Datastore side.
+client,Log a line.
+client,logLine the line to log
+client,Lookup data store entities.
+client,Sort SQL entities by id in ascending order and return entities on page.
+client,pageNum page in a sorted entities tables
+client,Main function to run to verify isEqual between sql and datastore DBs.
+client,Performs the remote operation to the back-end.
+client,Returns an Iterable which iterates all the matched entities of the query.
+client,Decrypts and parses the statistics bundle that is saved in the disk.
+client,Encrypts and persists the statistics bundle to the disk.
+client,Adds a instructor email to the stats associated with the institute.
+client,"If the institute or email is from test data, ignore."
+client,"If the instructor email is already in the stats of the institute, ignore."
+client,Adds a student email to the stats associated with the institute.
+client,"If the institute or email is from test data, ignore."
+client,"If the student email is already in the stats of the institute, ignore."
+client,Gets a list of institute stats sorted by the number of students inside institute.
+client,Gets number of unique instructor emails in the bundle.
+client,Gets number of unique students emails in the bundle.
+client,Performs the remote operation to the back-end.
+client,Converts Account from its noSQL to SQL entity.
+client,Converts Account Request from its noSQL to SQL entity.
+client,Converts Course from its noSQL to SQL entity.
+client,Converts Deadline Extension from its noSQL to SQL entity.
+client,Converts Feedback Question from its noSQL to SQL entity.
+client,Converts Feedback Response from its noSQL to SQL entity.
+client,Converts Feedback Response Comment from its noSQL to SQL entity.
+client,Converts Feedback Session from its noSQL to SQL entity.
+client,Converts Instructor from its noSQL to SQL entity.
+client,Converts Notification from its noSQL to SQL entity.
+client,Converts Student from its noSQL to SQL entity.
+client,Creates SQL Read Notifications from Account attributes.
+client,Creates SQL Section from noSQL Student attribute.
+client,Creates SQL Team from noSQL Student attribute.
+client,Generates an ID for the test entity. This does not guarantee uniqueness between entities and is merely a counter
+client,Performs the remote operation to the back-end.
+client,Gets the query for the entities that need data migration.
+client,Checks whether data migration is needed.
+client,Causation: this method might be called in multiple threads if using transaction.
+client,"If true, the script will not perform actual data migration."
+client,Logs a line and persists it to the disk.
+client,Logs an error and persists it to the disk.
+client,Migrates the entity.
+client,Causation: this method might be called in multiple threads if using transaction.
+client,Stores the entity to save in a buffer and saves it later.
+client,Determines whether the migration should be done in a transaction.
+client,"Transaction is useful for data consistency. However, there are some limitations on operations inside a transaction. In addition, the performance of the script will also be affected."
+client,Generates a new googleId based on the oldAccount.
+client,Checks whether the googleId of the account is needed to be migrated or not.
+client,Performs the remote operation to the back-end.
+client,Generates a new googleId based on the oldAccount.
+client,Checks whether the googleId of the account is needed to be migrated or not.
+client,Performs the remote operation to the back-end.
+client,Performs the remote operation to the back-end.
+client,Generates a new googleId based on the oldAccount.
+client,Checks whether the googleId of the account is needed to be migrated or not.
+client,Initializes the Hibernate session.
+client,Inserts the document.
+client,Updates the indexing for all account requests using the backdoor and batch processing.
+client,Constructs a LoopHelper object which prints message for every printCycle iterations.
+client,Increments count and prints the count and message on system output when count is a multiple of printCycle.
+client,Applies this function to the given argument.
+client,t the function argument
+common,Returns a builder for AccountAttributes.
+common,Gets a deep copy of this object.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for an account.
+common,Gets the AccountAttributes instance of the given Account.
+common,Returns a builder for AccountRequestAttributes.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for an account request.
+common,Gets the AccountRequestAttributes instance of the given AccountRequest.
+common,Returns a builder for CourseAttributes.
+common,Sorts the list of courses by the course ID.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a course.
+common,Gets the CourseAttributes instance of the given Course.
+common,Returns a builder for DeadlineExtensionAttributes.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a deadline extension.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a deadline extension.
+common,Gets the DeadlineExtensionAttributes instance of the given DeadlineExtension.
+common,"Returns a List of strings, one string for each attribute whose value is invalid. The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user. Returns an empty List if all attributes are valid."
+common,Returns true if the attributes represent a valid state for the entity.
+common,Perform any sanitization that needs to be done before saving. e.g. trim strings
+common,Returns a Object corresponding to the attributes defined by this EntityAttributes class.
+common,Checks if updating this question to the newAttributes will require the responses to be deleted for consistency. Does not check if any responses exist.
+common,Returns a builder for FeedbackQuestionAttributes.
+common,Gets a deep copy of this object.
+common,Returns true if the response is visible to the given participant type.
+common,Removes irrelevant/extraneous response visibility option settings from the question.
+common,NOTE: Only use this to match and search for the ID of a known existing question entity.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a question.
+common,Gets the FeedbackQuestionAttributes instance of the given FeedbackQuestion.
+common,Returns a builder for FeedbackResponseAttributes.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a response.
+common,Gets the FeedbackResponseAttributes instance of the given FeedbackResponse.
+common,Returns a builder for FeedbackResponseCommentAttributes.
+common,Returns true if the response comment is visible to the given participant type.
+common,Use only to match existing and known Comment.
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a comment.
+common,Gets the FeedbackResponseCommentAttributes instance of the given FeedbackResponseComment.
+common,Returns a builder for FeedbackSessionAttributes.
+common,Gets a deep copy of this object.
+common,Creates a copy that uses the specific deadline for the given instructor.
+common,instructorEmail The email address of the given instructor.
+common,Creates a copy that uses the specific deadline for the given student.
+common,studentEmail The email address of the given student.
+common,"Finds the point in time when the session is considered closed, excluding the grace period."
+common,This varies depending on who is looking at the session:
+common,"For instructors looking at the session in full detail, this is when the end time is reached. For participants, this is when the end time is reached, or their extension deadline, if it exists."
+common,Gets the instructions of the feedback session.
+common,Checks if the feedback session is closed. This occurs when the current time is after both the deadline and the grace period.
+common,Returns true if the feedback session is closed after the number of specified hours.
+common,Checks if the session closed some time in the last one hour from calling this function.
+common,Returns true if the feedback session is closing (almost closed) after the number of specified hours.
+common,Returns true if the given email is the same as the creator email of the feedback session.
+common,Checks if the feedback session is closed but still accepts responses. This occurs when the current time is either the deadline or later but still within the grace period.
+common,Checks if the feedback session is open. This occurs when the current time is either the start time or later but before the deadline.
+common,Returns true if session's start time is opening from now to anytime before now() + the specific number of {
+common,hours} supplied in the argument.
+common,Returns true if the feedback session opens after the number of specified hours.
+common,Returns true if the results of the feedback session is visible; false if not. Does not care if the session has ended or not.
+common,Returns true if the session is visible; false if not. Does not care if the session has started or not.
+common,"Returns true has not opened before and is waiting to open, false if session has opened before."
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a session.
+common,Returns a UpdateOptions.Builder to build on top of updateOptions.
+common,Gets the FeedbackSessionAttributes instance of the given FeedbackSession.
+common,Return a builder for InstructorAttributes.
+common,Gets a deep copy of this object.
+common,Returns a list of sections this instructor has the specified privilege.
+common,Returns true if the instructor has co-owner privilege.
+common,Returns true if the instructor has the given privilege in the course.
+common,Returns true if the instructor has the given privilege in the given section.
+common,Returns true if the instructor has the given privilege in the given section for the given feedback session.
+common,Returns true if privilege for session is present for any section.
+common,Sorts the instructors list alphabetically by name.
+common,Updates with UpdateOptionsWithEmail.
+common,Updates with UpdateOptionsWithGoogleId.
+common,Returns a UpdateOptionsWithEmail.Builder to build UpdateOptions for an instructor with courseId and email.
+common,Returns a UpdateOptionsWithGoogleId.Builder to build UpdateOptions for an instructor with courseId and googleId.
+common,Gets the InstructorAttributes instance of the given Instructor.
+common,Returns a builder for NotificationAttributes.
+common,Gets a deep copy of this object.
+common,Sets the notification as shown to the user. Only allowed to change value from false to true.
+common,"Sorts the list of notifications by the start time, with the latest as the first element."
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a notification.
+common,Returns a UpdateOptions.Builder to build on top of updateOptions.
+common,Gets the NotificationAttributes instance of the given Notification.
+common,Return a builder for StudentAttributes.
+common,Gets a deep copy of this object.
+common,"Format: emailcourseId e.g., adam@.nosp@m.gmai.nosp@m.l.comcs1101."
+common,"Sorts the list of students by the section name, then team name, then name."
+common,"Sorts the list of students by the team name, then name."
+common,Updates with UpdateOptions.
+common,Returns a UpdateOptions.Builder to build UpdateOptions for a student.
+common,Gets the StudentAttributes instance of the given CourseStudent.
+common,Gets the StudentAttributes instance of the given Student.
+common,Returns a builder for UsageStatisticsAttributes.
+common,Gets a deep copy of this object.
+common,Gets the UsageStatisticsAttributes instance of the given UsageStatistics.
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,Returns a builder for QueryLogsParams.
+common,"Hides sensitive, confidential information, particularly those that contain user information."
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Get question result statistics as JSON string.
+common,Individual responses are shown by default. Override for specific question types if necessary.
+common,Checks whether instructor comments are allowed for the question.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Returns a deep copy of the question details.
+common,Returns a JSON string representation of the question details.
+common,Get question result statistics as JSON string.
+common,Get question result statistics as JSON string.
+common,Individual responses are shown by default. Override for specific question types if necessary.
+common,Checks whether instructor comments are allowed for the question.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Checks whether missing responses should be generated.
+common,Checks whether missing responses should be generated.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,"Returns List of sorted answers, with uninitialised values filtered out."
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,"Provides updates of responses for 'rank recipient question', such that the ranks in the responses are consistent."
+common,"responses responses to one feedback question, from one giver maxRank the maximum rank in each response"
+common,Returns a string representation of the response.
+common,Returns a deep copy of the response details.
+common,Returns a JSON string representation of the response details.
+common,"Returns a list of rubric weights if the weights are assigned, otherwise returns an empty list."
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Checks whether the changes to the question details require deletion of corresponding responses.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates if giverType and recipientType are valid for the question type. Validates visibility options as well.
+common,Override in Feedback*QuestionDetails if necessary.
+common,Validates the question details.
+common,Validates the list of response details.
+common,Returns a string representation of the response.
+common,Returns a builder for AttributesDeletionQuery.
+common,Builds a Map from team name to team members.
+common,Gets info of a participant associated with an identifier in the course.
+common,Returns the instructor object for the given email.
+common,Returns the student object for the given email.
+common,Checks whether a student is in course.
+common,Checks whether a student is in team.
+common,Checks whether two students are in the same team.
+common,Checks whether a team is in course.
+common,Converts a GeneralLogEntry to a condensed ErrorLogEntry.
+common,Returns the legacy map representation of this permission set structure.
+common,Returns the section level privileges of the instructor.
+common,Returns the list of sections the instructor has the specified privilege name.
+common,Returns the session level privileges of the instructor.
+common,Returns true if co-owner privilege exists.
+common,Returns true if manager privilege exists.
+common,Returns true if observer privilege exists.
+common,Returns true if tutor privilege exists.
+common,Returns true if it is allowed for the privilege specified by privilegeName.
+common,Returns true if it is allowed for the privilege specified by privilegeName in sectionName.
+common,Returns true if it is allowed for the privilege specified by privilegeName for sessionName in sectionName.
+common,Returns true if privilege for session is present for any section.
+common,Returns true if the given string is a valid privilege name.
+common,Returns true if the given string is a valid section-level privilege name.
+common,Returns true if the given string is a valid session-level privilege name.
+common,Converts the current privilege object to its legacy format.
+common,Sets privilege for the privilege specified by privilegeName.
+common,Sets privilege for the privilege specified by privilegeName for sectionName.
+common,Sets privilege for the privilege specified by privilegeName for sessionName in sectionName.
+common,"Validates the privileges in course level, section level and session level."
+common,Makes sure there is nothing wrong with privileges hierarchy by adding the prerequisite privileges if they have not been granted yet.
+common,Gets the anonymous name for a given name.
+common,The anonymous name will be deterministic based on name.
+common,Returns true if the giver of a comment is visible to the current user. Returns false otherwise.
+common,Returns true if the giver of a response is visible to the current user. Returns false otherwise.
+common,Returns true if the recipient of a response is visible to the current user. Returns false otherwise.
+common,Builds a Map from team name to team members.
+common,Gets info of a participant associated with an identifier in the course.
+common,Returns the instructor object for the given email.
+common,Returns the student object for the given email.
+common,Checks whether a student is in course.
+common,Checks whether a student is in team.
+common,Checks whether two students are in the same team.
+common,Checks whether a team is in course.
+common,Gets the anonymous name for a given name.
+common,The anonymous name will be deterministic based on name.
+common,Returns true if the giver of a comment is visible to the current user. Returns false otherwise.
+common,Returns true if the giver of a response is visible to the current user. Returns false otherwise.
+common,Returns true if the recipient of a response is visible to the current user. Returns false otherwise.
+common,Gets a UserInfoCookie object from cookie string.
+common,Returns true if the object represents a valid user info and the object has not expired.
+common,Returns db connection URL.
+common,"Creates an AppUrl for the supplied relativeUrl parameter. The base URL will be the application front-end URL. relativeUrl must start with a ""/""."
+common,Returns the GAE instance ID.
+common,Returns the port number at which the system will be run in.
+common,Indicates whether dev server login is enabled.
+common,Sets the email subject based on the email type and inserts the specified params in the indicated places.
+common,Checks whether all the elements in a Collection are unique.
+common,elements The Collection of elements to be checked.
+common,"Checks if comment giver type is either instructor, student or team."
+common,commentGiverType comment giver type to be checked.
+common,"Checks if courseId is not null, not empty, has no surrounding whitespaces, not longer than COURSE_ID_MAX_LENGTH, is sanitized for HTML, and match the REGEX REGEX_COURSE_ID."
+common,"Checks if courseName is a non-null non-empty string no longer than the specified length COURSE_NAME_MAX_LENGTH, and also does not contain any invalid characters (| or %)."
+common,"Checks if email is not null, not empty, not longer than EMAIL_MAX_LENGTH, and is a valid email address according to REGEX_EMAIL."
+common,"Checks if feedbackSessionName is a non-null non-empty string no longer than the specified length FEEDBACK_SESSION_NAME_MAX_LENGTH, does not contain any invalid characters (| or %), and has no unsanitized HTML characters."
+common,"Checks if googleId is not null, not empty, not longer than GOOGLE_ID_MAX_LENGTH, does not contain any invalid characters (| or %), AND is either a Google username (without the ""@gmail.com"") or a valid email address."
+common,Checks if gracePeriod is not negative.
+common,"Checks if instituteName is a non-null non-empty string no longer than the specified length INSTITUTE_NAME_MAX_LENGTH, and also does not contain any invalid characters (| or %)."
+common,"Checks if the endTime is valid to be used as a session end time. Returns an empty string if it is valid, or an error message otherwise."
+common,"The endTime is valid if it is after 1 hour before now, before 12 months from now and at exact hour mark."
+common,"Checks if the startTime is valid to be used as a session start time. Returns an empty string if it is valid, or an error message otherwise."
+common,"The startTime is valid if it is after 2 hours before now, before 12 months from now and at exact hour mark."
+common,Checks if the notification message is a non-null non-empty string.
+common,notificationMessage The notification message.
+common,Checks if style is one of the recognized notification style NOTIFICATION_STYLE_ACCEPTED_VALUES.
+common,Checks if targetUser is one of the recognized notification target user groups NOTIFICATION_TARGET_USER_ACCEPTED_VALUES.
+common,Checks if the notification title is a non-null non-empty string.
+common,notificationTitle The title of the notification.
+common,"Checks if personName is a non-null non-empty string no longer than the specified length PERSON_NAME_MAX_LENGTH, and also does not contain any invalid characters (| or %)."
+common,Checks if role is one of the recognized roles ROLE_ACCEPTED_VALUES.
+common,"Checks if sectionName is a non-null non-empty string no longer than the specified length SECTION_NAME_MAX_LENGTH, and also does not contain any invalid characters (| or %)."
+common,"Checks if the given studentRoleComments is a non-null string no longer than the specified length STUDENT_ROLE_COMMENTS_MAX_LENGTH. However, this string can be empty."
+common,"Checks if teamName is a non-null non-empty string no longer than the specified length TEAM_NAME_MAX_LENGTH, does not contain any invalid characters (| or %) and is not a valid email."
+common,"Checks if the visibilityStart is valid to be used as a session visible start time. Returns an empty string if it is valid, or an error message otherwise."
+common,The visibilityStart is valid if it is less than 30 days before sessionStart.
+common,Checks if Notification Start Time is before Notification End Time.
+common,Checks if the session end time is before all extended deadlines.
+common,Checks if the session end time is before all extended deadlines.
+common,Checks if Session Start Time is before Session End Time.
+common,Checks if Visibility Start Time is before Results Publish Time.
+common,Checks if Session Visibility Start Time is before Session Start Time.
+common,Checks if the given string is a non-null string contained in Java's list of regional time zone IDs.
+common,Checks if visibility of comment is following question when comment is from a feedback participant.
+common,isCommentFromFeedbackParticipant true if comment is from feedback participant. isVisibilityFollowingFeedbackQuestion true if visibility of comment follows question.
+common,Checks if both the giver type and recipient type for the feedback question is valid.
+common,giverType feedback question giver type to be checked. recipientType feedback question recipient type to be checked.
+common,Checks if all the given participant types are valid for the purpose of showing different fields of a feedback response.
+common,showResponsesTo the list of participant types to whom responses can be shown showGiverNameTo the list of participant types to whom giver name can be shown showRecipientNameTo the list of participant types to whom recipient name can be shown
+common,Checks if the given value is not null.
+common,Reads the contents of a file in the resources folder as an InputStream.
+common,"file The file name, which must be in the resources folder."
+common,Reads the contents of a file in the resources folder.
+common,"file The file name, which must be in the resources folder."
+common,Start a resource transaction.
+common,Builds a session factory if it does not already exist.
+common,Force this session to clear. Usually called together with flush.
+common,"Commit the current resource transaction, writing any unflushed changes to the database."
+common,Returns a MutationQuery object.
+common,Returns a generic typed TypedQuery object.
+common,Create and execute a MutationQuery for the given delete criteria tree.
+common,Flush the current session and evict the given entity from the session.
+common,"Force this session to flush. Must be called at the end of a unit of work, before the transaction is committed."
+common,"Return the persistent instance of the given entity class with the given identifier, or null if there is no such persistent instance."
+common,"Return the persistent instance of the given entity class with the given natural id, or null if there is no such persistent instance."
+common,Returns a CriteriaBuilder object.
+common,"Return a reference to the persistent instance with the given class and identifier,making the assumption that the instance is still persistent in the database."
+common,Copy the state of the given object onto the persistent object with the same identifier.
+common,Make a transient instance persistent and mark it for later insertion in the database.
+common,Mark a persistence instance associated with this session for removal from the underlying database.
+common,Roll back the current resource transaction if needed.
+common,Executes a HTTP GET request and returns the response string.
+common,uri The URI containing the request URL and request parameters.
+common,"Returns the cookie value, or null if said cookie does not exist."
+common,Gets the request body payload.
+common,Deserializes the specified JSON string into an object of the specified class.
+common,Deserializes the specified JSON string into an object of the specified type.
+common,Parses the specified JSON string into a JsonElement object.
+common,Serializes the specified object into its equivalent JSON string.
+common,Serializes the specified object into its equivalent JSON string and stream into a writer. This is done to reduce the memory consumption when creating object across call stack.
+common,Serializes and pretty-prints the specified object into its equivalent JSON string.
+common,Serializes and pretty-prints the specified object into its equivalent JSON string.
+common,This creates a Gson object that can be reformatted to modify JSON output.
+common,Logs a particular event at INFO level.
+common,Logs a message at FINE level.
+common,Logs a message at INFO level.
+common,Logs an HTTP request.
+common,Logs an HTTP request.
+common,Logs a message at SEVERE level.
+common,Logs a message at SEVERE level.
+common,Logs an instance shutdown event.
+common,Logs an instance startup event.
+common,Logs a message at WARNING level.
+common,Logs a message at WARNING level.
+common,Throws DeadlineExceededException if the current thread has exceeded the limit for serving request.
+common,Returns the span ID of the current request.
+common,Returns the remaining time (in millis) until the current request times out.
+common,Returns the trace ID of the current request.
+common,Initializes the request with an ID and the timeout value (in seconds).
+common,Sanitizes an email address by removing leading/trailing whitespace.
+common,Sanitizes the string for inserting into HTML. Converts special characters into HTML-safe equivalents.
+common,Sanitizes the string with rich-text. Removes disallowed elements based on defined policy.
+common,Converts a string to be put in URL (replaces some characters).
+common,Sanitizes a google ID by removing leading/trailing whitespace.
+common,"Sanitizes name by removing leading, trailing, and duplicate internal whitespace."
+common,"Sanitizes a user input text field by removing leading/trailing whitespace. i.e. comments, instructions, etc."
+common,"Sanitizes title by removing leading, trailing, and duplicate internal whitespace."
+common,Converts null input to empty string. Non-null inputs will be left as is. This method is for displaying purpose.
+common,Decrypts the supplied string.
+common,message the ciphertext as a hexadecimal string
+common,"InvalidParametersException if the ciphertext is invalid. RuntimeException if the decryption fails for any other reason, such as Cipher initialization failure."
+common,Encrypts the supplied string.
+common,value the plaintext as a string
+common,"RuntimeException if the encryption fails for some reason, such as Cipher initialization failure."
+common,Generates the HMAC SHA-1 signature for a supplied string.
+common,data The string to be signed
+common,Generates a left-indentation of length units.
+common,Converts a hexadecimal string to byte array.
+common,Verifies the HMAC SHA-1 signature against a given value.
+common,value The value to be checked signature The signature in hex-string format
+common,Checks whether the input string is empty or equals null.
+common,s The string to be checked
+common,Checks whether the input string matches the regex.
+common,input The string to be matched regex The regex used for the matching
+common,"Trims the string and reduces consecutive white spaces to only one space. Example: "" a a "" --> ""a a""."
+common,Replaces every character in str that does not match regex with the character replacement.
+common,str String to be replaced. regex Pattern that every character is to be matched against. replacement Character unmatching characters should be replaced with.
+common,Converts a double value between 0 and 1 to 3dp-string.
+common,"Converts and concatenates a list of objects to a single string, separated by line breaks. The conversion is done by using the Object#toString() method."
+common,"Converts and concatenates a list of objects to a single string, separated by the given delimiter. The conversion is done by using the Object#toString() method."
+common,Trims the string if it is not null.
+common,"Trims head of the String if it is longer than specified Length. E.g., String ""12345678"" with maximumStringLength = 6, returns ""345678"""
+common,maximumStringLength - maximum required length of the string
+common,Populates the HTML templates by replacing variables in the template string with the given value strings.
+common,"template The template html to be populated keyValuePairs Array of a variable, even number of key-value pairs: { ""key1"", ""val1"", ""key2"", ""val2"", ... }"
+common,Formats a datetime stamp from an instant using a formatting pattern.
+common,"Note: a formatting pattern containing 'a' (for the period; AM/PM) is treated differently at noon/midday. Using that pattern with a datetime whose time falls on ""12:00 PM"" will cause it to be formatted as ""12:00 NOON""."
+common,"instant the instant to be formatted timeZone the time zone to compute local datetime pattern formatting pattern, see Oracle docs for DateTimeFormatter for pattern table"
+common,Returns an Instant that is offset by a number of days before now.
+common,offsetInDays integer number of days to offset by
+common,Returns an Instant that is offset by a number of days from now.
+common,offsetInDays integer number of days to offset by
+common,Returns an Instant that is offset by a number of hours from now.
+common,offsetInHours integer number of hours to offset by
+common,Returns an Instant that is offset by a number of months from now.
+common,offsetInMonths integer number of months to offset by timeZone string representing the time zone to compute local datetime
+common,Returns an Instant that represents the nearest hour before the given object.
+common,"The time zone used is assumed to be the default timezone, namely UTC."
+common,Returns an Instant that represents the nearest quarter hour before the given object.
+common,"The time zone used is assumed to be the default timezone, namely UTC."
+common,Gets an Instant which is adjusted for midnight time (23:59 and 00:00) at the specified time zone. The direction of adjustment (23:59 to 00:00 or vice versa) is determined by isForward parameter.
+common,"Returns whether the given instant is being used as a special representation, signifying its face value should not be used without proper processing."
+common,A null instant is not a special time.
+common,instant the instant to test
+common,Parses an Instant object from a datetime string in the ISO 8601 format.
+common,AssertionError if there is a parsing error
+common,Creates an instance. Created by the ServiceLoader.
+common,ZoneRulesException if unable to load
+common,"Returns the first part of the URL, including the protocol and authority (host name + port number if specified) but not the path. Example:"
+common,"new Url(""http://localhost:8080/index.html"").getBaseUrl() returns http://localhost:8080 new Url(""https://teammatesv4.appspot.com/index.html"").getBaseUrl() returns https://teammatesv4.appspot.com"
+common,Returns the absolute version of the URL by appending the base URL to the URL input.
+common,Returns the enum value of a log type given its label.
+common,Gets displayedOption that is associated with a particular distribute points option.
+common,Constructor for FeedbackQuestionType. Pass in the corresponding questionDetailsClass and responseDetailsClass
+common,Getter for corresponding Feedback*QuestionDetails class.
+common,Getter for corresponding Feedback*ResponseDetails class.
+common,Formats the participant type as a singular noun.
+common,Parse the input string into a FeedbackResultFetchType and default to FeedbackResultFetchType.BOTH.
+common,This result fetch should be by giver.
+common,This result fetch should be by receiver.
+common,Get enum from string.
+common,Gets the subject heading of this email type.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,"Creates an AppUrl for the supplied relativeUrl parameter. The base URL will be the value of test.app.backend.url in test.properties. relativeUrl must start with a ""/""."
+e2e,"Creates an AppUrl for the supplied relativeUrl parameter. The base URL will be the value of test.app.frontend.url in test.properties. relativeUrl must start with a ""/""."
+e2e,Deletes file with fileName from the downloads folder.
+e2e,Removes and restores the databundle using BACKDOOR.
+e2e,Checks if the feedback session is published.
+e2e,Equivalent to clicking the 'logout' link in the top menu of the page.
+e2e,Prepares the browser used for the current test.
+e2e,Prepares the test data used for the current test.
+e2e,Puts the documents in the database using BACKDOOR.
+e2e,dataBundle the data to be put in the database
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Verifies downloaded file has correct fileName and contains expected content.
+e2e,Verifies that email with subject is found in inbox. Email used must be an authentic gmail account.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the browser used for the current test.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,"Creates an AppUrl for the supplied relativeUrl parameter. The base URL will be the value of test.app.backend.url in test.properties. relativeUrl must start with a ""/""."
+e2e,"Creates an AppUrl for the supplied relativeUrl parameter. The base URL will be the value of test.app.frontend.url in test.properties. relativeUrl must start with a ""/""."
+e2e,Deletes file with fileName from the downloads folder.
+e2e,Gets registration key for a given instructor.
+e2e,Gets registration key for a given student.
+e2e,Equivalent to clicking the 'logout' link in the top menu of the page.
+e2e,Prepares the browser used for the current test.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Verifies downloaded file has correct fileName and contains expected content.
+e2e,Verifies that email with subject is found in inbox. Email used must be an authentic gmail account.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the browser used for the current test.
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,Prepares the test data used for the current test.
+e2e,Contains all the tests for the page.
+e2e,"This approach is chosen so that setup and teardown are only needed once per test page, thereby saving time. While it necessitates failed tests to be restarted from the beginning, test failures are rare and thus not causing significant overhead."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Used by subclasses to create a AppPage object to wrap around the given browser object. Fails if the page content does not match the page type, as defined by the sub-class."
+e2e,Clear existing text in the editor.
+e2e,Clicks the element and clicks 'Yes' in the follow up dialog box. Fails if there is no dialog box.
+e2e,Clicks a button (can be inside or outside the modal) that dismisses the modal and waits for the modal to be hidden. The caller must ensure the button is in the modal or a timeout will occur while waiting for the modal to be hidden.
+e2e,dismissModalButton a button that dismisses the modal
+e2e,Closes current window and switches back to parent window.
+e2e,Closes toast message.
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,Get rich text from editor.
+e2e,Gets a new page object representation of the currently open web page in the browser.
+e2e,Fails if the new page content does not match content expected in a page of the type indicated by the parameter typeOfPage.
+e2e,Returns the HTML source of the currently loaded page.
+e2e,Returns the text of the option selected in the dropdown.
+e2e,Returns True if there is a corresponding element for the given locator.
+e2e,Returns True if there is a corresponding element for the given id or name.
+e2e,"Select the option, if it is not already selected. No action taken if it is already selected."
+e2e,"Unselect the option, if it is not already unselected. No action taken if it is already unselected'."
+e2e,Selects option in dropdown based on visible text.
+e2e,Selects option in dropdown based on value.
+e2e,Switches to the new browser window just opened.
+e2e,Asserts message in toast is equal to the expected message.
+e2e,Asserts message in toast is equal to the expected message and contains the expected links.
+e2e,Asserts that all values in the body of the given table are equal to the expectedTableBodyValues.
+e2e,Asserts that all values in the column header of the given table are equal to the expectedTablColumnHeaderValues.
+e2e,Asserts that all header values in the given table row are equal to the expectedRowHeaderValues.
+e2e,Asserts that all values in the row header of the given table are equal to the expectedRowHeaderValues.
+e2e,Asserts that all data values in the given table row are equal to the expectedRowValues.
+e2e,Waits for a confirmation modal to appear and click the confirm button.
+e2e,"Waits for the element to appear in the page, up to the timeout specified."
+e2e,Waits until an element is no longer attached to the DOM or the timeout expires.
+e2e,element the WebElement that expires after TestProperties#TEST_TIMEOUT
+e2e,Waits until the page is fully loaded.
+e2e,Waits until the page is fully loaded.
+e2e,excludeToast Set this to true if toast message's disappearance should not be counted as criteria for page load's completion.
+e2e,Write rich text to editor.
+e2e,Closes the current browser.
+e2e,Closes the current browser window and switches back to the last window used previously.
+e2e,Visits the given URL.
+e2e,Switches to new browser window for browsing.
+e2e,Waits for the page to load. This includes all AJAX requests and Angular animations in the page.
+e2e,excludeToast Set this to true if toast message's disappearance should not be counted as criteria for page load's completion.
+e2e,Waits for the page to load by only looking at the page's readyState.
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,Waits until the page is fully loaded.
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,"Returns True if the page contains some basic elements expected in a page of the specific type. e.g., the top heading."
+e2e,Constructs an email client for the username.
+e2e,Triggers the authentication process for the associated username.
+e2e,Returns true if unread mail that arrived in the past minute contains mail with the specified subject.
+e2e,Returns the name of the task.
+e2e,Executes a method that runs the task once.
+e2e,Creates a new RetryManager that contains methods to retry tasks.
+e2e,maxDelayInS maximum delay (in seconds) to wait before final retry.
+e2e,"Runs task, retrying if needed using exponential backoff, until no exceptions of the specified recognizedExceptionTypes are caught."
+e2e,MaximumRetriesExceededException if maximum retries are exceeded.
+logic,Generates login link for the logging in user.
+logic,userEmail email of the logging in user. continueUrl URL upon successful login.
+logic,Indicates whether login email is to be enabled.
+logic,Generates the logs compilation email for the given logs.
+logic,Generates deadline extension granted emails.
+logic,Generates deadline extension revoked emails.
+logic,Generates deadline extension updated emails.
+logic,Generates the feedback session closed emails for the given session.
+logic,Generates the feedback session closing emails for the given session.
+logic,Students and instructors with deadline extensions are not notified.
+logic,Generates the feedback session closing emails for users with deadline extensions.
+logic,Generates the feedback session opening emails for the given session.
+logic,Generates the feedback session opening soon emails for the given session.
+logic,This is useful for e.g. in case the feedback session opening info was set wrongly.
+logic,Generates the feedback session published emails for the given session.
+logic,Generates the feedback session published emails for the given students and instructors in session.
+logic,"Generates the feedback session reminder emails for the given session for students and instructorsToRemind. In addition, the emails will also be forwarded to instructorsToNotify."
+logic,Generates the email containing the summary of the feedback sessions email for the given courseId for userEmail.
+logic,courseId - ID of the course userEmail - Email of student to send feedback session summary to emailType - The email type which corresponds to the reason behind why the links are being resent
+logic,Generates the feedback session unpublished emails for the given session.
+logic,Generates the course join email for the given instructor in course. Also specifies contact information of inviter.
+logic,Generates the course re-join email for the given instructor in course.
+logic,This method was private but was made public to be used in the SQLEmailGenerator for migration.
+logic,studentsForEmail - Student to generate link fragment map
+logic,Generates the login email for the given user.
+logic,Generates the new instructor account join email for the given instructor.
+logic,"Generates for the student an recovery email listing the links to submit/view responses for all feedback sessions under recoveryEmailAddress in the past 180 days. If no student with recoveryEmailAddress is found, generate an email stating that there is no such student in the system. If no feedback sessions are found, generate an email stating no feedback sessions found."
+logic,Generates the course join email for the given student in course.
+logic,Generates the course re-join email for the given student in course.
+logic,Generates the course registered email for the user with the given details in course.
+logic,Sends the given message and generates a log report.
+logic,Checks whether there are responses for a question.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Creates an account request.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the account request is not valid EntityAlreadyExistsException if the account request already exists
+logic,Creates a course and an associated instructor for the course.
+logic,Preconditions:
+logic,All parameters are non-null. instructorGoogleId already has an account and instructor privileges.
+logic,Creates a deadline extension.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the deadline extension is not valid EntityAlreadyExistsException if the deadline extension to create already exists
+logic,Creates a new feedback question.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the question is invalid
+logic,Creates a feedback response.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the response is not valid EntityAlreadyExistsException if the response already exist
+logic,"Create a feedback response comment, and return the created comment."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Creates a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the session is not valid EntityAlreadyExistsException if the session already exist
+logic,Creates an instructor.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the instructor is not valid EntityAlreadyExistsException if the instructor already exists in the database
+logic,Creates a notification.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the notification is not valid EntityAlreadyExistsException if the notification exists in the database
+logic,Creates a student.
+logic,InvalidParametersException if the student is not valid. EntityAlreadyExistsException if the student already exists in the database.
+logic,"Deletes both instructor and student privileges, as well as the account."
+logic,Fails silently if no such account.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Deletes an account request.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,"Deletes a course cascade its students, instructors, sessions, responses, deadline extensions and comments."
+logic,Fails silently if no such course.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Deletes a deadline extension.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Fails silently if the deadline extension doesn't exist.
+logic,Deletes a feedback question cascade its responses and comments.
+logic,Silently fail if question does not exist.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Deletes a feedback response and cascades its associated comments.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Deletes a comment.
+logic,"Deletes a feedback session cascade to its associated questions, responses, deadline extensions and comments."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,"Deletes an instructor cascade its associated feedback responses, deadline extensions and comments."
+logic,Fails silently if the student does not exist.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Deletes notification by ID.
+logic,Fails silently if no such notification.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,"Deletes a student cascade its associated feedback responses, deadline extensions and comments."
+logic,Fails silently if the student does not exist.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,"Deletes all the students in the course cascade their associated responses, deadline extensions and comments."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets an account request by email address and institute.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets an account request by unique constraint registrationKey.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Returns a list of accounts with email matching email.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Returns active notification for general users and the specified targetUser.
+logic,Gets the actual number of submissions for a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsnull if not found.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,"Gets a deadline extension by courseId, feedbackSessionName, userEmail and isInstructor."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets a list of deadline extensions with end time within the next 24 hours and possibly need a closing email to be sent.
+logic,Gets the expected number of submissions for a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets a List of all questions for the given session that instructor can view/submit.
+logic,Gets all questions for a feedback session. Returns an empty list if they are no questions for the session. Preconditions:
+logic,All parameters are non-null.
+logic,Gets a list of all questions for the given session that students can view/submit.
+logic,Gets comment associated with the response.
+logic,The comment is given by a feedback participant to explain the response
+logic,feedbackResponseId the response id
+logic,Get existing feedback responses from instructor for the given question.
+logic,Get existing feedback responses from student or his team for the given question.
+logic,Gets a feedback session from the data storage.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets a feedback session from the recycle bin.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Returns returns a list of sessions that were closed within past hour.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets a list of feedback sessions for instructors.
+logic,Returns a list of sessions that require automated emails to be sent as they are published.
+logic,Gets a set of giver identifiers that has at least one response under a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsnull if not found.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsnull if not found.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsnull if not found.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsnull if not found.
+logic,Preconditions:
+logic,All parameters are non-null. ReturnsEmpty list if none found.
+logic,Preconditions:
+logic,All parameters are non-null. ReturnsEmpty list if none found.
+logic,Gets a notification by ID.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets the recipients of a feedback question for student.
+logic,Returns a list of section names for the course with ID courseId.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets the session result for a feedback session.
+logic,Gets the session result for a feedback session for the given user.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Returns a List of feedback sessions in the Recycle Bin for the instructors. Omits sessions if the corresponding courses are archived or in Recycle Bin
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Preconditions:
+logic,All parameters are non-null. ReturnsEmpty list if none found.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Gets all students of a team.
+logic,Checks whether an instructor has attempted a feedback session.
+logic,"If there is no question for instructors, the feedback session is considered as attempted."
+logic,Checks whether a student has attempted a feedback session.
+logic,"If there is no question for students, the feedback session is considered as attempted."
+logic,"Make the instructor join the course, i.e. associate the Google ID to the instructor. Creates an account for the instructor if no existing account is found. Preconditions:"
+logic,Parameters regkey and googleId are non-null.
+logic,"Make the student join the course, i.e. associate the Google ID to the student. Create an account for the student if no existing account is found. Preconditions:"
+logic,All parameters are non-null. Parameters keythe registration key
+logic,key the registration key
+logic,Moves a course to Recycle Bin by its given corresponding ID.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Soft-deletes a specific session to Recycle Bin.
+logic,Persists the given data bundle to the database.
+logic,Populates fields that need dynamic generation in a question.
+logic,"Currently, only MCQ/MSQ needs to generate choices dynamically."
+logic,Preconditions:
+logic,All parameters except teamOfEntityDoingQuestion are non-null.
+logic,"feedbackQuestionAttributes the question to populate emailOfEntityDoingQuestion the email of the entity doing the question teamOfEntityDoingQuestion the team of the entity doing the question. If the entity is an instructor, it can be null."
+logic,Publishes a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,EntityDoesNotExistException if the feedback session cannot be found InvalidParametersException if session is already published
+logic,Creates or updates search document for the given account request.
+logic,Puts searchable documents from the data bundle to the database.
+logic,Creates or updates search document for the given instructor.
+logic,Creates or updates search document for the given student.
+logic,Regenerates the registration key for the instructor with email address email in course courseId.
+logic,EntityAlreadyExistsException if the newly generated instructor has the same registration key as the original one. EntityDoesNotExistException if the instructor does not exist.
+logic,Regenerates the registration key for the student with email address email in course courseId.
+logic,EntityAlreadyExistsException if the newly generated course student has the same registration key as the original one. EntityDoesNotExistException if the student does not exist.
+logic,Removes the given data bundle from the database.
+logic,Resets the associated googleId of an instructor.
+logic,Resets the googleId associated with the student.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Restores a course and all data related to the course from Recycle Bin by its given corresponding ID.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Restores a specific session from Recycle Bin to feedback sessions table.
+logic,This is used by admin to search account requests in the whole system.
+logic,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+logic,Search for students. Preconditions: all parameters are non-null.
+logic,"instructors a list of InstructorAttributes associated to a googleId, used for filtering of search result"
+logic,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search students in the whole system.
+logic,Changes the archive status of a course for an instructor.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,courseId The course of which the archive status is to be changed archiveStatus The archive status to be set
+logic,Unpublishes a feedback session.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,EntityDoesNotExistException if the feedback session cannot be found InvalidParametersException if the feedback session is not ready to be unpublished.
+logic,Updates an account request.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the account request is not valid EntityDoesNotExistException if the account request to update does not exist
+logic,Updates a course by CourseAttributes.UpdateOptions.
+logic,"If the timezone of the course is changed, cascade the change to its corresponding feedback sessions."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the course cannot be found
+logic,Updates a deadline extension.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if the updated deadline extension is not valid EntityDoesNotExistException if the deadline extension to update does not exist
+logic,Updates a feedback question by FeedbackQuestionAttributes.UpdateOptions.
+logic,Cascade adjust the question number of questions in the same session.
+logic,Cascade adjust the existing response of the question.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback question cannot be found
+logic,Updates a feedback response by FeedbackResponseAttributes.UpdateOptions.
+logic,"Cascade updates its associated feedback response comment (e.g. associated response ID, giverSection and recipientSection)."
+logic,"If the giver/recipient field is changed, the response is updated by recreating the response as question-giver-recipient is the primary key."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found EntityAlreadyExistsException if the response cannot be updated by recreation because of an existent response
+logic,Updates a feedback response comment by FeedbackResponseCommentAttributes.UpdateOptions.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found
+logic,Updates the details of a feedback session by FeedbackSessionAttributes.UpdateOptions.
+logic,Adjust email sending status if necessary.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback session cannot be found
+logic,Updates an instructor by InstructorAttributes.UpdateOptionsWithEmail.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+logic,Updates an instructor by InstructorAttributes.UpdateOptionsWithGoogleId.
+logic,"Cascade update the comments, responses and deadline extensions associated with the instructor."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+logic,Updates a notification.
+logic,Preconditions:
+logic,All parameters are non-null. Returnsupdated notification Exceptions InvalidParametersExceptionif the notification is not valid EntityDoesNotExistExceptionif the notification does not exist in the database
+logic,InvalidParametersException if the notification is not valid EntityDoesNotExistException if the notification does not exist in the database
+logic,Updates user read status for notification with ID notificationId and expiry time endTime.
+logic,Preconditions:
+logic,All parameters are non-null. endTime must be after current moment.
+logic,Updates a student by StudentAttributes.UpdateOptions.
+logic,"If email changed, update by recreating the student and cascade update all responses the student gives/receives as well as any deadline extensions given to the student."
+logic,"If team changed, cascade delete all responses the student gives/receives within that team."
+logic,"If section changed, cascade update all responses the student gives/receives."
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the student cannot be found EntityAlreadyExistsException if the student cannot be updated by recreation because of an existent student
+logic,Update instructor being edited to ensure validity of instructors for the course.
+logic,Validates sections for any limit violations and teams for any team name violations.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,Verifies that all the given instructors exist in the given course.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,EntityDoesNotExistException If some instructor does not exist in the course.
+logic,Verifies that all the given students exist in the given course.
+logic,Preconditions:
+logic,All parameters are non-null.
+logic,EntityDoesNotExistException If some student does not exist in the course.
+logic,Creates a feedback session log.
+logic,Creates a feedback session log.
+logic,Gets the number of logs for the event type and extra filters.
+logic,Gets the feedback session logs as filtered by the given parameters ordered by ascending timestamp.
+logic,email Can be null
+logic,Queries and retrieves logs with given parameters.
+logic,Returns true if the captchaResponse token is verified successfully.
+logic,Schedules for the search indexing of the account request identified by id.
+logic,id the id associated with the account request
+logic,Schedules for course registration to be sent to the specified instructor.
+logic,inviterGoogleId googleId of instructor or administrator who sends the invitation courseId the target course ID instructorEmail the email address of the invited instructor
+logic,Schedules for course registration to be sent to the specified student.
+logic,courseId the target course ID studentEmail the email address of the student
+logic,Schedules for the given list of emails to be sent.
+logic,emails the list of emails to be sent
+logic,Schedules for feedback session published email to be sent.
+logic,courseId the course ID of the feedback session feedbackSessionName the name of the feedback session
+logic,Schedules for feedback session reminders (i.e. student has not submitted responses yet) for the specified feedback session.
+logic,courseId the course ID of the feedback session feedbackSessionName the name of the feedback session
+logic,Schedules for feedback session reminders (i.e. student/instructor has not submitted responses yet) for the specified feedback session for the specified group of users.
+logic,courseId the course ID of the feedback session feedbackSessionName the name of the feedback session usersToRemind the group of users to send the reminders to requestingInstructorId the ID of the instructor who sends the reminder isSendingCopyToInstructor the indicator of whether to send an email copy to the requesting instructor
+logic,Schedules for feedback session publication reminders for the specified feedback session for the specified group of users.
+logic,courseId the course ID of the feedback session feedbackSessionName the name of the feedback session usersToEmail the group of users to send the reminders to requestingInstructorId the ID of the instructor who sends the reminder
+logic,Schedules for feedback session unpublished email to be sent.
+logic,courseId the course ID of the feedback session feedbackSessionName the name of the feedback session
+logic,Schedules for the search indexing of the instructor identified by courseId and email.
+logic,courseId the course ID of the instructor email the email of the instructor
+logic,Schedules for the search indexing of the student identified by courseId and email.
+logic,courseId the course ID of the student email the email of the student
+logic,Gets the information of a user who has administrator role only.
+logic,Gets the current logged in user.
+logic,Gets the information of the current logged in user.
+logic,"Gets the information of the current logged in user, with an SQL transaction."
+logic,Gets the information of the current masqueraded user.
+logic,"Deletes both instructor and student privileges, as well as the account."
+logic,Fails silently if no such account.
+logic,Gets an account.
+logic,Returns a list of accounts with email matching email.
+logic,Gets ids of read notifications in an account.
+logic,Gets a sql account.
+logic,"Joins the user as an instructor and sets the institute if it is not null. If the given institute is null, the instructor is given the institute of an existing instructor of the same course."
+logic,Joins the user as a student.
+logic,Updates the readNotifications of an account.
+logic,"googleId google ID of the user who read the notification. notificationId notification to be marked as read. endTime the expiry time of the notification, i.e. notification will not be shown after this time."
+logic,InvalidParametersException if the notification has expired. EntityDoesNotExistException if account or notification does not exist.
+logic,Creates an account request.
+logic,InvalidParametersException if the account request is not valid EntityAlreadyExistsException if the account request to create already exists
+logic,Deletes the account request associated with the email address and institute.
+logic,Fails silently if the account request doesn't exist.
+logic,Gets an account request by email address and institute.
+logic,Gets an account request by unique constraint registrationKey.
+logic,Creates or updates search document for the given account request.
+logic,accountRequest the account request to be put into documents
+logic,Searches for account requests in the whole system.
+logic,Updates an account request.
+logic,InvalidParametersException if the account request is not valid EntityDoesNotExistException if the account request to update does not exist
+logic,Creates a course and an associated instructor for the course.
+logic,Preconditions:
+logic,instructorGoogleId already has an account and instructor privileges.
+logic,"Deletes a course cascade its students, instructors, sessions, responses, deadline extensions and comments."
+logic,Fails silently if no such course.
+logic,Gets the course with the specified ID.
+logic,Gets the institute associated with the course.
+logic,Returns a list of CourseAttributes for all courses for a given list of instructors except for courses in Recycle Bin.
+logic,Returns a list of CourseAttributes for all courses a given student is enrolled in.
+logic,googleId The Google ID of the student
+logic,Returns a list of section names for the course with valid ID courseId.
+logic,courseId Course ID of the course
+logic,Returns a list of CourseAttributes for soft-deleted courses for a given list of instructors.
+logic,Returns team names for a particular courseId.
+logic,Note: This method does not returns any Loner information presently. Loner information must be returned as we decide to support loners in future.
+logic,Returns team names for a particular section of a course.
+logic,Note: This method does not returns any Loner information presently. Loner information must be returned as we decide to support loners in future.
+logic,Returns true if the course with ID courseId is present.
+logic,Moves a course to Recycle Bin by its given corresponding ID.
+logic,Restores a course from Recycle Bin by its given corresponding ID.
+logic,Updates a course by CourseAttributes.UpdateOptions.
+logic,"If the timezone of the course is changed, cascade the change to its corresponding feedback sessions."
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the course cannot be found
+logic,"Persists data in the given DataBundle to the database, including accounts, account requests, courses, deadline extensions, instructors, students, sessions, questions, responses, and comments."
+logic,"Accounts are generated for students and instructors with Google IDs if the corresponding accounts are not found in the data bundle. For question ID injection in responses and comments to work properly, all questions referenced by responses and comments must be included in the data bundle."
+logic,InvalidParametersException if invalid data is encountered.
+logic,"Creates document for entities that have document, i.e. searchable."
+logic,Removes the items in the data bundle from the database.
+logic,Creates a deadline extension.
+logic,InvalidParametersException if the deadline extension is not valid EntityAlreadyExistsException if the deadline extension to create already exists
+logic,Deletes a deadline extension.
+logic,Fails silently if the deadline extension doesn't exist.
+logic,Deletes deadline extensions using AttributesDeletionQuery.
+logic,Deletes all deadline extensions for a user in a course.
+logic,Fails silently if the deadline extension doesn't exist.
+logic,"Gets a deadline extension by courseId, feedbackSessionName, userEmail and isInstructor."
+logic,Gets a list of deadline extensions with end time coming up soon and possibly need a closing email to be sent.
+logic,Updates a deadline extension.
+logic,"If endTimeOption is present and sentClosingEmailOption is not explicitly set, update sentClosingEmailOption to false."
+logic,InvalidParametersException if the updated deadline extension is not valid EntityDoesNotExistException if the deadline extension to update does not exist
+logic,Updates all deadline extensions of a user in a course with new email.
+logic,Builds a complete giver to recipient map for a relatedQuestion.
+logic,relatedQuestion The question to be considered courseRoster the roster in the course
+logic,Creates a new feedback question.
+logic,InvalidParametersException if the question is invalid
+logic,Deletes a feedback question cascade its responses and comments.
+logic,Silently fail if question does not exist.
+logic,Deletes questions using AttributesDeletionQuery.
+logic,Gets a single question corresponding to the given parameters. Note:
+logic,This method should only be used if the question already exists in the database and has an ID already generated.
+logic,Gets a single question corresponding to the given parameters.
+logic,"Filters the feedback questions in a course, with specified question type."
+logic,courseId the course to search from questionType the question type to search on
+logic,Filters through the given list of questions and returns a List of questions that instructors can view/submit.
+logic,Gets a List of all questions for the given session that instructors can view/submit.
+logic,Gets a List of every FeedbackQuestion in the given session.
+logic,Filters through the given list of questions and returns a List of questions that students can view/submit.
+logic,Gets a List of all questions for the given session that students can view/submit.
+logic,Gets the recipients of a feedback question including recipient section and team.
+logic,"question the feedback question instructorGiver can be null for student giver studentGiver can be null for instructor giver courseRoster if provided, the function can be completed without touching database"
+logic,Checks if there are any questions for the given session that instructors can view/submit.
+logic,Checks if there are any questions for the given session that students can view/submit.
+logic,Populates fields that need dynamic generation in a question.
+logic,"Currently, only MCQ/MSQ needs to generate choices dynamically."
+logic,"feedbackQuestionAttributes the question to populate emailOfEntityDoingQuestion the email of the entity doing the question teamOfEntityDoingQuestion the team of the entity doing the question. If the entity is an instructor, it can be null."
+logic,Returns true if a session has question in either STUDENTS type or TEAMS type.
+logic,Returns true if a session has question in a specific giverType.
+logic,Updates a feedback question by FeedbackQuestionAttributes.UpdateOptions.
+logic,Cascade adjust the question number of questions in the same session.
+logic,Cascade adjust the existing response of the question.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback question cannot be found
+logic,Checks whether there are responses for a question.
+logic,Creates a feedback response.
+logic,InvalidParametersException if the response is not valid EntityAlreadyExistsException if the response already exist
+logic,Deletes a feedback response and cascades its associated comments.
+logic,Deletes responses using AttributesDeletionQuery.
+logic,Deletes all feedback responses of a question cascade its associated comments.
+logic,Deletes all feedback responses involved an entity cascade its associated comments.
+logic,courseId the course id entityEmail the entity email
+logic,Gets a feedback response by its unique key.
+logic,Gets a feedback response by its ID.
+logic,Gets all responses for a question.
+logic,Gets all responses given to/from a section for a question.
+logic,"feedbackQuestionId the ID of the question section if null, will retrieve all responses for the question"
+logic,Gets all responses received by an user for a course.
+logic,Gets all responses given to/from a section in a feedback session in a course.
+logic,"feedbackSessionName the name if the session courseId the course ID of the session section if null, will retrieve all responses in the session fetchType if not null, will retrieve responses by giver, receiver sections, or both"
+logic,Gets all responses given by an user for a course.
+logic,Gets all responses given by a user for a question.
+logic,Get existing feedback responses from student or his team for the given question.
+logic,Gets a set of giver identifiers that has at least one response under a feedback session.
+logic,Gets the session result for a feedback session.
+logic,"feedbackSessionName the feedback session name courseId the ID of the course instructorEmail the instructor viewing the feedback session questionId if not null, will only return partial bundle for the question section if not null, will only return partial bundle for the section fetchType if not null, will fetch responses by giver, receiver sections, or both"
+logic,Gets the session result for a feedback session for the given user.
+logic,"feedbackSessionName the feedback session name courseId the ID of the course userEmail the user viewing the feedback session isInstructor true if the user is an instructor questionId if not null, will only return partial bundle for the question isPreviewResults true if getting session results for preview purpose"
+logic,Checks whether a giver has responded a session.
+logic,Checks whether there are responses for a course.
+logic,Checks whether the giver name of a response is visible to an user.
+logic,Returns true if the responses of the question are visible to instructors.
+logic,Returns true if the responses of the question are visible to students.
+logic,Updates a feedback response by FeedbackResponseAttributes.UpdateOptions.
+logic,"Cascade updates its associated feedback response comment (e.g. associated response ID, giverSection and recipientSection)."
+logic,"If the giver/recipient field is changed, the response is updated by recreating the response as question-giver-recipient is the primary key."
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found EntityAlreadyExistsException if the response cannot be updated by recreation because of an existent response
+logic,Updates responses for a student when his email changes.
+logic,Updates responses for a student when his section changes.
+logic,Updates responses for a student when his team changes.
+logic,This is done by deleting responses that are no longer relevant to him in his new team.
+logic,Updates the relevant responses before the deletion of a student. This method takes care of the following:
+logic,Making existing responses of 'rank recipient question' consistent.
+logic,Creates a feedback response comment.
+logic,"If the comment is given by feedback participant, ownership of the corresponding response of the comment is not checked."
+logic,Deletes a comment.
+logic,Deletes comments using AttributesDeletionQuery.
+logic,Gets a feedback response comment.
+logic,"Gets a feedback response comment by ""fake"" unique constraint response-giver-createdAt."
+logic,The method is only used in testing
+logic,Gets all feedback response comments for a question in a section.
+logic,"questionId the ID of the question section if null, will retrieve all comments for the question"
+logic,Gets all response comments for a response.
+logic,Gets comment associated with the response.
+logic,The comment is given by a feedback participant to explain the response
+logic,feedbackResponseId the response id
+logic,Gets all feedback response comments for session in a section.
+logic,"courseId the course ID of the feedback session feedbackSessionName the feedback session name section if null, will retrieve all comments in the session"
+logic,Gets all comments given by a user in a course.
+logic,Returns true if the comment's giver name is visible to certain user.
+logic,Verifies whether the comment is visible to certain user.
+logic,Updates a feedback response comment by FeedbackResponseCommentAttributes.UpdateOptions.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found
+logic,Updates all email fields of feedback response comments with the new email.
+logic,Updates all common fields of feedback response comments with the same field from its parent response.
+logic,"Currently, this method only updates comment's giverSection and receiverSection for a given response."
+logic,Creates a feedback session.
+logic,InvalidParametersException if the session is not valid EntityAlreadyExistsException if the session already exist
+logic,"Deletes a feedback session cascade to its associated questions, responses, deadline extensions and comments."
+logic,Deletes sessions using AttributesDeletionQuery.
+logic,Deletes the instructor email address for all their deadlines in the feedback sessions of the given course.
+logic,Deletes the student email address for all their deadlines in the feedback sessions of the given course.
+logic,Gets the actual number of submissions for a feedback session.
+logic,Gets all ongoing feedback sessions.
+logic,Gets the expected number of submissions for a feedback session.
+logic,Gets a feedback session from the data storage.
+logic,Gets a feedback session from the recycle bin.
+logic,Returns returns a list of sessions that were closed within past hour.
+logic,Returns returns a list of sessions that are going to close within the next 24 hours.
+logic,Gets all feedback sessions of a course.
+logic,Gets all feedback sessions of a course started after time.
+logic,Gets a list of feedback sessions for instructors.
+logic,Returns returns a list of sessions that are going to open in 24 hours.
+logic,"Criteria: must be published, publishEmail must be enabled and resultsVisibleTime must be custom."
+logic,Gets a list of undeleted feedback sessions which start within the last 2 hours and need an open email to be sent.
+logic,Returns a List of feedback sessions in the Recycle Bin for the instructors. Omits sessions if the corresponding courses are archived or in Recycle Bin
+logic,Returns true if the given email is the creator of the given session.
+logic,Checks whether an instructor has attempted a feedback session.
+logic,"If there is no question for instructors, the feedback session is considered as attempted."
+logic,Checks whether a student has attempted a feedback session.
+logic,"If feedback session consists of all team questions, session is attempted by student only if someone from the team has responded. If feedback session has some individual questions, session is attempted only if the student has responded to any of the individual questions (regardless of the completion status of the team questions)."
+logic,Returns true if there are any questions for the specified user type (students/instructors) to answer.
+logic,Returns true if the feedback session is viewable by the given user type (students/instructors).
+logic,Soft-deletes a specific feedback session to Recycle Bin.
+logic,Publishes a feedback session.
+logic,InvalidParametersException if session is already published EntityDoesNotExistException if the feedback session cannot be found
+logic,Restores a specific feedback session from Recycle Bin.
+logic,Unpublishes a feedback session.
+logic,InvalidParametersException if session is already unpublished EntityDoesNotExistException if the feedback session cannot be found
+logic,Updates the details of a feedback session by FeedbackSessionAttributes.UpdateOptions.
+logic,Adjust email sending status if necessary.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback session cannot be found
+logic,Updates the instructor email address for all their deadlines in the feedback sessions of the given course.
+logic,Updates the student email address for all their deadlines in the feedback sessions of the given course.
+logic,Updates all feedback sessions of courseId to have be in courseTimeZone.
+logic,Creates an instructor.
+logic,InvalidParametersException if the instructor is not valid EntityAlreadyExistsException if the instructor already exists in the database
+logic,"Deletes an instructor cascade its associated feedback responses, deadline extensions and comments."
+logic,Fails silently if the student does not exist.
+logic,Deletes instructors using AttributesDeletionQuery.
+logic,"Deletes all instructors associated with a googleId and cascade delete its associated feedback responses, deadline extensions and comments."
+logic,Gets the list of instructors with co-owner privileges in a course.
+logic,Gets an instructor by unique ID.
+logic,Gets emails of all instructors of a course.
+logic,Gets an instructor by unique constraint courseId-email.
+logic,Gets an instructor by unique constraint courseId-googleId.
+logic,Gets an instructor by unique constraint registrationKey.
+logic,Gets all instructors of a course.
+logic,Gets all non-archived instructors associated with a googleId.
+logic,Gets all instructors associated with a googleId.
+logic,omitArchived whether archived instructors should be omitted or not
+logic,Returns true if the user associated with the googleId is an instructor in any course in the system.
+logic,Creates or updates search document for the given instructor.
+logic,instructor the instructor to be put into documents
+logic,Regenerates the registration key for the instructor with email address email in course courseId.
+logic,EntityAlreadyExistsException if the newly generated instructor has the same registration key as the original one. EntityDoesNotExistException if the instructor does not exist.
+logic,Resets the associated googleId of an instructor.
+logic,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+logic,Sets the archive status of an instructor (i.e. whether the instructor decides to archive the associated course or not).
+logic,Updates an instructor by InstructorAttributes.UpdateOptionsWithEmail.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+logic,Updates an instructor by InstructorAttributes.UpdateOptionsWithGoogleId.
+logic,"Cascade update the comments, responses and deadline extensions associated with the instructor."
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+logic,"Checks if there are any other registered instructors that can modify instructors. If there are none, the instructor currently being edited will be granted the privilege of modifying instructors automatically."
+logic,courseId Id of the course. instructorToEdit Instructor that will be edited. This may be modified within the method.
+logic,Checks if all the given instructors exist in the given course.
+logic,EntityDoesNotExistException If some instructor does not exist in the course.
+logic,Registers dependencies between different logic classes.
+logic,Creates a notification.
+logic,InvalidParametersException if the notification is not valid EntityAlreadyExistsException if the notification already exists in the database.
+logic,Deletes notification associated with the notificationId.
+logic,Fails silently if the notification doesn't exist.
+logic,Checks if a notification associated with notificationId exists.
+logic,Gets a list of notifications.
+logic,Gets all notifications.
+logic,Gets notification associated with the notificationId.
+logic,Updates/Creates the notification using NotificationAttributes.UpdateOptions.
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if notification cannot be found with given Id
+logic,Creates a student.
+logic,InvalidParametersException if the student is not valid EntityAlreadyExistsException if the student already exists in the database
+logic,"Deletes a student cascade its associated feedback responses, deadline extensions and comments."
+logic,Fails silently if the student does not exist.
+logic,Deletes students using AttributesDeletionQuery.
+logic,"Deletes all students associated a googleId and cascade its associated feedback responses, deadline extensions and comments."
+logic,"Deletes the first batchSize of the remaining students in the course cascade their associated responses, deadline extensions, and comments."
+logic,Gets list of students by email.
+logic,Gets the total number of students of a course.
+logic,Returns the section name for the given team name for the given course.
+logic,Gets a student by unique constraint courseId-googleId.
+logic,Gets a student by unique constraint courseId-email.
+logic,Gets a student by unique constraint registrationKey.
+logic,Gets all students of a course.
+logic,Gets the first batchSize students of a course.
+logic,Gets all students associated with a googleId.
+logic,Gets all students of a section.
+logic,Gets all students of a team.
+logic,Gets all unregistered students of a course.
+logic,Returns true if the user associated with the googleId is a student in any course in the system.
+logic,Returns true if the two given emails belong to the same team in the given course.
+logic,Creates or updates search document for the given student.
+logic,student the student to be put into documents
+logic,Regenerates the registration key for the student with email address email in course courseId.
+logic,EntityAlreadyExistsException if the newly generated course student has the same registration key as the original one. EntityDoesNotExistException if the student does not exist.
+logic,Resets the googleId associated with the student.
+logic,Searches for students.
+logic,instructors the constraint that restricts the search result
+logic,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search students in the whole system.
+logic,Updates a student by StudentAttributes.UpdateOptions.
+logic,"If email changed, update by recreating the student and cascade update all responses the student gives/receives as well as any deadline extensions given to the student."
+logic,"If team changed, cascade delete all responses the student gives/receives within that team."
+logic,"If section changed, cascade update all responses the student gives/receives."
+logic,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the student cannot be found EntityAlreadyExistsException if the student cannot be updated by recreation because of an existent student
+logic,Validates sections for any limit violations and teams for any team name violations.
+logic,Checks if all the given students exist in the given course.
+logic,EntityDoesNotExistException If some student does not exist in the course.
+logic,Calculates the statistics of created entities for the given time range.
+logic,Creates a statistics object.
+logic,InvalidParametersException if the statistics object is not valid EntityAlreadyExistsException if the statistics object already exists in the database
+logic,Gets the list of statistics objects between start time and end time.
+logic,Generates login link for the logging in user.
+logic,userEmail email of the logging in user. continueUrl URL upon successful login.
+logic,Parses the wrapper email object to specific implementations of email object used by the service.
+logic,Sends the email packaged as a wrapper.
+logic,Returns true if the captchaResponse token is verified successfully.
+logic,Generates login link for the logging in user.
+logic,userEmail email of the logging in user. continueUrl URL upon successful login.
+logic,Creates a feedback session log.
+logic,Creates a feedback session log for migrated courses.
+logic,Gets the feedback session logs as filtered by the given parameters ordered by ascending timestamp.
+logic,Gets the list of logs satisfying the given criteria.
+logic,"Adds the given task, to be run after the specified time, to the specified queue."
+logic,task the task object containing the details of task to be added countdownTime the time delay for the task to be executed
+logic,Returns true if the captchaResponse token is verified successfully.
+logic,Creates a feedback session log.
+logic,Creates a feedback session log for migrated courses.
+logic,Gets the feedback session logs as filtered by the given parameters ordered by ascending timestamp.
+logic,Gets the list of logs satisfying the given criteria.
+logic,"Adds the given task, to be run after the specified time, to the specified queue."
+logic,task the task object containing the details of task to be added countdownTime the time delay for the task to be executed
+logic,Parses the wrapper email object to specific implementations of email object used by the service.
+logic,Sends the email packaged as a wrapper.
+logic,Parses the wrapper email object to specific implementations of email object used by the service.
+logic,Sends the email packaged as a wrapper.
+logic,Parses the wrapper email object to specific implementations of email object used by the service.
+logic,Sends the email packaged as a wrapper.
+logic,Generates login link for the logging in user.
+logic,userEmail email of the logging in user. continueUrl URL upon successful login.
+logic,Parses the wrapper email object to specific implementations of email object used by the service.
+logic,Sends the email packaged as a wrapper.
+logic,Creates a feedback session log.
+logic,Creates a feedback session log for migrated courses.
+logic,Gets the feedback session logs as filtered by the given parameters ordered by ascending timestamp.
+logic,Gets the list of logs satisfying the given criteria.
+logic,Returns true if the captchaResponse token is verified successfully.
+logic,"Adds the given task, to be run after the specified time, to the specified queue."
+logic,task the task object containing the details of task to be added countdownTime the time delay for the task to be executed
+storage,Deletes an account.
+storage,Fails silently if there is no such account.
+storage,Gets an account.
+storage,Returns a list of accounts with email matching email.
+storage,Updates an account with AccountAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if account cannot be found
+storage,Deletes an accountRequest.
+storage,Removes search document for the given account request by using accountRequestUniqueId.
+storage,Gets an account request by email and institute.
+storage,Gets an account request by unique constraint registrationKey.
+storage,Gets the number of account requests created within a specified time range.
+storage,Creates or updates search document for the given account request.
+storage,Searches all account requests in the system.
+storage,This is used by admin to search account requests in the whole system.
+storage,Updates an account request.
+storage,InvalidParametersException if the account request is not valid EntityDoesNotExistException if the account request cannot be found
+storage,Deletes a course.
+storage,Gets a course.
+storage,Gets a list of courses.
+storage,Gets the number of courses created within a specified time range.
+storage,Restores a soft-deleted course by its given corresponding ID.
+storage,Soft-deletes a course by its given corresponding ID.
+storage,Updates a course by CourseAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the course cannot be found
+storage,Deletes a deadline extension.
+storage,Deletes deadline extensions using AttributesDeletionQuery.
+storage,"Gets a deadline extension by courseId, feedbackSessionName, userEmail and isInstructor."
+storage,Gets a list of deadline extensions with endTime coming up soon and possibly need a closing email to be sent.
+storage,Updates a deadline extension.
+storage,InvalidParametersException if the updated deadline extension is not valid EntityDoesNotExistException if the deadline extension cannot be found
+storage,Updates all deadline extensions of a user in a course with new email.
+storage,Deletes a feedback question.
+storage,Deletes questions using AttributesDeletionQuery.
+storage,Gets a feedback question by using feedbackQuestionId.
+storage,Gets a feedback question by using unique constrain: course-session-questionNumber.
+storage,Gets all feedback questions of a session that has certain giver type.
+storage,Gets all feedback questions of a session.
+storage,Checks if there is any feedback questions in a session in a course for the given giver type.
+storage,Updates a feedback question by FeedbackQuestionAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback question cannot be found
+storage,Checks whether there are responses for a question.
+storage,Deletes a feedback response.
+storage,Deletes responses using AttributesDeletionQuery.
+storage,Gets a feedback response by unique constraint question-giver-receiver.
+storage,Gets a feedback response.
+storage,Gets all feedback responses for a question.
+storage,Gets all feedback responses of a question in a specific section.
+storage,Gets all responses given to a user in a course.
+storage,Gets all responses received by a user for a question.
+storage,Gets all responses of a feedback session in a course.
+storage,"Gets all responses given to/from a section in a feedback session in a course. Optionally, retrieves by either giver, receiver sections, or both."
+storage,Gets all responses given by a user in a course.
+storage,Gets all responses given by a user for a question.
+storage,Gets a set of giver identifiers that has at least one response under a feedback session.
+storage,Gets the number of feedback responses created within a specified time range.
+storage,Returns true if there are existing responses in any feedback session in the course.
+storage,Checks whether a user has responses in a session.
+storage,Updates a feedback response with FeedbackResponseAttributes.UpdateOptions.
+storage,"If the giver/recipient field is changed, the response is updated by recreating the response as question-giver-recipient is the primary key."
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found EntityAlreadyExistsException if the response cannot be updated by recreation because of an existent response
+storage,Deletes a comment.
+storage,Deletes comments using AttributesDeletionQuery.
+storage,Gets a feedback response comment.
+storage,"Gets a feedback response comment by ""fake"" unique constraint response-giver-createdAt."
+storage,The method is only used in testing
+storage,Gets all comments given by a user in a course.
+storage,Gets comment associated with the response.
+storage,The comment is given by a feedback participant to explain the response
+storage,feedbackResponseId the response id
+storage,Gets all comments of a feedback question of a course.
+storage,Gets all comments which have its corresponding response given to/from a section of a feedback question of a course.
+storage,Gets all response comments for a response.
+storage,Gets all comments in a feedback session of a course.
+storage,Gets all comments which have its corresponding response given to/from a section of a feedback session of a course.
+storage,Updates a feedback response comment by FeedbackResponseCommentAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the comment cannot be found
+storage,Updates the giver email to a new one for all comments in a course.
+storage,Updates the last editor to a new one for all comments in a course.
+storage,Deletes a feedback session.
+storage,Deletes sessions using AttributesDeletionQuery.
+storage,"Gets a list of feedback sessions that is ongoing, i.e. starting before rangeEnd and ending after rangeStart."
+storage,The time window of searching is limited to (range + 30) days (e.g. only sessions starting before rangeEnd but not before [rangeStart - 30 days] will be considered) to not return excessive amount of results.
+storage,Gets a feedback session that is not soft-deleted.
+storage,Gets a list of all sessions for the given course except those are soft-deleted.
+storage,Gets a list of all sessions starting from some date for the given course except those are soft-deleted.
+storage,Gets a list of undeleted feedback sessions which end in the future (2 hour ago onward) and possibly need a closed email to be sent.
+storage,Gets a list of undeleted feedback sessions which end in the future (2 hour ago onward) and possibly need a closing email to be sent.
+storage,Gets a list of undeleted feedback sessions which start within the last 2 hours and possibly need an open email to be sent.
+storage,Gets a list of undeleted feedback sessions which open in the future and possibly need a opening soon email to be sent.
+storage,Gets a list of undeleted published feedback sessions which possibly need a published email to be sent.
+storage,Gets a soft-deleted feedback session.
+storage,Gets a list of sessions for the given course that are soft-deleted.
+storage,Restores a specific soft deleted feedback session.
+storage,Soft-deletes a specific feedback session by its name and course id.
+storage,Update a feedback session by FeedbackSessionAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback session cannot be found
+storage,Removes search document for the given instructor by using instructorUniqueId.
+storage,Deletes the instructor specified by courseId and email.
+storage,Fails silently if the student does not exist.
+storage,Deletes instructors using AttributesDeletionQuery.
+storage,Gets an instructor by unique ID.
+storage,Gets the emails of all instructors of a course.
+storage,Gets an instructor by unique constraint courseId-email.
+storage,Gets an instructor by unique constraint courseId-googleId.
+storage,Gets an instructor by unique constraint registrationKey.
+storage,Gets all instructors that will be displayed to students of a course.
+storage,Gets all instructors of a course.
+storage,Gets all instructors associated with a googleId.
+storage,omitArchived whether archived instructors should be omitted or not
+storage,Gets the number of instructors created within a specified time range.
+storage,Checks if the given instructors exist in the given course.
+storage,Returns true if there are any instructor entities associated with the googleId.
+storage,Creates or updates search document for the given instructor.
+storage,Regenerates the registration key of an instructor in a course.
+storage,EntityAlreadyExistsException if a new registration key could not be generated
+storage,Searches all instructors in the system.
+storage,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+storage,Updates an instructor by InstructorAttributes.UpdateOptionsWithEmail.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+storage,Updates an instructor by InstructorAttributes.UpdateOptionsWithGoogleId.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the instructor cannot be found
+storage,Deletes a notification by its unique ID.
+storage,Fails silently if there is no such notification.
+storage,Checks if a notification associated with notificationId exists.
+storage,Gets notifications by targetUser.
+storage,Gets all notifications.
+storage,Gets a notification by its unique ID.
+storage,Updates a notification with NotificationAttributes.UpdateOptions.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if notification cannot be found
+storage,Register entity classes in Objectify service.
+storage,Removes search document for the given student by using studentUniqueId.
+storage,Deletes a student in a course with email.
+storage,Fails silently if there is no such student.
+storage,Deletes students using AttributesDeletionQuery.
+storage,Gets list of students by email.
+storage,Gets the total number of students of a course.
+storage,Gets the number of students created within a specified time range.
+storage,Gets count of students of a team of a course.
+storage,Gets a student by unique ID courseId-email.
+storage,Gets a student by unique constraint courseId-googleId.
+storage,Gets a student by unique constraint registrationKey.
+storage,Gets all students of a course.
+storage,Gets the first batchSize students of the course.
+storage,Gets all students associated with a googleId.
+storage,Gets all students of a section of a course.
+storage,Gets all students of a team of a course.
+storage,Gets all unregistered students of a course.
+storage,Checks if the given students exist in the given course.
+storage,Returns true if there are any student entities associated with the googleId.
+storage,Creates or updates search document for the given student.
+storage,Regenerates the registration key of a student in a course.
+storage,EntityAlreadyExistsException if a new registration key could not be generated
+storage,Searches for students.
+storage,instructors the constraint that restricts the search result
+storage,Searches all students in the system.
+storage,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+storage,Updates a student by StudentAttributes.UpdateOptions.
+storage,"If the student's email is changed, the student is re-created."
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the student cannot be found EntityAlreadyExistsException if the student cannot be updated by recreation because of an existent student
+storage,Gets a list of statistics objects between start time and end time.
+storage,Instantiates a new account.
+storage,"googleId the Google ID of the user. name The name of the user. email The official email of the user. readNotifications The notifications that the user has read, stored in a map of ID to end time."
+storage,Retrieves the account's read notifications map. Returns an empty map if the account does not yet have the readNotifications attribute.
+storage,Generates an unique ID for the account request.
+storage,Generates an unique ID for the student.
+storage,Sets the createdAt timestamp.
+storage,Sets the full name of the student.
+storage,Updates the updatedAt timestamp when saving.
+storage,Generates a unique ID for the deadline.
+storage,Updates the updatedAt timestamp when saving.
+storage,Gets the question id.
+storage,Sets the createdAt timestamp of the question.
+storage,Updates the updatedAt timestamp when saving.
+storage,Generates an unique ID for the feedback response.
+storage,Sets the createdAt timestamp of the response.
+storage,Updates the updatedAt timestamp when saving.
+storage,Gets the giver type of the comment.
+storage,Use only if the comment has already persisted in the database and has its ID generated.
+storage,Gets whether the visibility setting of the comment follow the corresponding question.
+storage,Sets the giver type of the comment.
+storage,Sets the giver email of the response comment.
+storage,"giverEmail the giverEmail to set. This is the email used by the user in the course, not the one associated with the user's google account."
+storage,Generates an unique ID for the feedback session.
+storage,Generates an unique ID for the instructor.
+storage,Gets the instructor privileges stored in JSON format.
+storage,Gets the archived status of the instructor.
+storage,Returns the unique ID of the entity (format: emailcourseId).
+storage,Returns whether the instructor is displayed to students.
+storage,Sets the createdAt timestamp.
+storage,Sets the unique ID for the instructor entity.
+storage,uniqueId The unique ID of the entity (format: emailcourseId).
+storage,Updates the updatedAt timestamp when saving.
+storage,"Instantiates a new notification, with ID randomly generated and time fields filled automatically."
+storage,"startTime start time for the notification to be shown to users endTime notifications are hidden from users after endTime style style of the notification (e.g. success, warning, etc.) targetUser student or instructor title title of the notification message message body of the notification"
+storage,"Instantiates a new notification, with all fields passed in as parameters. This is mainly for conversion from attributes to entity."
+storage,Sets the notification as shown to the user. Only allowed to change value from false to true.
+storage,Updates the updatedAt timestamp when saving.
+storage,Generates a unique ID for the usage statistics object.
+storage,Searches for account requests.
+storage,Searches for instructors.
+storage,Registers the account request search service into the factory.
+storage,Registers the instructor search service into the factory.
+storage,Registers the student search service into the factory.
+storage,Searches for students.
+storage,instructors the constraint that restricts the search result
+storage,Creates an Account.
+storage,Deletes an Account.
+storage,Returns an Account with the id or null if it does not exist.
+storage,Returns an Account with the googleId or null if it does not exist.
+storage,Gets accounts based on email.
+storage,Saves an updated Account to the db.
+storage,Creates an AccountRequest in the database.
+storage,Deletes an AccountRequest.
+storage,Removes search document for the given account request.
+storage,Get AccountRequest by id from the database.
+storage,Get AccountRequest by registrationKey from database.
+storage,Get AccountRequest with createdTime within the times startTime and endTime.
+storage,Get all Account Requests.
+storage,Get all Account Requests for a given email.
+storage,Get all Account Requests with status of 'pending'.
+storage,Searches all account requests in the system.
+storage,This is used by admin to search account requests in the whole system.
+storage,Updates or creates (if does not exist) the AccountRequest in the database.
+storage,Creates a course.
+storage,Creates a section.
+storage,Creates a team.
+storage,Deletes a course.
+storage,Deletes all sections by courseId.
+storage,Returns a course with the courseID or null if it does not exist.
+storage,Get section by courseId and teamName.
+storage,Get section by name.
+storage,Gets a team by name.
+storage,Get teams by course.
+storage,Get teams by section.
+storage,Saves an updated Course to the db.
+storage,Creates a deadline extension.
+storage,Deletes a deadline extension.
+storage,Gets a deadline extension by id.
+storage,Get DeadlineExtension by userId and feedbackSessionId.
+storage,"Gets the DeadlineExtension with the specified feedbackSessionId and userId if it exists. Otherwise, return null."
+storage,Gets a list of deadline extensions with endTime coming up soon and possibly need a closing email to be sent.
+storage,Saves an updated DeadlineExtension to the db.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the deadline extension cannot be found
+storage,Creates a new feedback question.
+storage,InvalidParametersException if the question is invalid EntityAlreadyExistsException if the question already exists
+storage,Deletes a feedback question.
+storage,Gets a feedback question.
+storage,Gets the unique feedback question based on sessionId and questionNumber.
+storage,Gets a list of feedback questions by feedbackSession and giverType.
+storage,Gets all feedback questions of a session.
+storage,Checks if there is any feedback questions in a session in a course for the given giver type.
+storage,Checks whether there are responses for a question.
+storage,Creates a feedbackResponse.
+storage,Deletes a feedbackResponse.
+storage,Deletes all feedback responses of a question cascade its associated comments.
+storage,Gets a feedbackResponse or null if it does not exist.
+storage,Gets all responses with a specific giver and recipient in a course.
+storage,Gets all feedback responses of a question in a specific section.
+storage,Gets all responses given to a user in a course.
+storage,Gets all responses received by a user for a question.
+storage,Gets all responses of a feedback session in a course.
+storage,"Gets all responses given to/from a section in a feedback session in a course. Optionally, retrieves by either giver, receiver sections, or both."
+storage,Gets all responses given by a user in a course.
+storage,Gets the feedback responses for a feedback question.
+storage,feedbackQuestionId the Id of the feedback question. giverEmail the email of the response giver.
+storage,Get responses for a question.
+storage,Checks whether there are responses for a course.
+storage,Checks whether a user has responses in a session.
+storage,Updates a feedbackResponse.
+storage,EntityDoesNotExistException if the feedbackResponse does not exist InvalidParametersException if the feedbackResponse is not valid
+storage,Creates a feedbackResponseComment.
+storage,Deletes a feedbackResponseComment.
+storage,Gets a feedbackResponseComment or null if it does not exist.
+storage,Gets the comment associated with the feedback response.
+storage,Gets all comments of a feedback question of a course.
+storage,Gets all comments for a question where the giver or recipient is in the given section.
+storage,Gets all feedback response comments for a response.
+storage,Gets all comments in a feedback session of a course.
+storage,Gets all comments in the given session where the giver or recipient is in the given section.
+storage,Updates the feedback response comment.
+storage,Updates the giver email for all of the giver's comments in a course.
+storage,Updates the last editor to a new one for all comments in a course.
+storage,Creates a feedback session.
+storage,Deletes a feedback session.
+storage,Gets a feedback session for feedbackSessionName and courseId.
+storage,Gets a feedback session.
+storage,Gets feedback sessions for a given courseId.
+storage,Gets feedback sessions for a given courseId that start after after.
+storage,Gets a feedback session reference.
+storage,Gets a list of undeleted feedback sessions which end in the future (2 hour ago onward) and possibly need a closed email to be sent.
+storage,Gets a list of undeleted feedback sessions which end in the future (2 hour ago onward) and possibly need a closing soon email to be sent.
+storage,Gets a list of undeleted feedback sessions which start within the last 2 days and possibly need an open email to be sent.
+storage,Gets a list of undeleted feedback sessions which open in the future and possibly need a opening soon email to be sent.
+storage,Gets a list of undeleted published feedback sessions which possibly need a published email to be sent.
+storage,Gets all and only the feedback sessions ongoing within a range of time.
+storage,Gets a soft-deleted feedback session.
+storage,Gets soft-deleted feedback sessions for course.
+storage,Restores a specific soft deleted feedback session.
+storage,Soft-deletes a specific feedback session by its name and course id.
+storage,Saves an updated FeedbackSession to the db.
+storage,InvalidParametersException if attributes to update are not valid EntityDoesNotExistException if the feedback session cannot be found
+storage,Creates feedback session logs.
+storage,Gets the feedback session logs as filtered by the given parameters ordered by ascending timestamp. Logs with the same timestamp will be ordered by the student's email.
+storage,studentId Can be null feedbackSessionId Can be null
+storage,Creates a notification.
+storage,Preconditions:
+storage,Notification fields are valid.
+storage,Deletes a notification.
+storage,Fails silently if notification is null.
+storage,Gets notifications by targetUser.
+storage,Gets all notifications.
+storage,Gets a notification by its unique ID.
+storage,Updates a notification.
+storage,Preconditions:
+storage,Notification fields are valid.
+storage,Creates a usage statistics object.
+storage,Gets a list of statistics objects between start time and end time.
+storage,Performs checks on student without updating.
+storage,Creates an instructor.
+storage,Creates a student.
+storage,Gets all instructors by googleId.
+storage,Gets all students by googleId.
+storage,Gets list of students by email.
+storage,Gets all instructors and students by googleId.
+storage,Gets an instructor by its id.
+storage,Gets an instructor by googleId.
+storage,Gets an instructor by regKey.
+storage,Gets the instructor with the specified userEmail.
+storage,Gets all instructors that will be displayed to students of a course.
+storage,Gets the list of instructors for the specified courseId.
+storage,Gets instructors with the specified userEmail.
+storage,Gets all instructors associated with a googleId.
+storage,Gets the number of instructors created within a specified time range.
+storage,Gets the number of students created within a specified time range.
+storage,Gets the section with the specified sectionName and courseId.
+storage,Gets a section by its courseId and sectionName.
+storage,Gets a student by its id.
+storage,Gets a student by googleId.
+storage,Gets a student by regKey.
+storage,Gets count of students of a team of a course.
+storage,Gets the student with the specified userEmail.
+storage,Gets a student reference by its id.
+storage,Gets all students by googleId.
+storage,Gets a list of students by teamName and courseId.
+storage,Gets the list of students for the specified courseId.
+storage,Gets the list of students for the specified courseId in batches with batchSize.
+storage,Gets students with the specified userEmail.
+storage,Gets all students of a section of a course.
+storage,Gets all students of a team of a course.
+storage,Gets a team by its section and teamName.
+storage,Gets a team by its section and teamName.
+storage,Searches all instructors in the system.
+storage,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+storage,Searches for students.
+storage,instructors the constraint that restricts the search result
+storage,Searches all students in the system.
+storage,This method should be used by admin only since the searching does not restrict the visibility according to the logged-in user's google ID. This is used by admin to search instructors in the whole system.
+storage,Updates a student.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Make a copy of the FeedbackQuestion.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Gets a copy of the question details of the feedback question.
+storage,Add a read notification to this account.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Generates a new registration key for the account request.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Returns true if the attributes represent a valid state for the entity.
+storage,Adds a section to the Course.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Checks if updating this question to the question will require the responses to be deleted for consistency. Does not check if any responses exist.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Gets a copy of the question details of the feedback question.
+storage,Returns true if the response is visible to the given participant type.
+storage,Make a copy of the FeedbackQuestion.
+storage,Creates a feedback question according to its FeedbackQuestionType.
+storage,Set the question details of the question.
+storage,Gets a copy of the question details of the feedback question.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Creates a feedback response according to its FeedbackQuestionType.
+storage,Update a feedback response according to its FeedbackQuestionType.
+storage,Returns true if the response comment is visible to the given participant type.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Formats the entity before persisting in database. TODO: Override when BaseEntity adds abstract sanitizeForSaving
+storage,Creates a copy of the feedback session.
+storage,Creates a copy that uses the specific deadline for the given user.
+storage,userEmail The email address of the given user.
+storage,Gets the instructions of the feedback session.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Checks if the feedback session is closed. This occurs only when the current time is after both the deadline and the grace period.
+storage,Returns true if the feedback session is closed after the number of specified hours.
+storage,Checks if the feedback session is closed given the extendedDeadline and grace period. This occurs only when it is after the extended deadline or end time plus grace period.
+storage,Checks if the session closed some time in the last one hour from calling this function.
+storage,Returns true if the feedback session is closing (almost closed) after the number of specified hours.
+storage,Checks if user with userEmail is the creator.
+storage,"Checks if the feedback session is during the grace period. This occurs when the current time is after end time, but before the end of the grace period."
+storage,Checks if the feedback session is during the grace period given the extendedDeadline.
+storage,Checks if the feedback session is open. This occurs when the current time is either the start time or later but before the deadline.
+storage,Checks if the feedback session is opened given the extendedDeadline and grace period.
+storage,Returns true if session's start time is opening from now to anytime before now() + the specific number of {
+storage,hours} supplied in the argument.
+storage,Returns true if the feedback session opens after the number of specified hours.
+storage,Returns true if the results of the feedback session is published; false if not. Does not care if the session has ended or not.
+storage,Returns true if the session is visible; false if not. Does not care if the session has started or not.
+storage,Checks if the feedback session has not opened yet.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Returns the user's section.
+storage,Returns the user's section name.
+storage,Returns a list of sections this instructor has the specified privilege.
+storage,Returns the user's team name.
+storage,Returns true if the instructor has co-owner privilege.
+storage,Returns true if the instructor has the given privilege in the course.
+storage,Returns true if the instructor has the given privilege in the given section.
+storage,Returns true if the instructor has the given privilege in the given section for the given feedback session.
+storage,Returns true if privilege for session is present for any section.
+storage,Instantiates a new notification.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Sets the notification as shown to the user. Only allowed to change value from false to true.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Adds a team to the section.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Gets the comments of the student.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Returns the user's section.
+storage,Returns the user's section name.
+storage,Returns the user's team name.
+storage,Sets the comments of the student.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,"Returns a List of strings, one string for each attribute whose value is invalid, or an empty List if all attributes are valid."
+storage,The string explains why the value is invalid and what should values are acceptable. These explanations are good enough to show to the user.
+storage,Generates a new registration key for the user.
+storage,Returns google id of the user if account is not null.
+storage,Sets a course as well as the courseId.
+storage,Sets google id of account if account and googleId provided is not null.
+storage,Searches for account requests.
+storage,Searches for instructors.
+storage,Registers the account request search service into the factory.
+storage,Registers the instructor search service into the factory.
+storage,Registers the student search service into the factory.
+storage,Searches for students.
+storage,instructors the constraint that restricts the search result
+ui,Hides some attributes to student.
+ui,Generates FeedbackQuestionsData for a list of FeedbackQuestions.
+ui,"Normalizes question number in questions by setting question number in sequence (i.e. 1, 2, 3, 4 ...)."
+ui,Hides some attributes to a student.
+ui,"Creates FeedbackResponsesData from a list of FeedbackResponseAttributes. TODO: When deleting Attributes, rename createFromEntity to be constructor."
+ui,Creates FeedbackResponsesData from a list of FeedbackResponse.
+ui,Hide information for given student email.
+ui,Constructs FeedbackSessionData for a given user deadline.
+ui,Hides some attributes to instructor without appropriate privilege.
+ui,Hides some attributes to instructor without appropriate privilege.
+ui,Hides some attributes for instructor who is submitting feedback session.
+ui,Hides some attributes for instructor who is submitting feedback session.
+ui,Hides some attributes to student.
+ui,Hides some attributes to student.
+ui,Returns all feedback session log entries.
+ui,Constructor for check for presence of responses.
+ui,hasResponses True if has response.
+ui,Constructor for multi-session check for presence of responses.
+ui,hasResponsesBySession Map of session name and whether each has response.
+ui,Return true if has no response.
+ui,Return a map of session name to whether it has responses.
+ui,Adds additional attributes only for search result for admin.
+ui,key Registration key institute Institute of the instructor googleId Google ID of the instructor
+ui,"Returns true if access is allowed for the requester by using the registration key, false otherwise."
+ui,"Returns true if the registration key has been used, false otherwise."
+ui,"Returns true if the registration key is valid, false otherwise."
+ui,Factory method to construct API output for instructor.
+ui,Factory method to construct API output for instructor.
+ui,Factory method to construct API output for student.
+ui,Factory method to construct API output for student.
+ui,Adds additional information only for search result for admin.
+ui,key The registration key institute The institute of the student googleId The googleId of the student
+ui,Hides some attributes to student.
+ui,Validate the request.
+ui,Returns true if both reason body and title are non-null.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Get number of entities to give feedback to.
+ui,Get feedback question details.
+ui,Get feedback participants who can see responses.
+ui,Validate the request.
+ui,Validate the request.
+ui,Gets the result visible from time of the session.
+ui,Gets the session visible from time.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Gets the deadlines for instructors.
+ui,Gets the deadlines for students.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Validate the request.
+ui,Executes the action.
+ui,Checks if the requesting user has sufficient authority to access the resource.
+ui,Executes the action.
+ui,Returns the request body payload.
+ui,Gets the user information of the current user.
+ui,Returns true if the action has a request body already defined in it.
+ui,Initializes the action object based on the HTTP request.
+ui,Returns true if course has been migrated or does not exist in the datastore.
+ui,Returns true if course has been migrated or does not exist in the datastore.
+ui,"Checks if the action requires a SQL transaction when executed. If false, the action will have to handle its own SQL transactions."
+ui,Inject logic class for use in tests.
+ui,Inject logic class for use in tests.
+ui,Returns the matching Action object for the URI and method in req.
+ui,Packages and forwards the action result to the HTTP response.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Generate a course ID for demo course from a given email or a generated course Id.
+ui,"Here we check the input string is an email or course Id and handle them accordingly; check the resulting course id, and if bigger than maximumIdLength, cut it so that it equals maximumIdLength."
+ui,"instructorEmailOrProposedCourseId is the instructor email or a proposed course id that already exists. maximumIdLength is the maximum resulting id length allowed, above which we will cut the part before ""@"""
+ui,lebro.nosp@m.n@gm.nosp@m.ail.c.nosp@m.om -> lebron.gma-demo lebron.gma-demo -> lebron.gma-demo0 lebron.gma-demo0 -> lebron.gma-demo1 012345678901234567890123456789.gma-demo9 -> 01234567890123456789012345678.gma-demo10 (being cut)
+ui,Executes the action.
+ui,"Checks if the action requires a SQL transaction when executed. If false, the action will have to handle its own SQL transactions."
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Gets the minimum access control level required to access the resource.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Packages and forwards the action result to the HTTP response.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,"Checks if the action requires a SQL transaction when executed. If false, the action will have to handle its own SQL transactions."
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,"Checks if the action requires a SQL transaction when executed. If false, the action will have to handle its own SQL transactions."
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.
+ui,Executes the action.

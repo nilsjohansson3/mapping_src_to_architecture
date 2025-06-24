@@ -1,0 +1,50 @@
+The module makes a decision to yield only when the pedestrian traffic light is **GREEN** or **UNKNOWN**.
+The decision is based on the following variables, along with the calculation of the collision point.
+
+- Time-To-Collision (TTC): The time for the **ego** to reach the virtual collision point.
+- Time-To-Vehicle (TTV): The time for the **object** to reach the virtual collision point.
+
+We classify ego behavior at crosswalks into three categories according to the relative relationship between TTC and TTV [1].
+
+- A. **TTC >> TTV**: The object has enough time to cross before the ego.
+  - No stop planning.
+- B. **TTC ≒ TTV**: There is a risk of collision.
+  - **Stop point is inserted in the ego's path**.
+- C. **TTC << TTV**: Ego has enough time to cross before the object.
+  - No stop planning.
+
+<div align="center">
+    <table>
+        <tr>
+            <td><img src="./docs/virtual_collision_point.svg" width="600"></td>
+            <td><img src="./docs/ttc_vs_ttv.drawio.svg" width="350"></td>
+        </tr>
+    </table>
+</div>
+
+The boundary of A and B is interpolated from `ego_pass_later_margin_x` and `ego_pass_later_margin_y`.
+In the case of the upper figure, `ego_pass_later_margin_x` is `{0, 1, 2}` and `ego_pass_later_margin_y` is `{1, 4, 6}`.
+In the same way, the boundary of B and C is calculated from `ego_pass_first_margin_x` and `ego_pass_first_margin_y`.
+In the case of the upper figure, `ego_pass_first_margin_x` is `{3, 5}` and `ego_pass_first_margin_y` is `{0, 1}`.
+
+If the red signal is indicating to the corresponding crosswalk, the ego do not yield against the pedestrians.
+
+<div align="center">
+    <table>
+        <tr>
+            <td><img src="./docs/without_traffic_light.svg" width="600"></td>
+            <td><img src="./docs/with_traffic_light.svg" width="600"></td>
+        </tr>
+    </table>
+</div>
+
+In the `pass_judge` namespace, the following parameters are defined.
+
+| Parameter                          |       | Type   | Description                                                                                                                                     |
+| ---------------------------------- | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ego_pass_first_margin_x`          | [[s]] | double | time to collision margin vector for ego pass first situation (the module judges that ego don't have to stop at TTC + MARGIN < TTV condition)    |
+| `ego_pass_first_margin_y`          | [[s]] | double | time to vehicle margin vector for ego pass first situation (the module judges that ego don't have to stop at TTC + MARGIN < TTV condition)      |
+| `ego_pass_first_additional_margin` | [s]   | double | additional time margin for ego pass first situation to suppress chattering                                                                      |
+| `ego_pass_later_margin_x`          | [[s]] | double | time to vehicle margin vector for object pass first situation (the module judges that ego don't have to stop at TTV + MARGIN < TTC condition)   |
+| `ego_pass_later_margin_y`          | [[s]] | double | time to collision margin vector for object pass first situation (the module judges that ego don't have to stop at TTV + MARGIN < TTC condition) |
+| `ego_pass_later_additional_margin` | [s]   | double | additional time margin for object pass first situation to suppress chattering                                                                   |

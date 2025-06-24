@@ -1,0 +1,5 @@
+In the shoulder lane, when there are no parked vehicles ahead and the shoulder lane is sufficiently long, a forward shift pull out path (a clothoid curve with consistent jerk) is generated.
+
+<figure markdown>
+  ![shift_pull_out](images/shift_pull_out_path.drawio.svg){width=1100}
+</figure>

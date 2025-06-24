@@ -1,0 +1,2 @@
+Candidate trajectories are generated based on the current ego state and some target state.
+2 sampling algorithms are currently implemented: sampling with bézier curves or with polynomials in the frenet frame.

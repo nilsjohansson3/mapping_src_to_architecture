@@ -1,0 +1,1 @@
+Drivable area can be expanded in the configuration file, as noted in the [drivable area expansion section](drivable-area-expansion).

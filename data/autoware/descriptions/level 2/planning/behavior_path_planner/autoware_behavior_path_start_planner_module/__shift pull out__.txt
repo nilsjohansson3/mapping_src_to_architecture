@@ -1,0 +1,11 @@
+This is the most basic method of starting path planning and is used on road lanes and shoulder lanes when there is no particular obstruction.
+
+Pull out distance is calculated by the speed, lateral deviation, and the lateral jerk. The lateral jerk is searched for among the predetermined minimum and maximum values, and the one that generates a safe path is selected.
+
+- Generate the road lane centerline and shift it to the current position.
+- In the section between merge start and end, path is shifted by a method that is used to generate avoidance path (four segmental constant jerk polynomials)
+- Combine this path with center line of road lane
+
+![shift_pull_out](./images/shift_pull_out.drawio.svg)
+
+[shift pull out video](https://user-images.githubusercontent.com/39142679/187872468-6d5057ee-e039-499b-afc7-fe0dc8052a6b.mp4)

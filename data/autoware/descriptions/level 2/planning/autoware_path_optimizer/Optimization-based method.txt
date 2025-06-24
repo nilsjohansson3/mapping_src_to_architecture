@@ -1,0 +1,2 @@
+- pros: comparatively fast against high dimension by leveraging the gradient descent
+- cons: often converge to the local minima in the non-convex problem

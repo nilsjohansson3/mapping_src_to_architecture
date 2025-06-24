@@ -1,0 +1,2 @@
+It applies the velocity limit near the stopping point.
+This function is used to approach near the obstacle or improve the accuracy of stopping.

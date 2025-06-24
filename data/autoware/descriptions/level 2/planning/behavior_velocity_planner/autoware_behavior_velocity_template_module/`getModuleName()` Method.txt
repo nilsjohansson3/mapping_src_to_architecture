@@ -1,0 +1,2 @@
+- This method is an override of a virtual method from the `SceneModuleManagerInterface` class.
+- It returns a pointer to a constant character string, which is the name of the module. In this case, it returns "template" as the module name.

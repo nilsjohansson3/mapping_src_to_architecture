@@ -1,0 +1,8 @@
+Multiple inputs are pre-defined in the input channel parameters (described below) and the inputs can be configured
+
+| Name                      | Type                       | Description            |
+| ------------------------- | -------------------------- | ---------------------- |
+| `selected_input_channels` | `std::vector<std::string>` | array of channel names |
+
+- default value: `selected_input_channels:="['detected_objects']"`, merged DetectedObject message
+- multi-input example: `selected_input_channels:="['lidar_centerpoint','camera_lidar_fusion','detection_by_tracker','radar_far']"`

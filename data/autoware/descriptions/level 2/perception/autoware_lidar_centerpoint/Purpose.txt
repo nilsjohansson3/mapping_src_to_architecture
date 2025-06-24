@@ -1,0 +1,1 @@
+autoware_lidar_centerpoint is a package for detecting dynamic 3D objects.

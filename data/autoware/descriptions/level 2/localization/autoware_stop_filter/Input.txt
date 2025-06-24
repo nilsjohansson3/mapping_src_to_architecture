@@ -1,0 +1,3 @@
+| Name         | Type                      | Description           |
+| ------------ | ------------------------- | --------------------- |
+| `input/odom` | `nav_msgs::msg::Odometry` | localization odometry |

@@ -1,0 +1,75 @@
+```plantuml
+@startuml
+title onTimer
+start
+
+:get current pose;
+
+if (all input data are ready?) then (yes)
+else (no)
+  stop
+endif
+
+if (scenario is initialized?) then (yes)
+else (no)
+  :initialize scenario;
+endif
+
+:select scenario;
+
+:publish scenario;
+
+:extract scenario trajectory;
+
+if (scenario trajectory is empty?) then (yes)
+else (no)
+  :publish trajectory;
+endif
+
+stop
+@enduml
+```
+
+```plantuml
+@startuml
+title Scenario Transition
+start
+
+if (current_scenario is completed?\n()) then (yes)
+else (no)
+  stop
+endif
+
+' Empty
+if (scenario is initialized?) then (yes)
+else (no)
+  if (is in lane?) then (yes)
+    :set LaneDriving;
+  else (no)
+    :set Parking;
+  endif
+
+  stop
+endif
+
+' LaneDriving
+if (current scenario is LaneDriving?) then (yes)
+  if (is in parking lot & goal is not in lane?) then (yes)
+    :set Parking;
+    stop
+  endif
+endif
+
+' Parking
+if (current scenario is Parking?) then (yes)
+  if (parking is completed and is in lane?) then (yes)
+    :set LaneDriving;
+    stop
+  endif
+endif
+
+:continue previous scenario;
+
+stop
+@enduml
+```

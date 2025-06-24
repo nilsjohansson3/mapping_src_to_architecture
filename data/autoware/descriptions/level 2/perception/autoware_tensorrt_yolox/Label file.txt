@@ -1,0 +1,6 @@
+A sample label file (named `label.txt`) and semantic segmentation color map file (name `semseg_color_map.csv`) are also downloaded automatically during env preparation process
+(**NOTE:** This file is incompatible with models that output labels for the COCO dataset (e.g., models from the official YOLOX repository)).
+
+This file represents the correspondence between class index (integer outputted from YOLOX network) and
+class label (strings making understanding easier). This package maps class IDs (incremented from 0)
+with labels according to the order in this file.

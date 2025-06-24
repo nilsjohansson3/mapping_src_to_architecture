@@ -1,0 +1,6 @@
+Parameters under `stop_condition` define the criteria for stopping conditions.
+
+| Name                          | Unit    | Type   | Description                             | Default value |
+| :---------------------------- | :------ | :----- | :-------------------------------------- | :------------ |
+| maximum_deceleration_for_stop | [m/s^2] | double | Maximum deceleration allowed for a stop | 1.0           |
+| maximum_jerk_for_stop         | [m/s^3] | double | Maximum jerk allowed for a stop         | 1.0           |

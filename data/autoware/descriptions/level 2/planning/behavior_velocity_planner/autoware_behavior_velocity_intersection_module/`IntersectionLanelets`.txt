@@ -1,0 +1,21 @@
+```plantuml
+@startuml
+entity IntersectionLanelets {
+ * conflicting lanes/area
+ --
+ * first conflicting area
+ The conflicting lane area which the path intersects first
+ --
+ * attention lanes/area
+ --
+ * first attention lane area
+ The attention lane area which the path intersects first
+ --
+ * occlusion attention lanes/area
+ Part of attention lanes/area for occlusion detection
+ --
+ * is_priortized: bool
+ If ego has priority in current traffic light context
+}
+@enduml
+```

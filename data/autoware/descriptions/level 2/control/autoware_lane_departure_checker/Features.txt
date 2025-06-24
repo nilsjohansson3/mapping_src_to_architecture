@@ -1,0 +1,5 @@
+This package includes the following features:
+
+- **Lane Departure**: Check if ego vehicle is going to be out of lane boundaries based on output from control module (predicted trajectory).
+- **Trajectory Deviation**: Check if ego vehicle's pose does not deviate from the trajectory. Checking lateral, longitudinal and yaw deviation.
+- **Road Border Departure**: Check if ego vehicle's footprint, generated from the control's output, extends beyond the road border.

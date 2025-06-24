@@ -1,0 +1,6 @@
+| Name            | Type     | Description                           | Default value |
+| :-------------- | :------- | :------------------------------------ | :------------ |
+| `jerk_weight`   | `double` | Weight for "smoothness" cost for jerk | 10.0          |
+| `over_v_weight` | `double` | Weight for "over speed limit" cost    | 100000.0      |
+| `over_a_weight` | `double` | Weight for "over accel limit" cost    | 5000.0        |
+| `over_j_weight` | `double` | Weight for "over jerk limit" cost     | 1000.0        |

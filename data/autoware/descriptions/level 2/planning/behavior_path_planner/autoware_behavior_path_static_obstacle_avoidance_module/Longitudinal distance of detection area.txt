@@ -1,0 +1,20 @@
+If the parameter `detection_area.static` is set to `true`, the module creates detection area whose longitudinal distance is `max_forward_distance`.
+
+If the parameter `detection_area.static` is set to `false`, the module creates a detection area so that the ego can avoid objects with minimum lateral jerk value. Thus, the longitudinal distance depends on maximum lateral shift length, lateral jerk constraints and current ego speed. Additionally, it has to consider the distance used for the preparation phase.
+
+```c++
+...
+    const auto max_shift_length = std::max(
+      std::abs(parameters_->max_right_shift_length), std::abs(parameters_->max_left_shift_length));
+    const auto dynamic_distance =
+      PathShifter::calcLongitudinalDistFromJerk(max_shift_length, getLateralMinJerkLimit(), speed);
+
+    return std::clamp(
+      1.5 * dynamic_distance + getNominalPrepareDistance(),
+      parameters_->object_check_min_forward_distance,
+      parameters_->object_check_max_forward_distance);
+```
+
+![fig](./images/target_filter/detection_area.svg)
+
+![fig](./images/target_filter/detection_area_rviz.png)

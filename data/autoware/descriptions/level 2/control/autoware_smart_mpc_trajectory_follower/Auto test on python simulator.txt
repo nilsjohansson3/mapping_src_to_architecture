@@ -1,0 +1,40 @@
+Here, we describe a method for testing adaptive performance by giving the simulation side a predefined range of model parameters while the control side is given constant model parameters.
+
+To run a driving experiment within the parameter change range set in [run_sim.py](./autoware_smart_mpc_trajectory_follower/python_simulator/run_sim.py), for example, move to `control/autoware_smart_mpc_trajectory_follower/autoware_smart_mpc_trajectory_follower/python_simulator` and run the following command:
+
+```bash
+python3 run_sim.py --param_name steer_bias
+```
+
+Here we described the experimental procedure for steer bias, and the same method can be used for other parameters.
+
+To run the test for all parameters except limits at once, run the following command:
+
+```bash
+python3 run_auto_test.py
+```
+
+The results are stored in the `auto_test` directory.
+After the executions were completed, the following results were obtained by running [plot_auto_test_result.ipynb](./autoware_smart_mpc_trajectory_follower/python_simulator/plot_auto_test_result.ipynb):
+
+<p style="text-align: center;">
+    <img src="images/proxima_test_result_with_lstm.png" width="712px">
+</p>
+
+The orange line shows the intermediate model trained using pure pursuit figure eight drive, and the blue line shows the final model trained using data from both the intermediate model and the figure eight drive.
+In most cases, sufficient performance is obtained, but for `vehicle_type_1`, which is intended for a heavy bus, a lateral deviation of about 2 m was observed, which is not satisfactory.
+
+In `run_sim.py`, the following parameters can be set:
+
+| Parameter                 | Type               | Description                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| USE_TRAINED_MODEL_DIFF    | bool               | Whether the derivative of the trained model is reflected in the control                                                                                                                                                                                                                                                                                                   |
+| DATA_COLLECTION_MODE      | DataCollectionMode | Which method will be used to collect the training data　<br> "DataCollectionMode.ff": Straight line driving with feed-forward input <br> "DataCollectionMode.pp": Figure eight driving with pure pursuit control <br> "DataCollectionMode.mpc": Slalom driving with mpc                                                                                                   |
+| USE_POLYNOMIAL_REGRESSION | bool               | Whether to perform polynomial regression before NN                                                                                                                                                                                                                                                                                                                        |
+| USE_SELECTED_POLYNOMIAL   | bool               | When USE_POLYNOMIAL_REGRESSION is True, perform polynomial regression using only some preselected polynomials. <br> The choice of polynomials is intended to be able to absorb the contribution of some parameter shifts based on the nominal model of the vehicle.                                                                                                       |
+| FORCE_NN_MODEL_TO_ZERO    | bool               | Whether to force the NN model to zero (i.e., erase the contribution of the NN model). <br> When USE_POLYNOMIAL_REGRESSION is True, setting FORCE_MODEL_TO_ZERO to True allows the control to reflect the results of polynomial regression only, without using NN models.                                                                                                  |
+| FIT_INTERCEPT             | bool               | Whether to include bias in polynomial regression. <br> If it is False, perform the regression with a polynomial of the first degree or higher.                                                                                                                                                                                                                            |
+| USE_INTERCEPT             | bool               | When a polynomial regression including bias is performed, whether to use or discard the resulting bias information. <br> It is meaningful only if FIT_INTERCEPT is True.<br> If it is False, discard the bias in the polynomial regression in the hope that the NN model can remove the bias term, even if the polynomial regression is performed with the bias included. |
+
+> [!NOTE]
+> When `run_sim.py` is run, the `use_trained_model_diff` set in `run_sim.py` takes precedence over the `trained_model_parameter:control_application:use_trained_model_diff` set in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml).

@@ -1,0 +1,10 @@
+<img src="./media/diagnostic_trigger_node_service_status.png" alt="drawing" width="600"/>
+
+| Name                      | Description                                        | Transition condition to Warning | Transition condition to Error |
+| ------------------------- | -------------------------------------------------- | ------------------------------- | ----------------------------- |
+| `service_call_time_stamp` | the time stamp of service calling                  | none                            | none                          |
+| `is_activated`            | whether the node is in the "activate" state or not | none                            | none                          |
+| `is_succeed_service`      | whether the process of service is succeed or not   | none                            | none                          |
+
+※
+This diagnostic is only published when the service is called, so it becomes stale after the initial pose estimation is completed.

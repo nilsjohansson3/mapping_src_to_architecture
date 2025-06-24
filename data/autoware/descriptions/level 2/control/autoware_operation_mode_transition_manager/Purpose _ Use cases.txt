@@ -1,0 +1,8 @@
+This module is responsible for managing the different modes of operation for the Autoware system. The possible modes are:
+
+- `Autonomous`: the vehicle is fully controlled by the autonomous driving system
+- `Local`: the vehicle is controlled by a physically connected control system such as a joy stick
+- `Remote`: the vehicle is controlled by a remote controller
+- `Stop`: the vehicle is stopped and there is no active control system.
+
+There is also an `In Transition` state that occurs during each mode transitions. During this state, the transition to the new operator is not yet complete, and the previous operator is still responsible for controlling the system until the transition is complete. Some actions may be restricted during the `In Transition` state, such as sudden braking or steering. (This is restricted by the `vehicle_cmd_gate`).

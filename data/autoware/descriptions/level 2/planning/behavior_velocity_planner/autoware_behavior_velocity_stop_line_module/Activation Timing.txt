@@ -1,0 +1,1 @@
+This module is activated when there is a stop line in a target lane.

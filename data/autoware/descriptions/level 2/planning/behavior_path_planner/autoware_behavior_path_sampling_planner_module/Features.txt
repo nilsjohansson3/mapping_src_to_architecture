@@ -1,0 +1,8 @@
+This package is able to:
+
+- create a smooth trajectory to avoid static obstacles.
+- guarantees the generated trajectory (if any) complies with customizable hard constraints.
+- transitions to a success state after the ego vehicle merges to its goal lane.
+- re-use previously generated outputs to re-sample new alternative paths
+
+Note that the velocity is just taken over from the input path.

@@ -1,0 +1,4 @@
+| Name                                    | Type                                                     | Description                                         |
+| --------------------------------------- | -------------------------------------------------------- | --------------------------------------------------- |
+| `/control_performance/performance_vars` | control_performance_analysis::msg::ErrorStamped          | The result of the performance analysis.             |
+| `/control_performance/driving_status`   | control_performance_analysis::msg::DrivingMonitorStamped | Driving status (acceleration, jerk etc.) monitoring |

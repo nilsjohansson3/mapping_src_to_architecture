@@ -1,0 +1,4 @@
+When each pose_estimator is run alone, this package does nothing.
+Following figure shows the node configuration when NDT, YabLoc Eagleye and AR-Tag are run independently.
+
+<img src="./media/single_pose_estimator.drawio.svg" alt="drawing" width="600"/>

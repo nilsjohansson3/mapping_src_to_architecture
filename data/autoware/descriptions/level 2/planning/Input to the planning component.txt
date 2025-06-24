@@ -1,0 +1,17 @@
+- **From Map**
+  - Vector map: Contains all static information about the environment, including lane connection information for route planning, lane geometry for generating a reference path, and traffic rule-related information.
+- **From Perception**
+  - Detected object information: Provides real-time information about objects that cannot be known in advance, such as pedestrians and other vehicles. The Planning Component plans maneuvers to avoid collisions with these objects.
+  - Detected obstacle information: Supplies real-time information about the location of obstacles, which is more primitive than Detected Object and used for emergency stops and other safety measures.
+  - Occupancy map information: Offers real-time information about the presence of pedestrians and other vehicles and occluded area information.
+  - Traffic light recognition result: Provides the current state of each traffic light in real time. The Planning Component extracts relevant information for the planned path and determines whether to stop at intersections.
+- **From Localization**
+  - Vehicle motion information: Includes the ego vehicle's position, velocity, acceleration, and other motion-related data.
+- **From System**
+  - Operation mode: Indicates whether the vehicle is operating in Autonomous mode.
+- **From Human Machine Interface (HMI)**
+  - Feature execution: Allows for executing/authorizing autonomous driving operations, such as lane changes or entering intersections, by human operators.
+- **From API Layer**
+  - Destination (Goal): Represents the final position that the Planning Component aims to reach.
+  - Checkpoint: Represents a midpoint along the route to the destination. This is used during route calculation.
+  - Velocity limit: Sets the maximum speed limit for the vehicle.

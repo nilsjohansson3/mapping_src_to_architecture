@@ -1,0 +1,7 @@
+target_object:
+      ...
+          lateral_margin:
+            soft_margin: 0.3                             [m]
+            hard_margin: 0.2                             [m]
+            hard_margin_for_parked_vehicle: 0.7          [m]
+      ...

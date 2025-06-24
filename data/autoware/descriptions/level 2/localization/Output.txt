@@ -1,0 +1,13 @@
+- Pose with covariance stamped
+  - Vehicle pose, covariance, and timestamp on the map coordinate
+  - 50Hz~ frequency (depending on the requirements of the Planning and Control components)
+- Twist with covariance stamped
+  - Vehicle velocity, covariance, and timestamp on the base_link coordinate
+  - 50Hz~ frequency
+- Accel with covariance stamped
+  - Acceleration, covariance, and timestamp on the base_link coordinate
+  - 50Hz~ frequency
+- Diagnostics
+  - Diagnostics information that indicates if the localization module works properly
+- tf
+  - tf of map to base_link

@@ -1,0 +1,15 @@
+| Name                                | Type     | Description                                                           | Default value |
+| :---------------------------------- | :------- | :-------------------------------------------------------------------- | :------------ |
+| `update_rate`                       | `double` | The update rate [Hz]                                                  | 10.0          |
+| `delay_time`                        | `double` | he time delay considered for the emergency response [s]               | 0.17          |
+| `max_deceleration`                  | `double` | Max deceleration for ego vehicle to stop [m/s^2]                      | 1.5           |
+| `resample_interval`                 | `double` | Interval for resampling trajectory [m]                                | 0.5           |
+| `stop_margin`                       | `double` | The stopping margin [m]                                               | 0.5           |
+| `ego_nearest_dist_threshold`        | `double` | The nearest distance threshold for ego vehicle [m]                    | 3.0           |
+| `ego_nearest_yaw_threshold`         | `double` | The nearest yaw threshold for ego vehicle [rad]                       | 1.046         |
+| `min_trajectory_check_length`       | `double` | The minimum trajectory check length in meters [m]                     | 1.5           |
+| `trajectory_check_time`             | `double` | The trajectory check time in seconds. [s]                             | 3.0           |
+| `distinct_point_distance_threshold` | `double` | The distinct point distance threshold [m]                             | 0.3           |
+| `distinct_point_yaw_threshold`      | `double` | The distinct point yaw threshold [deg]                                | 5.0           |
+| `filtering_distance_threshold`      | `double` | It ignores the objects if distance is higher than this [m]            | 1.5           |
+| `use_object_prediction`             | `bool`   | If true, node predicts current pose of the objects wrt delta time [-] | true          |

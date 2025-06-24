@@ -1,0 +1,7 @@
+The parameters for core algorithm can be set as `node_params`.
+
+- `update_rate_hz` (double) [hz]
+  - Default parameter is 20.0
+
+This parameter is update rate for the `onTimer` function.
+This parameter should be same as the frame rate of input topics.

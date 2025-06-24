@@ -1,0 +1,1 @@
+{{ json_to_markdown("planning/autoware_scenario_selector/schema/scenario_selector.schema.json") }}

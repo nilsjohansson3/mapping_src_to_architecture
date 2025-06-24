@@ -1,0 +1,26 @@
+The transition to the success state is determined by the following conditions:
+
+- If a reverse path is being generated or the search for a pull out path fails:
+  - The module does not transition to the success state.
+- If the end point of the pull out path's shift section is reached:
+  - The module transitions to the success state.
+
+The flowchart below illustrates the decision-making process in the `canTransitSuccessState` function:
+
+```plantuml
+@startuml
+@startuml
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor black
+skinparam ActivityBorderThickness 1
+skinparam ActivityArrowColor black
+skinparam ActivityArrowThickness 1
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityDiamondBackgroundColor white
+skinparam ActivityDiamondBorderColor black
+skinparam ActivityDiamondFontColor black
+partition canTransitSuccessState() {
+start
+if (planner type is FREESPACE?) then (yes)
+if (Has reached freespace end?) then (yes)

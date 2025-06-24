@@ -1,0 +1,3 @@
+- `autoware_planning_msgs/Trajectory` : reference trajectory to follow.
+- `nav_msgs/Odometry`: current odometry
+- `autoware_vehicle_msgs/SteeringReport` current steering

@@ -1,0 +1,17 @@
+Note: This function of Vector Map Builder has not been released. Please wait for a while.
+Currently there is no documentation about Vector Map Builder's operation for this function.
+
+The optimized centerline can be generated from Vector Map Builder's operation.
+
+We can run
+
+- path planning server
+- http server to connect path planning server and Vector Map Builder
+
+with the following command by designating `<vehicle_model>`
+
+```sh
+ros2 launch autoware_static_centerline_generator run_planning_server.launch.xml vehicle_model:=<vehicle-model>
+```
+
+FYI, port ID of the http server is 4010 by default.

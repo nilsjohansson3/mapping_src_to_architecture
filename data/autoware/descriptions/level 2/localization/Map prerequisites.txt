@@ -1,0 +1,8 @@
+- Sufficient information is contained within the map.
+  - Pose estimation might be unstable if there is insufficient information in the map.
+  - A testing framework is necessary to check if the map has adequate information for pose estimation.
+- Map does not differ greatly from the actual environment.
+  - Pose estimation might be unstable if the actual environment has different objects from the map.
+  - Maps need updates according to new objects and seasonal changes.
+- Maps must be aligned to a uniform coordinate, or an alignment framework is in place.
+  - If multiple maps with different coordinate systems are used, the misalignment between them can affect the localization performance.

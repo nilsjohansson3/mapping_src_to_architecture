@@ -1,0 +1,10 @@
+It is possible to launch multiple pose_estimators and fuse them using a Kalman filter by editing launch files.
+However, this approach is not preferable due to computational costs.
+
+Particularly, NDT and YabLoc are computationally intensive, and it's not recommended to run them simultaneously.
+Also, even if both can be activated at the same time, the Kalman Filter may be affected by one of them giving bad output.
+
+> [!NOTE]
+> Currently, **there is ONLY A RULE implemented that always enables all pose_estimators.**
+> If users want to toggle pose_estimator with their own rules, they need to add new rules. by referring to example_rule.
+> The [example_rule](example_rule/README.md) has source code that can be used as a reference for implementing the rules.

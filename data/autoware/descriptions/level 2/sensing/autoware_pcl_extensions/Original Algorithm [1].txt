@@ -1,0 +1,3 @@
+1. create a 3D voxel grid over the input pointcloud data
+2. calculate centroid in each voxel
+3. all the points are approximated with their centroid

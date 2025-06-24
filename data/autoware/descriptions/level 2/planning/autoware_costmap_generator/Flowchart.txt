@@ -1,0 +1,33 @@
+```plantuml
+@startuml
+title onTimer
+start
+
+if (scenario is active?) then (yes)
+else (no)
+  stop
+endif
+
+:get current pose;
+
+:set the center of costmap to current pose;
+
+if (use wayarea or use parkinglot?) then (yes)
+ :generate map primitives costmap;
+endif
+
+if (use objects?) then (yes)
+ :generate objects costmap;
+endif
+
+if (use points?) then (yes)
+ :generate points costmap;
+endif
+
+:combine costmap;
+
+:publish costmap;
+
+stop
+@enduml
+```

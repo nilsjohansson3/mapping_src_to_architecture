@@ -1,0 +1,3 @@
+| Name              | Type                                    | Description                                                   |
+| ----------------- | --------------------------------------- | ------------------------------------------------------------- |
+| `/map/vector_map` | `autoware_map_msgs::msg::LaneletMapBin` | Subscribe vector map to calculate position of `viewer` frames |

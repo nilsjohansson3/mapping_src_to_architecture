@@ -1,0 +1,3 @@
+- Assume that the velocity limit or the stopping point is properly set at the point on the reference trajectory
+- If the velocity limit set in the reference path cannot be achieved by the designated constraints of the deceleration and the jerk, decelerate while suppressing the velocity, the acceleration and the jerk deviation as much as possible
+- The importance of the deviations is set in the config file

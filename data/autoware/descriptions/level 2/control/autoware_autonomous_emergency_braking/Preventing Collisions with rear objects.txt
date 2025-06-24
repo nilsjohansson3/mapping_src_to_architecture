@@ -1,0 +1,3 @@
+The AEB module can also prevent collisions when the ego vehicle is moving backwards.
+
+![backward driving](./image/backward-driving.drawio.svg)

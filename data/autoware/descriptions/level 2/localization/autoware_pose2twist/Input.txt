@@ -1,0 +1,3 @@
+| Name | Type                            | Description                                       |
+| ---- | ------------------------------- | ------------------------------------------------- |
+| pose | geometry_msgs::msg::PoseStamped | pose source to used for the velocity calculation. |

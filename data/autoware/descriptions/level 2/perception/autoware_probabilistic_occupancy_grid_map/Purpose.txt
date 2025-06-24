@@ -1,0 +1,2 @@
+This package outputs the probability of having an obstacle as occupancy grid map.
+![pointcloud_based_occupancy_grid_map_sample_image](./image/pointcloud_based_occupancy_grid_map_sample_image.gif)

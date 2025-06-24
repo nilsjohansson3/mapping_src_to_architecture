@@ -1,0 +1,3 @@
+- Consider more specific image distortion/occlusion type, for instance raindrop or dust.
+
+- Consider degraded visibility under fog or rain condition from optical point of view

@@ -1,0 +1,4 @@
+| Name            | Type                                               | Description            |
+| --------------- | -------------------------------------------------- | ---------------------- |
+| `~/input/image` | `sensor_msgs::msg::Image`                          | input image            |
+| `~/input/rois`  | `tier4_perception_msgs::msg::TrafficLightRoiArray` | rois of traffic lights |

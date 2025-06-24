@@ -1,0 +1,4 @@
+It resamples the points on the reference trajectory with designated time interval.
+Note that the range of the length of the trajectory is set between `min_trajectory_length` and `max_trajectory_length`, and the distance between two points is longer than `min_trajectory_interval_distance`.
+It samples densely up to the distance traveled between `resample_time` with the current velocity, then samples sparsely after that.
+By sampling according to the velocity, both calculation load and accuracy are achieved since it samples finely at low velocity and coarsely at high velocity.

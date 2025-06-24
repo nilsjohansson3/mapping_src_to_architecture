@@ -1,0 +1,11 @@
+| Mode       | Outputs, Covariance                         |
+| ---------- | ------------------------------------------- |
+| GNSS Only  | GNSS, Unmodified                            |
+| GNSS + NDT | **GNSS:** Unmodified, **NDT:** Interpolated |
+| NDT Only   | NDT, Unmodified                             |
+
+NDT covariance values overwritten only for the `GNSS + NDT` mode.
+
+This enables a smooth transition between `GNSS Only` and `NDT Only` modes.
+
+In this mode, both NDT and GNSS poses are published from this node.

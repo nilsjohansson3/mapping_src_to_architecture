@@ -1,0 +1,4 @@
+The footprint of the bicycle model is created from lines parallel to the left and right simulated motion at a distance of half the vehicle width.
+In addition, the two points on the left and right of the end point of the central simulated motion are used to complete the polygon.
+
+![bicycle_footprint_image](./media/bicycle_footprint.png)

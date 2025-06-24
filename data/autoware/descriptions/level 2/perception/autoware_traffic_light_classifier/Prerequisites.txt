@@ -1,0 +1,18 @@
+<!-- cspell:ignore Miniconda -->
+
+**Step 1.** Download and install Miniconda from the [official website](https://mmpretrain.readthedocs.io/en/latest/get_started.html).
+
+**Step 2.** Create a conda virtual environment and activate it
+
+```bash
+conda create --name tl-classifier python=3.8 -y
+conda activate tl-classifier
+```
+
+**Step 3.** Install PyTorch
+
+Please ensure you have PyTorch installed, compatible with CUDA 11.6, as it is a requirement for current Autoware
+
+```bash
+conda install pytorch==1.13.1 torchvision==0.14.1 pytorch-cuda=11.6 -c pytorch -c nvidia
+```

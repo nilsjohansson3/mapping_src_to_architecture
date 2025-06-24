@@ -1,0 +1,5 @@
+test_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='Resize', scale=224),
+    dict(type='PackInputs'),
+]

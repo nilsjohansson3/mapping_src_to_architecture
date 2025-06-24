@@ -1,0 +1,1 @@
+{{ json_to_markdown("localization/yabloc/yabloc_monitor/schema/yabloc_monitor.schema.json") }}

@@ -1,0 +1,5 @@
+In the shoulder lane, when there are parked vehicles ahead and the lane is sufficiently long behind, a path that involves reversing before generating a forward shift pull out path is created.
+
+<figure markdown>
+  ![shift_pull_out_with_back](images/shift_pull_out_path_with_back.drawio.svg){width=1100}
+</figure>

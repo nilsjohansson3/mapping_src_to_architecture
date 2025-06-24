@@ -1,0 +1,18 @@
+Sets a stop line, a pass judge line, a detection area and conflict area based on a map information and a self position.
+
+- Stop line : Automatically created based on crossing lane information.
+
+- Pass judge line : A position to judge if stop or not to avoid a rapid brake.
+
+- Detection area : Right/left side area of the self position.
+
+- Conflict area : Right/left side area from the self position to the stop line.
+
+Stop/Go state: When both conditions are met for any of each object, this module state is transited to the "stop" state and insert zero velocity to stop the vehicle.
+
+- Object is on the detection area
+- Object’s predicted path is on the conflict area
+
+In order to avoid a rapid stop, the “stop” judgement is not executed after the judgment line is passed.
+
+Once a "stop" is judged, it will not transit to the "go" state until the "go" judgment continues for a certain period in order to prevent chattering of the state (e.g. 2 seconds).

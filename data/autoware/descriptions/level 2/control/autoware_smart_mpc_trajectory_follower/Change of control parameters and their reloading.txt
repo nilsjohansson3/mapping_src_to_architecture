@@ -1,0 +1,8 @@
+The control parameters can be changed by editing files [mpc_param.yaml](./autoware_smart_mpc_trajectory_follower/param/mpc_param.yaml) and [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml).
+Although it is possible to reflect parameter changes by restarting autoware, the following command allows us to do so without leaving autoware running:
+
+```bash
+ros2 topic pub /pympc_reload_mpc_param_trigger std_msgs/msg/String "data: ''" --once
+```
+
+The main parameters among the control parameters are as follows.

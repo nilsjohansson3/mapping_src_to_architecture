@@ -1,0 +1,4 @@
+- Produces the likeliest pose, velocity, acceleration, and their covariances, computed by fusing two kinds of information:
+  - The pose obtained from the pose estimator.
+  - The velocity and acceleration obtained from the twist-accel estimator
+- Produces tf of map to base_link according to the pose estimation result

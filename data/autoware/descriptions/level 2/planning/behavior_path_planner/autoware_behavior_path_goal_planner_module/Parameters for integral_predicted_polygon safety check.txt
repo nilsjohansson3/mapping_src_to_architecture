@@ -1,0 +1,6 @@
+| Name            | Unit | Type   | Description                            | Default value |
+| :-------------- | :--- | :----- | :------------------------------------- | :------------ |
+| forward_margin  | [m]  | double | forward margin for ego footprint       | 1.0           |
+| backward_margin | [m]  | double | backward margin for ego footprint      | 1.0           |
+| lat_margin      | [m]  | double | lateral margin for ego footprint       | 1.0           |
+| time_horizon    | [s]  | double | Time width to integrate each footprint | 10.0          |

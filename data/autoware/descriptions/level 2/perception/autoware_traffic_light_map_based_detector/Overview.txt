@@ -1,0 +1,8 @@
+`autoware_traffic_light_map_based_detector` calculates where the traffic lights will appear in the image based on the HD map.
+
+Calibration and vibration errors can be entered as parameters, and the size of the detected RegionOfInterest will change according to the error.
+
+![traffic_light_map_based_detector_result](./docs/traffic_light_map_based_detector_result.svg)
+
+If the node receives route information, it only looks at traffic lights on that route.
+If the node receives no route information, it looks at a radius of 200 meters and the angle between the traffic light and the camera is less than 40 degrees.

@@ -1,0 +1,4 @@
+If the ego has already initiated an avoidance maneuver, this module tries to set the return shift end point on the stop line.
+
+![fig](./images/traffic_light/return_after_stop_line.png)
+![fig](./images/traffic_light/return_before_stop_line.png)

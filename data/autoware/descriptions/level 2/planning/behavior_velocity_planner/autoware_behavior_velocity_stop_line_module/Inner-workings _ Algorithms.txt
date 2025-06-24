@@ -1,0 +1,4 @@
+- Gets a stop line from map information.
+- insert a stop point on the path from the stop line defined in the map and the ego vehicle length.
+- Sets velocities of the path after the stop point to 0[m/s].
+- Release the inserted stop velocity when the vehicle stops at the stop point for `stop_duration_sec` seconds.

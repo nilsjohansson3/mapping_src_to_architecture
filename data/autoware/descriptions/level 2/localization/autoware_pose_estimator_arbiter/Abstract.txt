@@ -1,0 +1,4 @@
+This package launches multiple pose estimators and provides the capability to stop or resume specific pose estimators based on the situation.
+It provides provisional switching rules and will be adaptable to a wide variety of rules in the future.
+
+Please refer to [this discussion](https://github.com/orgs/autowarefoundation/discussions/3878) about other ideas on implementation.

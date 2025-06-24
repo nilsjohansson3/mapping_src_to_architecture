@@ -1,0 +1,2 @@
+If `uuid` is registered, return `true`.
+If not, return `false`.

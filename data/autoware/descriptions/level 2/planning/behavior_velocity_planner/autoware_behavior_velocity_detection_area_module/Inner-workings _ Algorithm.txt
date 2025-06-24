@@ -1,0 +1,5 @@
+1. Gets a detection area and stop line from map information and confirms if there is pointcloud in the detection area
+2. Inserts stop point l[m] in front of the stop line
+3. Inserts a pass judge point to a point where the vehicle can stop with a max deceleration
+4. Sets velocity as zero behind the stop line when the ego-vehicle is in front of the pass judge point
+5. If the ego vehicle has passed the pass judge point already, it doesn’t stop and pass through.

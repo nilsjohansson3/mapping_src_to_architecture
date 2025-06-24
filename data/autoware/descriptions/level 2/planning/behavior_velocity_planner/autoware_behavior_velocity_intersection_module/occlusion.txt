@@ -1,0 +1,20 @@
+| Parameter                                      | Type     | Description                                                                                 |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| `.enable`                                      | bool     | [-] flag to calculate occlusion detection                                                   |
+| `.occlusion_attention_area_length`             | double   | [m] the length of attention are for occlusion detection                                     |
+| `.free_space_max`                              | int      | [-] maximum value of occupancy grid cell to treat at occluded                               |
+| `.occupied_min`                                | int      | [-] minimum value of occupancy grid cell to treat at occluded                               |
+| `.denoise_kernel`                              | double   | [m] morphology window size for preprocessing raw occupancy grid                             |
+| `.attention_lane_crop_curvature_threshold`     | double   | [m] curvature threshold for trimming curved part of the lane                                |
+| `.attention_lane_crop_curvature_ds`            | double   | [m] discretization interval of centerline for lane curvature calculation                    |
+| `.creep_during_peeking.enable`                 | bool     | [-] flag to insert `creep_velocity` while peeking to intersection occlusion stopline        |
+| `.creep_during_peeking.creep_velocity`         | double   | [m/s] the command velocity while peeking to intersection occlusion stopline                 |
+| `.peeking_offset`                              | double   | [m] the offset of the front of the vehicle into the attention area for peeking to occlusion |
+| `.occlusion_required_clearance_distance`       | double   | [m] threshold for the distance to nearest occlusion cell from ego path                      |
+| `.possible_object_bbox`                        | [double] | [m] minimum bounding box size for checking if occlusion polygon is small enough             |
+| `.ignore_parked_vehicle_speed_threshold`       | double   | [m/s] velocity threshold for checking parked vehicle                                        |
+| `.occlusion_detection_hold_time`               | double   | [s] hold time of occlusion detection                                                        |
+| `.temporal_stop_time_before_peeking`           | double   | [s] temporal stop duration at default_stopline before starting peeking                      |
+| `.temporal_stop_before_attention_area`         | bool     | [-] flag to temporarily stop at first_attention_stopline before peeking into attention_area |
+| `.creep_velocity_without_traffic_light`        | double   | [m/s] creep velocity to occlusion_wo_tl_pass_judge_line                                     |
+| `.static_occlusion_with_traffic_light_timeout` | double   | [s] the timeout duration for ignoring static occlusion at intersection with traffic light   |

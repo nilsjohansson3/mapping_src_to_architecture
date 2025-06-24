@@ -1,0 +1,38 @@
+```plantuml
+@startuml
+title onTimer
+start
+
+if (all input data are ready?) then (yes)
+else (no)
+  stop
+endif
+
+if (scenario is active?) then (yes)
+else (no)
+  :reset internal data;
+  stop
+endif
+
+:get current pose;
+
+if (replan is required?) then (yes)
+  :reset internal data;
+  :publish stop trajectory before planning new trajectory;
+  :plan new trajectory;
+else (no)
+endif
+
+
+if (vehicle is stopped?) then (yes)
+  stop
+else (no)
+endif
+
+:split trajectory\n(internally managing the state);
+
+:publish trajectory;
+
+stop
+@enduml
+```

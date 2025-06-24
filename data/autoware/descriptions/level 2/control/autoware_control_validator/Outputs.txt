@@ -1,0 +1,6 @@
+It outputs the following:
+
+| Name                         | Type                                     | Description                                                               |
+| ---------------------------- | ---------------------------------------- | ------------------------------------------------------------------------- |
+| `~/output/validation_status` | control_validator/ControlValidatorStatus | validator status to inform the reason why the trajectory is valid/invalid |
+| `/diagnostics`               | diagnostic_msgs/DiagnosticStatus         | diagnostics to report errors                                              |

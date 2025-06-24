@@ -1,0 +1,2 @@
+- The calculations are activated once we have a route planned for a mission in Autoware.
+- The calculations are triggered timely based on the `update_rate` parameter.

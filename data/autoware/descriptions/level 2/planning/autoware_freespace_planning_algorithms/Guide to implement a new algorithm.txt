@@ -1,0 +1,9 @@
+- All planning algorithm class in this package must inherit `AbstractPlanningAlgorithm`
+  class. If necessary, please overwrite the virtual functions.
+- All algorithms must use `nav_msgs::OccupancyGrid`-typed costmap.
+  Thus, `AbstractPlanningAlgorithm` class mainly implements the collision checking
+  using the costmap, grid-based indexing, and coordinate transformation related to
+  costmap.
+- All algorithms must take both `PlannerCommonParam`-typed and algorithm-specific-
+  type structs as inputs of the constructor. For example, `AstarSearch` class's
+  constructor takes both `PlannerCommonParam` and `AstarParam`.

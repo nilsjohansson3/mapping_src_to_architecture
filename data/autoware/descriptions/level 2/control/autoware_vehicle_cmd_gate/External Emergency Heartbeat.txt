@@ -1,0 +1,3 @@
+The parameter `check_external_emergency_heartbeat` (true by default) enables an emergency stop request from external modules.
+This feature requires a `~/input/external_emergency_stop_heartbeat` topic for health monitoring of the external module, and the vehicle_cmd_gate module will not start without the topic.
+The `check_external_emergency_heartbeat` parameter must be false when the "external emergency stop" function is not used.

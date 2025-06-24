@@ -1,0 +1,102 @@
+<!-- spell-checker:disable -->
+
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title avoidance path planning
+start
+partition calcAvoidanceTargetObjects() {
+:calcOverhangDistance;
+note right
+ - get overhang_pose
+end note
+
+:getClosestLaneletWithinRoute;
+note right
+ - obtain overhang_lanelet
+end note
+
+if(Is overhang_lanelet.id() exist?) then (no)
+stop
+else (\n yes)
+
+if(isOnRight(object)?) then (yes)
+partition getLeftMostLineString() {
+repeat
+repeat
+:getLeftLanelet;
+note left
+ Check both
+ - lane-changeable lane
+ - non lane-changeable lane
+end note
+repeat while (Same direction Lanelet exist?) is (yes) not (no)
+:getLeftOppositeLanelet;
+repeat while (Opposite direction Lanelet exist?) is (yes) not (no)
+}
+:compute\nobject.to_road_shoulder_distance;
+note left
+distance from overhang_pose
+to left most linestring
+end note
+else(\n no)
+partition getRightMostLineString() {
+repeat
+repeat
+:getRightLanelet;
+note right
+ Check both
+ - lane-changeable lane
+ - non lane-changeable lane
+end note
+repeat while (Same direction Lanelet exist?) is (yes) not (no)
+:getRightOppositeLanelet;
+repeat while (Opposite direction Lanelet exist?) is (yes) not (no)
+}
+:compute\nobject.to_road_shoulder_distance;
+note right
+distance from overhang_pose
+to right most linestring
+end note
+endif
+endif
+}
+
+partition calcRawShiftPointsFromObjects() {
+:compute max_allowable_lateral_distance;
+note right
+The sum of
+- lat_collision_safety_buffer
+- lat_collision_margin
+- vehicle_width
+Minus
+- road_shoulder_safety_margin
+end note
+:compute avoid_margin;
+note right
+The sum of
+- lat_collision_safety_buffer
+- lat_collision_margin
+- 0.5 * vehicle_width
+end note
+if(object.to_road_shoulder_distance > max_allowable_lateral_distance ?) then (no)
+stop
+else (\n yes)
+if(isOnRight(object)?) then (yes)
+:shift_length = std::min(object.overhang_dist + avoid_margin);
+else (\n No)
+:shift_length = std::max(object.overhang_dist - avoid_margin);
+endif
+if(isSameDirectionShift(isOnRight(object),shift_length)?) then (no)
+stop
+endif
+endif
+}
+stop
+@enduml
+```
+
+<!-- spell-checker:enable -->

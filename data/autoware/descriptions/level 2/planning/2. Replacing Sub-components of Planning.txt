@@ -1,0 +1,3 @@
+Collaboration and extension at the sub-component level may interest some users. This could involve replacing Mission Planning with an existing FMS service or incorporating a third-party trajectory generation module while utilizing the existing Validation functionality.
+
+Adhering to the [Internal interface in the planning component](internal-interface-in-the-planning-component), collaboration and extension at this level are feasible. While complex coordination with existing Planning features may be limited, it allows for integration between certain Planning Component functionalities and external modules.

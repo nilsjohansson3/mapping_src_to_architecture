@@ -1,0 +1,5 @@
+In the shoulder lane, when there is an object ahead and not enough space to reverse sufficiently, a path that involves reversing before making an geometric pull out is generated.
+
+<figure markdown>
+  ![geometric_pull_out_with_back](images/geometric_pull_out_path_with_back.drawio.svg){width=1100}
+</figure>

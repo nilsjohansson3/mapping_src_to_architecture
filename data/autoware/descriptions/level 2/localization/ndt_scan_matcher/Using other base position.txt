@@ -1,0 +1,4 @@
+Other than GNSS, you can give other global position topics obtained from magnetic markers, visual markers or etc. if they are available in your environment.
+(Currently Autoware does not provide a node that gives such pose.)
+To use your topic for regularization, you need to remap the `input_regularization_pose_topic` with your topic in `ndt_scan_matcher.launch.xml`.
+By default, it is remapped with `/sensing/gnss/pose_with_covariance`.

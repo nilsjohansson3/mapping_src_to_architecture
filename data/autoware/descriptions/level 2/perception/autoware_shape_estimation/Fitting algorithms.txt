@@ -1,0 +1,12 @@
+- bounding box
+
+  - L-shape fitting: See reference below for details
+  - ML based shape fitting: See ML Based Shape Fitting Implementation section below for details
+
+- cylinder
+
+  `cv::minEnclosingCircle`
+
+- convex hull
+
+  `cv::convexHull`

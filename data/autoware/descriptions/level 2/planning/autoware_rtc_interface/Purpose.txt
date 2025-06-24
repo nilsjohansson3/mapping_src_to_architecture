@@ -1,0 +1,1 @@
+RTC Interface is an interface to publish the decision status of behavior planning modules and receive execution command from external of an autonomous driving system.

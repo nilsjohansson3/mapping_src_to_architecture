@@ -1,0 +1,11 @@
+Following figure illustrates important positions used in the intersection module. Note that each solid line represents ego front line position and the corresponding dot represents the actual inserted stop point position for the vehicle frame, namely the center of the rear wheel.
+
+![data structure](./docs/intersection-stoplines.drawio.svg)
+
+To precisely calculate stop positions, the path is interpolated at the certain interval of `common.path_interpolation_ds`.
+
+- closest_idx denotes the path point index which is closest to ego position.
+- first_attention_stopline denotes the first path point where ego footprint intersects with the attention_area.
+- If a stopline is associated with the intersection lane on the map, that line is used as default_stopline for collision detection. Otherwise the point which is `common.default_stopline_margin` meters behind first_attention_stopline is defined as default_stopline instead.
+- occlusion_peeking_stopline is a bit ahead of first_attention_stopline as described later.
+- occlusion_wo_tl_pass_judge_line is the first position where ego footprint intersects with the centerline of the first attention_area lane.

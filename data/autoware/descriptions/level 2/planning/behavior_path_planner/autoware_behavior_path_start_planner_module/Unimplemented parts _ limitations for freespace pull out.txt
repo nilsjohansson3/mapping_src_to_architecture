@@ -1,0 +1,3 @@
+- When a short path is generated, the ego does can not drive with it.
+- Complex cases take longer to generate or fail.
+- The drivable area is not guaranteed to fit in the parking_lot.

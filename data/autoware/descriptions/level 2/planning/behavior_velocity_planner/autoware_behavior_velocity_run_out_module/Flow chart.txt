@@ -1,0 +1,28 @@
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+partition "Preprocess path" {
+:Calculate the expected target velocity for ego vehicle;
+:Extend path;
+:Trim path from ego position;
+}
+
+partition "Preprocess obstacles" {
+:Create data of abstracted dynamic obstacles;
+:Exclude obstacles outside of partition lanelet;
+}
+
+partition "Collision_detection" {
+:Detect collision with dynamic obstacles;
+}
+
+partition "Insert velocity" {
+:Insert velocity to decelerate for obstacles;
+
+:Limit velocity with specified jerk and acc limit;
+}
+stop
+@enduml
+```

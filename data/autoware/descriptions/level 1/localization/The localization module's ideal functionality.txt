@@ -1,0 +1,7 @@
+- The localization module should provide pose, velocity, and acceleration for control, planning, and perception.
+- Latency and stagger should be sufficiently small or adjustable such that the estimated values can be used for control within the ODD (Operational Design Domain).
+- The localization module should produce the pose on a fixed coordinate frame.
+- Sensors should be independent of each other so that they can be easily replaced.
+- The localization module should provide a status indicating whether or not the autonomous vehicle can operate with the self-contained function or map information.
+- Tools or manuals should describe how to set proper parameters for the localization module
+- Valid calibration parameters should be provided to align different frame or pose coordinates and sensor timestamps.

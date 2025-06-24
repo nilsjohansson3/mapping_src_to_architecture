@@ -1,0 +1,4 @@
+This package is the fusion with LiDAR-based 3D detection output and radar data.
+LiDAR based 3D detection can estimate position and size of objects with high precision, but it cannot estimate velocity of objects.
+Radar data can estimate doppler velocity of objects, but it cannot estimate position and size of objects with high precision
+This fusion package is aim to fuse these characteristic data, and to estimate position, size, velocity of objects with high precision.

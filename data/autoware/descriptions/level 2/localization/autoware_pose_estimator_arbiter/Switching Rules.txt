@@ -1,0 +1,8 @@
+<details>
+<summary>Click to show details</summary>
+
+Currently, **ONLY ONE RULE** (`enable_all_rule`) is implemented.
+In the future, several rules will be implemented and users will be able to select rules.
+
+> [!TIP]
+> There are presets available to extend the rules. If you want to extend the rules, please see [example_rule](./example_rule/README.md).

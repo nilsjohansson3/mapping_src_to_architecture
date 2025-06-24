@@ -1,0 +1,2 @@
+This package generates a trajectory that is kinematically-feasible to drive and collision-free based on the input path, drivable area.
+Only position and orientation of trajectory are updated in this module, and velocity is just taken over from the one in the input path.

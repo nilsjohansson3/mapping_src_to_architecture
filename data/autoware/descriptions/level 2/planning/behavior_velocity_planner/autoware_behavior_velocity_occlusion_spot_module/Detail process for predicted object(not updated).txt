@@ -1,0 +1,49 @@
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+partition process_path {
+:clip path by length;
+note right
+  100m considering perception range
+end note
+:interpolate ego path;
+:get closest index from ego position in interpolated path;
+:extract target road type start/end distance by arc length;
+}
+partition preprocess_dynamic_object {
+:get parked vehicle from dynamic object array;
+note right
+  target parked vehicle is define as follow .
+  - dynamic object's semantic type is "car","bus","track".
+  - velocity is below `stuck_vehicle_vel`.
+end note
+}
+:generate_detection_area_polygon;
+partition find_possible_collision {
+:generate possible collision behind parked vehicle;
+note right
+  - occlusion spot candidate is stuck vehicle polygon 2 points farther which is closer to ego path.
+end note
+:calculate collision path point and intersection point;
+note right
+  - occlusion spot is calculated by stuck vehicle polygon.
+  - intersection point is where ego front bumper and darting object will crash.
+  - collision path point is calculated by arc coordinate consider ego vehicle's geometry.
+end note
+:calculate safe velocity and safe margin for possible collision;
+note right
+  - safe velocity and safe margin is calculated from performance of ego emergency braking system.
+end note
+}
+partition process_possible_collision {
+:filter collision by road type;
+:calculate slow down points for possible collision;
+:handle collision offset;
+:apply safe velocity comparing with allowed velocity;
+:insert safe velocity to path;
+}
+stop
+@enduml
+```

@@ -1,0 +1,12 @@
+This matrix describes the scenarios in which the vehicle can be engaged based on the combinations of parameter settings:
+
+| `enable_engage_on_driving` | `check_engage_condition` | `allow_autonomous_in_stopped` | Scenarios where engage is permitted                               |
+| :------------------------: | :----------------------: | :---------------------------: | :---------------------------------------------------------------- |
+|             x              |            x             |               x               | Only when the vehicle is stationary.                              |
+|             x              |            x             |               o               | Only when the vehicle is stationary.                              |
+|             x              |            o             |               x               | When the vehicle is stationary and all engage conditions are met. |
+|             x              |            o             |               o               | Only when the vehicle is stationary.                              |
+|             o              |            x             |               x               | At any time (Caution: Not recommended).                           |
+|             o              |            x             |               o               | At any time (Caution: Not recommended).                           |
+|             o              |            o             |               x               | When all engage conditions are met, regardless of vehicle status. |
+|             o              |            o             |               o               | When all engage conditions are met or the vehicle is stationary.  |

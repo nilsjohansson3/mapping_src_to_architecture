@@ -1,0 +1,7 @@
+| Variable name      | Symbol      |
+| ------------------ | ----------- |
+| covariance         | $p[n-1]$    |
+| map_offset         | $\theta[n]$ |
+| forgetting*factor* | $\lambda$   |
+| phi                | $x(=1)$     |
+| measured_acc       | $y$         |

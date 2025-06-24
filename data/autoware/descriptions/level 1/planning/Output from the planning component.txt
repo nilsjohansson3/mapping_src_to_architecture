@@ -1,0 +1,10 @@
+- **To Control**
+  - Trajectory: Provides a smooth sequence of pose, twist, and acceleration that the Control Component must follow. The trajectory is typically 10 seconds long with a 0.1-second resolution.
+  - Turn Signals: Controls the vehicle's turn indicators, such as right, left, hazard, etc. based on the planned maneuvers.
+- **To System**
+  - Diagnostics: Reports the state of the Planning Component, indicating whether the processing is running correctly and whether a safe plan is being generated.
+- **To Human Machine Interface (HMI)**
+  - Feature execution availability: Indicates the status of operations that can be executed or are required, such as lane changes or entering intersections.
+  - Trajectory candidate: Shows the potential trajectory that will be executed after the user's execution.
+- **To API Layer**
+  - Planning factors: Provides information about the reasoning behind the current planning behavior. This may include the position of target objects to avoid, obstacles that led to the decision to stop, and other relevant information.

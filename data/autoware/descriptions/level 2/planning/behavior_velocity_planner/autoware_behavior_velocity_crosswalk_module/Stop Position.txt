@@ -1,0 +1,28 @@
+First of all, `stop_distance_from_object [m]` is always kept at least between the ego and the target object for safety.
+
+When the stop line exists in the lanelet map, the stop position is calculated based on the line.
+When the stop line does **NOT** exist in the lanelet map, the stop position is calculated by keeping `stop_distance_from_crosswalk [m]` between the ego and the crosswalk.
+
+<div align="center">
+    <table>
+        <tr>
+            <td><img src="./docs/explicit_stop_line.svg" width="600"></td>
+            <td><img src="./docs/virtual_stop_line.svg" width="600"></td>
+        </tr>
+    </table>
+</div>
+
+As an exceptional case, if a pedestrian (or bicycle) is crossing **wide** crosswalks seen in scramble intersections, and the pedestrian position is more than `far_object_threshold` meters away from the stop line, the actual stop position is determined by `stop_distance_from_object` and pedestrian position, not at the stop line.
+
+<figure markdown>
+  ![far_object_threshold](docs/far_object_threshold.drawio.svg){width=700}
+</figure>
+
+In the `stop_position` namespace, the following parameters are defined.
+
+| Parameter                      |     | Type   | Description                                                                                                                                                                                                               |
+| ------------------------------ | --- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `stop_position_threshold`      | [m] | double | If the ego vehicle has stopped near the stop line than this value, this module assumes itself to have achieved yielding.                                                                                                  |
+| `stop_distance_from_crosswalk` | [m] | double | make stop line away from crosswalk for the Lanelet2 map with no explicit stop lines                                                                                                                                       |
+| `far_object_threshold`         | [m] | double | If objects cross X meters behind the stop line, the stop position is determined according to the object position (stop_distance_from_object meters before the object) for the case where the crosswalk width is very wide |
+| `stop_distance_from_object`    | [m] | double | the vehicle decelerates to be able to stop in front of object with margin                                                                                                                                                 |

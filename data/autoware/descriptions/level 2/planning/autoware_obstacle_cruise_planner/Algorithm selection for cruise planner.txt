@@ -1,0 +1,6 @@
+Currently, only a PID-based planner is supported.
+Each planner will be explained in the following.
+
+| Parameter                | Type   | Description                                                  |
+| ------------------------ | ------ | ------------------------------------------------------------ |
+| `common.planning_method` | string | cruise and stop planning algorithm, selected from "pid_base" |

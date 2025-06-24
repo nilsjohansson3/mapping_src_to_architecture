@@ -1,0 +1,1 @@
+`autoware_shift_decider` is a module to decide shift from ackermann control command.

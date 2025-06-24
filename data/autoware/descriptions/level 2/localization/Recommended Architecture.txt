@@ -1,0 +1,1 @@
+![recommended-architecture](../image/localization/recommended-architecture.png)

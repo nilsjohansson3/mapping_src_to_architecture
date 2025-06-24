@@ -1,0 +1,8 @@
+- limits for speed bump height and slow down speed to create a linear equation
+
+| Parameter    | Type   | Description                                       |
+| ------------ | ------ | ------------------------------------------------- |
+| `min_height` | double | [m] minimum height assumption of the speed bump   |
+| `max_height` | double | [m] maximum height assumption of the speed bump   |
+| `min_speed`  | double | [m/s] minimum speed assumption of slow down speed |
+| `max_speed`  | double | [m/s] maximum speed assumption of slow down speed |

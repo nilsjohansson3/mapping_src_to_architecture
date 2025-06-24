@@ -1,0 +1,6 @@
+| Name             | Type                                               | Description                                                         |
+| ---------------- | -------------------------------------------------- | ------------------------------------------------------------------- |
+| `out/objects`    | `tier4_perception_msgs/DetectedObjectsWithFeature` | The detected objects with 2D bounding boxes                         |
+| `out/image`      | `sensor_msgs/Image`                                | The image with 2D bounding boxes for visualization                  |
+| `out/mask`       | `sensor_msgs/Image`                                | The semantic segmentation mask                                      |
+| `out/color_mask` | `sensor_msgs/Image`                                | The colorized image of semantic segmentation mask for visualization |

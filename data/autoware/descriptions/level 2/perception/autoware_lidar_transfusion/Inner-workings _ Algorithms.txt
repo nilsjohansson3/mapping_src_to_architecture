@@ -1,0 +1,3 @@
+The implementation bases on TransFusion [1] work. It uses TensorRT library for data process and network inference.
+
+We trained the models using <https://github.com/open-mmlab/mmdetection3d>.

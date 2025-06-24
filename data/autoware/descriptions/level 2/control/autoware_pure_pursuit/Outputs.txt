@@ -1,0 +1,6 @@
+Return LateralOutput which contains the following to the controller node
+
+- `autoware_control_msgs/Lateral`: target steering angle
+- LateralSyncData
+  - steer angle convergence
+- `autoware_planning_msgs/Trajectory`: predicted path for ego vehicle

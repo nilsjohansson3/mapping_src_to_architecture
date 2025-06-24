@@ -1,0 +1,16 @@
+To filter the objects crossing to ego vehicle, this package filter the objects as below algorithm.
+
+![algorithm](docs/radar_crossing_objects_noise_filter.drawio.svg)
+
+```cpp
+  // If velocity of an object is rather than the velocity_threshold,
+  // and crossing_yaw is near to vertical
+  // angle_threshold < crossing_yaw < pi - angle_threshold
+  if (
+    velocity > node_param_.velocity_threshold &&
+    abs(std::cos(crossing_yaw)) < abs(std::cos(node_param_.angle_threshold))) {
+    // Object is noise object;
+  } else {
+    // Object is not noise object;
+  }
+```

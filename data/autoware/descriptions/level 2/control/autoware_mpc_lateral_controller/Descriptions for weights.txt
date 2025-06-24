@@ -1,0 +1,8 @@
+- `weight_lat_error`: Reduce lateral tracking error. This acts like P gain in PID.
+- `weight_heading_error`: Make a drive straight. This acts like D gain in PID.
+- `weight_heading_error_squared_vel_coeff` : Make a drive straight in high speed range.
+- `weight_steering_input`: Reduce oscillation of tracking.
+- `weight_steering_input_squared_vel_coeff`: Reduce oscillation of tracking in high speed range.
+- `weight_lat_jerk`: Reduce lateral jerk.
+- `weight_terminal_lat_error`: Preferable to set a higher value than normal lateral weight `weight_lat_error` for stability.
+- `weight_terminal_heading_error`: Preferable to set a higher value than normal heading weight `weight_heading_error` for stability.

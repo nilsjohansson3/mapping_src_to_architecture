@@ -1,0 +1,5 @@
+```mermaid
+flowchart LR
+  A{ }
+  A --whatever --> _A[When the ego vehicle is in a predetermined pose_estimator_area,\n it enables the corresponding pose_estamtor.]
+```

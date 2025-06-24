@@ -1,0 +1,12 @@
+Generate a configuration file for your preferred model within the `configs` folder
+
+```bash
+touch ~/mmpretrain/configs/mobilenet_v2/mobilenet-v2_8xb32_custom.py
+```
+
+Open the configuration file in your preferred text editor and make a copy of
+the provided content. Adjust the **data_root** variable to match the path of your dataset.
+You are welcome to customize the configuration parameters for the model, dataset, and scheduler to
+suit your preferences
+
+```python

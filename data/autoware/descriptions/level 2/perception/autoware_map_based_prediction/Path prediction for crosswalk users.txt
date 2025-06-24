@@ -1,0 +1,25 @@
+This module treats **Pedestrians** and **Bicycles** as objects using the crosswalk, and outputs prediction path based on map and estimated object's velocity, assuming the object has intention to cross the crosswalk, if the objects satisfies at least one of the following conditions:
+
+- move toward the crosswalk
+- stop near the crosswalk
+
+<div align="center">
+  <img src="images/target_objects.svg" width=90%>
+</div>
+
+If there are a reachable crosswalk entry points within the `prediction_time_horizon` and the objects satisfies above condition, this module outputs additional predicted path to cross the opposite side via the crosswalk entry point.
+
+This module takes into account the corresponding traffic light information.
+When RED signal is indicated, we assume the target object will not walk across.
+In addition, if the target object is stopping (not moving) against GREEN signal, we assume the target object will not walk across either.
+This prediction comes from the assumption that the object should move if the traffic light is green and the object is intended to cross.
+
+<div align="center">
+  <img src="images/outside_road.svg" width=90%>
+</div>
+
+If the target object is inside the road or crosswalk, this module outputs one or two additional prediction path(s) to reach exit point of the crosswalk. The number of prediction paths are depend on whether object is moving or not. If the object is moving, this module outputs one prediction path toward an exit point that existed in the direction of object's movement. One the other hand, if the object has stopped, it is impossible to infer which exit points the object want to go, so this module outputs two prediction paths toward both side exit point.
+
+<div align="center">
+  <img src="images/inside_road.svg" width=90%>
+</div>

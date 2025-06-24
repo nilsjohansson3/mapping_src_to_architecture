@@ -1,0 +1,3 @@
+YOLOX github repository
+
+- <https://github.com/Megvii-BaseDetection/YOLOX>

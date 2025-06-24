@@ -1,0 +1,3 @@
+| Parameter        | Type   | Description                                                                         |
+| ---------------- | ------ | ----------------------------------------------------------------------------------- |
+| `lateral_margin` | double | lateral margin from the vehicle footprint for slow down obstacle detection area [m] |

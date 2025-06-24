@@ -1,0 +1,1 @@
+{{json_to_markdown("control/autoware_external_cmd_selector/schema/external_cmd_selector.schema.json")}}

@@ -1,0 +1,10 @@
+This module plans to avoid stop in 'no stopping area`.
+
+![brief](./docs/no-stopping-area.svg)
+
+- PassThrough case
+  - if ego vehicle go through pass judge point, then ego vehicle can't stop with maximum jerk and acceleration, so this module doesn't insert stop velocity. In this case override or external operation is necessary.
+- STOP case
+  - If there is a stuck vehicle or stop velocity around `no_stopping_area`, then vehicle stops inside `no_stopping_area` so this module makes stop velocity in front of `no_stopping_area`
+- GO case
+  - else

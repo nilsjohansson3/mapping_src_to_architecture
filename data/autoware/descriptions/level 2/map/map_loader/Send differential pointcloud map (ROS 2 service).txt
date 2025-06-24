@@ -1,0 +1,4 @@
+Here, we assume that the pointcloud maps are divided into grids.
+
+Given a query and set of map IDs, the node sends a set of pointcloud maps that overlap with the queried area and are not included in the set of map IDs.
+Please see [the description of `GetDifferentialPointCloudMap.srv`](https://github.com/autowarefoundation/autoware_msgs/tree/main/autoware_map_msgsgetdifferentialpointcloudmapsrv) for details.

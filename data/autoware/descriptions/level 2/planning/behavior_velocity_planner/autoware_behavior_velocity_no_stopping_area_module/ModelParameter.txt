@@ -1,0 +1,9 @@
+| Parameter                    | Type   | Description                                                         |
+| ---------------------------- | ------ | ------------------------------------------------------------------- |
+| `state_clear_time`           | double | [s] time to clear stop state                                        |
+| `stuck_vehicle_vel_thr`      | double | [m/s] vehicles below this velocity are considered as stuck vehicle. |
+| `stop_margin`                | double | [m] margin to stop line at no stopping area                         |
+| `dead_line_margin`           | double | [m] if ego pass this position GO                                    |
+| `stop_line_margin`           | double | [m] margin to auto-gen stop line at no stopping area                |
+| `detection_area_length`      | double | [m] length of searching polygon                                     |
+| `stuck_vehicle_front_margin` | double | [m] obstacle stop max distance                                      |

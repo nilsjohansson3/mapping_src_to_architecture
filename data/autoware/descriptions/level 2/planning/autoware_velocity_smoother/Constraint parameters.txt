@@ -1,0 +1,8 @@
+| Name           | Type     | Description                                    | Default value |
+| :------------- | :------- | :--------------------------------------------- | :------------ |
+| `max_velocity` | `double` | Max velocity limit [m/s]                       | 20.0          |
+| `max_accel`    | `double` | Max acceleration limit [m/ss]                  | 1.0           |
+| `min_decel`    | `double` | Min deceleration limit [m/ss]                  | -0.5          |
+| `stop_decel`   | `double` | Stop deceleration value at a stop point [m/ss] | 0.0           |
+| `max_jerk`     | `double` | Max jerk limit [m/sss]                         | 1.0           |
+| `min_jerk`     | `double` | Min jerk limit [m/sss]                         | -0.5          |

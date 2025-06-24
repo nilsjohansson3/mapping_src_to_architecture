@@ -1,0 +1,9 @@
+This is the default and simplest rule. This rule enables all pose_estimators regardless of their current state.
+
+```mermaid
+flowchart LR
+  A{ }
+  A --whatever --> _A[enable all pose_estimators]
+```
+
+</details>

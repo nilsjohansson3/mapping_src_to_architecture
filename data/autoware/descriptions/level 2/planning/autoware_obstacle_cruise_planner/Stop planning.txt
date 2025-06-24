@@ -1,0 +1,10 @@
+In the `pid_based_planner` namespace,
+
+| Parameter                                         | Type   | Description                                                  |
+| ------------------------------------------------- | ------ | ------------------------------------------------------------ |
+| `obstacle_velocity_threshold_from_cruise_to_stop` | double | obstacle velocity threshold to be stopped from cruised [m/s] |
+
+Only one obstacle is targeted for the stop planning.
+It is the obstacle among obstacle candidates whose velocity is less than `obstacle_velocity_threshold_from_cruise_to_stop`, and which is the nearest to the ego along the trajectory. A stop point is inserted keeping`common.safe_distance_margin` distance between the ego and obstacle.
+
+Note that, as explained in the stop planning design, a stop planning which requires a strong acceleration (less than `common.min_strong_accel`) will be canceled.

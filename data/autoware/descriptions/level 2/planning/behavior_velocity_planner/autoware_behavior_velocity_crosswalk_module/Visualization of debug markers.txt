@@ -1,0 +1,14 @@
+`/planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/crosswalk` shows the following markers.
+
+<figure markdown>
+  ![limitation](docs/debug_markers.png){width=1000}
+</figure>
+
+- Yellow polygons
+  - Ego footprints' polygon to calculate the collision check.
+- Pink polygons
+  - Object footprints' polygon to calculate the collision check.
+- The color of crosswalks
+  - Considering the traffic light's color, red means the target crosswalk, and white means the ignored crosswalk.
+- Texts
+  - It shows the module ID, TTC, TTV, and the module state.

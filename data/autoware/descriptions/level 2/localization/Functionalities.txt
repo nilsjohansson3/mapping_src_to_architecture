@@ -1,0 +1,2 @@
+- Correct vehicle positions along the lateral direction.
+- Pose correction along the longitudinal can be inaccurate, but can be resolved by fusing with GNSS.

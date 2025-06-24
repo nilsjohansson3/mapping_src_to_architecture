@@ -1,0 +1,2 @@
+- Need to remove backward compatibility interfaces.
+- This node should be merged to the `vehicle_cmd_gate` due to its strong connection.

@@ -1,0 +1,4 @@
+The tracker models used in this package vary based on the class of the detected object.
+See more details in the [models.md](models.md).
+
+<!-- In the future, you can add flowcharts, state transitions, and other details about how this package works. -->

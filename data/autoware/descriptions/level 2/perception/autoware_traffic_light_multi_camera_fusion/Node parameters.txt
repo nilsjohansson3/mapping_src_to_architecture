@@ -1,0 +1,6 @@
+| Parameter              | Type            | Description                                      |
+| ---------------------- | --------------- | ------------------------------------------------ |
+| `camera_namespaces`    | vector\<string> | Camera Namespaces to be fused                    |
+| `message_lifespan`     | double          | The maximum timestamp span to be fused           |
+| `approximate_sync`     | bool            | Whether work in Approximate Synchronization Mode |
+| `perform_group_fusion` | bool            | Whether perform Group Fusion                     |

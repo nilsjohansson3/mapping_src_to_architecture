@@ -1,0 +1,6 @@
+optim_wrapper = dict(
+    optimizer=dict(type='SGD', lr=0.001, momentum=0.9))
+param_scheduler = dict(type='StepLR', by_epoch=True, step_size=1, gamma=0.98)
+
+dataset_type = 'CustomDataset'
+data_root = "/PATH/OF/YOUR/DATASET"

@@ -1,0 +1,29 @@
+1. Calculate the standard deviation of error ellipse(covariance) in vehicle coordinate.
+
+   1.Transform covariance into vehicle coordinate.
+
+   $$
+   \begin{align}
+   \left( \begin{array}{cc} x_{vehicle}\\ y_{vehicle}\\ \end{array} \right) = R_{map2vehicle}  \left( \begin{array}{cc} x_{map}\\ y_{map}\\ \end{array} \right)
+   \end{align}
+   $$
+
+   Calculate covariance in vehicle coordinate.
+
+   $$
+   \begin{align}
+   Cov_{vehicle} &= E \left[
+   \left( \begin{array}{cc} x_{vehicle}\\ y_{vehicle}\\ \end{array} \right) (x_{vehicle}, y_{vehicle}) \right] \\
+   &= E \left[ R\left( \begin{array}{cc} x_{map}\\ y_{map}\\ \end{array} \right)
+   (x_{map}, y_{map})R^t
+   \right] \\
+   &= R E\left[ \left( \begin{array}{cc} x_{map}\\ y_{map}\\ \end{array} \right)
+   (x_{map}, y_{map})
+   \right] R^t \\
+   &= R Cov_{map} R^t
+   \end{align}
+   $$
+
+   2.The longitudinal length we want to expand is correspond to marginal distribution of $x_{vehicle}$, which is represented in $Cov_{vehicle}(0,0)$. In the same way, the lateral length is represented in $Cov_{vehicle}(1,1)$. Wikipedia reference [here](https://en.wikipedia.org/wiki/Multivariate_normal_distributionMarginal_distributions).
+
+2. Expand footprint based on the standard deviation multiplied with `footprint_margin_scale`.

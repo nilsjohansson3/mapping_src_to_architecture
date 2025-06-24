@@ -1,0 +1,1 @@
+There is a debugging tool called [RTC Replayer](https://autowarefoundation.github.io/autoware_tools/main/planning/autoware_rtc_replayer/) for the RTC interface.

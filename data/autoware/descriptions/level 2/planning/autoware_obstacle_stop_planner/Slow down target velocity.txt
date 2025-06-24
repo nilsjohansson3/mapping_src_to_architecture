@@ -1,0 +1,4 @@
+| Parameter                | Type   | Description                  |
+| ------------------------ | ------ | ---------------------------- |
+| `max_slow_down_velocity` | double | max slow down velocity [m/s] |
+| `min_slow_down_velocity` | double | min slow down velocity [m/s] |

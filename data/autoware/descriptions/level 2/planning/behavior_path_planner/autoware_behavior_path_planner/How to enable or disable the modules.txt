@@ -1,0 +1,19 @@
+Enabling and disabling the modules in the behavior path planner is primarily managed through two key files: `default_preset.yaml` and `behavior_path_planner.launch.xml`.
+
+The `default_preset.yaml` file acts as a configuration file for enabling or disabling specific modules within the planner. It contains a series of arguments which represent the behavior path planner's modules or features. For example:
+
+- `launch_static_obstacle_avoidance_module`: Set to `true` to enable the avoidance module, or `false` to disable it.
+
+!!! note
+
+    Click [here](https://github.com/autowarefoundation/autoware_launch/blob/main/autoware_launch/config/planning/preset/default_preset.yaml) to view the `default_preset.yaml`.
+
+The `behavior_path_planner.launch.xml` file references the settings defined in `default_preset.yaml` to apply the configurations when the behavior path planner's node is running. For instance, the parameter `static_obstacle_avoidance.enable_module` in
+
+```xml
+<param name="static_obstacle_avoidance.enable_module" value="$(var launch_static_obstacle_avoidance_module)"/>
+```
+
+corresponds to launch_static_obstacle_avoidance_module from `default_preset.yaml`.
+
+Therefore, to enable or disable a module, simply set the corresponding module in `default_preset.yaml` to `true` or `false`. These changes will be applied upon the next launch of Autoware.

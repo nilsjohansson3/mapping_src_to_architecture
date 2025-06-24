@@ -1,0 +1,2 @@
+You can download the ONNX file using these instructions.  
+Please visit [autoware-documentation](https://github.com/autowarefoundation/autoware-documentation/blob/main/docs/models/index.md) for more information.

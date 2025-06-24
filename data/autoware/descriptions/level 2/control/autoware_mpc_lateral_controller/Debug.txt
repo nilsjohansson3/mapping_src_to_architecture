@@ -1,0 +1,3 @@
+| Name                       | Type    | Description                                                                       | Default value |
+| :------------------------- | :------ | :-------------------------------------------------------------------------------- | :------------ |
+| publish_debug_trajectories | boolean | publish predicted trajectory and resampled reference trajectory for debug purpose | true          |

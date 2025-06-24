@@ -1,0 +1,8 @@
+If it does not seems to work, users can get more information in the following ways.
+
+> [!TIP]
+>
+> ```bash
+> ros2 service call /localization/autoware_pose_estimator_arbiter/config_logger logging_demo/srv/ConfigLogger \
+>   '{logger_name: localization.autoware_pose_estimator_arbiter, level: debug}'
+> ```

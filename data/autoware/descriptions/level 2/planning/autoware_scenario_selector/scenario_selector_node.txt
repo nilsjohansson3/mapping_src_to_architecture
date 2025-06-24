@@ -1,0 +1,1 @@
+`scenario_selector_node` is a node that switches trajectories from each scenario.

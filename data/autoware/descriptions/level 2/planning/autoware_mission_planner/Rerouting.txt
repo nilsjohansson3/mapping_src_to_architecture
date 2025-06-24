@@ -1,0 +1,10 @@
+Reroute here means changing the route while driving. Unlike route setting, it is required to keep a certain distance from vehicle to the point where the route is changed.
+If the ego vehicle is not on autonomous driving state, the safety checking process will be skipped.
+
+![rerouting_safety](./media/rerouting_safety.svg)
+
+And there are three use cases that require reroute.
+
+- Route change API
+- Emergency route
+- Goal modification

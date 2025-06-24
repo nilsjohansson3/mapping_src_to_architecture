@@ -1,0 +1,69 @@
+```plantuml
+@startuml
+title modifyPathVelocity (Occupancy/PredictedObject)
+start
+
+partition process_path {
+:clip path by length;
+:interpolate path;
+note right
+  using spline interpolation and interpolate (x,y,z,v)
+end note
+:calc closest path point from ego;
+}
+
+partition process_sensor_data {
+if (road type is PredictedObject) then (yes)
+  :preprocess dynamic object;
+else if (road type is Occupancy) then (yes)
+  :preprocess occupancy grid map info;
+else (no)
+  stop
+endif
+}
+:calculate offset from start to ego;
+partition generate_detection_area_polygon {
+:convert path to path lanelet;
+:generate left/right slice of polygon that starts from path start;
+:generate interpolated polygon created from ego TTC and lateral distance that pedestrian can reach within ego TTC.;
+}
+partition find_possible_collision {
+:generate possible collision;
+:calculate collision path point and intersection point;
+note right
+  - occlusion spot is calculated by the longitudinally closest point of unknown cells.
+  - intersection point is where ego front bumper and the darting object will crash.
+  - collision path point is calculated by arc coordinate consider ego vehicle's geometry.
+  - safe velocity and safe margin is calculated from performance of ego emergency braking system.
+end note
+:calculate safe velocity and safe margin for possible collision;
+note right
+  - safe velocity and safe margin is calculated from performance of ego emergency braking system.
+end note
+}
+partition process_possible_collision {
+:filter possible collision by road type;
+note right
+filter by target road type start and end pair
+end note
+:calculate slow down points for possible collision;
+note right
+calculate original velocity and height for the possible collision
+end note
+:handle collision offset;
+note right
+consider offset from path start to ego vehicle for possible collision
+end note
+:apply safe velocity comparing with allowed velocity;
+note right
+calculated by
+- safe velocity calculated from emergency brake performance.
+- maximum allowed deceleration [m/s^2]
+- min velocity [m/s] the velocity that is allowed on the road.
+- original_velocity [m/s]
+set minimum velocity for path point after occlusion spot.
+end note
+}
+stop
+@enduml
+```

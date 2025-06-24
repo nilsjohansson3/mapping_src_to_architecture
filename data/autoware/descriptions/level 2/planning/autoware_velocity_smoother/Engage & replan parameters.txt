@@ -1,0 +1,7 @@
+| Name                           | Type     | Description                                                                                                                        | Default value |
+| :----------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------- | :------------ |
+| `replan_vel_deviation`         | `double` | Velocity deviation to replan initial velocity [m/s]                                                                                | 5.53          |
+| `engage_velocity`              | `double` | Engage velocity threshold [m/s] (if the trajectory velocity is higher than this value, use this velocity for engage vehicle speed) | 0.25          |
+| `engage_acceleration`          | `double` | Engage acceleration [m/ss] (use this acceleration when engagement)                                                                 | 0.1           |
+| `engage_exit_ratio`            | `double` | Exit engage sequence to normal velocity planning when the velocity exceeds engage_exit_ratio x engage_velocity.                    | 0.5           |
+| `stop_dist_to_prohibit_engage` | `double` | If the stop point is in this distance, the speed is set to 0 not to move the vehicle [m]                                           | 0.5           |

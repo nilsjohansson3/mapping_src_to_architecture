@@ -1,0 +1,8 @@
+This package contains some executable nodes related to image processing.
+
+- [line_segment_detector](line_segment_detector)
+- [graph_segmentation](graph_segmentation)
+- [segment_filter](segment_filter)
+- [undistort](undistort)
+- [lanelet2_overlay](lanelet2_overlay)
+- [line_segments_overlay](line_segments_overlay)

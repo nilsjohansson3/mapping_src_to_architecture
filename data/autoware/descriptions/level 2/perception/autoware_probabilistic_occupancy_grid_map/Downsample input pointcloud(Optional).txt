@@ -1,0 +1,5 @@
+If you set `downsample_input_pointcloud` to `true`, the input pointcloud will be downsampled and following topics are also used. This feature is currently only for the pointcloud based occupancy grid map.
+
+- pointcloud_based_occupancy_grid_map method
+
+```yaml

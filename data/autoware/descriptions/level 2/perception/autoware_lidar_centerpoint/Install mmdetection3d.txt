@@ -1,0 +1,20 @@
+**Step 1.** Install MMEngine, MMCV, and MMDetection using MIM
+
+```bash
+pip install -U openmim
+mim install mmengine
+mim install 'mmcv>=2.0.0rc4'
+mim install 'mmdet>=3.0.0rc5, <3.3.0'
+```
+
+**Step 2.** Install mmdetection3d forked repository
+
+Introduced several valuable enhancements in our fork of the mmdetection3d repository.
+Notably, we've made the PointPillar z voxel feature input optional to maintain compatibility with the original paper.
+In addition, we've integrated a PyTorch to ONNX converter and a T4 format reader for added functionality.
+
+```bash
+git clone https://github.com/autowarefoundation/mmdetection3d.git
+cd mmdetection3d
+pip install -v -e .
+```

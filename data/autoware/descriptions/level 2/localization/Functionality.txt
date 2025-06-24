@@ -1,0 +1,2 @@
+- Vehicle location can be obtained on the world coordinate by detecting the magnetic markers.
+- The system can work even if the road is covered with snow.

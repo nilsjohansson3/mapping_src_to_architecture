@@ -1,0 +1,21 @@
+val_cfg = dict()
+val_dataloader = dict(
+    dataset=dict(
+        type=dataset_type,
+        data_root=data_root,
+        ann_file='',
+        data_prefix='val',
+        with_label=True,
+        pipeline=test_pipeline,
+    ),
+    num_workers=8,
+    batch_size=32,
+    sampler=dict(type='DefaultSampler', shuffle=True)
+)
+
+val_evaluator = dict(topk=(1, 3,), type='Accuracy')
+
+test_dataloader = val_dataloader
+test_evaluator = val_evaluator
+
+```

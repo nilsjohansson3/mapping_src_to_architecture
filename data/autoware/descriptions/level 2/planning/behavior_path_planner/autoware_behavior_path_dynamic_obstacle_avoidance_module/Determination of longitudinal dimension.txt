@@ -1,0 +1,9 @@
+Then, extracting the same directional and opposite directional obstacles from the drivable area will work as follows considering TTC (time to collision).
+
+Regarding the same directional obstacles, obstacles whose TTC is negative will be ignored (e.g., The obstacle is in front of the ego, and the obstacle's velocity is larger than the ego's velocity.).
+
+Same directional obstacles (Parameter names may differ from implementation)
+![same_directional_object](./image/same_directional_object.svg)
+
+Opposite directional obstacles (Parameter names may differ from implementation)
+![opposite_directional_object](./image/opposite_directional_object.svg)

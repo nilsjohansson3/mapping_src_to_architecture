@@ -1,0 +1,3 @@
+In this implementation, CenterPoint [1] uses a PointPillars-based [2] network to inference with TensorRT.
+
+We trained the models using <https://github.com/open-mmlab/mmdetection3d>.

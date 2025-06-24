@@ -1,0 +1,6 @@
+Here, as an example, we describe the verification of the adaptive performance when the wheel base of the sample_vehicle is 2.79 m, but an incorrect value of 2.0 m is given to the controller side.
+To give the controller 2.0 m as the wheel base, set the value of `nominal_parameter:vehicle_info:wheel_base` in [nominal_param.yaml](./autoware_smart_mpc_trajectory_follower/param/nominal_param.yaml) to 2.0, and run the following command:
+
+```bash
+python3 -m smart_mpc_trajectory_follower.clear_pycache
+```

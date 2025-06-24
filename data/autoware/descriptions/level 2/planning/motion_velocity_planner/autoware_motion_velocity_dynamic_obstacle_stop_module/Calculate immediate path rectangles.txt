@@ -1,0 +1,5 @@
+![Immediate paths example](docs/DynamicObstacleStop-ImmediatePaths.drawio.svg)
+
+For each considered object, a rectangle is created representing its _immediate_ path.
+The rectangle has the width of the object plus the `extra_object_width` parameter
+and its length is the current speed of the object multiplied by the `time_horizon`.

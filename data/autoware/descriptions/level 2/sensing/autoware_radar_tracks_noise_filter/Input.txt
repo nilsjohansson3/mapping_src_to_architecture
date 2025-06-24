@@ -1,0 +1,3 @@
+| Name             | Type                           | Description         |
+| ---------------- | ------------------------------ | ------------------- |
+| `~/input/tracks` | radar_msgs/msg/RadarTracks.msg | 3D detected tracks. |

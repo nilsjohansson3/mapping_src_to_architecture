@@ -1,0 +1,5 @@
+This module executes avoidance over lanes, and the decision requires the lane structure information to take care of traffic rules (e.g. it needs to send an indicator signal when the vehicle crosses a lane). The difference between the motion and behavior modules in the planning stack is whether the planner takes traffic rules into account, which is why this avoidance module exists in the behavior module.
+
+<br>
+
+If you would like to know the overview rather than the detail, please skip the next section and refer to [FAQ](frequently-asked-questions).

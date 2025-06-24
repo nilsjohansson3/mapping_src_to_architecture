@@ -1,0 +1,4 @@
+The `pose_instability_detector` node compares the pose calculated by dead reckoning with the latest pose from the EKF output.
+These two pose are ideally the same, but in reality, they are not due to the error in the twist values the pose observation.
+If these two poses are significantly different so that the absolute value exceeds the threshold, the node outputs a WARN message to the `/diagnostics` topic.
+There are six thresholds (x, y, z, roll, pitch, and yaw) to determine whether the poses are significantly different, and these thresholds are determined by the following subsections.

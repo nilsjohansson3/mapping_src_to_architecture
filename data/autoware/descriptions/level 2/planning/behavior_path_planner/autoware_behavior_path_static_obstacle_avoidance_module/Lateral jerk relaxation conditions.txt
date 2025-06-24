@@ -1,0 +1,2 @@
+- If the ego vehicle is close to the avoidance target, the lateral jerk will be relaxed up to the maximum jerk.
+- When returning to the center line after avoidance, if there is not enough distance left to the goal (end of path), the jerk condition will be relaxed as above.

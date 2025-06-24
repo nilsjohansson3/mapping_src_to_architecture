@@ -1,0 +1,2 @@
+The module can be customized by adjusting the rules and parameters that define how it identifies and avoids obstacles.
+The avoidance manuever would not be changed by specific vehicle types.

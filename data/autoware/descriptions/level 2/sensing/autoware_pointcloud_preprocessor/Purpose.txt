@@ -1,0 +1,7 @@
+The `autoware_pointcloud_preprocessor` is a package that includes the following filters:
+
+- removing outlier points
+- cropping
+- concatenating pointclouds
+- correcting distortion
+- downsampling

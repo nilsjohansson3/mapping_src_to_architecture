@@ -1,0 +1,7 @@
+The following command shows the plot of used data in the calibration. In each plot of velocity ranges, you can see the distribution of the relationship between pedal and acceleration, and raw data points with colors according to their pitch angles.
+
+```sh
+ros2 run autoware_accel_brake_map_calibrator view_plot.py
+```
+
+![sample pic](media/log_sample.png)

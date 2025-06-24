@@ -1,0 +1,3 @@
+Blind spot module checks possible collisions with bicycles and pedestrians running on its left/right side while turing left/right before junctions.
+
+![brief](./docs/blind-spot.drawio.svg)

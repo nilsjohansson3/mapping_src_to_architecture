@@ -1,0 +1,5 @@
+- The following information about the target obstacle is needed
+  - Label (type of person, car, etc.)
+  - The object position in the current time and predicted position in the future time.
+- The following information about the surrounding environment is needed
+  - Road network information with Lanelet2 format

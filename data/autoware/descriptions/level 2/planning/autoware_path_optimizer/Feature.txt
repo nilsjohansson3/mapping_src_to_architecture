@@ -1,0 +1,7 @@
+This package is able to
+
+- make the trajectory inside the drivable area as much as possible
+  - NOTE: Static obstacles to avoid can be removed from the drivable area.
+- insert stop point before the planned footprint will be outside the drivable area
+
+Note that the velocity is just taken over from the input path.

@@ -1,0 +1,1 @@
+This function is activated when the lane id of the target path has an no drivable lane label (i.e. the `no_drivable_lane` attribute is `yes`).

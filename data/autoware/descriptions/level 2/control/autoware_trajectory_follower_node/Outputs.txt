@@ -1,0 +1,1 @@
+- `autoware_control_msgs/Control`: message containing both lateral and longitudinal commands.

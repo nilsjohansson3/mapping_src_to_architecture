@@ -1,0 +1,6 @@
+To prevent chatter caused by noisy perception, two duration parameters are used.
+
+- `add_stop_duration_buffer` represents the duration of consecutive collision detection with an object for the corresponding stop point to be added.
+- `remove_stop_duration_buffer` represents the duration of consecutive non-detection of collision with an object for the corresponding stop point to be removed.
+
+Timers and collision points are tracked for each dynamic object independently.

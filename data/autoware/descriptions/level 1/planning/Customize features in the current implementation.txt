@@ -1,0 +1,3 @@
+While it is possible to add module-level functionalities in the current implementation, a unified interface for all functionalities is not provided. Here's a brief explanation of the methods of extending at the module level in the current implementation.
+
+![reference-implementation-add-new-modules](image/reference-implementation-add-new-modules.drawio.svg)

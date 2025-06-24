@@ -1,0 +1,3 @@
+| Parameter                                   | Type   | Description                     |
+| ------------------------------------------- | ------ | ------------------------------- |
+| `merge_from_private_road/stop_duration_sec` | double | [m] time margin to change state |

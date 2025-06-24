@@ -1,0 +1,1 @@
+The data association algorithm matches detected objects to existing tracks.

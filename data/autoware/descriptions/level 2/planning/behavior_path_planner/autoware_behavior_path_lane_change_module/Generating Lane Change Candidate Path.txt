@@ -1,0 +1,3 @@
+The lane change candidate path is divided into two phases: preparation and lane-changing. The following figure illustrates each phase of the lane change candidate path.
+
+![lane-change-phases](./images/lane_change-lane_change_phases.png)

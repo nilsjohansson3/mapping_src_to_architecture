@@ -1,0 +1,12 @@
+The module insert a stop point where the ego trajectory collides with the immediate path of an object.
+The overall module flow can be summarized with the following 4 steps.
+
+1. Filter dynamic objects.
+2. Calculate immediate path rectangles of the dynamic objects.
+3. Find earliest collision where ego collides with an immediate path rectangle.
+4. Insert stop point before the collision.
+
+In addition to these 4 steps, 2 mechanisms are in place to make the stop point of this module more stable: an hysteresis and a decision duration buffer.
+
+The `hysteresis` parameter is used when a stop point was already being inserted in the previous iteration
+and it increases the range where dynamic objects are considered close enough to the ego trajectory to be used by the module.

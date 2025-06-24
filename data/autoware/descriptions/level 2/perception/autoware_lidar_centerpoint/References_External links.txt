@@ -1,0 +1,17 @@
+[1] Yin, Tianwei, Xingyi Zhou, and Philipp Krähenbühl. "Center-based 3d object detection and tracking." arXiv preprint arXiv:2006.11275 (2020).
+
+[2] Lang, Alex H., et al. "PointPillars: Fast encoders for object detection from point clouds." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.
+
+[3] <https://github.com/tianweiy/CenterPoint>
+
+[4] <https://github.com/open-mmlab/mmdetection3d>
+
+[5] <https://github.com/open-mmlab/OpenPCDet>
+
+[6] <https://github.com/yukkysaito/autoware_perception>
+
+[7] <https://github.com/NVIDIA-AI-IOT/CUDA-PointPillars>
+
+[8] <https://www.nuscenes.org/nuscenes>
+
+[9] <https://www.argoverse.org/av2.html>

@@ -1,0 +1,12 @@
+python tools/deploy.py \
+~/mmdeploy/configs/mmpretrain/classification_onnxruntime_static.py\
+~/mmpretrain/configs/mobilenet_v2/train_mobilenet_v2.py \
+~/mmpretrain/work_dirs/train_mobilenet_v2/epoch_300.pth \
+/SAMPLE/IAMGE/DIRECTORY \
+--work-dir mmdeploy_model/mobilenet_v2
+```
+
+Converted ONNX model will be saved in the `mmdeploy/mmdeploy_model/mobilenet_v2` folder.
+
+After obtaining your onnx model, update parameters defined in the launch file (e.g. `model_file_path`, `label_file_path`, `input_h`, `input_w`...).
+Note that, we only support labels defined in [tier4_perception_msgs::msg::TrafficLightElement](https://github.com/tier4/tier4_autoware_msgs/blob/tier4/universe/tier4_perception_msgs/msg/traffic_light/TrafficLightElement.msg).

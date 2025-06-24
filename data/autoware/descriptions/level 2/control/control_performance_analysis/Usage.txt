@@ -1,0 +1,11 @@
+- After launched simulation and control module, launch the `control_performance_analysis.launch.xml`.
+- You should be able to see the driving monitor and error variables in topics.
+- If you want to visualize the results, you can use `Plotjuggler` and use `config/controller_monitor.xml` as layout.
+- After import the layout, please specify the topics that are listed below.
+
+> - /localization/kinematic_state
+> - /vehicle/status/steering_status
+> - /control_performance/driving_status
+> - /control_performance/performance_vars
+
+- In `Plotjuggler` you can export the statistic (max, min, average) values as csv file. Use that statistics to compare the control modules.

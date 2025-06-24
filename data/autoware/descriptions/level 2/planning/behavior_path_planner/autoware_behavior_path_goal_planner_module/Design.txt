@@ -1,0 +1,70 @@
+If goal modification is not allowed, park at the designated fixed goal. (`fixed_goal_planner` in the figure below)
+When allowed, park in accordance with the specified policy(e.g pull over on left/right side of the lane). (`rough_goal_planner` in the figure below). Currently rough goal planner only support pull_over feature, but it would be desirable to be able to accommodate various parking policies in the future.
+
+```plantuml
+@startuml
+package goal_planner{
+
+    class GoalPlannerModule {}
+
+    package rough_goal_planner <<Rectangle>>{
+
+        package lane_parking <<Rectangle>>{
+            class ShiftPullOver {}
+            class GeometricPullOver {}
+        }
+
+        package freespace_parking <<Rectangle>>{
+            class FreeSpacePullOver {}
+        }
+
+        class GoalSearcher {}
+
+        struct GoalCandidates {}
+        struct PullOverPath{}
+
+        abstract class PullOverPlannerBase {}
+        abstract class GoalsearcherBase {}
+
+    }
+
+    package fixed_goal_planner <<Rectangle>>{
+        abstract class FixedGoalPlannerBase {}
+        class DefaultFixedPlanner{}
+    }
+}
+
+
+package utils{
+    class PathShifter {}
+
+    class GeometricParallelParking {}
+}
+
+package freespace_planning_algorithms
+ {
+    class AstarSearch{}
+    class RRTStar{}
+}
+
+' goal planner
+ShiftPullOver --|> PullOverPlannerBase
+GeometricPullOver --|> PullOverPlannerBase
+FreeSpacePullOver --|> PullOverPlannerBase
+GoalSearcher --|> GoalSearcherBase
+DefaultFixedPlanner --|> FixedGoalPlannerBase
+
+PathShifter --o ShiftPullOver
+GeometricParallelParking --o GeometricPullOver
+AstarSearch --o FreeSpacePullOver
+RRTStar --o FreeSpacePullOver
+
+PullOverPlannerBase --o GoalPlannerModule
+GoalSearcherBase --o GoalPlannerModule
+FixedGoalPlannerBase --o GoalPlannerModule
+
+PullOverPath --o PullOverPlannerBase
+GoalCandidates --o GoalSearcherBase
+
+@enduml
+```

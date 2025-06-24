@@ -1,0 +1,4 @@
+| Name                        | Type                          | Description                                                       |
+| --------------------------- | ----------------------------- | ----------------------------------------------------------------- |
+| output/amplitude_pointcloud | sensor_msgs::msg::PointCloud2 | PointCloud2 radar pointcloud whose intensity is amplitude.        |
+| output/doppler_pointcloud   | sensor_msgs::msg::PointCloud2 | PointCloud2 radar pointcloud whose intensity is doppler velocity. |

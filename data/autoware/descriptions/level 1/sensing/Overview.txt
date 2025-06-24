@@ -1,0 +1,3 @@
+Sensing component is a collection of modules that apply some primitive pre-processing to the raw sensor data.
+
+The sensor input formats are defined in this component.

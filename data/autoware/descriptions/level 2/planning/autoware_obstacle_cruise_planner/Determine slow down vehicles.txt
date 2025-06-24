@@ -1,0 +1,12 @@
+Among obstacles which are not for cruising and stopping, the obstacles meeting the following condition are determined as obstacles for slowing down.
+
+- The object type is for slowing down according to `common.slow_down_obstacle_type.*`.
+- The lateral distance from the object to the ego's trajectory is smaller than `behavior_determination.slow_down.max_lat_margin`.
+
+| Parameter                                         | Type   | Description                                       |
+| ------------------------------------------------- | ------ | ------------------------------------------------- |
+| `common.slow_down_obstacle_type.unknown`          | bool   | flag to consider unknown objects for slowing down |
+| `common.slow_down_obstacle_type.car`              | bool   | flag to consider unknown objects for slowing down |
+| `common.slow_down_obstacle_type.truck`            | bool   | flag to consider unknown objects for slowing down |
+| ...                                               | bool   | ...                                               |
+| `behavior_determination.slow_down.max_lat_margin` | double | maximum lateral margin for slow down obstacles    |

@@ -1,0 +1,5 @@
+Obstacles that are not inside any forward simulated footprint are ignored if parameter `obstacles.filter_envelope` is set to true.
+The safety envelope polygon is built from all the footprints and used as a positive mask on the occupancy grid or pointcloud.
+
+This option can reduce the total number of obstacles which reduces the cost of collision detection.
+However, the cost of masking the envelope is usually too high to be interesting.

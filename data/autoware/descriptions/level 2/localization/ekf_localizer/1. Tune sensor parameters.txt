@@ -1,0 +1,7 @@
+Set standard deviation for each sensor. The `pose_measure_uncertainty_time` is for the uncertainty of the header timestamp data.
+You can also tune a number of steps for smoothing for each observed sensor data by tuning `*_smoothing_steps`.
+Increasing the number will improve the smoothness of the estimation, but may have an adverse effect on the estimation performance.
+
+- `pose_measure_uncertainty_time`
+- `pose_smoothing_steps`
+- `twist_smoothing_steps`

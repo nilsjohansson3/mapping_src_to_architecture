@@ -1,0 +1,4 @@
+Additionally, if the target object is farther than the stop line of the traffic light, this module sets the avoidance shift start point on the stop line in order to prevent the ego from stopping at a red traffic signal in the middle of an avoidance maneuver.
+
+![fig](./images/traffic_light/shift_from_current_pos.png)
+![fig](./images/traffic_light/shift_from_stop_line.png)

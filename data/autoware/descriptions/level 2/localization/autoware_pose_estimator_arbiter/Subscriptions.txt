@@ -1,0 +1,16 @@
+For pose estimator arbitration:
+
+| Name                                  | Type                                          | Description    |
+| ------------------------------------- | --------------------------------------------- | -------------- |
+| `/input/artag/image`                  | sensor_msgs::msg::Image                       | ArTag input    |
+| `/input/yabloc/image`                 | sensor_msgs::msg::Image                       | YabLoc input   |
+| `/input/eagleye/pose_with_covariance` | geometry_msgs::msg::PoseWithCovarianceStamped | Eagleye output |
+| `/input/ndt/pointcloud`               | sensor_msgs::msg::PointCloud2                 | NDT input      |
+
+For switching rule:
+
+| Name                          | Type                                                         | Description                       |
+| ----------------------------- | ------------------------------------------------------------ | --------------------------------- |
+| `/input/vector_map`           | autoware_map_msgs::msg::LaneletMapBin                        | vector map                        |
+| `/input/pose_with_covariance` | geometry_msgs::msg::PoseWithCovarianceStamped                | localization final output         |
+| `/input/initialization_state` | autoware_adapi_v1_msgs::msg::LocalizationInitializationState | localization initialization state |

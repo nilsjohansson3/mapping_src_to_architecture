@@ -1,0 +1,2 @@
+The path is trimmed from ego position to a certain distance to reduce calculation time.
+Trimmed distance is specified by parameter of `detection_distance`.

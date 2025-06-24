@@ -1,0 +1,1 @@
+![fig](./images/purpose/rviz.png)

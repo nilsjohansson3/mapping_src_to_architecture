@@ -1,0 +1,9 @@
+1. Smoothed target velocity and its acceleration shall be set in the trajectory
+   1. The velocity command is not smoothed inside the controller (only noise may be removed).
+   2. For step-like target signal, tracking is performed as fast as possible.
+2. The vehicle velocity must be an appropriate value
+   1. The ego-velocity must be a signed-value corresponding to the forward/backward direction
+   2. The ego-velocity should be given with appropriate noise processing.
+   3. If there is a large amount of noise in the ego-velocity, the tracking performance will be significantly reduced.
+3. The output of this controller must be achieved by later modules (e.g. vehicle interface).
+   1. If the vehicle interface does not have the target velocity or acceleration interface (e.g., the vehicle only has a gas pedal and brake interface), an appropriate conversion must be done after this controller.

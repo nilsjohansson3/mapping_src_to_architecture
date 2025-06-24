@@ -1,0 +1,8 @@
+The quality of the candidates generated with polynomials in frenet frame greatly depend on the reference path.
+If the reference path is not smooth, the resulting candidates will probably be un-drivable.
+
+Failure to find a valid trajectory current results in a suddenly stopping trajectory.
+
+The module has troubles generating paths that converge rapidly to the goal lanelet. Basically, after overcoming all obstacles, the module should prioritize paths that rapidly make the ego vehicle converge back to its goal lane (ie. paths with low average and final lateral deviation). However, this does not function properly at the moment.
+
+Detection of proper merging can be rough: Sometimes, the module when detects that the ego has converged on the goal lanelet and that there are no more obstacles, the planner transitions to the goal planner, but the transition is not very smooth and could cause discomfort for the user.

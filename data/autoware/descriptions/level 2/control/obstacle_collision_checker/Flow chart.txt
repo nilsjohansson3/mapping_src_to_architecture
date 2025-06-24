@@ -1,0 +1,34 @@
+```plantuml
+@startuml
+skinparam monochrome true
+
+title obstacle collision checker : update
+start
+
+:calculate braking distance;
+
+:resampling trajectory;
+note right
+to reduce calculation cost
+end note
+:filter point cloud by trajectory;
+
+:create vehicle foot prints;
+
+:create vehicle passing area;
+
+partition will_collide {
+
+while (has next ego vehicle foot print) is (yes)
+  :found collision with obstacle foot print;
+  if (has collision with obstacle) then (yes)
+      :set diag to ERROR;
+      stop
+  endif
+end while (no)
+:set diag to OK;
+stop
+}
+
+@enduml
+```

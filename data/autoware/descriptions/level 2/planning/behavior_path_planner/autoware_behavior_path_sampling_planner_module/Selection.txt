@@ -1,0 +1,7 @@
+Among the valid candidate trajectories, the _best_ one is determined using a set of soft constraints (i.e., objective functions).
+
+- curvature: prefer smoother trajectories;
+- length: prefer trajectories with longer remaining path length;
+- lateral deviation: prefer trajectories close to the goal.
+
+Each soft constraint is associated with a weight to allow tuning of the preferences.

@@ -1,0 +1,22 @@
+Autonomous vehicles have to cooperate with the infrastructures such as:
+
+- Warehouse shutters
+- Traffic lights with V2X support
+- Communication devices at intersections
+- Fleet Management Systems (FMS)
+
+The following items are example cases:
+
+1. Traffic control by traffic lights with V2X support
+   ![traffic_light](docs/V2X_support_traffic_light.png)
+
+2. Intersection coordination of multiple vehicles by FMS.
+   ![FMS](docs/intersection-coordination.png)
+
+It's possible to make each function individually, however, the use cases can be generalized with these three elements.
+
+1. `start`: Start a cooperation procedure after the vehicle enters a certain zone.
+2. `stop`: Stop at a defined stop line according to the status received from infrastructures.
+3. `end`: Finalize the cooperation procedure after the vehicle reaches the exit zone. This should be done within the range of stable communication.
+
+This module sends/receives status from infrastructures and plans the velocity of the cooperation result.

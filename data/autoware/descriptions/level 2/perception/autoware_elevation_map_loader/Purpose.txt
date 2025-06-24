@@ -1,0 +1,1 @@
+This package provides elevation map for autoware_compare_map_segmentation.

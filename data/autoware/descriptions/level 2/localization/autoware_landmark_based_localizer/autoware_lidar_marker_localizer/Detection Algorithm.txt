@@ -1,0 +1,5 @@
+![detection_algorithm](./doc_image/detection_algorithm.png)
+
+1. Split the LiDAR point cloud into rings along the x-axis of the base_link coordinate system at intervals of the `resolution` size.
+2. Find the portion of intensity that matches the `intensity_pattern`.
+3. Perform steps 1 and 2 for each ring, accumulate the matching indices, and detect portions where the count exceeds the `vote_threshold_for_detect_marker` as markers.

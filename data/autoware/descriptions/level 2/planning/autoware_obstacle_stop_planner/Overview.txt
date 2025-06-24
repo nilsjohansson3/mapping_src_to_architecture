@@ -1,0 +1,8 @@
+`obstacle_stop_planner` has following modules
+
+- Obstacle Stop Planner
+  - inserts a stop point in trajectory when there is a static point cloud on the trajectory.
+- Slow Down Planner
+  - inserts a deceleration section in trajectory when there is a point cloud near the trajectory.
+- Adaptive Cruise Controller (ACC)
+  - embeds target velocity in trajectory when there is a dynamic point cloud on the trajectory.

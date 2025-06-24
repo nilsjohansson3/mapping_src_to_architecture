@@ -1,0 +1,1 @@
+{{ json_to_markdown("perception/autoware_lidar_transfusion/schema/detection_class_remapper.schema.json") }}

@@ -1,0 +1,2 @@
+The manager launch speed bump scene module when there is speed bump regulatory element referring to
+the reference path.

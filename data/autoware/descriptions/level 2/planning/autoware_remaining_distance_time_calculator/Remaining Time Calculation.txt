@@ -1,0 +1,3 @@
+- The remaining time currently depends on a simple equation of motion by getting the maximum velocity limit.
+- The remaining distance is calculated by dividing the remaining distance by the maximum velocity limit.
+- A check is added to the remaining time calculation to make sure that maximum velocity limit is greater than zero. This prevents division by zero or getting negative time value.

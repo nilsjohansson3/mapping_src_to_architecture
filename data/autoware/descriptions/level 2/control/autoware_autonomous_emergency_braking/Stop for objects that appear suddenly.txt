@@ -1,0 +1,3 @@
+When an object appears suddenly, the AEB can act as a fail-safe to stop the ego vehicle when other modules fail to detect the object on time. If sudden object cut ins are expected, it might be useful for the AEB module to detect collisions of objects BEFORE they enter the real ego vehicle path by increasing the `expand_width` parameter.
+
+![occluded object collision prevention](./image/occluded_space.drawio.svg)

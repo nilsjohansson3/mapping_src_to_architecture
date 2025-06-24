@@ -1,0 +1,11 @@
+Parameters under `path_safety_check.ego_predicted_path` specify the ego vehicle's predicted path characteristics.
+
+| Name                          | Unit    | Type   | Description                                          | Default value |
+| :---------------------------- | :------ | :----- | :--------------------------------------------------- | :------------ |
+| min_velocity                  | [m/s]   | double | Minimum velocity of the ego vehicle's predicted path | 0.0           |
+| acceleration                  | [m/s^2] | double | Acceleration for the ego vehicle's predicted path    | 1.0           |
+| max_velocity                  | [m/s]   | double | Maximum velocity of the ego vehicle's predicted path | 1.0           |
+| time_horizon_for_front_object | [s]     | double | Time horizon for predicting front objects            | 10.0          |
+| time_horizon_for_rear_object  | [s]     | double | Time horizon for predicting rear objects             | 10.0          |
+| time_resolution               | [s]     | double | Time resolution for the ego vehicle's predicted path | 0.5           |
+| delay_until_departure         | [s]     | double | Delay until the ego vehicle departs                  | 1.0           |

@@ -1,0 +1,4 @@
+| Name                         | Type                      | Description                                                                                |
+| ---------------------------- | ------------------------- | ------------------------------------------------------------------------------------------ |
+| `~/input/pointcloud`         | `sensor_msgs/PointCloud2` | Obstacle point cloud with ground removed.                                                  |
+| `~/input/occupancy_grid_map` | `nav_msgs/OccupancyGrid`  | A map in which the probability of the presence of an obstacle is occupancy probability map |

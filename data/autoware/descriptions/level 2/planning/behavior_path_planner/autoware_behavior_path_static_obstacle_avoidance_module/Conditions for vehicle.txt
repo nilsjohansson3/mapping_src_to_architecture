@@ -1,0 +1,19 @@
+Target class:
+
+- Car
+- Truck
+- Bus
+- Trailer
+
+As a next step, the object is filtered by a condition specialized for its class.
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Filtering flow for vehicle type objects
+start
+
+partition isSatisfiedWithVehicleCodition() {
+if(isNeverAvoidanceTarget()) then (yes)

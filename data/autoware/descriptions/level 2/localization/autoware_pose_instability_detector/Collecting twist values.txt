@@ -1,0 +1,5 @@
+The `pose_instability_detector` node collects the twist values from the `~/input/twist` topic to perform dead reckoning.
+Ideally, `pose_instability_detector` needs the twist values between the previous pose and the current pose.
+Therefore, `pose_instability_detector` snips the twist buffer and apply interpolations and extrapolations to obtain the twist values at the desired time.
+
+![how_to_snip_necessary_twist](./media/how_to_snip_twist.png)

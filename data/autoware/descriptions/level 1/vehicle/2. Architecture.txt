@@ -1,0 +1,10 @@
+The Vehicle Interface component consists of the following components:
+
+- A Raw Vehicle Command Converter component that will pass through vehicle commands from the Control component if velocity/acceleration control is supported by the drive-by-wire system. Otherwise, the Control commands will be modified according to the control method (eg: converting a target acceleration from the Control component to a vehicle specific accel/brake pedal value through the use of an acceleration map)
+- A Vehicle Interface component (vehicle specific) that acts as an interface between Autoware and a vehicle to communicate control signals and to obtain information about the vehicle (steer output, tyre angle etc)
+
+Each component contains static nodes of Autoware, while each module can be dynamically loaded and unloaded (corresponding to C++ classes). The mechanism of the Vehicle Interface component is depicted by the following figures:
+
+![Vehicle Interface overview](./image/vehicle_interface_architecture.png)
+
+![Vehicle Interface overview](./image/vehicle_interface_overview.png)

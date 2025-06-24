@@ -1,0 +1,3 @@
+| Name             | Type                                   | Description              |
+| ---------------- | -------------------------------------- | ------------------------ |
+| `~/debug/marker` | `visualization_msgs::msg::MarkerArray` | Marker for visualization |

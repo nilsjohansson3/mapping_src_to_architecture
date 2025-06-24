@@ -1,0 +1,33 @@
+When running multiple pose_estimators, autoware_pose_estimator_arbiter is executed.
+It comprises a **switching rule** and **stoppers** corresponding to each pose_estimator.
+
+- Stoppers control the pose_estimator activity by relaying inputs or outputs, or by requesting a suspend service.
+- Switching rules determine which pose_estimator to use.
+
+Which stoppers and switching rules are instantiated depends on the runtime arguments at startup.
+
+Following figure shows the node configuration when all pose_estimator are run simultaneously.
+
+<img src="./media/architecture.drawio.svg" alt="drawing" width="800"/>
+
+- **NDT**
+
+The NDT stopper relays topics in the front side of the point cloud pre-processor.
+
+- **YabLoc**
+
+The YabLoc stopper relays input image topics in the frontend of the image pre-processor.
+YabLoc includes a particle filter process that operates on a timer, and even when image topics are not streamed, the particle prediction process continues to work.
+To address this, the YabLoc stopper also has a service client for explicitly stopping and resuming YabLoc.
+
+- **Eagleye**
+
+The Eagleye stopper relays Eagleye's output pose topics in the backend of Eagleye's estimation process.
+Eagleye performs time-series processing internally, and it can't afford to stop the input stream.
+Furthermore, Eagleye's estimation process is lightweight enough to be run continuously without a significant load, so the relay is inserted in the backend.
+
+- **ArTag**
+
+The ArTag stopper relays image topics in the front side of the landmark localizer.
+
+</details>

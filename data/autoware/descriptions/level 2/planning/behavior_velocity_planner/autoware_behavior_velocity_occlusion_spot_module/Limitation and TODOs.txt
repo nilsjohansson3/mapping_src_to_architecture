@@ -1,0 +1,7 @@
+This module is prototype implementation to care occlusion spot. To solve the excessive deceleration due to false positive of the perception, the logic of detection method can be selectable. This point has not been discussed in detail and needs to be improved.
+
+- Make occupancy grid for planning.
+- Make map tag for occlusion spot.
+- About the best safe motion.
+
+TODOs are written in each Inner-workings / Algorithms (see the description below).

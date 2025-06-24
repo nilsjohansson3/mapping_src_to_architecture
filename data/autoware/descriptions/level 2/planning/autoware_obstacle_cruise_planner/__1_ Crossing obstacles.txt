@@ -1,0 +1,5 @@
+Crossing obstacle is the object whose orientation's yaw angle against the ego's trajectory is smaller than `behavior_determination.crossing_obstacle.obstacle_traj_angle_threshold`.
+
+| Parameter                                                                | Type   | Description                                                                                       |
+| ------------------------------------------------------------------------ | ------ | ------------------------------------------------------------------------------------------------- |
+| `behavior_determination.crossing_obstacle.obstacle_traj_angle_threshold` | double | maximum angle against the ego's trajectory to judge the obstacle is crossing the trajectory [rad] |

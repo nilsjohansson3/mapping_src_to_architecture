@@ -1,0 +1,2 @@
+1. Get the largest lateral margin of all classes (Car, Truck, ...). The margin is the sum of `soft_margin` and `hard_margin_for_parked_vehicle`.
+2. The detection area width is the sum of ego vehicle width and the largest lateral margin.

@@ -1,0 +1,6 @@
+The `autoware_planning_validator` takes in the following inputs:
+
+| Name                 | Type                              | Description                                    |
+| -------------------- | --------------------------------- | ---------------------------------------------- |
+| `~/input/kinematics` | nav_msgs/Odometry                 | ego pose and twist                             |
+| `~/input/trajectory` | autoware_planning_msgs/Trajectory | target trajectory to be validated in this node |

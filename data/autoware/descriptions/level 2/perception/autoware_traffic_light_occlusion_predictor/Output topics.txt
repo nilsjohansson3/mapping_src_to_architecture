@@ -1,0 +1,3 @@
+| Name                 | Type                                                 | Description                  |
+| -------------------- | ---------------------------------------------------- | ---------------------------- |
+| `~/output/occlusion` | autoware_perception_msgs::TrafficLightOcclusionArray | occlusion ratios of each roi |

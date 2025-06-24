@@ -1,0 +1,6 @@
+The shift points are modified by a filtering process in order to get the expected shape of the avoidance path. It contains the following filters.
+
+- Quantization: Quantize the avoidance width in order to ignore small shifts.
+- Small shifts removal: Shifts with small changes with respect to the previous shift point are unified in the previous shift width.
+- Similar gradient removal: Connect two shift points with a straight line, and remove the shift points in between if their shift amount is in the vicinity of the straight line.
+- Remove momentary returns: For shift points that reduce the avoidance width (for going back to the center line), if there is enough long distance in the longitudinal direction, remove them.

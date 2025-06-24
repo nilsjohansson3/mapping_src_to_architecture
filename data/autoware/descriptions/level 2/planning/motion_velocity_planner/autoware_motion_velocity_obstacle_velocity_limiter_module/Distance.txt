@@ -1,0 +1,3 @@
+The distance to a collision point is calculated by finding the curvature circle passing through the trajectory point and the collision point.
+
+![bicycle_collision_distance_image](./media/bicycle_distance.png)

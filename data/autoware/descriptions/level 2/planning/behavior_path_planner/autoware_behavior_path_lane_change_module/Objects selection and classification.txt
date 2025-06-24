@@ -1,0 +1,26 @@
+First, we divide the target objects into obstacles in the target lane, obstacles in the current lane, and obstacles in other lanes. Target lane indicates the lane that the ego vehicle is going to reach after the lane change and current lane mean the current lane where the ego vehicle is following before the lane change. Other lanes are lanes that do not belong to the target and current lanes. The following picture describes objects on each lane. Note that users can remove objects either on current and other lanes from safety check by changing the flag, which are `check_objects_on_current_lanes` and `check_objects_on_other_lanes`.
+
+![object lanes](./images/lane_objects.drawio.svg)
+
+Furthermore, to change lanes behind a vehicle waiting at a traffic light, we skip the safety check for the stopping vehicles near the traffic light. The explanation for parked car detection is written in [documentation for avoidance module](../autoware_behavior_path_static_obstacle_avoidance_module/README.md).
+
+The detection area for the target lane can be expanded beyond its original boundaries to enable detection of objects that are outside the target lane's limits.
+
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <div style="text-align: center;">
+          <div style="color: black; font-size: 20px; margin-bottom: 10px;">Without Lane Expansion</div>
+          <img src="./images/lane_change-lane_expansion-without.png" alt="Without lane expansion">
+        </div>
+      </td>
+      <td>
+        <div style="text-align: center;">
+          <div style="color: black; font-size: 20px; margin-bottom: 10px;">With Lane Expansion</div>
+          <img src="./images/lane_change-lane_expansion-with.png" alt="With lane expansion">
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

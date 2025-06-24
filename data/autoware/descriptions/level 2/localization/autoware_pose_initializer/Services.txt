@@ -1,0 +1,3 @@
+| Name                       | Type                                                 | Description           |
+| -------------------------- | ---------------------------------------------------- | --------------------- |
+| `/localization/initialize` | tier4_localization_msgs::srv::InitializeLocalization | initial pose from api |

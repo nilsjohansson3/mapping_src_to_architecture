@@ -1,0 +1,19 @@
+| topic name                      | message type                               | description                                                                           |
+| ------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `~input/main_object`            | `autoware_perception_msgs::TrackedObjects` | Dominant tracking objects. Output will be published with this dominant object stamps. |
+| `~input/sub_object`             | `autoware_perception_msgs::TrackedObjects` | Sub tracking objects.                                                                 |
+| `output/object`                 | `autoware_perception_msgs::TrackedObjects` | Merged tracking objects.                                                              |
+| `debug/interpolated_sub_object` | `autoware_perception_msgs::TrackedObjects` | Interpolated sub tracking objects.                                                    |
+
+Default parameters are set in [config/decorative_tracker_merger.param.yaml](./config/decorative_tracker_merger.param.yaml).
+
+| parameter name            | description                                                                                                                                                      | default value |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `base_link_frame_id`      | base link frame id. This is used to transform the tracking object.                                                                                               | "base_link"   |
+| `time_sync_threshold`     | time sync threshold. If the time difference between two tracking objects is smaller than this value, we consider these two tracking objects are the same object. | 0.05          |
+| `sub_object_timeout_sec`  | sub object timeout. If the sub object is not updated for this time, we consider this object is not exist.                                                        | 0.5           |
+| `main_sensor_type`        | main sensor type. This is used to determine the dominant tracking object.                                                                                        | "lidar"       |
+| `sub_sensor_type`         | sub sensor type. This is used to determine the sub tracking object.                                                                                              | "radar"       |
+| `tracker_state_parameter` | tracker state parameter. This is used to manage the tracklet.                                                                                                    |               |
+
+- the detail of `tracker_state_parameter` is described in [tracklet management](tracklet-management)

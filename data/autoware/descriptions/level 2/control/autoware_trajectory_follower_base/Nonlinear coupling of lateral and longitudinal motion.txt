@@ -1,0 +1,3 @@
+The lat-lon mixed control problem is very complex and uses nonlinear optimization to achieve high performance. Since it is difficult to guarantee the convergence of the nonlinear optimization, a simple control logic is also necessary for development.
+
+Also, the benefits of simultaneous longitudinal and lateral control are small if the vehicle doesn't move at high speed.

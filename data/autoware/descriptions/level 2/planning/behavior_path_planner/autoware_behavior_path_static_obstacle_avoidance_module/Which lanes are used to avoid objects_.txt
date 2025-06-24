@@ -1,0 +1,2 @@
+This module is able to use not only the current lane but also adjacent lanes and opposite lanes. Usable lanes can be selected by the configuration file as noted in the [shift length calculation section](shift-length-calculation).
+It is assumed that there are no parked vehicles on the central lane in a situation where there are lanes on the left and right.

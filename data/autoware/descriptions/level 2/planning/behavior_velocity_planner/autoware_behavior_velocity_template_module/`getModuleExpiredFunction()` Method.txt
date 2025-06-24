@@ -1,0 +1,5 @@
+- This is a private method that takes an argument of type `tier4_planning_msgs::msg::PathWithLaneId`.
+- It returns a `std::function<bool(const std::shared_ptr<SceneModuleInterface>&)>`. This function is used by the behavior velocity planner to determine whether a particular module has expired or not based on the given path.
+- The implementation of this method is expected to return a function that can be used to check the expiration status of modules.
+
+Please note that the specific functionality of the methods `launchNewModules()` and `getModuleExpiredFunction()` would depend on the details of your behavior velocity modules and how they are intended to be managed within the Autoware system. You would need to implement these methods according to your module's requirements.

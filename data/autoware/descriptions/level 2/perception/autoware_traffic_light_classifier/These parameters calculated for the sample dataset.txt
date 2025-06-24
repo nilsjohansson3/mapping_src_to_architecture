@@ -1,0 +1,6 @@
+data_preprocessor = dict(
+    mean=[0.2888 * 256, 0.2570 * 256, 0.2329 * 256],
+    std=[0.2106 * 256, 0.2037 * 256, 0.1864 * 256],
+    num_classes=3,
+    to_rgb=True,
+)

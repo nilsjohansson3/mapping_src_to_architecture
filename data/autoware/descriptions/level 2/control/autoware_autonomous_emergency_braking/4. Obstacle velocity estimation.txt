@@ -1,0 +1,31 @@
+Once the position of the closest obstacle/point is determined, the AEB modules uses the history of previously detected objects to estimate the closest object relative speed using the following equations:
+
+$$
+d_{t} = t_{1} - t_{0}
+$$
+
+$$
+d_{x} = norm(o_{x} - prev_{x})
+$$
+
+$$
+v_{norm} = d_{x} / d_{t}
+$$
+
+Where $t_{1}$ and $t_{0}$ are the timestamps of the point clouds used to detect the current closest object and the closest object of the previous point cloud frame, and $o_{x}$ and $prev_{x}$ are the positions of those objects, respectively.
+
+![relative_speed](./image/object_relative_speed.drawio.svg)
+
+Note that, when the closest obstacle/point comes from using predicted object data, $v_{norm}$ is calculated by directly computing the norm of the predicted object's velocity in the x and y axes.
+
+The velocity vector is then compared against the ego's predicted path to get the longitudinal velocity $v_{obj}$:
+
+$$
+v_{obj} = v_{norm} * Cos(yaw_{diff}) + v_{ego}
+$$
+
+where $yaw_{diff}$ is the difference in yaw between the ego path and the displacement vector $$v_{pos} = o_{pos} - prev_{pos} $$ and $v_{ego}$ is the ego's current speed, which accounts for the movement of points caused by the ego moving and not the object. All these equations are performed disregarding the z axis (in 2D).
+
+Note that, the object velocity is calculated against the ego's current movement direction. If the object moves in the opposite direction to the ego's movement, the object velocity will be negative, which will reduce the rss distance on the next step.
+
+The resulting estimated object speed is added to a queue of speeds with timestamps. The AEB then checks for expiration of past speed estimations and eliminates expired speed measurements from the queue, the object expiration is determined by checking if the time elapsed since the speed was first added to the queue is larger than the parameter `previous_obstacle_keep_time`. Finally, the median speed of the queue is calculated. The median speed will be used to calculate the RSS distance used for collision checking.

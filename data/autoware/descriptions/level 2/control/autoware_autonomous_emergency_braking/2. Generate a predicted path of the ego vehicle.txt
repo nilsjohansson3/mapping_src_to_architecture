@@ -1,0 +1,11 @@
+AEB generates a predicted footprint path based on current velocity and current angular velocity obtained from attached sensors. Note that if `use_imu_path` is `false`, it skips this step. This predicted path is generated as:
+
+$$
+x_{k+1} = x_k + v cos(\theta_k) dt \\
+y_{k+1} = y_k + v sin(\theta_k) dt \\
+\theta_{k+1} = \theta_k + \omega dt
+$$
+
+where $v$ and $\omega$ are current longitudinal velocity and angular velocity respectively. $dt$ is time interval that users can define in advance.
+
+On the other hand, if `use_predicted_trajectory` is set to true, the AEB module will use the predicted path from the MPC as a base to generate a footprint path. Both the IMU footprint path and the MPC footprint path can be used at the same time.

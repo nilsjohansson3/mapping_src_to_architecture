@@ -1,0 +1,5 @@
+The validity of each candidate trajectory is checked using a set of hard constraints.
+
+- collision: ensure no collision with static obstacles;
+- curvature: ensure smooth curvature;
+- drivable area: ensure the trajectory stays within the drivable area.

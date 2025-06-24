@@ -1,0 +1,7 @@
+| Parameter                       | Type   | Description                                                           |
+| ------------------------------- | ------ | --------------------------------------------------------------------- |
+| `max_delay_sec`                 | double | [s] maximum allowed delay for command                                 |
+| `near_line_distance`            | double | [m] threshold distance to stop line to check ego stop.                |
+| `dead_line_margin`              | double | [m] threshold distance that this module continue to insert stop line. |
+| `hold_stop_margin_distance`     | double | [m] parameter for restart prevention (See following section)          |
+| `check_timeout_after_stop_line` | bool   | [-] check timeout to stop when linkage is disconnected                |

@@ -1,0 +1,7 @@
+The preparation trajectory is the candidate path's first and the straight portion generated along the ego vehicle's current lane. The length of the preparation trajectory is computed as follows.
+
+```C++
+lane_change_prepare_distance = current_speed * lane_change_prepare_duration + 0.5 * deceleration * lane_change_prepare_duration^2
+```
+
+During the preparation phase, the turn signal will be activated when the remaining distance is equal to or less than `lane_change_search_distance`.

@@ -1,0 +1,5 @@
+The terms "in-phase signal group" and "anti-phase signal group" are introduced to distinguish the lanes by the timing of traffic light regulation as shown in below figure.
+
+![phase signal group](./docs/signal-phase-group.drawio.svg)
+
+The set of intersection lanes whose color is in sync with lane L1 is called the in-phase signal group of L1, and the set of remaining lanes is called the anti-phase signal group.

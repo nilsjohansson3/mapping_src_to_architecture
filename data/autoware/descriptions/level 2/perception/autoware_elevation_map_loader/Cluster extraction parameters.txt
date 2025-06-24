@@ -1,0 +1,7 @@
+Cluster extraction is based on pcl algorithms. See <https://pointclouds.org/documentation/tutorials/cluster_extraction.html> for more details.
+
+| Name                                                         | Type  | Description                                                                            | Default value |
+| :----------------------------------------------------------- | :---- | :------------------------------------------------------------------------------------- | :------------ |
+| pcl_grid_map_extraction/cluster_extraction/cluster_tolerance | float | Distance between points below which they will still be considered part of one cluster. | 0.2           |
+| pcl_grid_map_extraction/cluster_extraction/min_num_points    | int   | Min number of points that a cluster needs to have (otherwise it will be discarded).    | 3             |
+| pcl_grid_map_extraction/cluster_extraction/max_num_points    | int   | Max number of points that a cluster can have (otherwise it will be discarded).         | 1000000       |

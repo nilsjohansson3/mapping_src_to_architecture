@@ -1,0 +1,3 @@
+After Noise filtering, the module performs a geometric collision check to determine whether the filtered obstacles/hull vertices actually have possibility to collide with the ego vehicle. In this check, the ego vehicle is represented as a rectangle, and the point cloud obstacles are represented as points. Only the vertices with a possibility of collision are kept.
+
+![rigorous_filtering](./image/obstacle_filtering_2.drawio.svg)

@@ -1,0 +1,4 @@
+| Name                         | Type | Description                                                                               |
+| ---------------------------- | ---- | ----------------------------------------------------------------------------------------- |
+| publish_amplitude_pointcloud | bool | Whether publish radar pointcloud whose intensity is amplitude. Default is `true`.         |
+| publish_doppler_pointcloud   | bool | Whether publish radar pointcloud whose intensity is doppler velocity. Default is `false`. |

@@ -1,0 +1,3 @@
+This module plans velocity so that the vehicle can stop right before stop lines and restart driving after stopped.
+
+![stop line](docs/stop_line.svg)

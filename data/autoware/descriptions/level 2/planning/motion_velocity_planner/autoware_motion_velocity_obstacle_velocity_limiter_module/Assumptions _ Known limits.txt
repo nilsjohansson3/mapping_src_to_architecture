@@ -1,0 +1,3 @@
+The velocity profile produced by this node is not meant to be a realistic velocity profile
+and can contain sudden jumps of velocity with no regard for acceleration and jerk.
+This velocity profile is meant to be used as an upper bound on the actual velocity of the vehicle.

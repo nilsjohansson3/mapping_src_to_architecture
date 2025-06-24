@@ -1,0 +1,16 @@
+A reference acceleration is calculated from accel_brake_map based on values of a desired_pedal and a current velocity;
+
+$$
+    pedal_d = throttle_d - brake_d,
+$$
+
+$$
+    acc_{ref} = Acc(pedal_d, v_{x,current}).
+$$
+
+| Parameter       | Description                                                                               |
+| --------------- | ----------------------------------------------------------------------------------------- |
+| $throttle_d$    | throttle value of external control command (`~/in/external_control_cmd.control.throttle`) |
+| $brake_d$       | brake value of external control command (`~/in/external_control_cmd.control.brake`)       |
+| $v_{x,current}$ | current longitudinal velocity (`~/in/odometry.twist.twist.linear.x`)                      |
+| Acc             | accel_brake_map                                                                           |

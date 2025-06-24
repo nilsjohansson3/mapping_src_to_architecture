@@ -1,0 +1,1 @@
+{{ json_to_markdown("localization/ndt_scan_matcher/schema/sub/ndt.json") }}

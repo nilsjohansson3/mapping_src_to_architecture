@@ -1,0 +1,38 @@
+The following diagram describes the reference implementation of the Planning component. By adding new modules or extending the functionalities, various ODDs can be supported.
+
+_Note that some implementation does not adhere to the high-level architecture design due to the difficulties of the implementation and require updating._
+
+![reference-implementation](image/planning-diagram-tmp.drawio.svg)
+
+For more details, please refer to the design documents in each package.
+
+- [_mission_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_mission_planner/): calculate route from start to goal based on the map information.
+- [_behavior_path_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_planner/): calculates path and drivable area based on the traffic rules.
+  - [_lane_following_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_plannerlane-following)
+  - [_lane_change_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_lane_change_module/)
+  - [_static_obstacle_avoidance_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_static_obstacle_avoidance_module/)
+  - [_pull_over_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_goal_planner_module/)
+  - [_pull_out_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_start_planner_module/)
+  - [_side_shift_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_side_shift_module/)
+- [_behavior_velocity_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_planner/): calculates max speed based on the traffic rules.
+  - [_detection_area_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_detection_area_module/)
+  - [_blind_spot_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_blind_spot_module/)
+  - [_cross_walk_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_crosswalk_module/)
+  - [_stop_line_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_stop_line_module/)
+  - [_traffic_light_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_traffic_light_module/)
+  - [_intersection_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/)
+  - [_no_stopping_area_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_no_stopping_area_module/)
+  - [_virtual_traffic_light_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_virtual_traffic_light_module/)
+  - [_occlusion_spot_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_occlusion_spot_module/)
+  - [_run_out_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_run_out_module/)
+- [_obstacle_avoidance_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/behavior_path_planner/autoware_behavior_path_dynamic_obstacle_avoidance_module/): calculate path shape under obstacle and drivable area constraints
+- [_surround_obstacle_checker_](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_surround_obstacle_checker/): keeps the vehicle being stopped when there are obstacles around the ego-vehicle. It works only when the vehicle is stopped.
+- [_obstacle_stop_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/obstacle_stop_planner/): When there are obstacles on or near the trajectory, it calculates the maximum velocity of the trajectory points depending on the situation: stopping, slowing down, or adaptive cruise (following the car).
+  - [_stop_](https://autowarefoundation.github.io/autoware.universe/main/planning/obstacle_stop_planner/obstacle-stop-planner_1)
+  - [_slow_down_](https://autowarefoundation.github.io/autoware.universe/main/planning/obstacle_stop_planner/slow-down-planner)
+  - [_adaptive_cruise_](https://autowarefoundation.github.io/autoware.universe/main/planning/obstacle_stop_planner/adaptive-cruise-controller)
+- [_costmap_generator_](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_costmap_generator): generates a costmap for path generation from dynamic objects and lane information.
+- [_freespace_planner_](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_freespace_planner/): calculates trajectory considering the feasibility (e.g. curvature) for the freespace scene. Algorithms are described [here](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_freespace_planning_algorithms/).
+- _scenario_selector_ : chooses a trajectory according to the current scenario.
+- [_external_velocity_limit_selector_](https://autowarefoundation.github.io/autoware.universe/main/planning/autoware_external_velocity_limit_selector/): takes an appropriate velocity limit from multiple candidates.
+- [_motion_velocity_smoother_](https://autowarefoundation.github.io/autoware.universe/main/planning/motion_velocity_planner/autoware_motion_velocity_planner_node/): calculates final velocity considering velocity, acceleration, and jerk constraints.

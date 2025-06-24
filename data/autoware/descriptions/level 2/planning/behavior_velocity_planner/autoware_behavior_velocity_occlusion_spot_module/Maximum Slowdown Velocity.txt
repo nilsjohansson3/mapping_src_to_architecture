@@ -1,0 +1,8 @@
+The maximum slowdown velocity is calculated from the below parameters of ego current velocity and acceleration with maximum slowdown jerk and maximum slowdown acceleration in order not to slowdown too much.
+
+- $j_{max}$ slowdown jerk limit[m/s^3]
+- $a_{max}$ slowdown deceleration limit[m/s2]
+- $v_{0}$ current velocity[m/s]
+- $a_{0}$ current acceleration[m/s]
+
+![brief](./docs/maximum_slowdown_velocity.drawio.svg)

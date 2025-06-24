@@ -1,0 +1,1 @@
+The example rule provides a sample rule for controlling the arbiter. By combining the provided rules, it is possible to achieve demonstrations as follows. Users can extend the rules as needed by referencing this code, allowing them to control the arbiter as desired.

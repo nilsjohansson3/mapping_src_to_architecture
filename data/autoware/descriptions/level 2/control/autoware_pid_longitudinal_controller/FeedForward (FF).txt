@@ -1,0 +1,3 @@
+The reference acceleration set in the trajectory and slope compensation terms are output as a feedforward. Under ideal conditions with no modeling error, this FF term alone should be sufficient for velocity tracking.
+
+Tracking errors causing modeling or discretization errors are removed by the feedback control (now using PID).

@@ -1,0 +1,4 @@
+| Name               | Type                            | Description                                        |
+| ------------------ | ------------------------------- | -------------------------------------------------- |
+| `~/input/path`     | autoware_planning_msgs/msg/Path | Reference path and the corresponding drivable area |
+| `~/input/odometry` | nav_msgs/msg/Odometry           | Current Velocity of ego vehicle                    |

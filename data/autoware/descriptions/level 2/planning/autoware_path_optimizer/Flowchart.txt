@@ -1,0 +1,41 @@
+Flowchart of functions is explained here.
+
+```plantuml
+@startuml
+title pathCallback
+start
+
+:isDataReady;
+
+:createPlannerData;
+
+group generateOptimizedTrajectory
+  group optimizeTrajectory
+    :check replan;
+    if (replanning required?) then (yes)
+      :getEBTrajectory;
+      :getModelPredictiveTrajectory;
+      if (optimization failed?) then (no)
+      else (yes)
+        :send previous\n trajectory;
+      endif
+    else (no)
+      :send previous\n trajectory;
+    endif
+  end group
+
+  :applyInputVelocity;
+  :insertZeroVelocityOutsideDrivableArea;
+  :publishDebugMarkerOfOptimization;
+end group
+
+
+:extendTrajectory;
+
+:setZeroVelocityAfterStopPoint;
+
+:publishDebugData;
+
+stop
+@enduml
+```

@@ -1,0 +1,16 @@
+`TargetObject` holds the object, its belonging lane and corresponding stopline information.
+
+```plantuml
+@startuml
+entity TargetObject {
+  * object: PredictedObject
+  detected object
+  --
+  * attention_lanelet: ConstLanelet
+  belonging lanelet instance
+  --
+  * stopline: ConstLineString3d
+  reachable stopline of attention_lanelet
+}
+@enduml
+```

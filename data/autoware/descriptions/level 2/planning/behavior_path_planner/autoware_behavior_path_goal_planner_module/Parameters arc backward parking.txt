@@ -1,0 +1,6 @@
+| Name                                     | Unit  | Type   | Description                                                               | Default value |
+| :--------------------------------------- | :---- | :----- | :------------------------------------------------------------------------ | :------------ |
+| enable_arc_backward_parking              | [-]   | bool   | flag whether to enable arc backward parking                               | true          |
+| after_backward_parking_straight_distance | [m]   | double | straight line distance after pull over end point                          | 2.0           |
+| backward_parking_velocity                | [m/s] | double | velocity when backward parking                                            | -1.38         |
+| backward_parking_lane_departure_margin   | [m/s] | double | lane departure margin for front right corner of ego-vehicle when backward | 0.0           |

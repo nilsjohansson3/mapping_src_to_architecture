@@ -1,0 +1,3 @@
+<!-- Write performance information like complexity. If it wouldn't be the bottleneck, not necessary.
+
+Example:

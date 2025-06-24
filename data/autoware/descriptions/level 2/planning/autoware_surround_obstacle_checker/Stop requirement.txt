@@ -1,0 +1,8 @@
+If it satisfies all following conditions, it plans stopping.
+
+- Ego vehicle is stopped
+- It satisfies any following conditions
+  1. The distance to nearest obstacle satisfies following conditions
+     - If state is `State::PASS`, the distance is less than `surround_check_distance`
+     - If state is `State::STOP`, the distance is less than `surround_check_recover_distance`
+  2. If it does not satisfies the condition in 1, elapsed time from the time it satisfies the condition in 1 is less than `state_clear_time`

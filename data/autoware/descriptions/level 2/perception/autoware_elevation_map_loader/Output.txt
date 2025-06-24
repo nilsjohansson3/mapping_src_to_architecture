@@ -1,0 +1,4 @@
+| Name                         | Type                            | Description                                                          |
+| ---------------------------- | ------------------------------- | -------------------------------------------------------------------- |
+| `output/elevation_map`       | `grid_map_msgs::msg::GridMap`   | The elevation map                                                    |
+| `output/elevation_map_cloud` | `sensor_msgs::msg::PointCloud2` | (Optional) The point cloud generated from the value of elevation map |

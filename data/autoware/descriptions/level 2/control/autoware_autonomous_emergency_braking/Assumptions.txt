@@ -1,0 +1,7 @@
+This module has following assumptions.
+
+- The predicted path of the ego vehicle can be made from either the path created from sensors or the path created from a control module, or both.
+
+- The current speed and angular velocity can be obtained from the sensors of the ego vehicle, and it uses points as obstacles.
+
+- The AEBs target obstacles are 2D points that can be obtained from the input point cloud or by obtaining the intersection points between the predicted ego footprint path and a predicted object's shape.

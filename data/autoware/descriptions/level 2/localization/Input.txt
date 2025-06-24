@@ -1,0 +1,10 @@
+- Sensor message
+  - e.g., LiDAR, camera, GNSS, IMU, CAN Bus, etc.
+  - Data types should be ROS primitives for reusability
+- Map data
+  - e.g., point cloud map, lanelet2 map, feature map, etc.
+  - The map format should be chosen based on use case and sensor configuration
+  - Note that map data is not required for some specific cases (e.g., GNSS-only localization)
+- tf, static_tf
+  - map frame
+  - base_link frame

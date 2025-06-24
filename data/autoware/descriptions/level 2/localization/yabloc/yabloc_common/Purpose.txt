@@ -1,0 +1,1 @@
+This node extracts the elements related to the road surface markings and yabloc from lanelet2.

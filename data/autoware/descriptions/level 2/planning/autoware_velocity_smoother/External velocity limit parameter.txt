@@ -1,0 +1,3 @@
+| Name                                       | Type     | Description                                           | Default value |
+| :----------------------------------------- | :------- | :---------------------------------------------------- | :------------ |
+| `margin_to_insert_external_velocity_limit` | `double` | margin distance to insert external velocity limit [m] | 0.3           |

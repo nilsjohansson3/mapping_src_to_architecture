@@ -1,0 +1,6 @@
+Next, for each trajectory point, we create the corresponding out of lane areas by subtracting the ego lanelets (from step 2) from the trajectory point footprint (from step 1).
+Each area is associated with the lanelets overlapped by the area and with the corresponding ego trajectory point.
+
+![out_of_lane_areas](./docs/out_of_lane_areas.png)
+
+In the debug visualization, the out of lane area polygon is connected to the corresponding trajectory point by a line.

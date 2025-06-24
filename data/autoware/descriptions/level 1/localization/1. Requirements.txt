@@ -1,0 +1,14 @@
+Localization aims to estimate vehicle pose, velocity, and acceleration.
+
+Goals:
+
+- Propose a system that can estimate vehicle pose, velocity, and acceleration for as long as possible.
+- Propose a system that can diagnose the stability of estimation and send a warning message to the error-monitoring system if the estimation result is unreliable.
+- Design a vehicle localization function that can work with various sensor configurations.
+
+Non-goals:
+
+- This design document does not aim to develop a localization system that
+  - is infallible in all environments
+  - works outside of the pre-defined ODD (Operational Design Domain)
+  - has better performance than is required for autonomous driving

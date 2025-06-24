@@ -1,0 +1,10 @@
+| Name                           | Type                                         | Description                                               |
+| ------------------------------ | -------------------------------------------- | --------------------------------------------------------- |
+| `output/weighted_particles`    | `yabloc_particle_filter::msg::ParticleArray` | weighted particles                                        |
+| `debug/cost_map_image`         | `sensor_msgs::msg::Image`                    | cost map created from lanelet2                            |
+| `debug/cost_map_range`         | `visualization_msgs::msg::MarkerArray`       | cost map boundary                                         |
+| `debug/match_image`            | `sensor_msgs::msg::Image`                    | projected line segments image                             |
+| `debug/scored_cloud`           | `sensor_msgs::msg::PointCloud2`              | weighted 3d line segments                                 |
+| `debug/scored_post_cloud`      | `sensor_msgs::msg::PointCloud2`              | weighted 3d line segments which are iffy                  |
+| `debug/state_string`           | `std_msgs::msg::String`                      | string describing the node state                          |
+| `debug/particles_marker_array` | `visualization_msgs::msg::MarkerArray`       | particles visualization. published if `visualize` is true |

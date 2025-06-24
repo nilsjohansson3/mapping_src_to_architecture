@@ -1,0 +1,4 @@
+The managing of your modules is defined in manager.hpp and manager.cpp. The managing is handled by two classes:
+
+- The `TemplateModuleManager` class defines the core logic for managing and launching the behavior_velocity_template scenes (defined in behavior_velocity_template_module/src/scene.cpp/hpp). It inherits essential manager attributes from its parent class `SceneModuleManagerInterface`.
+- The `TemplateModulePlugin` class provides a way to integrate the `TemplateModuleManager` into the logic of the Behavior Velocity Planner.

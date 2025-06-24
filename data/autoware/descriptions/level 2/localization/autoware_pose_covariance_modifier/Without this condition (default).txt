@@ -1,0 +1,6 @@
+- The output of the [ndt_scan_matcher](../../localization/ndt_scan_matcher) is directly sent
+  to [ekf_localizer](../../localization/ekf_localizer).
+  - It has a preset covariance value.
+  - **topic name:** `/localization/pose_estimator/pose_with_covariance`
+- The GNSS pose does not enter the ekf_localizer.
+- This node does not launch.

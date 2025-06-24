@@ -1,0 +1,6 @@
+**ArTagBasedLocalizer** is a vision-based localization node.
+
+<img src="./doc_image/ar_tag_image.png" width="320px" alt="ar_tag_image">
+
+This node uses [the ArUco library](https://index.ros.org/p/aruco/) to detect AR-Tags from camera images and calculates and publishes the pose of the ego vehicle based on these detections.
+The positions and orientations of the AR-Tags are assumed to be written in the Lanelet2 format.

@@ -1,0 +1,2 @@
+To train the model, you need ground truth 3D bounding box annotations. When using the mmdetection3d repository for training a 3D object detection algorithm, these ground truth annotations are
+saved and utilized for data augmentation. These annotations are used as an essential dataset for training the shape estimation model effectively.

@@ -1,0 +1,8 @@
+The `autoware_obstacle_cruise_planner` package has following modules.
+
+- Stop planning
+  - stop when there is a static obstacle near the trajectory.
+- Cruise planning
+  - cruise a dynamic obstacle in front of the ego.
+- Slow down planning
+  - slow down when there is a static/dynamic obstacle near the trajectory.

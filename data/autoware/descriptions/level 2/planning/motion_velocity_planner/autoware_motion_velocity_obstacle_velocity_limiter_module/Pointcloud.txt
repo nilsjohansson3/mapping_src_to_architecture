@@ -1,0 +1,2 @@
+Masking is performed using the [`pcl::CropHull`](https://pointclouds.org/documentation/classpcl_1_1_crop_hull.html) function.
+Points from the pointcloud are then directly used as obstacles.

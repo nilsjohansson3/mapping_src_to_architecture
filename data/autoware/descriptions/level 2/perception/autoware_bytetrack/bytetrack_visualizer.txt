@@ -1,0 +1,3 @@
+| Name      | Type | Default Value | Description                                                                                   |
+| --------- | ---- | ------------- | --------------------------------------------------------------------------------------------- |
+| `use_raw` | bool | false         | The flag for the node to switch `sensor_msgs/Image` or `sensor_msgs/CompressedImage` as input |

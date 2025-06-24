@@ -1,0 +1,5 @@
+```bash
+
+cd bbox_estimator
+python3 utils/split_dbinfos.py --dataset_path /path/to/mmdetection3d/data/nuscenes --classes 'car' 'truck' 'bus' 'trailer'  --train_ratio 0.8
+```

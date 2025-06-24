@@ -1,0 +1,2 @@
+Currently, there isn't any topic that outputs the relative position with the ego vehicle and target object.
+Visual confirmation on RViz would be the only solution for now.

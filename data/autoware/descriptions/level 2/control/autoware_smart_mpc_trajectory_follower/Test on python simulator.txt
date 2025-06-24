@@ -1,0 +1,107 @@
+First, to give wheel base 2.79 m in the python simulator, create the following file and save it in `control/autoware_smart_mpc_trajectory_follower/autoware_smart_mpc_trajectory_follower/python_simulator` with the name `sim_setting.json`:
+
+```json
+{ "wheel_base": 2.79 }
+```
+
+Next, after moving to `control/autoware_smart_mpc_trajectory_follower/autoware_smart_mpc_trajectory_follower/python_simulator`, run the following commands to test the slalom driving on the python simulator with the nominal control:
+
+```bash
+python3 run_python_simulator.py nominal_test
+```
+
+The result of the driving is stored in `test_python_nominal_sim`.
+
+The following results were obtained.
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_nominal_model_wheel_base.png" width="712px">
+</p>
+
+The center of the upper row represents the lateral deviation.
+
+Run the following commands to perform training using figure eight driving data under the control of pure pursuit.
+
+To perform training using a figure eight driving and driving based on the obtained model, run the following commands:
+
+```bash
+python3 run_python_simulator.py
+```
+
+The result of the driving is stored in `test_python_trined_sim`.
+
+When `trained_model_parameter:memory_for_training:use_memory_for_training` in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml) is set to `true`, the following results were obtained.
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_trained_model_lstm_wheel_base.png" width="712px">
+</p>
+
+When `trained_model_parameter:memory_for_training:use_memory_for_training` in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml) is set to `false`, the following results were obtained.
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_trained_model_wheel_base.png" width="712px">
+</p>
+
+It can be seen that the lateral deviation has improved significantly.
+However, the difference in driving with and without LSTM is not very apparent.
+
+To see the difference, for example, we can experiment with parameters such as steer_time_delay.
+
+First, to restore nominal model settings to default values, set the value of `nominal_parameter:vehicle_info:wheel_base` in [nominal_param.yaml](./autoware_smart_mpc_trajectory_follower/param/nominal_param.yaml) to 2.79, and run the following command:
+
+```bash
+python3 -m smart_mpc_trajectory_follower.clear_pycache
+```
+
+Next, modify `sim_setting.json` as follows:
+
+```json
+{ "steer_time_delay": 1.01 }
+```
+
+In this way, an experiment is performed when `steer_time_delay` is set to 1.01 sec.
+
+The result of the driving using the nominal model is as follows:
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_nominal_model_steer_time_delay.png" width="712px">
+</p>
+
+The result of the driving using the trained model with LSTM is as follows:
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_trained_model_lstm_steer_time_delay.png" width="712px">
+</p>
+
+The result of the driving using the trained model without LSTM is as follows:
+
+<p style="text-align: center;">
+    <img src="images/python_sim_lateral_error_trained_model_steer_time_delay.png" width="712px">
+</p>
+
+It can be seen that the performance with the model that includes LSTM is significantly better than with the model that does not.
+
+The parameters that can be passed to the python simulator are as follows.
+
+| Parameter                | Type        | Description                                                                                                                                                                                                                                                                                  |
+| ------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| steer_bias               | float       | steer bias [rad]                                                                                                                                                                                                                                                                             |
+| steer_rate_lim           | float       | steer rate limit [rad/s]                                                                                                                                                                                                                                                                     |
+| vel_rate_lim             | float       | acceleration limit [m/s^2]                                                                                                                                                                                                                                                                   |
+| wheel_base               | float       | wheel base [m]                                                                                                                                                                                                                                                                               |
+| steer_dead_band          | float       | steer dead band [rad]                                                                                                                                                                                                                                                                        |
+| adaptive_gear_ratio_coef | list[float] | List of floats of length 6 specifying information on speed-dependent gear ratios from tire angle to steering wheel angle.                                                                                                                                                                    |
+| acc_time_delay           | float       | acceleration time delay [s]                                                                                                                                                                                                                                                                  |
+| steer_time_delay         | float       | steer time delay [s]                                                                                                                                                                                                                                                                         |
+| acc_time_constant        | float       | acceleration time constant [s]                                                                                                                                                                                                                                                               |
+| steer_time_constant      | float       | steer time constant [s]                                                                                                                                                                                                                                                                      |
+| accel_map_scale          | float       | Parameter that magnifies the corresponding distortion from acceleration input values to actual acceleration realizations. <br> Correspondence information is kept in `control/autoware_smart_mpc_trajectory_follower/autoware_smart_mpc_trajectory_follower/python_simulator/accel_map.csv`. |
+| acc_scaling              | float       | acceleration scaling                                                                                                                                                                                                                                                                         |
+| steer_scaling            | float       | steer scaling                                                                                                                                                                                                                                                                                |
+| vehicle_type             | int         | Take values from 0 to 4 for pre-designed vehicle types. <br> A description of each vehicle type is given below.                                                                                                                                                                              |
+
+For example, to give the simulation side 0.01 [rad] of steer bias and 0.001 [rad] of steer dead band, edit the `sim_setting.json` as follows.
+
+```json
+{ "steer_bias": 0.01, "steer_dead_band": 0.001 }
+```

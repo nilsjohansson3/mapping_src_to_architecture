@@ -1,0 +1,4 @@
+> **This package is disabled by default in Autoware, you need to manually enable it.**
+
+To enable this package, you need to change the `use_autoware_pose_covariance_modifier` parameter to `true` within
+the [pose_twist_estimator.launch.xml](../../launch/tier4_localization_launch/launch/pose_twist_estimator/pose_twist_estimator.launch.xmlL3).

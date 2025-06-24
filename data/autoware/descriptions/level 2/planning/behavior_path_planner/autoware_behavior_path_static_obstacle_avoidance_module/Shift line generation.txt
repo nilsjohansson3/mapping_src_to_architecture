@@ -1,0 +1,32 @@
+As mentioned above, the end point of the avoidance shift path and the start point of the return shift path, which are FIXED points, are calculated from envelope polygon. As a next step, the module adjusts the other side points depending on shift length, current ego speed and lateral jerk constrain params defined in the config file.
+
+Since the two points are always on the centerline of the ego lane, the module only calculates longitudinal distance between the shift start and end point based on the following function. This function is defined in the path shifter library. See [this](../autoware_behavior_path_planner_common/docs/behavior_path_planner_path_generation_design.md) page as well.
+
+```c++
+double PathShifter::calcLongitudinalDistFromJerk(
+  const double lateral, const double jerk, const double velocity)
+{
+  const double j = std::abs(jerk);
+  const double l = std::abs(lateral);
+  const double v = std::abs(velocity);
+  if (j < 1.0e-8) {
+    return 1.0e10;
+  }
+  return 4.0 * std::pow(0.5 * l / j, 1.0 / 3.0) * v;
+}
+```
+
+We call the line that connects shift start and end point `shift_line`, which the avoidance path is generated from with spline completion.
+
+The start point of avoidance has another longitudinal constraint. In order to keep turning on the blinker for a few seconds before starting the avoidance maneuver, the avoidance start point must be further than the value (we call the distance `prepare_length`.) depending on ego speed from ego position.
+
+```yaml
+longitudinal:
+  min_prepare_time: 1.0  [s]
+  max_prepare_time: 2.0  [s]
+  min_prepare_distance: 1.0  [m]
+```
+
+The `prepare_length` is calculated as the product of ego speed and `max_prepare_time`. (When the ego speed is zero, `min_prepare_distance` is used.)
+
+![fig](./images/path_generation/shift_line.png)

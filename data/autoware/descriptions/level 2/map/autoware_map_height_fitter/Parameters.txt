@@ -1,0 +1,1 @@
+{{ json_to_markdown("map/autoware_map_height_fitter/schema/map_height_fitter.schema.json") }}

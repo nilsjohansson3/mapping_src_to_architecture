@@ -1,0 +1,730 @@
+Module,Text
+client,Enables access to any datastore (local/production).
+client,Base script to be used as a template for all data migration scripts.
+client,Supports full scan of entities without OutOfMemoryError. Supports automatic continuation from the last failure point (Checkpoint feature). Supports transaction between isMigrationNeeded(BaseEntity) and migrateEntity(BaseEntity). Supports batch saving if transaction is not used.
+client,<E> The datastore entity type to be migrated by the script. <T> The SQL entity type to be migrated by the script.
+client,Data migration class for account and read notifications.
+client,Data migration class for account request entity.
+client,Data migration class for notification entity.
+client,Data migration class for usage statistics.
+client,Index the newly-indexable fields of courses.
+client,Migrate non course entities.
+client,SeedDB class.
+client,Seeds the usage statistics table with dummy data.
+client,Class for verifying account attributes.
+client,Class for verifying account request attributes.
+client,Verification of the data migration connection.
+client,Verify non course entities.
+client,Protected methods may be overriden.
+client,<E> Datastore entity <T> SQL entity
+client,Verify the counts of non-course entities are correct.
+client,Class for verifying notification attributes.
+client,Class for verifying usage statistics.
+client,An iterator that iterates all the matched entities for a Datastore query with batch fetching enabled.
+client,<T> the type of entity to iterate
+client,File storage service that saves stats/cache to encrypted/unencrypted files.
+client,A bundle that consists of the usages of the application for each institute.
+client,Script that calculates the number of unique students and instructors per institute.
+client,"Class to create JSON test data in SQL format from a noSQL JSON file. File can be run using the gradle execScript task and accepts a single argument which is the JSON path ./gradlew execScript -PuserScript=""testdataconversion/ConvertDatastoreJsonToSqlJson"" args=""JSON_FILE_PATH_HERE"""
+client,Helper class to convert entities from its noSQL to SQL format.
+client,Generator that counts up to generate an ID for an entity.
+client,Regenerates all JSON data files used for different purposes.
+client,Base script to be used as a template for all data migration scripts.
+client,Supports full scan of entities without OutOfMemoryError. Supports automatic continuation from the last failure point (Checkpoint feature). Supports transaction between isMigrationNeeded(BaseEntity) and migrateEntity(BaseEntity). Supports batch saving if transaction is not used.
+client,<T> The entity type to be migrated by the script.
+client,Script to set distributePointsFor to DISTRIBUTE_ALL_UNEVENLY if forceUnevenDistribution is true.
+client,Script to set isZeroSum as false in all old feedback contribution questions before the addition of the isZeroSum field in feedback contribution questions.
+client,Script to set feedback sessions whose timezone does not match their corresponding course's.
+client,"Script to append Google IDs that do not contain ""@"" with ""@gmail.com""."
+client,Script to set commentGiverType as INSTRUCTOR in all comments by instructor.
+client,Script to change all null value to false in the isArchived field for Instructor entity.
+client,Script to set commentGiverType as INSTRUCTOR in all comments by instructor.
+client,Script to remove google ID of CourseStudent if it is fake google ID.
+client,Script to desanitize content of Course if it is sanitized.
+client,Script to desanitize content of Instructor if it is sanitized.
+client,Script to desanitize content of CourseStudent if it is sanitized.
+client,Script to desanitize name of Instructor if it is sanitized.
+client,Script to set recipientType as STUDENTS_EXCLUDING_SELF in all feedback questions whose recipientType is STUDENTS and recipientType as TEAMS_EXCLUDING_SELF in all feedback questions whose recipientType is TEAMS.
+client,Script to migrate giver name from student's name to team's name for question where the giver type is TEAMS.
+client,"This only affects very old response entities, created before late 2015."
+client,Script to migrate old format of TEXT question details (plain text) to JSON.
+client,This only affects very old question entities created before there are multiple question types.
+client,Script to set recommendedLength as null in all text questions whose recommendedLength is 0.
+client,"Migrates instructor's registration key to its encrypted version, if not yet encrypted."
+client,"Migrates student's registration key to its encrypted version, if not yet encrypted."
+client,"Generates usage statistics objects, mostly for testing purpose."
+client,Base script to migrate a googleId to a new googleId.
+client,The change of googleId is not atomic due to the constrains imposed by the Datastore.
+client,Instructions to use the script:
+client,"The script scans all Account entities and checks each accordingly. To limit the query range, override GoogleIdMigrationBaseScript#getFilterQuery(). Implement GoogleIdMigrationBaseScript#isMigrationOfGoogleIdNeeded(Account) to check whether the googleId migration is needed for the account. Implement GoogleIdMigrationBaseScript#generateNewGoogleId(Account) to generate the new googleId for the account."
+client,Index the newly-indexable fields of feedback sessions.
+client,Script to generate emails of active instructors within a period.
+client,Script to mock a course and populate large number of responses.
+client,Script to populate search documents into the system back-end.
+client,Script to migrate a googleId to a new googleId for a single account.
+client,Displays the step-by-step calculations for contribution question results.
+client,Script to trigger indexing for all account requests.
+client,Used to create API calls to the back-end without going through the UI.
+client,Represents properties in client.properties file.
+client,Helper class to help manage loops.
+client,Represents a function that accepts one argument and produces a result.
+client,Exception can be thrown from the function body.
+client,<T> the type of the input to the function <R> the type of the result of the function
+client,Contains classes needed to connect to the back end directly.
+client,Contains scripts that deal with the back end data for administrative purposes.
+client,Contains scripts that migrate non course data.
+client,Contains scripts that calculate the statistics per institute.
+client,Contains classes to migrate noSQL test data.
+client,Contains utility classes for scripts dealing with the back end data.
+common,The data transfer object for Account entities.
+common,The data transfer object for AccountRequest entities.
+common,The data transfer object for Course entities.
+common,The data transfer object for DeadlineExtension entities.
+common,Base class for Attribute classes (Attribute classes represent attributes of persistable entities).
+common,<E> type of persistable entity being wrapped
+common,The data transfer object for FeedbackQuestion entities.
+common,The data transfer object for FeedbackResponse entities.
+common,The data transfer object for FeedbackResponseComment entities.
+common,The data transfer object for FeedbackSession entities.
+common,The data transfer class for Instructor entities.
+common,The data transfer object for the notification.
+common,The data transfer object for CourseStudent entities.
+common,The data transfer object for UsageStatistics entities.
+common,Contains structure and processing logic for other types of logs (e.g. unrecognized types).
+common,Contains specific structure and processing logic for email sent log.
+common,Contains specific structure and processing logic for exception log.
+common,Contains specific structure and processing logic for feedback session audit log.
+common,Represents a log entry and contains the fields that are more important for tracing and debugging purposes.
+common,Contains specific structure and processing logic for instance log.
+common,Holds the details for a specific log event.
+common,Represents the parameters used for querying logs.
+common,Contains specific structure and processing logic for HTTP request log.
+common,Represents a user who invokes the HTTP request.
+common,Represents a location of source code that produces a log line.
+common,Contains specific structure and processing logic for constant sum feedback questions.
+common,Contains specific structure and processing logic for constant sum feedback responses.
+common,Contains specific structure and processing logic for contribution feedback questions.
+common,Contains specific structure and processing logic for contribution feedback responses.
+common,Contains specific structure and processing logic for MCQ feedback questions.
+common,Contains specific structure and processing logic for MCQ feedback responses.
+common,Contains specific structure and processing logic for MSQ feedback questions.
+common,Contains specific structure and processing logic for MCQ feedback responses.
+common,Contains specific structure and processing logic for numerical scale feedback questions.
+common,Contains specific structure and processing logic for numerical scale feedback responses.
+common,A class holding the details for a specific question type. This abstract class is inherited by concrete Feedback*QuestionDetails classes which provides the implementation for the various abstract methods such that pages can render the correct information/forms depending on the question type
+common,Contains specific structure and processing logic for rank options feedback questions.
+common,Contains specific structure and processing logic for rank options feedback responses.
+common,Contains common abstractions between rank options and rank recipients questions.
+common,Contains specific structure and processing logic for rank recipients feedback questions.
+common,Contains specific structure and processing logic for rank recipients feedback responses.
+common,A class holding the details for the response of a specific question type.
+common,This abstract class is inherited by concrete Feedback*ResponseDetails classes which provides the implementation for the various abstract methods such that pages can render the correct information depending on the question type.
+common,Contains specific structure and processing logic for rubric feedback questions.
+common,Contains specific structure and processing logic for rubric feedback responses.
+common,Contains specific structure and processing logic for text feedback questions.
+common,Contains specific structure and processing logic for text feedback responses.
+common,The query for attributes deletion.
+common,Contains a list of students and instructors in a course. Useful for caching a copy of student and instructor details of a course instead of reading them from the database multiple times.
+common,Holds a bundle of *Attributes data transfer objects.
+common,This class is mainly used for serializing JSON strings.
+common,Represents an error level entry from the logs.
+common,Represents a recipient of a feedback question.
+common,Represents a log entry of a feedback session.
+common,Represents a set of allowed action to be performed by an instructor.
+common,Representation of instructor privileges. Store the privileges of the instructor
+common,"Legacy format of instructor privileges object, where map of string to boolean is used."
+common,Represents the results of querying logs.
+common,Represents detailed results for a feedback session.
+common,Contains a list of students and instructors in a course. Useful for caching a copy of student and instructor details of a course instead of reading them from the database multiple times.
+common,Holds a bundle of entities.
+common,This class is mainly used for serializing JSON strings.
+common,Represents detailed results for a feedback session.
+common,This class represents an feedback contribution question result for a given team. It exposes the result via some public variables.
+common,"Represents a user type. Contains user's Google ID and flags to indicate whether the user is an admin, instructor, student."
+common,Represents user credential info to be persisted within cookies.
+common,Exception thrown when error is encountered while executing authentication-related services.
+common,Exception thrown when an operation is determined to have exceeded the time it is allowed to run.
+common,Exception thrown when error is encountered while sending email.
+common,Exception thrown when enrolling students into a course.
+common,Exception thrown due to attempting to create an entity that has existed.
+common,Exception thrown due to attempting to operate on an entity that does not exist.
+common,Exception thrown when a crucial HTTP request does not succeed.
+common,Exception thrown when updating instructor within a course.
+common,Exception thrown when non-HTTP parameter validation fails.
+common,Exception thrown when error is encountered while performing search.
+common,Exception thrown when updating student within a course.
+common,A specific implementation of Url used to encapsulate URLs of the application.
+common,Represents the deployment-specific configuration values of the system. This can be used to access values in the build.properties file too.
+common,"Stores constants that are widely used across classes. this class contains several nested classes, each containing a specific category of constants."
+common,Encapsulates the status of sending an email.
+common,Represents an email message and its important metadata.
+common,"Used to handle the data validation aspect e.g. validate emails, names, etc."
+common,Holds file-related functions.
+common,Utility class for Hibernate related methods.
+common,A utility class to execute an HTTP request and return the response.
+common,Holds HttpServletRequest-related helper functions.
+common,"Provides means to handle, manipulate, and convert JSON objects to/from strings."
+common,Allows any component of the application to log messages at appropriate levels.
+common,Stores the information of the current HTTP request.
+common,Class contains methods to sanitize user provided parameters so that they conform to our data format and possible threats can be removed first as well as methods to revert sanitized text back to its previous unsanitized state.
+common,ConsoleHandler implementation that uses System#out instead of System#err.
+common,Holds String-related helper functions.
+common,Represents a task to be added to the task queue.
+common,Contains utility methods for creating strings from given templates.
+common,"A helper class to hold time-related functions (e.g., converting dates to strings etc.)."
+common,Time zone is assumed as UTC unless specifically mentioned.
+common,Loads time-zone rules for 'TZDB'. Modified from java.time.zone.TzdbZoneRulesProvider. Reads the file 'tzdb.dat' from resources instead of the JRE library directory.
+common,The Url class represents a URL string. It provides methods to manipulate the URL string and extract values from it.
+common,Constant values for the different feedback session-related log types.
+common,Represents particular events to be logged.
+common,Severity level for logs.
+common,Enum that defines different distribute points options for constant sum questions.
+common,Feedback Question Type Definitions.
+common,The status of an account request.
+common,Represents the type of an entity that is involved in a feedback question or response.
+common,"The FeedbackResponse result fetching type to indicate whether the fetch is for giver only, receiver only or both."
+common,Instructor Permission Role.
+common,Const.InstructorPermissionRoleNames
+common,Represents the different notification banner background colors. It mainly refers to the available colors in bootstrap stylesheet. Reference: https://getbootstrap.com/docs/4.5/utilities/colors/#background-color
+common,Represents the type of target user groups for notifications.
+common,The type object that defines an email based on its purpose.
+common,"Contains lightweight data transfer objects for transferring data between components, particularly those from different packages."
+common,Contains attributes classes as a wrapper for persistable entities.
+common,Contains specific logs-related classes.
+common,Contains specific question type-related classes.
+common,Contains custom exceptions used across the application.
+common,Contains utility classes and helpers to be used by all components of the application.
+e2e,SUT: Const.WebPageURIs#ADMIN_ACCOUNTS_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_SEARCH_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_SESSIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#SESSION_RESULTS_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_SESSION_SUBMISSION_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSES_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_ENROLL_PAGE.
+e2e,SUT: Const.WebPageURIs#JOIN_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_STUDENT_DETAILS_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_STUDENT_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_REPORT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SEARCH_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_INDIVIDUAL_EXTENSION_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_ACTIVITY_LOGS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_LIST_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_RECORDS_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#JOIN_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_SEARCH_PAGE.
+e2e,Base class for all browser tests.
+e2e,"This type of test has no knowledge of the workings of the application, and can only communicate via the UI or via BackDoor to obtain/transmit data."
+e2e,Base class for all feedback question related browser tests.
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE."
+e2e,"Only UI-intensive operations, e.g. question creation and response submission, are tested separately. This is so that if any part of the testing fails (due to regression or inherent instability), only the specific test for the specific feedback question needs to be re-run."
+e2e,"For the above reason, viewing feedback responses/results is not considered to be under this test case. This is because viewing results is a fast action and combining all question types together under one test case will save some testing time."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for MCQ questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for msq questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for NumScale questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for RankOption questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for Rubric questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for text questions."
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_STUDENT_DETAILS_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_LIST_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_RECORDS_PAGE.
+e2e,SUT: Const.WebPageURIs#ACCOUNT_REQUEST_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#JOIN_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_ACCOUNTS_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_SEARCH_PAGE.
+e2e,SUT: Const.WebPageURIs#ADMIN_SESSIONS_PAGE.
+e2e,"SUT: Const.CronJobURIs#AUTOMATED_FEEDBACK_OPENING_REMINDERS, Const.CronJobURIs#AUTOMATED_FEEDBACK_CLOSING_REMINDERS, Const.CronJobURIs#AUTOMATED_FEEDBACK_CLOSED_REMINDERS, Const.CronJobURIs#AUTOMATED_FEEDBACK_PUBLISHED_REMINDERS."
+e2e,Base class for all browser tests.
+e2e,"This type of test has no knowledge of the workings of the application, and can only communicate via the UI or via BackDoor to obtain/transmit data."
+e2e,Base class for all feedback question related browser tests.
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE."
+e2e,"Only UI-intensive operations, e.g. question creation and response submission, are tested separately. This is so that if any part of the testing fails (due to regression or inherent instability), only the specific test for the specific feedback question needs to be re-run."
+e2e,"For the above reason, viewing feedback responses/results is not considered to be under this test case. This is because viewing results is a fast action and combining all question types together under one test case will save some testing time."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for ConstSumOption questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for ConstSumRecipient questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for Contribution questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for MCQ questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for MSQ questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for NumScale questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for RankOption questions."
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for RankRecipient questions."
+e2e,SUT: Const.WebPageURIs#SESSION_RESULTS_PAGE.
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for Rubric questions."
+e2e,SUT: Const.WebPageURIs#SESSION_SUBMISSION_PAGE.
+e2e,"SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE, Const.WebPageURIs#SESSION_SUBMISSION_PAGE specifically for text questions."
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSES_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_ENROLL_PAGE.
+e2e,SUT: Const.WebPageURIs#JOIN_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_STUDENT_DETAILS_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_COURSE_STUDENT_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_EDIT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_REPORT_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_NOTIFICATIONS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SEARCH_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_SESSION_INDIVIDUAL_EXTENSION_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_ACTIVITY_LOGS_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_LIST_PAGE.
+e2e,SUT: Const.WebPageURIs#INSTRUCTOR_STUDENT_RECORDS_PAGE.
+e2e,"SUT: The reusable notification banner, which can be displayed across many pages. Const.WebPageURIs#STUDENT_HOME_PAGE is used to test the behaviour of the banner in this case, Const.WebPageURIs#STUDENT_NOTIFICATIONS_PAGE"
+e2e,SUT: Const.WebPageURIs#STUDENT_COURSE_DETAILS_PAGE.
+e2e,SUT: Const.WebPageURIs#JOIN_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_HOME_PAGE.
+e2e,SUT: Const.WebPageURIs#STUDENT_NOTIFICATIONS_PAGE.
+e2e,Verifies that various system error report emails should or should not be sent to the admin.
+e2e,Verifies that the timezone databases in moment-timezone and java.time are consistent and up-to-date.
+e2e,Implemented as a browser test as both back-end and front-end methods are involved.
+e2e,Page Object Model for the admin accounts page.
+e2e,Represents the admin home page of the website.
+e2e,Page Object Model for the admin notifications page.
+e2e,Represents the admin home page of the website.
+e2e,Page Object Model for the admin sessions page.
+e2e,Page Object Model for the admin timezone page.
+e2e,"An abstract class that represents a browser-loaded page of the app and provides ways to interact with it. Also contains methods to validate some aspects of the page, e.g. HTML page source."
+e2e,Note: We are using the Page Object pattern here.
+e2e,A programmatic interface to the Browser used to test the app.
+e2e,Page Object Model for the course join confirmation page.
+e2e,Page Object Model for login page in development server.
+e2e,Page Object Model for the error reporting modal.
+e2e,Page Object Model for feedback results page.
+e2e,Represents the feedback submission page of the website.
+e2e,Page Object Model for home page.
+e2e,Page Object Model for the official IANA page for timezone database.
+e2e,"Represents the ""Courses"" page for Instructors."
+e2e,Represents the instructor course details page of the website.
+e2e,Represents the instructor course edit page of the website.
+e2e,Represents the instructor course enrollment page.
+e2e,Represents the instructor course student details edit page of the website.
+e2e,Represents the instructor course student details edit page of the website.
+e2e,Represents the instructor course student details view page of the website.
+e2e,Represents the instructor feedback edit page of the website.
+e2e,"Represents the ""Results"" page for Instructors."
+e2e,"Represents the ""Sessions"" page for Instructors."
+e2e,Represents the instructor home page.
+e2e,Page Object Model for instructor notifications page.
+e2e,Represents the instructor search page.
+e2e,Represents the instructor session individual extension page.
+e2e,Represents the student activity logs page of the website.
+e2e,Page Object Model for instructor student list page.
+e2e,Page Object Model for instructor student list page.
+e2e,Page Object Model for instructor student records page.
+e2e,Page Object Model for account request form page.
+e2e,Page Object Model for student course details page.
+e2e,Page Object Model for student home page.
+e2e,Page Object Model for student notifications page.
+e2e,Page Object Model for user notifications page.
+e2e,Used to create API calls to the back-end without going through the UI.
+e2e,Provides an access to real Gmail inbox used for testing.
+e2e,Authentication via a real username (Google ID) and password is required.
+e2e,Checks that the email account is ready for testing against staging/production server.
+e2e,Exception thrown when a Retryable does not end successfully after exceeding the retry limits.
+e2e,Represents a task that can be retried.
+e2e,"Handles running and retrying of Retryable tasks. Generally, the methods retry tasks with exponential backoff until one of the following conditions is met:"
+e2e,Task is successful (see specific method documentation for definition of success). Maximum retries are exceeded (as determined by the specified maximum delay). A Throwable of type specified in the task is encountered (this is thrown upwards).
+e2e,Checks for test data validity.
+e2e,"As E2E tests can be run against actual production server, the test data needs to be carefully designed such that they do not consist any form of data that may be resembling what users can be using."
+e2e,"For the above reason, the following fields are checked:"
+e2e,Account Google ID Course ID Student email Instructor email
+e2e,"In order to guarantee data safety as much as possible, we set some form of validation rule for the above fields such that the likelihood of any user using the same identifier is very low or zero."
+e2e,Verifies that the testng-e2e.xml configuration file contains all the E2E test cases in the project.
+e2e,Represents properties in test.properties file.
+e2e,SUT: TestProperties.
+e2e,Contains E2E test cases.
+e2e,Contains accessibility test cases.
+e2e,Contains E2E test cases for sql.
+e2e,Contains abstractions of the pages as they appear on a Web browser (i.e. SUTs).
+e2e,Contains infrastructure and helpers needed for running the E2E tests.
+logic,Provides authentication-related services.
+logic,Handles operations related to generating emails to be sent from provided templates.
+logic,Handles operations related to sending emails.
+logic,Provides the business logic for production usage of the system.
+logic,This is a Facade class which simply forwards the method to internal classes.
+logic,Handles operations related to logs reading/writing.
+logic,"Note that while this interface should support writing logs, most of the application/system logs should be written via the standard Logger class."
+logic,Used to handle the verification of the user's reCAPTCHA response.
+logic,Allows for adding specific type of tasks to the task queue.
+logic,Handles logic related to username and user role provisioning.
+logic,Handles operations related to accounts.
+logic,Handles the logic related to account requests.
+logic,Handles operations related to courses.
+logic,Handles operations related to data bundles.
+logic,Handles the logic related to deadline extensions.
+logic,Handles operations related to feedback questions.
+logic,Handles operations related to feedback responses.
+logic,Handles operations related to feedback response comments.
+logic,Handles operations related to feedback sessions.
+logic,Handles operations related to instructors.
+logic,Setup in web.xml to register logic classes at application startup.
+logic,Handles the logic related to notifications.
+logic,Handles operations related to students.
+logic,Handles operations related to system usage statistics objects.
+logic,Service that does not execute any authentication operations.
+logic,Email sender service which will not send any email.
+logic,"Service that bypasses reCAPTCHA verification, i.e. always returning successful verification."
+logic,Provides Firebase Admin Auth authentication services.
+logic,The FirebaseApp instance is initialized here.
+logic,Holds functions for operations related to Google Cloud Logging.
+logic,Holds functions for operations related to Google Cloud Tasks.
+logic,Google-based reCAPTCHA verifier service.
+logic,Holds functions for operations related to logs reading/writing in local dev environment.
+logic,The current implementation uses an in-memory storage of logs to simulate the logs retention locally for feedback session logs only. It is not meant as a replacement but merely for testing purposes.
+logic,Holds functions for operations related to task queue in local dev environment.
+logic,Email sender service provided by Mailgun.
+logic,Email sender service provided by Mailjet.
+logic,Email sender service provided by SendGrid.
+logic,Interface that provides authentication-related services.
+logic,An email sender interface used by services for sending emails.
+logic,An interface used for logs operations such as reading/writing.
+logic,An interface to verify the user's reCAPTCHA response.
+logic,Handles operations related to task queues.
+logic,Provides the API of the component to be accessed by the UI.
+logic,Contains the core logic of the system.
+logic,Contains the logic of the external dependencies and services.
+storage,Handles CRUD operations for accounts.
+storage,Handles CRUD operations for account requests.
+storage,Handles CRUD operations for courses.
+storage,Runs a local Datastore emulator instance.
+storage,Handles CRUD operations for deadline extensions.
+storage,Handles CRUD operations for feedback questions.
+storage,Handles CRUD operations for feedback responses.
+storage,Handles CRUD operations for feedback response comments.
+storage,Handles CRUD operations for feedback sessions.
+storage,Handles CRUD operations for instructors.
+storage,Handles CRUD operations for notifications.
+storage,Setup in web.xml to register Objectify at application startup.
+storage,Handles CRUD operations for students.
+storage,Handles CRUD operations for system usage statistics objects.
+storage,Represents a unique user in the system.
+storage,Represents an AccountRequest entity.
+storage,Base class for all entities persisted to the database.
+storage,Represents a course entity.
+storage,An association class that represents the association Account --> [enrolled in] --> Course.
+storage,Represents an individual student's extended deadline.
+storage,Represents a feedback question.
+storage,Represents a feedback response.
+storage,An association class that represents the association Giver --> [comments about] --> FeedbackResponse. Giver can be a student or an instructor or a team
+storage,Represents an instructor-created Feedback Session.
+storage,An association class that represents the association Account --> [is an instructor for] --> Course.
+storage,Represents a unique notification in the system.
+storage,Represents a system usage statistics for a specified period of time.
+storage,"Note that ""system usage"" here is defined as user-facing usages, such as number of entities created and number of actions, as opposed to system resources such as hardware and network."
+storage,Acts as a proxy to search service for account request related search features.
+storage,Acts as a proxy to search service for instructor-related search features.
+storage,Factory that returns search manager implementation.
+storage,Setup in web.xml to register search manager at application startup.
+storage,Acts as a proxy to search service for student-related search features.
+storage,Handles CRUD operations for accounts.
+storage,Generates CRUD operations for AccountRequest.
+storage,Handles CRUD operations for courses.
+storage,Handles CRUD operations for deadline extensions.
+storage,Handles CRUD operations for feedback questions.
+storage,Handles CRUD operations for feedbackResponses.
+storage,Handles CRUD operations for feedbackResponseComments.
+storage,Handles CRUD operations for feedback sessions.
+storage,Handles CRUD operations for feedback session logs.
+storage,Handles CRUD operations for notifications.
+storage,Handles CRUD operations for usage statistics.
+storage,Handles CRUD operations for users.
+storage,Represents a constant sum question.
+storage,Represents a contribution question.
+storage,Represents an mcq question.
+storage,Represents an msq question.
+storage,Represents a numerical scale question.
+storage,Represents a rank options question.
+storage,Represents a rank recipients question.
+storage,Represents a rubric question.
+storage,Represents a text question.
+storage,Represents a feedback constant sum response.
+storage,Represents a feedback contribution response.
+storage,Represents a feedback mcq response.
+storage,Represents a missing response.
+storage,Represents a feedback msq response.
+storage,Represents a feedback numerical scale response.
+storage,Represents a feedback rank options response.
+storage,Represents a feedback rank recipients response.
+storage,Represents a feedback rubric response.
+storage,Represents a text response.
+storage,Represents a unique account in the system.
+storage,Entity for AccountRequests.
+storage,Base class for all entities.
+storage,Represents a course.
+storage,Represents a deadline extension entity.
+storage,Represents a feedback question.
+storage,Represents a Feedback Response.
+storage,Represents a feedback response comment.
+storage,Represents a course entity.
+storage,Represents a feedback session log.
+storage,Represents an Instructor.
+storage,Represents a unique notification in the system.
+storage,Represents an association class between Accounts and Notifications. Keeps track of which Notifications have been read by an Account.
+storage,Represents a Section.
+storage,Represents a Student.
+storage,Represents a Team.
+storage,Represents a system usage statistics for a specified period of time.
+storage,"Note that ""system usage"" here is defined as user-facing usages, such as number of entities created and number of actions, as opposed to system resources such as hardware and network."
+storage,Represents a User.
+storage,Acts as a proxy to search service for account request related search features.
+storage,Acts as a proxy to search service for instructor-related search features.
+storage,Factory that returns search manager implementation.
+storage,Setup in web.xml to register search manager at application startup.
+storage,Acts as a proxy to search service for student-related search features.
+storage,Provides the API of the component to be accessed by the logic component.
+storage,Contains classes that represent persistable entities.
+storage,Contains classes for dealing with searching and indexing.
+storage,Contains classes handling CRUD operations against the databse.
+storage,Contains classes that represent JPA entities.
+storage,Contains FeedbackQuestion subclass entities.
+storage,Contains FeedbackResponse subclass entities.
+storage,Contains classes for dealing with searching and indexing.
+ui,The API output format of a list of accounts.
+ui,Output format of account data.
+ui,The API output format of a list of account requests.
+ui,Output format of account request data.
+ui,The API output format for retrieving list of action classes.
+ui,Generic output format for all API requests.
+ui,Authentication request format.
+ui,The API output for a list of courses.
+ui,The API output format of a archived course status.
+ui,The API output format of a course.
+ui,The API output format of a list of section names (as strings).
+ui,Output format of deadline extension data.
+ui,The output format for email request.
+ui,The API output wrapper for enroll results.
+ui,The API output format of a list of FeedbackQuestionAttributes.
+ui,The API output format of FeedbackQuestionAttributes.
+ui,"API output for Feedback Question Recipients, which is a collection of FeedbackQuestionRecipientData."
+ui,API output for feedback question recipient.
+ui,The API output format of a list of FeedbackResponseAttributes.
+ui,The API output format of teammates.common.datatransfer.attributes.FeedbackResponseCommentAttributes.
+ui,The API output format of FeedbackResponseAttributes.
+ui,The API output format of a list of FeedbackSessionAttributes.
+ui,The API output format of FeedbackSessionAttributes.
+ui,The API output format for logs on all feedback sessions in a course.
+ui,The response log of a single feedback session.
+ui,The session log of a student for a single feedback session.
+ui,API output of Feedback Session Stats.
+ui,The API output format of all givers who submitted a feedback session.
+ui,The API output format for general logs for query action.
+ui,The API output format to represent if there are responses.
+ui,The API output format of a list of instructors.
+ui,The API output format of an instructor.
+ui,The output format for privilege of an instructor.
+ui,Output format for join link.
+ui,The join status of a course.
+ui,Generic output format for message-producing endpoint.
+ui,The API output for a list of notifications.
+ui,The API output format of a notification.
+ui,A single ongoing session.
+ui,The API output format for OngoingSessions.
+ui,Output format of read notifications.
+ui,The API output format for the regenerate key request.
+ui,The API output format to represent if the registration key is valid for the logged in user (or lack thereof).
+ui,The output format for sending of login email requests.
+ui,The output format for session links recovery request.
+ui,"API output format for session results, including statistics."
+ui,The API output format of a list of StudentData.
+ui,The API output format of StudentAttributes.
+ui,The API output format for available timezones and their offsets-in-seconds.
+ui,The API output format of UsageStatisticsAttributes.
+ui,The API output format of a list of UsageStatistics.
+ui,The request of creating new account.
+ui,The request reasonBody for rejecting an account request.
+ui,The create request for an account request update request.
+ui,The request body of a HTTP request.
+ui,The archive request of a course.
+ui,The basic request of modifying a course.
+ui,The create request for the course.
+ui,The update request for a course.
+ui,The create request for an error report to be emailed to the admin.
+ui,The basic request of modifying a feedback question.
+ui,The create request of a feedback question.
+ui,The update request of a feedback question.
+ui,The basic request of submitting a list of feedback responses.
+ui,The create request of a feedback response comment.
+ui,The update request of a feedback response comment.
+ui,The basic request body format for creating/saving of feedback session.
+ui,The request body format for creation of feedback session.
+ui,The request of specifying reminder emails to be sent.
+ui,Sends a reminder email each to a list of respondents from a feedback session.
+ui,The update request of a feedback session.
+ui,The create request for an instructor to be created.
+ui,The update request for instructor privilege.
+ui,Exception thrown when an HTTP request body does not conform to an expected format (e.g. It is not deserializable or some fields are missing).
+ui,This corresponds to HTTP 400 error.
+ui,The request of marking a notification as read in account.
+ui,The basic request for a notification.
+ui,The request for creating a notification.
+ui,The request for updating a notification.
+ui,The request of sending an email.
+ui,The request for enrolling a list of students.
+ui,The create request for an student update request.
+ui,Servlet that handles dev server login.
+ui,Servlet that handles server health check.
+ui,"Note that ""health"" here is only defined as the server being reachable. It does not indicate whether other dependent components such as DB connection and Google Cloud libraries are working as expected."
+ui,Setup in web.xml to set up Hibernate Session Factory at application startup.
+ui,Maps some selected legacy URLs to new one. This is primarily for URLs send via email.
+ui,This class does not check for parameter validity.
+ui,Servlet that handles login.
+ui,Servlet that handles logout.
+ui,Filter to activate Objectify service.
+ui,This is adapted from the official ObjectifyFilter class with modification to support jakarta.servlet in place of javax.servlet.
+ui,Checks and validates origin of HTTP requests.
+ui,Servlet that handles the OAuth2 callback.
+ui,Extracts trace ID of HTTP requests.
+ui,Servlet that handles all requests from the web application.
+ui,Servlet that handles the single web page.
+ui,Filter to add web security headers.
+ui,Task queue worker action: performs account request search indexing.
+ui,"An ""action"" to be performed by the system. If the requesting user is allowed to perform the requested action, this object can talk to the back end to perform that action."
+ui,Generates the matching Action for a given URI and request method.
+ui,Exception thrown when a controller class is failed to be instantiated from a given resource URL.
+ui,This corresponds to either HTTP 404 or 405 error.
+ui,Represents the result of executing an Action.
+ui,Move a course to the recycle bin.
+ui,Gathers usage-related statistics (e.g. new created entities) in the past defined time period and store in the database.'
+ui,Creates a new instructor account with sample courses.
+ui,Creates a new account request.
+ui,Create a new course for an instructor.
+ui,Creates a feedback question.
+ui,Creates a new feedback response comment.
+ui,Create a feedback session.
+ui,Action: creates a feedback session log for the purposes of tracking and auditing.
+ui,Action: adds another instructor to a course that already exists.
+ui,Action: Creates a new notification banner.
+ui,Delete a course.
+ui,Deletes a feedback question.
+ui,Deletes a feedback response comment.
+ui,Delete a feedback session.
+ui,"Deletes an instructor from a course, unless it's the last instructor in the course."
+ui,Action: Deletes a notification by its ID.
+ui,Action: deletes all students in a course.
+ui,Action: deletes a student from a course.
+ui,Enroll a list of students.
+ui,Create the students who are not in the course.
+ui,Update the students who are already existed.
+ui,Return all students who are successfully enrolled.
+ui,Exception thrown when a requested entity is not found.
+ui,"More often than not, this will be a runtime exception wrapper for EntityDoesNotExistException."
+ui,This corresponds to HTTP 404 error.
+ui,Cron job: schedules feedback session closed emails to be sent.
+ui,Cron job: schedules feedback session closing emails to be sent.
+ui,Cron job: schedules feedback session opening emails to be sent.
+ui,Cron job: schedules feedback session opening soon emails to be sent.
+ui,Task queue worker action: prepares session published reminder for a particular session to be sent.
+ui,Cron job: schedules feedback session published emails to be sent.
+ui,Task queue worker action: sends feedback session reminder email to a course.
+ui,Task queue worker action: sends feedback session reminder email to particular students of a course.
+ui,Task queue worker action: sends feedback session reminder email to particular students of a course.
+ui,Task queue worker action: prepares session unpublished reminder for a particular session to be sent.
+ui,Generate email content.
+ui,Action: Gets pending account requests.
+ui,"Gets all courses for the instructor, and filtered by active, archived and soft-deleted. Or gets all courses for the student he belongs to."
+ui,Get a course for an instructor or student.
+ui,Get the join status of a course.
+ui,Gets the section names of a course.
+ui,Gets deadline extension information.
+ui,Get a list of feedback questions for a feedback session.
+ui,Get the recipients of a feedback question.
+ui,Get all the comments given by the user for a response.
+ui,Get a list of feedback sessions.
+ui,Get a feedback session.
+ui,Action: gets the feedback session logs of feedback sessions of a course.
+ui,Get a set of givers that has given at least one response in the feedback session.
+ui,Checks whether a course or question has responses for instructor. Checks whether a student has responded a feedback session.
+ui,Get a list of instructors of a course.
+ui,Get the information of an instructor inside a course.
+ui,Get the instructor privilege.
+ui,Action: Gets a list of notifications.
+ui,Action: Gets a notification by ID.
+ui,Gets the list of all ongoing sessions.
+ui,Action: Gets read notifications from account entity.
+ui,Action: checks whether the provided registration key is valid for the logged in user.
+ui,This does not log in or log out the user.
+ui,Action: gets the response stats (submitted / total) of a feedback session.
+ui,Gets feedback session results including statistics where necessary.
+ui,Get a list of students.
+ui,Get the information of a student inside a course.
+ui,Action specifically created for returning user cookie value.
+ui,Task queue worker action: sends registration email for an instructor of a course.
+ui,Task queue worker action: performs instructor search indexing.
+ui,Exception thrown when an HTTP parameter does not conform to an expected format (e.g. passing a string when the expected parameter is a number).
+ui,This corresponds to HTTP 400 error.
+ui,"Exception thrown when a normally valid operation is not valid due to factors outside of the operation itself, e.g. when trying to insert duplicate entry into the database."
+ui,This corresponds to HTTP 409 error.
+ui,Action: joins a course for a student/instructor.
+ui,Action result in form of JSON object.
+ui,This is the most common format for REST-ful back-end API response.
+ui,Action: Marks a notification as read in account entity.
+ui,Publish a feedback session.
+ui,Puts searchable documents from the data bundle into the DB.
+ui,Queries the logs.
+ui,"Regenerates the key for a given instructor in a course. This will also resend the course registration and feedback session links to the affected instructor, as any previously sent links will no longer work."
+ui,"Regenerates the key for a given student in a course. This will also resend the course registration and feedback session links to the affected student, as any previously sent links will no longer work."
+ui,Rejects an account request.
+ui,Remind the student about the published result of a feedback session.
+ui,Remind students about the feedback submission.
+ui,Action: resets an account ID.
+ui,Action: Restores a course from Recycle Bin.
+ui,Searches for account requests.
+ui,Searches for instructors.
+ui,Action for searching for students.
+ui,Send join reminder emails to register for a course.
+ui,Action specifically created for confirming email and sending session recovery links.
+ui,Task queue worker action: sends registration email for a student of a course.
+ui,Task queue worker action: performs student search indexing.
+ui,Submits a list of feedback responses to a feedback question.
+ui,This action is meant to completely overwrite the feedback responses that are previously attached to the same feedback question.
+ui,Exception thrown when an entity is attempting to request for resources it does not have permission for.
+ui,This corresponds to HTTP 403 error.
+ui,Unpublish a feedback session.
+ui,Updates an account request.
+ui,Updates a course.
+ui,Updates a feedback question.
+ui,Updates a feedback response comment.
+ui,Updates a feedback session.
+ui,Process feedback session logs from GCP in the past defined time period and store in the database.
+ui,Edits an instructor in a course.
+ui,Updates an instructor's privileges. Can only be accessed by instructors with the modify instructor permission.
+ui,Action: Updates a new notification banner.
+ui,Action: Edits details of a student in a course.
+ui,Special constants used by the back-end.
+ui,Special constants used by the back-end.
+ui,Default data structures for instructor permissions.
+ui,Default data structures for all different question types.
+ui,API endpoints for resources.
+ui,The comment visibility type.
+ui,The publish status of the a feedback session.
+ui,The submission status of a feedback session.
+ui,The feedback visibility type.
+ui,The join state of an(a) instructor/student.
+ui,The setting of number of entities to giver feedback to.
+ui,The option for response visible setting.
+ui,The option for session visible setting.
+ui,The intent of calling the REST API.
+ui,Represents the type of authentication.
+ui,Contains all constants to be shared with the front-end.
+ui,Contains all API output formats.
+ui,Contains all API request formats.
+ui,Contains servlets and filters.
+ui,"Contains action classes, i.e. the API layer processing logic."

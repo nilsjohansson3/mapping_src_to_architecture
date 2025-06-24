@@ -1,0 +1,3 @@
+The package algorithm evaluates the predicted trajectory against the reference trajectory and the predicted objects in
+the environment. It checks for potential collisions and, if necessary, generates an appropriate response to avoid them (
+emergency or pause request).

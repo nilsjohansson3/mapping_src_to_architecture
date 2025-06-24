@@ -1,0 +1,3 @@
+Sub object(Radar or Camera) often has higher frequency than dominant object(LiDAR). So we need to sync the time of sub object to dominant object.
+
+![time sync](image/time_sync.drawio.svg)

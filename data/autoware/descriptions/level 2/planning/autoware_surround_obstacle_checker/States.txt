@@ -1,0 +1,5 @@
+To prevent chattering, `surround_obstacle_checker` manages two states.
+As mentioned in stop condition section, it prevents chattering by changing threshold to find surround obstacle depending on the states.
+
+- `State::PASS` : Stop planning is released
+- `State::STOP` ：While stop planning

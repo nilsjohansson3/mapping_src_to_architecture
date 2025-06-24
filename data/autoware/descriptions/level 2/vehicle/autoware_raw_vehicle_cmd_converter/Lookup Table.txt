@@ -1,0 +1,3 @@
+The core of the converter's functionality lies in its use of a CSV-formatted lookup table. This table encapsulates the relationship between the throttle/brake pedal (depending on your vehicle control interface) and the corresponding vehicle acceleration across various speeds. The converter utilizes this data to accurately translate target accelerations into appropriate throttle/brake values.
+
+![accel-brake-map-table](./figure/accel-brake-map-table.png)

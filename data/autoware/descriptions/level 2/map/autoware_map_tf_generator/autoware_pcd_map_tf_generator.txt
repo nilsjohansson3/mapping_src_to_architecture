@@ -1,0 +1,3 @@
+| Name                  | Type                            | Description                                                       |
+| --------------------- | ------------------------------- | ----------------------------------------------------------------- |
+| `/map/pointcloud_map` | `sensor_msgs::msg::PointCloud2` | Subscribe pointcloud map to calculate position of `viewer` frames |

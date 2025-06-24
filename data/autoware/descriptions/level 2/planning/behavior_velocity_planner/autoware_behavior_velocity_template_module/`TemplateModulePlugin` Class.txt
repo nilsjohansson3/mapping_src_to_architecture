@@ -1,0 +1,1 @@
+- This class inherits from `PluginWrapper<TemplateModuleManager>`. It essentially wraps your `TemplateModuleManager` class within a plugin, which can be loaded and managed dynamically.

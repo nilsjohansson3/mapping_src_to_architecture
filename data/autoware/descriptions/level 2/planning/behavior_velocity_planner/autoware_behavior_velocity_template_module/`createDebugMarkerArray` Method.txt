@@ -1,0 +1,2 @@
+- This method, also defined in the `TemplateModule` class, is responsible for creating a visualization of debug markers and returning them as a `visualization_msgs::msg::MarkerArray`. In the provided code, it returns an empty `MarkerArray`.
+- You should implement the logic to generate debug markers specific to your module's functionality.

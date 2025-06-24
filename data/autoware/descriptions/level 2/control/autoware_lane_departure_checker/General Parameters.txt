@@ -1,0 +1,7 @@
+| Name                       | Type   | Description                                                                                                 | Default value |
+| :------------------------- | :----- | :---------------------------------------------------------------------------------------------------------- | :------------ |
+| will_out_of_lane_checker   | bool   | Enable checker whether ego vehicle footprint will depart from lane                                          | True          |
+| out_of_lane_checker        | bool   | Enable checker whether ego vehicle footprint is out of lane                                                 | True          |
+| boundary_departure_checker | bool   | Enable checker whether ego vehicle footprint wil depart from boundary specified by boundary_types_to_detect | False         |
+| update_rate                | double | Frequency for publishing [Hz]                                                                               | 10.0          |
+| visualize_lanelet          | bool   | Flag for visualizing lanelet                                                                                | False         |

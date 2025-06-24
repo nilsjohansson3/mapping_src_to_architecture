@@ -1,0 +1,59 @@
+```plantuml
+@startuml
+title modifyPathVelocity For Occupancy
+start
+
+partition process_path {
+:clip path by length;
+note right
+  50m considering occupancy grid range
+end note
+:interpolate ego path;
+:get closest index from ego position in interpolated path;
+}
+partition occupancy_grid_preprocess {
+:convert occupancy grid to image;
+note right
+  convert from occupancy grid to image to use opencv functions.
+end note
+:remove noise from occupancy to apply dilate and erode;
+note right
+  applying dilate and erode is much better and faster than rule base noise reduction.
+end note
+:quantize image to categorize to free_space,unknown,occupied;
+:convert image to occupancy grid;
+note right
+  convert from occupancy grid to image to use opencv functions.
+end note
+}
+:generate_detection_area_polygon;
+partition generate_possible_collision {
+:calculate offset from path start to ego;
+:generate possible collision from occlusion spot;
+note right
+  - occlusion spot candidate is N by N size unknown cells.
+  - consider occlusion spot in detection area polygon.
+end note
+:filter occlusion spot by partition lanelets;
+note right
+  - filter occlusion spot by partition lanelets which prevent pedestrians come out.
+end note
+:calculate collision path point and intersection point;
+note right
+  - use pedestrian polygon to judge "collision_free" or not.
+end note
+:calculate safe velocity and safe margin for possible collision;
+note right
+  - safe velocity and safe margin is calculated from the performance of ego emergency braking system.
+end note
+}
+partition handle_possible_collision {
+:filter collision by road type;
+:calculate slow down points for possible collision;
+:handle collision offset;
+:apply safe velocity comparing with allowed velocity;
+:insert safe velocity to path;
+}
+stop
+@enduml
+```

@@ -1,0 +1,3 @@
+| Name    | Type                                                     | Description                           |
+| ------- | -------------------------------------------------------- | ------------------------------------- |
+| `input` | `tier4_perception_msgs::msg::DetectedObjectsWithFeature` | detected objects with labeled cluster |

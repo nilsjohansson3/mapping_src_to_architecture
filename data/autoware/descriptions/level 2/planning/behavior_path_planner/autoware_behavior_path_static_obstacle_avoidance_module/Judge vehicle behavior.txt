@@ -1,0 +1,3 @@
+The module classifies vehicles into the following three behaviors based on yaw angle and offset direction.
+
+```yaml

@@ -1,0 +1,1 @@
+A reference acceleration and velocity are derived from the throttle and brake values of external control commands.

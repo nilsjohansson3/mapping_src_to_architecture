@@ -1,0 +1,1 @@
+Check that `surround_obstacle_checker` receives no ground pointcloud, dynamic objects and current velocity data.

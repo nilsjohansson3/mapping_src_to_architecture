@@ -1,0 +1,3 @@
+`autoware_velocity_smoother` outputs a desired velocity profile on a reference trajectory.
+This module plans a velocity profile within the limitations of the velocity, the acceleration and the jerk to realize both the maximization of velocity and the ride quality.
+We call this module `autoware_velocity_smoother` because the limitations of the acceleration and the jerk means the smoothness of the velocity profile.

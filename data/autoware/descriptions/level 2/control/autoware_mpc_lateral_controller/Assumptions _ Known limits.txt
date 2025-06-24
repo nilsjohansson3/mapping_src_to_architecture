@@ -1,0 +1,3 @@
+<!-- Required -->
+
+The tracking is not accurate if the first point of the reference trajectory is at or in front of the current ego pose.

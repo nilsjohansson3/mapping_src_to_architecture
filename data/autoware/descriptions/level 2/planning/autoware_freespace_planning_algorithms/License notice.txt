@@ -1,0 +1,5 @@
+Files `src/reeds_shepp.cpp` and `include/astar_search/reeds_shepp.h`
+are fetched from [pyReedsShepp](https://github.com/ghliu/pyReedsShepp).
+Note that the implementation in `pyReedsShepp` is also heavily based on
+the code in [ompl](https://github.com/ompl/ompl).
+Both `pyReedsShepp` and `ompl` are distributed under 3-clause BSD license.

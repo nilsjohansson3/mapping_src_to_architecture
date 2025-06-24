@@ -1,0 +1,2 @@
+1. Write your remapping info in `freespace_planner.launch` or add args when executing `roslaunch`
+2. `roslaunch freespace_planner freespace_planner.launch`

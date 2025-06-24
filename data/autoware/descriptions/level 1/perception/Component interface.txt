@@ -1,0 +1,1 @@
+The following describes the input/output concept between Perception Component and other components. See [the Perception Component Interface](../../autoware-interfaces/components/perception.md) page for the current implementation.

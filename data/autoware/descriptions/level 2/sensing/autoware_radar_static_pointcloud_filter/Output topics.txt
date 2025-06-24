@@ -1,0 +1,4 @@
+| Name                      | Type                       | Description              |
+| ------------------------- | -------------------------- | ------------------------ |
+| output/static_radar_scan  | radar_msgs::msg::RadarScan | static radar pointcloud  |
+| output/dynamic_radar_scan | radar_msgs::msg::RadarScan | dynamic radar pointcloud |

@@ -1,0 +1,28 @@
+| Name                                                | Type   | Description                                                                                                  | Default value |
+| :-------------------------------------------------- | :----- | :----------------------------------------------------------------------------------------------------------- | :------------ |
+| qp_solver_type                                      | string | QP solver option. described below in detail.                                                                 | "osqp"        |
+| mpc_prediction_horizon                              | int    | total prediction step for MPC                                                                                | 50            |
+| mpc_prediction_dt                                   | double | prediction period for one step [s]                                                                           | 0.1           |
+| mpc_weight_lat_error                                | double | weight for lateral error                                                                                     | 1.0           |
+| mpc_weight_heading_error                            | double | weight for heading error                                                                                     | 0.0           |
+| mpc_weight_heading_error_squared_vel                | double | weight for heading error \* velocity                                                                         | 0.3           |
+| mpc_weight_steering_input                           | double | weight for steering error (steer command - reference steer)                                                  | 1.0           |
+| mpc_weight_steering_input_squared_vel               | double | weight for steering error (steer command - reference steer) \* velocity                                      | 0.25          |
+| mpc_weight_lat_jerk                                 | double | weight for lateral jerk (steer(i) - steer(i-1)) \* velocity                                                  | 0.1           |
+| mpc_weight_steer_rate                               | double | weight for steering rate [rad/s]                                                                             | 0.0           |
+| mpc_weight_steer_acc                                | double | weight for derivatives of the steering rate [rad/ss]                                                         | 0.000001      |
+| mpc_low_curvature_weight_lat_error                  | double | [used in a low curvature trajectory] weight for lateral error                                                | 0.1           |
+| mpc_low_curvature_weight_heading_error              | double | [used in a low curvature trajectory] weight for heading error                                                | 0.0           |
+| mpc_low_curvature_weight_heading_error_squared_vel  | double | [used in a low curvature trajectory] weight for heading error \* velocity                                    | 0.3           |
+| mpc_low_curvature_weight_steering_input             | double | [used in a low curvature trajectory] weight for steering error (steer command - reference steer)             | 1.0           |
+| mpc_low_curvature_weight_steering_input_squared_vel | double | [used in a low curvature trajectory] weight for steering error (steer command - reference steer) \* velocity | 0.25          |
+| mpc_low_curvature_weight_lat_jerk                   | double | [used in a low curvature trajectory] weight for lateral jerk (steer(i) - steer(i-1)) \* velocity             | 0.0           |
+| mpc_low_curvature_weight_steer_rate                 | double | [used in a low curvature trajectory] weight for steering rate [rad/s]                                        | 0.0           |
+| mpc_low_curvature_weight_steer_acc                  | double | [used in a low curvature trajectory] weight for derivatives of the steering rate [rad/ss]                    | 0.000001      |
+| mpc_low_curvature_thresh_curvature                  | double | threshold of curvature to use "low_curvature" parameter                                                      | 0.0           |
+| mpc_weight_terminal_lat_error                       | double | terminal lateral error weight in matrix Q to improve mpc stability                                           | 1.0           |
+| mpc_weight_terminal_heading_error                   | double | terminal heading error weight in matrix Q to improve mpc stability                                           | 0.1           |
+| mpc_zero_ff_steer_deg                               | double | threshold that feed-forward angle becomes zero                                                               | 0.5           |
+| mpc_acceleration_limit                              | double | limit on the vehicle's acceleration                                                                          | 2.0           |
+| mpc_velocity_time_constant                          | double | time constant used for velocity smoothing                                                                    | 0.3           |
+| mpc_min_prediction_length                           | double | minimum prediction length                                                                                    | 5.0           |

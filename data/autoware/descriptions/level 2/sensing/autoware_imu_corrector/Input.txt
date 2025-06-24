@@ -1,0 +1,10 @@
+| Name              | Type                                            | Description      |
+| ----------------- | ----------------------------------------------- | ---------------- |
+| `~/input/imu_raw` | `sensor_msgs::msg::Imu`                         | **raw** imu data |
+| `~/input/pose`    | `geometry_msgs::msg::PoseWithCovarianceStamped` | ndt pose         |
+
+Note that the input pose is assumed to be accurate enough. For example when using NDT, we assume that the NDT is appropriately converged.
+
+Currently, it is possible to use methods other than NDT as a `pose_source` for Autoware, but less accurate methods are not suitable for IMU bias estimation.
+
+In the future, with careful implementation for pose errors, the IMU bias estimated by NDT could potentially be used not only for validation but also for online calibration.

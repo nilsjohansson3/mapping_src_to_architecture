@@ -1,0 +1,9 @@
+This document presents the design concept of the Control Component. The content is as follows:
+
+- [Autoware Control Design](autoware-control-design)
+  - Outlining the policy for Autoware's control, which deals with only general information for autonomous driving systems and provides generic control commands to the vehicle.
+- [Vehicle Adaptation Design](vehicle-adaptation-design)
+  - Describing the policy for vehicle adaptation, which utilizes adapter mechanisms to standardize the characteristics of the vehicle's drive system and integrate it with Autoware.
+- [Control Feature Design](control-feature-design)
+  - Demonstrating the features provided by Autoware's control.
+  - Presenting the approach towards the functions installed in the vehicle such as ABS.

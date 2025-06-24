@@ -1,0 +1,3 @@
+It applies the velocity limit input from the external of `autoware_velocity_smoother`.
+Remark that the external velocity limit is different from the velocity limit already set on the map and the reference trajectory.
+The external velocity is applied at the position that it is able to reach the velocity limit with the deceleration and the jerk constraints set as the parameter.

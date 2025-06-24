@@ -1,0 +1,2 @@
+- Dynamic objects (e.g. pedestrians and other vehicles) and dynamic map information (e.g. road construction which blocks some lanes) are not considered during route planning.
+- Looped route is not supported.

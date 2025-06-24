@@ -1,0 +1,3 @@
+MANUAL mode allows the operator to have direct control over the approval of avoidance paths, which is particularly useful in situations where sensor data may be unreliable or ambiguous.
+This mode helps prevent unnecessary or incorrect avoidance maneuvers by requiring human validation before execution.
+It is recommended for environments where false positives are likely or when the sensor/perception system's performance is limited.

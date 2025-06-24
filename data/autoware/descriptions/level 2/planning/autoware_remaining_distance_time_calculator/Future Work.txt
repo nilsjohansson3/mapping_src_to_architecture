@@ -1,0 +1,2 @@
+- Find a more efficient way for remaining distance calculation instead of regularly searching the graph for finding the remaining shortest path.
+- Engage more sophisticated motion models for more accurate remaining time calculations.

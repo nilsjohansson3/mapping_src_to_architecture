@@ -1,0 +1,1 @@
+The `autoware_lidar_transfusion` package is used for 3D object detection based on lidar data (x, y, z, intensity).

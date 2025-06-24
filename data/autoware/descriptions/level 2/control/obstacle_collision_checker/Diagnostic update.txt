@@ -1,0 +1,1 @@
+If any collision is found on predicted path, this module sets `ERROR` level as diagnostic status else sets `OK`.

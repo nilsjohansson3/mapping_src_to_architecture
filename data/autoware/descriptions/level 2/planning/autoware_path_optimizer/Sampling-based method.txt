@@ -1,0 +1,2 @@
+- pros: realize global optimization
+- cons: high computation cost especially in the complex case

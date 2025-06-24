@@ -1,0 +1,7 @@
+- May not be able to start when initial position/posture is far from the target.
+
+- It may take some time until the end of the planning to compile numba functions at the start of the first control.
+
+- In the stopping action near the goal our control switches to another simple control law. As a result, the stopping action may not work except near the goal. Stopping is also difficult if the acceleration map is significantly shifted.
+
+- If the dynamics deviates too much from the nominal model, as in `vehicle_type_1`, which is intended for heavy buses, it may not be well controlled.

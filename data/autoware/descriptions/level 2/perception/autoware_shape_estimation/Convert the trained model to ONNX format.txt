@@ -1,0 +1,4 @@
+python3 onnx_converter.py --weight_path /path/to/best_checkpoint.pth --output_path /path/to/output.onnx
+```
+
+Give the output path of the ONNX model to the `model_path` parameter in the `shape_estimation` node launch file.

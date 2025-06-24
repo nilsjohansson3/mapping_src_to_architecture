@@ -1,0 +1,16 @@
+The `default_preset.yaml` file acts as the primary configuration file, where planning modules can be disable or enabled. Furthermore, users can also set the type of motion planner across various motion planners. For example:
+
+- `launch_avoidance_module`: Set to `true` to enable the avoidance module, or `false` to disable it.
+- `motion_stop_planner_type`: Set `default` to either `obstacle_stop_planner` or `obstacle_cruise_planner`.
+
+!!! note
+
+    Click [here](https://github.com/autowarefoundation/autoware_launch/blob/main/autoware_launch/config/planning/preset/default_preset.yaml) to view the `default_preset.yaml`.
+
+The [launch files](https://github.com/autowarefoundation/autoware.universe/tree/main/launch/tier4_planning_launch/launch/scenario_planning/lane_driving) reference the settings defined in `default_preset.yaml` to apply the configurations when the behavior path planner's node is running. For instance, the parameter `avoidance.enable_module` in
+
+```xml
+<param name="avoidance.enable_module" value="$(var launch_avoidance_module)"/>
+```
+
+corresponds to launch_avoidance_module from `default_preset.yaml`.

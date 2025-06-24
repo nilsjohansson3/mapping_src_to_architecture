@@ -1,0 +1,2 @@
+1. Merge the unknown objects in the tracker as a single object.
+2. Shape fitting using the tracker information such as angle and size as reference information.

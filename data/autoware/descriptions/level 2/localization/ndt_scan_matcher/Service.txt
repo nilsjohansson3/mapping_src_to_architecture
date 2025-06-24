@@ -1,0 +1,3 @@
+| Name            | Type                                                         | Description                      |
+| --------------- | ------------------------------------------------------------ | -------------------------------- |
+| `ndt_align_srv` | `autoware_localization_srvs::srv::PoseWithCovarianceStamped` | service to estimate initial pose |

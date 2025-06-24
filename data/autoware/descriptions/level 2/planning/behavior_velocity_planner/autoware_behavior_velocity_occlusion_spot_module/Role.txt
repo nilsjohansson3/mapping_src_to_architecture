@@ -1,0 +1,3 @@
+This module plans safe velocity to slow down before reaching collision point that hidden object is darting out from `occlusion spot` where driver can't see clearly because of obstacles.
+
+![brief](./docs/occlusion_spot.drawio.svg)

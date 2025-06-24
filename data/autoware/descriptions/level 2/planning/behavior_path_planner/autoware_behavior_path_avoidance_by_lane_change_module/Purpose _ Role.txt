@@ -1,0 +1,6 @@
+This module is designed as one of the obstacle avoidance features and generates a lane change path if the following conditions are satisfied.
+
+- Exist lane changeable lanelet.
+- Exist avoidance target objects on ego driving lane.
+
+![avoidance_by_lane_change](./images/avoidance_by_lane_change.svg)

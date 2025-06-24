@@ -1,0 +1,5 @@
+`dynamic_obstacle_stop` is a module that stops the ego vehicle from entering the _immediate_ path of a dynamic object.
+
+The _immediate_ path of an object is the area that the object would traverse during a given time horizon, assuming constant velocity and heading.
+
+![rviz example](docs/dynamic_obstacle_stop_rviz.png)

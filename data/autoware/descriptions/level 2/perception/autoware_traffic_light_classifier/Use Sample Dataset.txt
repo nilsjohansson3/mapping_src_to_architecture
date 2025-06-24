@@ -1,0 +1,4 @@
+Autoware offers a sample dataset that illustrates the training procedures for
+traffic light classification. This dataset comprises 1045 images categorized
+into red, green, and yellow labels. To utilize this sample dataset,
+please download it from **[link](https://autoware-files.s3.us-west-2.amazonaws.com/dataset/traffic_light_sample_dataset.tar.gz)** and extract it to a designated folder of your choice.

@@ -1,0 +1,2 @@
+- The examples of the road signs and road surface markings are used in Japan. Please replace them with those used in your respective countries.
+- The values for range and distance indicated are minimum values. Please determine values that comply with the laws of your country. Furthermore, these minimum values may change depending on the maximum velocity of the autonomous driving vehicle.

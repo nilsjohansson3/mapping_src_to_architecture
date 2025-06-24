@@ -1,0 +1,54 @@
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+if (ego is turning right or left ?) then (yes)
+else (no)
+  stop
+endif
+
+:calculate pass judge Line;
+
+if (ego vehicle is not after pass judge line?) then (yes)
+else (no)
+  stop
+endif
+
+:check obstacle in blind spot;
+
+if (obstacle found in blind spot?) then (yes)
+  :set current state as STOP;
+else (no)
+  :set current state as GO;
+endif
+
+:set state with margin time;
+
+if (current state is same as previous state) then (yes)
+  :reset timer;
+else if (state is GO->STOP) then (yes)
+  :set state as STOP;
+  :reset timer;
+else if (state is STOP -> GO) then (yes)
+  if (start time is not set) then (yes)
+    :set start time;
+  else(no)
+   :calculate duration;
+   if(duration is more than margin time)then (yes)
+    :set state GO;
+    :reset timer;
+   endif
+  endif
+endif
+
+
+if (state is STOP) then (yes)
+  :set stop velocity;
+
+  :set stop reason and factor;
+endif
+
+stop
+@enduml
+```

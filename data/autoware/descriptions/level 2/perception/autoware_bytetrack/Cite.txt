@@ -1,0 +1,7 @@
+<!-- cspell: ignore Yifu Peize Jiang Dongdong Fucheng Weng Zehuan Xinggang -->
+
+- Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, and Xinggang Wang,
+  "ByteTrack: Multi-Object Tracking by Associating Every Detection Box", in the proc. of the ECCV
+  2022, [[ref](https://arxiv.org/abs/2110.06864)]
+- This package is ported version toward Autoware from [this repository](https://github.com/ifzhang/ByteTrack/tree/main/deploy/TensorRT/cpp)
+  (The C++ implementation by the ByteTrack's authors)

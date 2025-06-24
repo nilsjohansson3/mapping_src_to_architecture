@@ -1,0 +1,2 @@
+- The NDT matcher provides a pose with a fixed covariance.
+- The NDT matcher is unable to provide a dynamic, reliable covariance value.

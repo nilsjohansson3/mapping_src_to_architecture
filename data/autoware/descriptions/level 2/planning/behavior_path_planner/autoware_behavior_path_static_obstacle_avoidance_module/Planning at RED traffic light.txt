@@ -1,0 +1,5 @@
+This module takes traffic light information into account so that the ego can behave properly. Sometimes, the ego straddles the lane boundary but we want to prevent the ego from stopping in front of a red traffic signal in such a situation. This is because the ego will block adjacent lanes and it is inconvenient for other vehicles.
+
+![fig](./images/traffic_light/traffic_light.png)
+
+So, this module controls shift length and shift start/end point in order to prevent the above situation.

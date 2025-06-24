@@ -1,0 +1,7 @@
+Suppose the lane change trajectory is evaluated as unsafe. In that case, if the ego vehicle has not departed from the current lane yet, the trajectory will be reset, and the ego vehicle will resume the lane following the maneuver.
+
+The function can be enabled by setting `enable_on_prepare_phase` to `true`.
+
+The following image illustrates the cancel process.
+
+![cancel](./images/lane_change-cancel.png)

@@ -1,0 +1,35 @@
+```plantuml
+@startuml
+
+title surround obstacle checker
+start
+
+if (Check state) then
+  :State::STOP;
+
+  if (Is stop required?) then (yes)
+  else (no)
+    :Clear velocity limit;
+    :Set state to State::PASS;
+  endif
+
+else
+  :State::PASS;
+
+  if (Is stop required?) then (yes)
+    :Set velocity limit;
+    :Set state to State::STOP;
+  else (no)
+  endif
+
+endif
+
+:Publish stop reason;
+
+stop
+@enduml
+```
+
+<div align="center">
+  <img src="./media/check_distance.drawio.svg" width=80%>
+</div>

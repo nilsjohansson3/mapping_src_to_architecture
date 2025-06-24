@@ -1,0 +1,7 @@
+MMPretrain offers a training script that is controlled through a configuration file.
+Leveraging an inheritance design pattern, you can effortlessly tailor the training script
+using Python files as configuration files.
+
+In the example, we demonstrate the training steps on the MobileNetV2 model,
+but you have the flexibility to employ alternative classification models such as
+EfficientNetV2, EfficientNetV3, ResNet, and more.

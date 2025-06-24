@@ -1,0 +1,4 @@
+| Parameter                      | Type   | Description                                     |
+| ------------------------------ | ------ | ----------------------------------------------- |
+| `longitudinal_forward_margin`  | double | margin between obstacle and the ego's front [m] |
+| `longitudinal_backward_margin` | double | margin between obstacle and the ego's rear [m]  |

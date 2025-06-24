@@ -1,0 +1,14 @@
+When `search_priority` is set to `efficient_path` and the preference is for prioritizing `shift_pull_out`, the `PriorityOrder` array is populated in such a way that `shift_pull_out` is grouped together for all start pose candidates before moving on to the next planner type. This prioritization is reflected in the order of the array, with `shift_pull_out` being listed before geometric_pull_out.
+
+| Index | Planner Type       |
+| ----- | ------------------ |
+| 0     | shift_pull_out     |
+| 1     | shift_pull_out     |
+| ...   | ...                |
+| N     | shift_pull_out     |
+| 0     | geometric_pull_out |
+| 1     | geometric_pull_out |
+| ...   | ...                |
+| N     | geometric_pull_out |
+
+This approach prioritizes trying all candidates with `shift_pull_out` before proceeding to `geometric_pull_out`, which may be efficient in situations where `shift_pull_out` is likely to be appropriate.

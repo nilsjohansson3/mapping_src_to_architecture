@@ -1,0 +1,18 @@
+The metadata should look like this:
+
+```yaml
+x_resolution: 20.0
+y_resolution: 20.0
+A.pcd: [1200, 2500]  -> 1200 < x < 1220, 2500 < y < 2520
+B.pcd: [1220, 2500]  -> 1220 < x < 1240, 2500 < y < 2520
+C.pcd: [1200, 2520]  -> 1200 < x < 1220, 2520 < y < 2540
+D.pcd: [1240, 2520]  -> 1240 < x < 1260, 2520 < y < 2540
+```
+
+where,
+
+- `x_resolution` and `y_resolution`
+- `A.pcd`, `B.pcd`, etc, are the names of PCD files.
+- List such as `[1200, 2500]` are the values indicate that for this PCD file, x coordinates are between 1200 and 1220 (`x_resolution` + `x_coordinate`) and y coordinates are between 2500 and 2520 (`y_resolution` + `y_coordinate`).
+
+You may use [pointcloud_divider](https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_pointcloud_divider) for dividing pointcloud map as well as generating the compatible metadata.yaml.

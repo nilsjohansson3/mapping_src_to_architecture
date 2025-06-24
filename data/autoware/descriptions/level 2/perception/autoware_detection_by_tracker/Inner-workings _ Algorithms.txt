@@ -1,0 +1,7 @@
+The autoware detection by tracker receives an unknown object containing a point cloud and a tracker, where the unknown object is mainly shape-fitted using euclidean clustering.
+Shape fitting using euclidean clustering and other methods has a problem called under segmentation and over segmentation.
+
+[![segmentation_fail](image/segmentation_fail.png)](https://www.researchgate.net/figure/Examples-of-an-undersegmentation-error-top-and-an-oversegmentation-error-bottom-Each_fig1_304533062)
+_Adapted from [3]_
+
+Simply looking at the overlap between the unknown object and the tracker does not work. We need to take measures for under segmentation and over segmentation.

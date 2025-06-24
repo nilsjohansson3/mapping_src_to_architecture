@@ -1,0 +1,12 @@
+There are three main filtering functions `isSatisfiedWithCommonCondition()`, `isSatisfiedWithVehicleCondition()` and `isSatisfiedWithNonVehicleCondition()`. The filtering process is executed according to the following flowchart. Additionally, the module checks avoidance necessity in `isNoNeedAvoidanceBehavior()` based on the object pose, ego path and lateral margin in the config file.
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Object filtering flowchart
+start
+
+if(isSatisfiedWithCommonCondition()) then (yes)
+if(isNoNeedAvoidanceBehavior()) then (yes)

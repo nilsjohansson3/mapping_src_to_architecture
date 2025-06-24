@@ -1,0 +1,5 @@
+Sensor fusion with radar objects and a detected object.
+
+- Calculation cost is O(nm).
+  - n: the number of radar objects.
+  - m: the number of objects from 3d detection.

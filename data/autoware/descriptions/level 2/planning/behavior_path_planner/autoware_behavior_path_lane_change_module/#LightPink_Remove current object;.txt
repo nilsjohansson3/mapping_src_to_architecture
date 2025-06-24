@@ -1,0 +1,9 @@
+endif
+endwhile
+end group
+
+:Transform the objects into extended predicted object and return them as lane_change_target_objects;
+stop
+
+@enduml
+```

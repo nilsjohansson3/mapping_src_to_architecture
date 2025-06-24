@@ -1,0 +1,14 @@
+Building the package with ros-test and run tests:
+
+```sh
+colcon build --packages-select autoware_freespace_planning_algorithms
+colcon test --packages-select autoware_freespace_planning_algorithms
+```
+
+<!-- cspell: ignore fpalgos -->
+<!-- "fpalgos" means Free space Planning ALGOrithmS -->
+
+Inside the test, simulation results are stored in `/tmp/fpalgos-{algorithm_type}-case{scenario_number}` as a rosbag.
+Loading these resulting files, by using [test/debug_plot.py](test/debug_plot.py),
+one can create plots visualizing the path and obstacles as shown
+in the figures below. The created figures are then again saved in `/tmp`.

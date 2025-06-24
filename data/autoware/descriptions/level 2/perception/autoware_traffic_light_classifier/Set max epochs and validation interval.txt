@@ -1,0 +1,1 @@
+train_cfg = dict(by_epoch=True, max_epochs=50, val_interval=5)

@@ -1,0 +1,2 @@
+When an obstacle is in front of the ego vehicle, stop with keeping a distance for lane change.
+The position to be stopped depends on the situation, such as when the lane change is blocked by the target lane obstacle, or when the lane change is not needed immediately.The following shows the division in that case.

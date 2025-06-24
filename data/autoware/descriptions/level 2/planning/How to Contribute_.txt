@@ -1,0 +1,1 @@
+Ready to contribute? Great! To get started, simply visit our [Contributing Guidelines](https://autowarefoundation.github.io/autoware-documentation/main/contributing/) where you'll find all the information you need to jump in. This includes instructions on submitting bug reports, proposing feature enhancements, and even contributing to the codebase.

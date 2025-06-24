@@ -1,0 +1,5 @@
+It avoids cars, trucks, buses, trailers, bicycles, motorcycles, pedestrians, and unknown objects by default. Details are in the [Target object filtering section](target-object-filtering).
+The above objects are divided into vehicle type objects and non-vehicle type objects; the target object filtering would differ for vehicle types and non-vehicle types.
+
+- Vehicle type objects: Car, Truck, Bus, Trailer, Motorcycle
+- Non-vehicle type objects: Pedestrian, Bicycle

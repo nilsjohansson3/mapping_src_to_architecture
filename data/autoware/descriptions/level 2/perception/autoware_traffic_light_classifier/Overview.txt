@@ -1,0 +1,3 @@
+This guide provides detailed instructions on training a traffic light classifier model using the **[mmlab/mmpretrain](https://github.com/open-mmlab/mmpretrain)** repository
+and deploying it using **[mmlab/mmdeploy](https://github.com/open-mmlab/mmdeploy)**.
+If you wish to create a custom traffic light classifier model with your own dataset, please follow the steps outlined below.

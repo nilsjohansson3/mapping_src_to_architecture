@@ -1,0 +1,6 @@
+| Name               | Type  | Description                                                                                  |
+| ------------------ | ----- | -------------------------------------------------------------------------------------------- |
+| `use_height`       | bool  | use point.z for clustering                                                                   |
+| `min_cluster_size` | int   | the minimum number of points that a cluster needs to contain in order to be considered valid |
+| `max_cluster_size` | int   | the maximum number of points that a cluster needs to contain in order to be considered valid |
+| `tolerance`        | float | the spatial cluster tolerance as a measure in the L2 Euclidean space                         |

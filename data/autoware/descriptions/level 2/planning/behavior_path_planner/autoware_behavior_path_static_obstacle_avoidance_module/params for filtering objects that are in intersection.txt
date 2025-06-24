@@ -1,0 +1,26 @@
+intersection:
+  yaw_deviation: 0.349  [rad] (default 20.0deg)
+```
+
+| Behavior  | Details                                                                                                          | Figure                                       |
+| --------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| NONE      | If the object's relative yaw angle to lane is less than threshold `yaw_deviation`, it is classified into `NONE`. | ![fig](./images/target_filter/none.png)      |
+| MERGING   | See following flowchart.                                                                                         | ![fig](./images/target_filter/merging.png)   |
+| DEVIATING | See following flowchart.                                                                                         | ![fig](./images/target_filter/deviating.png) |
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Judge vehicle behavior
+start
+
+:calculate object relative yaw angle;
+if(angle < threshold or angle > PI - threshold) then (yes)
+:it is neither MERGING nor DEVIATING. (=NONE);
+stop
+else (no)
+endif
+if(Is the object on right side of ego path?) then (yes)
+if(angle < 0.0 and -PI/2 < angle) then (yes)

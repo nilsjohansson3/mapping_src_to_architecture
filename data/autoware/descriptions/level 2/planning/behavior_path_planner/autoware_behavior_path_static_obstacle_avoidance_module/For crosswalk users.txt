@@ -1,0 +1,3 @@
+If Pedestrian and Bicycle are closer to crosswalk than threshold 2.0m (hard coded for now), the module judges they're crossing the road and never avoids them.
+
+![fig](./images/target_filter/crosswalk.svg)

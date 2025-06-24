@@ -1,0 +1,15 @@
+This module makes the trajectory kinematically-feasible and collision-free.
+We define vehicle pose in the frenet coordinate, and minimize tracking errors by optimization.
+This optimization considers vehicle kinematics and collision checking with road boundary and obstacles.
+To decrease the computation cost, the optimization is applied to the shorter trajectory (default: 50 [m]) than the whole trajectory, and concatenate the remained trajectory with the optimized one at last.
+
+The trajectory just in front of the ego must not be changed a lot so that the steering wheel will be stable.
+Therefore, we use the previously generated trajectory in front of the ego.
+
+Optimization center on the vehicle, that tries to locate just on the trajectory, can be tuned along side the vehicle vertical axis.
+This parameter `mpt.kinematics.optimization center offset` is defined as the signed length from the back-wheel center to the optimization center.
+Some examples are shown in the following figure, and it is shown that the trajectory of vehicle shape differs according to the optimization center even if the reference trajectory (green one) is the same.
+
+![mpt_optimization_offset](./media/mpt_optimization_offset.svg)
+
+More details can be seen [here](docs/mpt.md).

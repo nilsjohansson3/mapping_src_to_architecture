@@ -1,0 +1,5 @@
+The Planning Component in autonomous driving systems plays a crucial role in generating a target trajectory (path and speed) for autonomous vehicles. It ensures safety and adherence to traffic rules, fulfilling specific missions.
+
+This document outlines the planning requirements and design within Autoware, aiding developers in comprehending the design and extendibility of the Planning Component.
+
+The document is divided into two parts: the first part discusses high-level requirements and design, and the latter part focuses on actual implementations and functionalities provided.

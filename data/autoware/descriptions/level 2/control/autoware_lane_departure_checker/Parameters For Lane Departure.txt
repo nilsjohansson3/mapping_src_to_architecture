@@ -1,0 +1,6 @@
+| Name                      | Type | Description                                       | Default value |
+| :------------------------ | :--- | :------------------------------------------------ | :------------ |
+| include_right_lanes       | bool | Flag for including right lanelet in borders       | False         |
+| include_left_lanes        | bool | Flag for including left lanelet in borders        | False         |
+| include_opposite_lanes    | bool | Flag for including opposite lanelet in borders    | False         |
+| include_conflicting_lanes | bool | Flag for including conflicting lanelet in borders | False         |

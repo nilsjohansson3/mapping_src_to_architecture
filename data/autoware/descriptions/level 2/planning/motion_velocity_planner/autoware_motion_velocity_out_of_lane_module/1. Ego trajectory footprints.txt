@@ -1,0 +1,5 @@
+In this first step, the ego footprint is projected at each trajectory point and its size is modified based on the `ego.extra_..._offset` parameters.
+
+The length of the trajectory used for generating the footprints is limited by the `max_arc_length` parameter.
+
+![ego_footprints](./docs/footprints.png)

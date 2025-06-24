@@ -1,0 +1,3 @@
+Increasing these two parameters will slow down and stabilize the lane change estimation.
+
+Normally, we recommend tuning only `time_threshold_for_lane_change_detection` because it is the more important factor for lane change decision.

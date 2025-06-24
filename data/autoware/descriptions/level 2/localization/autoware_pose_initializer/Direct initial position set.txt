@@ -1,0 +1,22 @@
+```bash
+ros2 service call /localization/initialize tier4_localization_msgs/srv/InitializeLocalization "
+pose_with_covariance:
+  - header:
+      frame_id: map
+    pose:
+      pose:
+        position:
+          x: 89571.1640625
+          y: 42301.1875
+          z: -3.1565165519714355
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.28072773940524687
+          w: 0.9597874433062874
+      covariance: [0.25, 0, 0, 0, 0, 0, 0, 0.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.06853891909122467]
+method: 1
+"
+```
+
+The initial position is set directly by the input position without going through localization algorithm.

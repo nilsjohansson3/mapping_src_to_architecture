@@ -1,0 +1,1 @@
+Target objects can be visualized using RViz, where the module's outputs, such as detected obstacles and planned avoidance paths, are displayed. For further information refer to the [debug marker section](visualize-debug-markers).

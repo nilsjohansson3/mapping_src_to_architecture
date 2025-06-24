@@ -1,0 +1,21 @@
+If you only have one pointcloud map, Autoware will assume the following directory structure by default.
+
+```bash
+sample-map-rosbag
+├── lanelet2_map.osm
+├── pointcloud_map.pcd
+```
+
+If you have multiple rosbags, an example directory structure would be as follows. Note that you need to have a metadata when you have multiple pointcloud map files.
+
+```bash
+sample-map-rosbag
+├── lanelet2_map.osm
+├── pointcloud_map.pcd
+│ ├── A.pcd
+│ ├── B.pcd
+│ ├── C.pcd
+│ └── ...
+├── map_projector_info.yaml
+└── pointcloud_map_metadata.yaml
+```

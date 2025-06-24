@@ -1,0 +1,13 @@
+For `search_priority` set to `short_back_distance`, the array alternates between planner types for each start pose candidate, which can minimize the distance the vehicle needs to move backward if the earlier candidates are successful.
+
+| Index | Planner Type       |
+| ----- | ------------------ |
+| 0     | shift_pull_out     |
+| 0     | geometric_pull_out |
+| 1     | shift_pull_out     |
+| 1     | geometric_pull_out |
+| ...   | ...                |
+| N     | shift_pull_out     |
+| N     | geometric_pull_out |
+
+This ordering is beneficial when the priority is to minimize the backward distance traveled, giving an equal chance for each planner to succeed at the closest possible starting position.

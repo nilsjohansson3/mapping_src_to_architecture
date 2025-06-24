@@ -1,0 +1,7 @@
+![Earliest collision example](docs/DynamicObstacleStop-Collision.drawio.svg)
+
+We build the ego trajectory footprints as the set of ego footprint polygons projected on each trajectory point.
+We then calculate the intersections between these ego trajectory footprints and the previously calculated immediate path rectangles.
+An intersection is ignored if the object is not driving toward ego, i.e., the absolute angle between the object and the trajectory point is larger than $\frac{3 \pi}{4}$.
+
+The collision point with the lowest arc length when projected on the ego trajectory will be used to calculate the final stop point.

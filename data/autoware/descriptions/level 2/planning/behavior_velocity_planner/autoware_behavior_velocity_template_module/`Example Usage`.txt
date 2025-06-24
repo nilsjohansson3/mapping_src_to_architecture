@@ -1,0 +1,13 @@
+In the following example, we take each point of the path, and multiply it by 2. Essentially duplicating the speed. Note that the velocity smoother will further modify the path speed after all the behavior velocity modules are executed.
+
+```cpp
+bool TemplateModule::modifyPathVelocity(
+  [[maybe_unused]] PathWithLaneId * path, [[maybe_unused]] StopReason * stop_reason)
+{
+  for (auto & p : path->points) {
+    p.point.longitudinal_velocity_mps *= 2.0;
+  }
+
+  return false;
+}
+```

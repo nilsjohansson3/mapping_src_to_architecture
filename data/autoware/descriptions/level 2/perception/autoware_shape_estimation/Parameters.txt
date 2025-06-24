@@ -1,0 +1,1 @@
+{{ json_to_markdown("perception/autoware_shape_estimation/schema/shape_estimation.schema.json") }}

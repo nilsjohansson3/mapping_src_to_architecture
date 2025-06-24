@@ -1,0 +1,23 @@
+<details><summary>click to open</summary><div>
+
+Some nodes requires `/tf_static` from `/base_link` to the frame_id of `/sensing/camera/traffic_light/image_raw/compressed` (e.g. `/traffic_light_left_camera/camera_optical_link`).
+You can verify that the tf_static is correct with the following command.
+
+```shell
+ros2 run tf2_ros tf2_echo base_link traffic_light_left_camera/camera_optical_link
+```
+
+If the wrong `/tf_static` are broadcasted due to using a prototype vehicle, not having accurate calibration data, or some other unavoidable reason, it is useful to give the frame_id in `override_camera_frame_id`.
+If you give it a non-empty string, `/image_processing/undistort_node` will rewrite the frame_id in camera_info.
+For example, you can give a different tf_static as follows.
+
+```shell
+ros2 launch yabloc_launch sample_launch.xml override_camera_frame_id:=fake_camera_optical_link
+ros2 run tf2_ros static_transform_publisher \
+  --frame-id base_link \
+  --child-frame-id fake_camera_optical_link \
+  --roll -1.57 \
+  --yaw -1.570
+```
+
+</div></details>

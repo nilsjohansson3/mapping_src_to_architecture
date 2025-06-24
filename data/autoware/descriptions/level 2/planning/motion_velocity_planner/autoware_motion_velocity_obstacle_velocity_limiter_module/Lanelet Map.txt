@@ -1,0 +1,4 @@
+Information about static obstacles can be stored in the Lanelet map using the value of the `type` tag of linestrings.
+If any linestring has a `type` with one of the value from parameter `obstacles.static_map_tags`, then it will be used as an obstacle.
+
+Obstacles from the lanelet map are not impacted by the masks.

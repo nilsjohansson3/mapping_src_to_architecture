@@ -1,0 +1,4 @@
+| Name           | Type                       | Description                |
+| -------------- | -------------------------- | -------------------------- |
+| input/radar    | radar_msgs::msg::RadarScan | RadarScan                  |
+| input/odometry | nav_msgs::msg::Odometry    | Ego vehicle odometry topic |

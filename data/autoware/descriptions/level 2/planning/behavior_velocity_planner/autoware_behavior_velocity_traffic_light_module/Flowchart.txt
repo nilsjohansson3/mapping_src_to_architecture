@@ -1,0 +1,39 @@
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+:calc stop point and insert index;
+
+:find offset segment;
+
+:calculate stop pose;
+
+:calculate distance to stop line;
+
+if (state is APPROACH) then (yes)
+  :set stop velocity;
+  if (distance to stop point is below singed dead line length(-2[m])) then (yes)
+    :change state to GO_OUT;
+    stop
+  elseif (no stop signal) then (yes)
+    :change previous state to PASS;
+    stop
+  elseif (not pass through) then (yes)
+    :insert stop pose;
+    :change previous state to STOP;
+    stop
+  else(no)
+    stop
+  endif
+elseif(state is GO_OUT) then (yes)
+  if (signed arc length to stop line is more than restart length(1[m])) then (yes)
+    :change state to APPROACH;
+  endif
+  stop
+else(no)
+  stop
+endif
+
+@enduml
+```

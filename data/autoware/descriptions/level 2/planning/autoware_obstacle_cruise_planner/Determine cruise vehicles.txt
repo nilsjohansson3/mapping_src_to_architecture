@@ -1,0 +1,29 @@
+The obstacles meeting the following condition are determined as obstacles for cruising.
+
+- The lateral distance from the object to the ego's trajectory is smaller than `behavior_determination.cruise.max_lat_margin`.
+
+- The object type is for cruising according to `common.cruise_obstacle_type.*`.
+- The object is not crossing the ego's trajectory (\*1).
+- If the object is inside the trajectory.
+  - The object type is for inside cruising according to `common.cruise_obstacle_type.inside.*`.
+  - The object velocity is larger than `behavior_determination.obstacle_velocity_threshold_from_cruise_to_stop`.
+- If the object is outside the trajectory.
+  - The object type is for outside cruising according to `common.cruise_obstacle_type.outside.*`.
+  - The object velocity is larger than `behavior_determination.cruise.outside_obstacle.obstacle_velocity_threshold`.
+  - The highest confident predicted path collides with the ego's trajectory.
+  - Its collision's period is larger than `behavior_determination.cruise.outside_obstacle.ego_obstacle_overlap_time_threshold`.
+
+| Parameter                                                                            | Type   | Description                                                          |
+| ------------------------------------------------------------------------------------ | ------ | -------------------------------------------------------------------- |
+| `common.cruise_obstacle_type.inside.unknown`                                         | bool   | flag to consider unknown objects for cruising                        |
+| `common.cruise_obstacle_type.inside.car`                                             | bool   | flag to consider unknown objects for cruising                        |
+| `common.cruise_obstacle_type.inside.truck`                                           | bool   | flag to consider unknown objects for cruising                        |
+| ...                                                                                  | bool   | ...                                                                  |
+| `common.cruise_obstacle_type.outside.unknown`                                        | bool   | flag to consider unknown objects for cruising                        |
+| `common.cruise_obstacle_type.outside.car`                                            | bool   | flag to consider unknown objects for cruising                        |
+| `common.cruise_obstacle_type.outside.truck`                                          | bool   | flag to consider unknown objects for cruising                        |
+| ...                                                                                  | bool   | ...                                                                  |
+| `behavior_determination.cruise.max_lat_margin`                                       | double | maximum lateral margin for cruise obstacles                          |
+| `behavior_determination.obstacle_velocity_threshold_from_cruise_to_stop`             | double | maximum obstacle velocity for cruise obstacle inside the trajectory  |
+| `behavior_determination.cruise.outside_obstacle.obstacle_velocity_threshold`         | double | maximum obstacle velocity for cruise obstacle outside the trajectory |
+| `behavior_determination.cruise.outside_obstacle.ego_obstacle_overlap_time_threshold` | double | maximum overlap time of the collision between the ego and obstacle   |

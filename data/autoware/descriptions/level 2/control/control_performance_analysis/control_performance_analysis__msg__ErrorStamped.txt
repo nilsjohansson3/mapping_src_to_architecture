@@ -1,0 +1,17 @@
+| Name                                       | Type  | Description                                                                                                       |
+| ------------------------------------------ | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| `lateral_error`                            | float | [m]                                                                                                               |
+| `lateral_error_velocity`                   | float | [m / s]                                                                                                           |
+| `lateral_error_acceleration`               | float | [m / s^2]                                                                                                         |
+| `longitudinal_error`                       | float | [m]                                                                                                               |
+| `longitudinal_error_velocity`              | float | [m / s]                                                                                                           |
+| `longitudinal_error_acceleration`          | float | [m / s^2]                                                                                                         |
+| `heading_error`                            | float | [rad]                                                                                                             |
+| `heading_error_velocity`                   | float | [rad / s]                                                                                                         |
+| `control_effort_energy`                    | float | [u * R * u^T]                                                                                                     |
+| `error_energy`                             | float | lateral_error^2 + heading_error^2                                                                                 |
+| `value_approximation`                      | float | V = xPx' ; Value function from DARE Lyap matrix P                                                                 |
+| `curvature_estimate`                       | float | [1 / m]                                                                                                           |
+| `curvature_estimate_pp`                    | float | [1 / m]                                                                                                           |
+| `vehicle_velocity_error`                   | float | [m / s]                                                                                                           |
+| `tracking_curvature_discontinuity_ability` | float | Measures the ability to tracking the curvature changes [`abs(delta(curvature)) / (1 + abs(delta(lateral_error))`] |

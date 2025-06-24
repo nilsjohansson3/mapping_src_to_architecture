@@ -1,0 +1,16 @@
+`Radar_tracks_msgs_converter` converts the label from `radar_msgs/msg/RadarTrack.msg` to Autoware label.
+Label id is defined as below.
+
+|            | RadarTrack | Autoware |
+| ---------- | ---------- | -------- |
+| UNKNOWN    | 32000      | 0        |
+| CAR        | 32001      | 1        |
+| TRUCK      | 32002      | 2        |
+| BUS        | 32003      | 3        |
+| TRAILER    | 32004      | 4        |
+| MOTORCYCLE | 32005      | 5        |
+| BICYCLE    | 32006      | 6        |
+| PEDESTRIAN | 32007      | 7        |
+
+Additional vendor-specific classifications are permitted starting from 32000 in [radar_msgs/msg/RadarTrack.msg](https://github.com/ros-perception/radar_msgs/blob/ros2/msg/RadarTrack.msg).
+Autoware objects label is defined in [ObjectClassification](https://github.com/autowarefoundation/autoware_msgs/tree/main/autoware_perception_msgs/msg/ObjectClassification.msg)

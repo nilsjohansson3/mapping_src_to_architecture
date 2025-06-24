@@ -1,0 +1,7 @@
+Generate shift points for multiple obstacles. All of them are merged to generate new shift points along the reference path. The new points are filtered (e.g. remove small-impact shift points), and the avoidance path is computed for the filtered shift points.
+
+**Merge process of raw shift points**: check the shift length on each path point. If the shift points are overlapped, the maximum shift value is selected for the same direction.
+
+For the details of the shift point filtering, see [filtering for shift points](filtering-for-shift-points).
+
+![fig](./images/how_to_decide_path_shape_multi_object_one_direction.drawio.svg)

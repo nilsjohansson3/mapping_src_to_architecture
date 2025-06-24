@@ -1,0 +1,5 @@
+stop
+else (\n no)
+endif
+
+if(Is object parallel to ego lane?) then (yes)

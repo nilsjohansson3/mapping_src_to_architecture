@@ -1,0 +1,6 @@
+See <https://pointclouds.org/documentation/tutorials/voxel_grid.html> for more explanation on point cloud downsampling.
+
+| Name                                                     | Type  | Description                             | Default value |
+| :------------------------------------------------------- | :---- | :-------------------------------------- | :------------ |
+| pcl_grid_map_extraction/downsampling/is_downsample_cloud | bool  | Whether to perform downsampling or not. | false         |
+| pcl_grid_map_extraction/downsampling/voxel_size          | float | Voxel sizes (xyz) in meters.            | 0.02          |

@@ -1,0 +1,3 @@
+Merging tracking objects from different sensor is a combination of data association and state fusion algorithms.
+
+Detailed process depends on the merger policy.

@@ -1,0 +1,1 @@
+The `use_height` option of `voxel_grid_based_euclidean_cluster` isn't implemented yet.

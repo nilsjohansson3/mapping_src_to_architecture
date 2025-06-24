@@ -1,0 +1,11 @@
+This module generates and plans a path for safely merging from the shoulder lane or side of road lane into the center of the road lane.
+
+Specifically, it includes the following features:
+
+- Plan the path to automatically start from the shoulder lane or side of road lane to center of road lane.
+- When parked vehicles are present on the shoulder lane, the module generates a path that allows for starting with a gap of a specified margin.
+- If a collision with other traffic participants is detected while traveling on the generated path, it will stop as much as possible.
+
+<figure markdown>
+  ![start_planner_module](images/start_planner_example.png){width=1100}
+</figure>

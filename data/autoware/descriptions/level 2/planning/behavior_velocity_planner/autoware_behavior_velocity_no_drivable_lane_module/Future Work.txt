@@ -1,0 +1,2 @@
+- As [Request to Intervene API](https://github.com/autowarefoundation/autoware/issues/3487) is not implemented yet, this will be handled to notify the driver to takeover the driving task responsibility after the vehicle stops due to `no_drivable_lane`
+- Handle the case when the vehicle stops before a no drivable lane but part of its footprint intersects with the no drivable lane polygon.

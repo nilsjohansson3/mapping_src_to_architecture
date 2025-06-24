@@ -1,0 +1,5 @@
+| Name            | Type                                               | Description                                                         |
+| --------------- | -------------------------------------------------- | ------------------------------------------------------------------- |
+| `~/input/image` | `sensor_msgs/Image`                                | The full size camera image                                          |
+| `~/input/rois`  | `tier4_perception_msgs::msg::TrafficLightRoiArray` | The array of ROIs detected by map_based_detector                    |
+| `~/expect/rois` | `tier4_perception_msgs::msg::TrafficLightRoiArray` | The array of ROIs detected by map_based_detector without any offset |

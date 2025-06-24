@@ -1,0 +1,8 @@
+When stopping for a pedestrian walking on the crosswalk, the behavior module inserts the zero velocity in the trajectory in front of the crosswalk.
+Also `autoware_obstacle_cruise_planner`'s stop planning also works, and the ego may not reach the behavior module's stop point since the safe distance defined in `autoware_obstacle_cruise_planner` may be longer than the behavior module's safe distance.
+To resolve this non-alignment of the stop point between the behavior module and `autoware_obstacle_cruise_planner`, `common.min_behavior_stop_margin` is defined.
+In the case of the crosswalk described above, `autoware_obstacle_cruise_planner` inserts the stop point with a distance `common.min_behavior_stop_margin` at minimum between the ego and obstacle.
+
+| Parameter                         | Type   | Description                                                            |
+| --------------------------------- | ------ | ---------------------------------------------------------------------- |
+| `common.min_behavior_stop_margin` | double | minimum stop margin when stopping with the behavior module enabled [m] |

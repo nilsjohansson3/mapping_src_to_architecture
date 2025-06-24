@@ -1,0 +1,4 @@
+The sampling based planner mostly offers a trade-off between the consistent quality of the trajectory and the computation time.
+To guarantee that a good trajectory is found requires generating many candidates which linearly increases the computation time.
+
+TODO

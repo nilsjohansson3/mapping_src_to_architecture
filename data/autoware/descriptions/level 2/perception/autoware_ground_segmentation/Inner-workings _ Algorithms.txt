@@ -1,0 +1,7 @@
+Detail description of each ground segmentation algorithm is in the following links.
+
+| Filter Name          | Description                                                                                                | Detail                               |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| ray_ground_filter    | A method of removing the ground based on the geometrical relationship between points lined up on radiation | [link](docs/ray-ground-filter.md)    |
+| scan_ground_filter   | Almost the same method as `ray_ground_filter`, but with slightly improved performance                      | [link](docs/scan-ground-filter.md)   |
+| ransac_ground_filter | A method of removing the ground by approximating the ground to a plane                                     | [link](docs/ransac-ground-filter.md) |

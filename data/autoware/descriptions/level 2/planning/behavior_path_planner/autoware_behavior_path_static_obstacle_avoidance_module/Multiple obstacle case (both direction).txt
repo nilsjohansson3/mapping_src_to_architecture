@@ -1,0 +1,3 @@
+Generate shift points for multiple obstacles. All of them are merged to generate new shift points. If there are areas where the desired shifts conflict in different directions, the sum of the maximum shift amounts of these areas is used as the final shift amount. The rest of the process is the same as in the case of one direction.
+
+![fig](./images/how_to_decide_path_shape_multi_object_both_direction.drawio.svg)

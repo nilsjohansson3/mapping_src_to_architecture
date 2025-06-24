@@ -1,0 +1,2 @@
+The particle model uses the constant heading and velocity of the vehicle at a trajectory point to simulate the future motion.
+The simulated forward motion corresponds to a straight line and the footprint to a rectangle.

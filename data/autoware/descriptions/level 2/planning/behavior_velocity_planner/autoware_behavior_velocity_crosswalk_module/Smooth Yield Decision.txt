@@ -1,0 +1,21 @@
+If the object is stopped near the crosswalk but has no intention of walking, a situation can arise in which the ego continues to yield the right-of-way to the object.
+To prevent such a deadlock situation, the ego will cancel yielding depending on the situation.
+
+For the object stopped around the crosswalk but has no intention to walk (\*1), after the ego has keep stopping to yield for a specific time (\*2), the ego cancels the yield and starts driving.
+
+\*1:
+The time is calculated by the interpolation of distance between the object and crosswalk with `distance_set_for_no_intention_to_walk` and `timeout_set_for_no_intention_to_walk`.
+
+In the `pass_judge` namespace, the following parameters are defined.
+
+| Parameter                               |       | Type   | Description                                                                     |
+| --------------------------------------- | ----- | ------ | ------------------------------------------------------------------------------- |
+| `distance_set_for_no_intention_to_walk` | [[m]] | double | key sets to calculate the timeout for no intention to walk with interpolation   |
+| `timeout_set_for_no_intention_to_walk`  | [[s]] | double | value sets to calculate the timeout for no intention to walk with interpolation |
+
+\*2:
+In the `pass_judge` namespace, the following parameters are defined.
+
+| Parameter                    |     | Type   | Description                                                                                                             |
+| ---------------------------- | --- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| `timeout_ego_stop_for_yield` | [s] | double | If the ego maintains the stop for this amount of time, then the ego proceeds, assuming it has stopped long time enough. |

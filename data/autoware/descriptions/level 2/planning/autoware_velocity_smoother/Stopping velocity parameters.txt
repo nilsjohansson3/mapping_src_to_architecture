@@ -1,0 +1,4 @@
+| Name                | Type     | Description                                                                           | Default value |
+| :------------------ | :------- | :------------------------------------------------------------------------------------ | :------------ |
+| `stopping_velocity` | `double` | change target velocity to this value before v=0 point [m/s]                           | 2.778         |
+| `stopping_distance` | `double` | distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied. | 0.0           |

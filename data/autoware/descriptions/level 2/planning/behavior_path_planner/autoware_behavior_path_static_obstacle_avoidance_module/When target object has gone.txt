@@ -1,0 +1,15 @@
+User can select the ego behavior when the target object has gone.
+
+```yaml
+cancel:
+  enable: true  [-]
+```
+
+If the above parameter is `true`, this module reverts avoidance path when the following conditions are met.
+
+- All target objects have gone.
+- The ego vehicle hasn't initiated avoidance maneuver yet.
+
+![fig](./images/cancel/cancel.png)
+
+If the parameter is `false`, this module keeps running even after the target object has gone.

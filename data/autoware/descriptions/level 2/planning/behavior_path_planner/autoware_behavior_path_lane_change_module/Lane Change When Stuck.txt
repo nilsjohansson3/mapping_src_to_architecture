@@ -1,0 +1,8 @@
+The ego vehicle is considered stuck if it is stopped and meets any of the following conditions:
+
+- There is an obstacle in front of the current lane
+- The ego vehicle is at the end of the current lane
+
+In this case, the safety check for lane change is relaxed compared to normal times.
+Please refer to the 'stuck' section under the 'Collision checks during lane change' for more details.
+The function to stop by keeping a margin against forward obstacle in the previous section is being performed to achieve this feature.

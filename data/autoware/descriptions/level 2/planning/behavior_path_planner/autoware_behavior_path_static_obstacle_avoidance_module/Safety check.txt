@@ -1,0 +1,11 @@
+This feature can be enabled by setting the following parameter to `true`.
+
+```yaml
+      safety_check:
+        ...
+        enable: true                                     [-]
+```
+
+This module pays attention not only to avoidance target objects but also non-target objects that are near the avoidance path, and if the avoidance path is unsafe due to surrounding objects, it reverts the avoidance maneuver and yields the lane to them.
+
+![fig](./images/safety_check/safety_check_flow.png)

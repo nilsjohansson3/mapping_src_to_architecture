@@ -1,0 +1,5 @@
+![sample output figure](figs/summary-rrtstar_fastest.png)
+
+The black cells, green box, and red box, respectively, indicate obstacles,
+start configuration, and goal configuration.
+The sequence of the blue boxes indicate the solution path.

@@ -1,0 +1,1 @@
+The **Lane Departure Checker** checks if vehicle follows a trajectory. If it does not follow the trajectory, it reports its status via `diagnostic_updater`.

@@ -1,0 +1,4 @@
+This module considers any occlusion spot around ego path computed from the occupancy grid.
+Due to the computational cost occupancy grid is not high resolution and this will make occupancy grid noisy so this module add information of occupancy to occupancy grid map.
+
+TODO: consider hight of obstacle point cloud to generate occupancy grid.

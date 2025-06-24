@@ -1,0 +1,13 @@
+This package makes use of external code. The trained files are provided by apollo. The trained files are automatically downloaded during env preparation.
+
+Original model URL
+
+<https://github.com/openvinotoolkit/open_model_zoo/tree/master/models/intel/road-segmentation-adas-0001>
+
+> Open Model Zoo is licensed under Apache License Version 2.0.
+
+Converted model URL
+
+<https://github.com/PINTO0309/PINTO_model_zoo/tree/main/136_road-segmentation-adas-0001>
+
+> model conversion scripts are released under the MIT license

@@ -1,0 +1,4 @@
+At high speeds, the delay of actuator systems such as gas pedals and brakes has a significant impact on driving accuracy.
+Depending on the actuating principle of the vehicle, the mechanism that physically controls the gas pedal and brake typically has a delay of about a hundred millisecond.
+
+In this controller, the predicted ego-velocity and the target velocity after the delay time are calculated and used for the feedback to address the time delay problem.

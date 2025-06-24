@@ -1,0 +1,3 @@
+| Name                  | Type | Default Value | Description                                              |
+| --------------------- | ---- | ------------- | -------------------------------------------------------- |
+| `track_buffer_length` | int  | 30            | The frame count that a tracklet is considered to be lost |

@@ -1,0 +1,7 @@
+At intersection without traffic light, if occlusion is detected, ego makes a brief stop at default_stopline and first_attention_stopline respectively. After stopping at the first_attention_area_stopline this module inserts `occlusion.absence_traffic_light.creep_velocity` velocity between ego and occlusion_wo_tl_pass_judge_line while occlusion is not cleared. If collision is detected, ego immediately stops. Once the occlusion is cleared or ego has passed occlusion_wo_tl_pass_judge_line this module does not detect collision and occlusion because ego footprint is already inside the intersection.
+
+![occlusion_detection](./docs/occlusion-without-tl.drawio.svg)
+
+While ego is creeping, yellow intersection_wall appears in front ego.
+
+![occlusion-wo-tl-creeping](./docs/occlusion-wo-tl-creeping.png)

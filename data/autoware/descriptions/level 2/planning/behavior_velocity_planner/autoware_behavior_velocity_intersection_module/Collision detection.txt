@@ -1,0 +1,7 @@
+TTC parameter varies depending on the traffic light color/shape as follows.
+
+| traffic light color | ttc(start)                                                             | ttc(end)                                                               |
+| ------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| GREEN               | `collision_detection.not_prioritized.collision_start_margin`           | `collision_detection.not_prioritized.collision_end_margin`             |
+| AMBER               | `collision_detection.partially_prioritized.collision_start_end_margin` | `collision_detection.partially_prioritized.collision_start_end_margin` |
+| RED / Arrow         | `collision_detection.fully_prioritized.collision_start_end_margin`     | `collision_detection.fully_prioritized.collision_start_end_margin`     |

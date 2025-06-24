@@ -1,0 +1,1 @@
+This module is activated when there is a detection area on the target lane.

@@ -1,0 +1,13 @@
+Currently we provide three parameters to tune lane change detection:
+
+- `dist_threshold_to_bound_`: maximum distance from lane boundary allowed for lane changing vehicle
+- `time_threshold_to_bound_`: maximum time allowed for lane change vehicle to reach the boundary
+- `cutoff_freq_of_velocity_lpf_`: cutoff frequency of low pass filter for lateral velocity
+
+You can change these parameters in rosparam in the table below.
+
+| param name                                          | default value |
+| --------------------------------------------------- | ------------- |
+| `dist_threshold_for_lane_change_detection`          | `1.0` [m]     |
+| `time_threshold_for_lane_change_detection`          | `5.0` [s]     |
+| `cutoff_freq_of_velocity_for_lane_change_detection` | `0.1` [Hz]    |

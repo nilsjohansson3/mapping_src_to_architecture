@@ -1,0 +1,24 @@
+The safe slowdown velocity is calculated from the below parameters of ego emergency braking system and time to collision.
+Below calculation is included but change velocity dynamically is not recommended for planner.
+
+- jerk limit[m/s^3]
+- deceleration limit[m/s2]
+- delay response time[s]
+- time to collision of pedestrian[s]
+  with these parameters we can briefly define safe motion before occlusion spot for ideal environment.
+
+  ![occupancy_grid](./docs/safe_motion.drawio.svg)
+
+This module defines safe margin to consider ego distance to stop and collision path point geometrically.
+While ego is cruising from safe margin to collision path point, ego vehicle keeps the same velocity as occlusion spot safe velocity.
+
+![brief](./docs/behavior_after_safe_margin.drawio.svg)
+
+Note: This logic assumes high-precision vehicle speed tracking and margin for decel point might not be the best solution, and override with manual driver is considered if pedestrian really run out from occlusion spot.
+
+TODO: consider one of the best choices
+
+1. stop in front of occlusion spot
+2. insert 1km/h velocity in front of occlusion spot
+3. slowdown this way
+4. etc... .

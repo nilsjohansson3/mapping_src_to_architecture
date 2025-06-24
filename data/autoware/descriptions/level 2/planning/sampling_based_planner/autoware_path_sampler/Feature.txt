@@ -1,0 +1,8 @@
+This package is able to:
+
+- make the trajectory smooth;
+- keep the trajectory inside the drivable area;
+- avoid static obstacles;
+- stop if no valid trajectory can be generated.
+
+Note that the velocity is just taken over from the input path.

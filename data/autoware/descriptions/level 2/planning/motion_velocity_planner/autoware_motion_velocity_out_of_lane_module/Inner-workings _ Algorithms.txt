@@ -1,0 +1,6 @@
+This module calculates if out of lane collisions occur and insert stop point before the collisions if necessary.
+
+The algorithm assumes the input ego trajectory contains accurate `time_from_start`
+values in order to calculate accurate time to collisions with the predicted objects.
+
+Next we explain the inner-workings of the module in more details.

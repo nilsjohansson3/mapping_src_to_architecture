@@ -1,0 +1,4 @@
+| Name               | Type                                           | Description           |
+| ------------------ | ---------------------------------------------- | --------------------- |
+| `~/input/odometry` | nav_msgs::msg::Odometry                        | Pose estimated by EKF |
+| `~/input/twist`    | geometry_msgs::msg::TwistWithCovarianceStamped | Twist                 |

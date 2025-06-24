@@ -1,0 +1,3 @@
+When the traffic light color/shape is RED/Arrow, occlusion detection is skipped.
+
+![traffic-light-specific-behavior](./docs/traffic-light-specific-behavior.drawio.svg)

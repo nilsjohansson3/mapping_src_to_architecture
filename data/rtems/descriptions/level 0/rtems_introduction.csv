@@ -1,0 +1,359 @@
+Module,Text
+barrier,The Barrier Manager provides a unique synchronization capability which can be used to have a set of tasks block and be unblocked as a set. The directives provided by the Barrier Manager are:
+barrier,rtems_barrier_create() - Creates a barrier. rtems_barrier_ident() - Identifies a barrier by the object name. rtems_barrier_delete() - Deletes the barrier. rtems_barrier_wait() - Waits at the barrier. rtems_barrier_release() - Releases the barrier.
+barrier,rtems_barrier_create() - Creates a barrier.
+barrier,rtems_barrier_ident() - Identifies a barrier by the object name.
+barrier,rtems_barrier_delete() - Deletes the barrier.
+barrier,rtems_barrier_wait() - Waits at the barrier.
+barrier,rtems_barrier_release() - Releases the barrier.
+cache,The Cache Manager provides functions to perform maintenance operations for data and instruction caches.
+cache,The actual actions of the Cache Manager operations depend on the hardware and the implementation provided by the CPU architecture port or a board support package.  Cache implementations tend to be highly hardware dependent. The directives provided by the Cache Manager are:
+cache,"rtems_cache_flush_multiple_data_lines() - Flushes the data cache lines covering the memory area. rtems_cache_invalidate_multiple_data_lines() - Invalidates the data cache lines covering the memory area. rtems_cache_invalidate_multiple_instruction_lines() - Invalidates the instruction cache lines covering the memory area. rtems_cache_instruction_sync_after_code_change() - Ensures necessary synchronization required after code changes. rtems_cache_get_maximal_line_size() - Gets the maximal cache line size in bytes of all caches (data, instruction, or unified). rtems_cache_get_data_line_size() - Gets the data cache line size in bytes. rtems_cache_get_instruction_line_size() - Gets the instruction cache line size in bytes. rtems_cache_get_data_cache_size() - Gets the data cache size in bytes for the cache level. rtems_cache_get_instruction_cache_size() - Gets the instruction cache size in bytes for the cache level. rtems_cache_flush_entire_data() - Flushes the entire data cache. rtems_cache_invalidate_entire_data() - Invalidates the entire data cache. rtems_cache_invalidate_entire_instruction() - Invalidates the entire instruction cache. rtems_cache_enable_data() - Enables the data cache. rtems_cache_disable_data() - Disables the data cache. rtems_cache_enable_instruction() - Enables the instruction cache. rtems_cache_disable_instruction() - Disables the instruction cache. rtems_cache_aligned_malloc() - Allocates memory from the C Program Heap which begins at a cache line boundary."
+cache,rtems_cache_flush_multiple_data_lines() - Flushes the data cache lines covering the memory area.
+cache,rtems_cache_invalidate_multiple_data_lines() - Invalidates the data cache lines covering the memory area.
+cache,rtems_cache_invalidate_multiple_instruction_lines() - Invalidates the instruction cache lines covering the memory area.
+cache,rtems_cache_instruction_sync_after_code_change() - Ensures necessary synchronization required after code changes.
+cache,"rtems_cache_get_maximal_line_size() - Gets the maximal cache line size in bytes of all caches (data, instruction, or unified)."
+cache,rtems_cache_get_data_line_size() - Gets the data cache line size in bytes.
+cache,rtems_cache_get_instruction_line_size() - Gets the instruction cache line size in bytes.
+cache,rtems_cache_get_data_cache_size() - Gets the data cache size in bytes for the cache level.
+cache,rtems_cache_get_instruction_cache_size() - Gets the instruction cache size in bytes for the cache level.
+cache,rtems_cache_flush_entire_data() - Flushes the entire data cache.
+cache,rtems_cache_invalidate_entire_data() - Invalidates the entire data cache.
+cache,rtems_cache_invalidate_entire_instruction() - Invalidates the entire instruction cache.
+cache,rtems_cache_enable_data() - Enables the data cache.
+cache,rtems_cache_disable_data() - Disables the data cache.
+cache,rtems_cache_enable_instruction() - Enables the instruction cache.
+cache,rtems_cache_disable_instruction() - Disables the instruction cache.
+cache,rtems_cache_aligned_malloc() - Allocates memory from the C Program Heap which begins at a cache line boundary.
+clock,The Clock Manager provides support for time of day and other time related capabilities. The directives provided by the Clock Manager are:
+clock,rtems_clock_set() - Sets the CLOCK_REALTIME to the time of day. rtems_clock_get_tod() - Gets the time of day associated with the current CLOCK_REALTIME. rtems_clock_get_tod_timeval() - Gets the seconds and microseconds elapsed since the Unix epoch and the current CLOCK_REALTIME. rtems_clock_get_realtime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in seconds and nanoseconds format. rtems_clock_get_realtime_bintime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in binary time format. rtems_clock_get_realtime_timeval() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in seconds and microseconds format. rtems_clock_get_realtime_coarse() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in seconds and nanoseconds format. rtems_clock_get_realtime_coarse_bintime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in binary time format. rtems_clock_get_realtime_coarse_timeval() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in seconds and microseconds format. rtems_clock_get_monotonic() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in seconds and nanoseconds format. rtems_clock_get_monotonic_bintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in binary time format. rtems_clock_get_monotonic_sbintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in signed binary time format. rtems_clock_get_monotonic_timeval() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in seconds and microseconds format. rtems_clock_get_monotonic_coarse() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in seconds and nanoseconds format. rtems_clock_get_monotonic_coarse_bintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in binary time format. rtems_clock_get_monotonic_coarse_timeval() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in seconds and microseconds format. rtems_clock_get_boot_time() - Gets the time elapsed since the Unix epoch at some time point during system initialization in seconds and nanoseconds format. rtems_clock_get_boot_time_bintime() - Gets the time elapsed since the Unix epoch at some time point during system initialization in binary time format. rtems_clock_get_boot_time_timeval() - Gets the time elapsed since the Unix epoch at some time point during system initialization in seconds and microseconds format. rtems_clock_get_seconds_since_epoch() - Gets the seconds elapsed since the RTEMS epoch and the current CLOCK_REALTIME. rtems_clock_get_ticks_per_second() - Gets the number of clock ticks per second configured for the application. rtems_clock_get_ticks_since_boot() - Gets the number of clock ticks since some time point during the system initialization or the last overflow of the clock tick counter. rtems_clock_get_uptime() - Gets the seconds and nanoseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC. rtems_clock_get_uptime_timeval() - Gets the seconds and microseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC. rtems_clock_get_uptime_seconds() - Gets the seconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC. rtems_clock_get_uptime_nanoseconds() - Gets the nanoseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC. rtems_clock_tick_later() - Gets a clock tick value which is at least delta clock ticks in the future. rtems_clock_tick_later_usec() - Gets a clock tick value which is at least delta microseconds in the future. rtems_clock_tick_before() - Indicates if the current clock tick counter is before the ticks.
+clock,rtems_clock_set() - Sets the CLOCK_REALTIME to the time of day.
+clock,rtems_clock_get_tod() - Gets the time of day associated with the current CLOCK_REALTIME.
+clock,rtems_clock_get_tod_timeval() - Gets the seconds and microseconds elapsed since the Unix epoch and the current CLOCK_REALTIME.
+clock,rtems_clock_get_realtime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in seconds and nanoseconds format.
+clock,rtems_clock_get_realtime_bintime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in binary time format.
+clock,rtems_clock_get_realtime_timeval() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in seconds and microseconds format.
+clock,rtems_clock_get_realtime_coarse() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in seconds and nanoseconds format.
+clock,rtems_clock_get_realtime_coarse_bintime() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in binary time format.
+clock,rtems_clock_get_realtime_coarse_timeval() - Gets the time elapsed since the Unix epoch measured using CLOCK_REALTIME in coarse resolution in seconds and microseconds format.
+clock,rtems_clock_get_monotonic() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in seconds and nanoseconds format.
+clock,rtems_clock_get_monotonic_bintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in binary time format.
+clock,rtems_clock_get_monotonic_sbintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in signed binary time format.
+clock,rtems_clock_get_monotonic_timeval() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in seconds and microseconds format.
+clock,rtems_clock_get_monotonic_coarse() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in seconds and nanoseconds format.
+clock,rtems_clock_get_monotonic_coarse_bintime() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in binary time format.
+clock,rtems_clock_get_monotonic_coarse_timeval() - Gets the time elapsed since some fixed time point in the past measured using the CLOCK_MONOTONIC in coarse resolution in seconds and microseconds format.
+clock,rtems_clock_get_boot_time() - Gets the time elapsed since the Unix epoch at some time point during system initialization in seconds and nanoseconds format.
+clock,rtems_clock_get_boot_time_bintime() - Gets the time elapsed since the Unix epoch at some time point during system initialization in binary time format.
+clock,rtems_clock_get_boot_time_timeval() - Gets the time elapsed since the Unix epoch at some time point during system initialization in seconds and microseconds format.
+clock,rtems_clock_get_seconds_since_epoch() - Gets the seconds elapsed since the RTEMS epoch and the current CLOCK_REALTIME.
+clock,rtems_clock_get_ticks_per_second() - Gets the number of clock ticks per second configured for the application.
+clock,rtems_clock_get_ticks_since_boot() - Gets the number of clock ticks since some time point during the system initialization or the last overflow of the clock tick counter.
+clock,rtems_clock_get_uptime() - Gets the seconds and nanoseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC.
+clock,rtems_clock_get_uptime_timeval() - Gets the seconds and microseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC.
+clock,rtems_clock_get_uptime_seconds() - Gets the seconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC.
+clock,rtems_clock_get_uptime_nanoseconds() - Gets the nanoseconds elapsed since some time point during the system initialization using CLOCK_MONOTONIC.
+clock,rtems_clock_tick_later() - Gets a clock tick value which is at least delta clock ticks in the future.
+clock,rtems_clock_tick_later_usec() - Gets a clock tick value which is at least delta microseconds in the future.
+clock,rtems_clock_tick_before() - Indicates if the current clock tick counter is before the ticks.
+config,The application configuration information group provides an API to get the configuration of an application.
+config,"RTEMS must be configured for an application.  This configuration encompasses a variety of information including the length of each clock tick, the maximum number of each information RTEMS object that can be created, the application initialization tasks, the task scheduling algorithm to be used, and the device drivers in the application."
+config,"Although this information is contained in data structures that are used by RTEMS at system initialization time, the data structures themselves must not be generated by hand. RTEMS provides a set of macros system which provides a simple standard mechanism to automate the generation of these structures."
+config,The RTEMS header file <rtems/confdefs.h> is at the core of the automatic generation of system configuration. It is based on the idea of setting macros which define configuration parameters of interest to the application and defaulting or calculating all others. This variety of macros can automatically produce all of the configuration data required for an RTEMS application.  The term confdefs is shorthand for a Configuration Defaults.
+config,"As a general rule, application developers only specify values for the configuration parameters of interest to them. They define what resources or features they require. In most cases, when a parameter is not specified, it defaults to zero (0) instances, a standards compliant value, or disabled as appropriate. For example, by default there will be 256 task priority levels but this can be lowered by the application. This number of priority levels is required to be compliant with the RTEID/ORKID standards upon which the Classic API is based. There are similar cases where the default is selected to be compliant with the POSIX standard."
+config,"For each configuration parameter in the configuration tables, the macro corresponding to that field is discussed. The RTEMS Maintainers expect that all systems can be easily configured using the <rtems/confdefs.h> mechanism and that using this mechanism will avoid internal RTEMS configuration changes impacting applications."
+config,Some application configuration settings and other system parameters can be queried by the application. The directives provided by the Application Configuration Information are:
+config,rtems_get_build_label() - Gets the RTEMS build label. rtems_get_copyright_notice() - Gets the RTEMS copyright notice. rtems_get_target_hash() - Gets the RTEMS target hash. rtems_get_version_string() - Gets the RTEMS version string. rtems_configuration_get_do_zero_of_workspace() - Indicates if the RTEMS Workspace is configured to be zeroed during system initialization for this application. rtems_configuration_get_idle_task_stack_size() - Gets the IDLE task stack size in bytes of this application. rtems_configuration_get_idle_task() - Gets the IDLE task body of this application. rtems_configuration_get_interrupt_stack_size() - Gets the interrupt stack size in bytes of this application. rtems_configuration_get_maximum_barriers() - Gets the resource number of Barrier Manager objects configured for this application. rtems_configuration_get_maximum_extensions() - Gets the resource number of User Extensions Manager objects configured for this application. rtems_configuration_get_maximum_message_queues() - Gets the resource number of Message Manager objects configured for this application. rtems_configuration_get_maximum_partitions() - Gets the resource number of Partition Manager objects configured for this application. rtems_configuration_get_maximum_periods() - Gets the resource number of Rate Monotonic Manager objects configured for this application. rtems_configuration_get_maximum_ports() - Gets the resource number of Dual-Ported Memory Manager objects configured for this application. rtems_configuration_get_maximum_processors() - Gets the maximum number of processors configured for this application. rtems_configuration_get_maximum_regions() - Gets the resource number of Region Manager objects configured for this application. rtems_configuration_get_maximum_semaphores() - Gets the resource number of Semaphore Manager objects configured for this application. rtems_configuration_get_maximum_tasks() - Gets the resource number of Task Manager objects configured for this application. rtems_configuration_get_maximum_timers() - Gets the resource number of Timer Manager objects configured for this application. rtems_configuration_get_microseconds_per_tick() - Gets the number of microseconds per clock tick configured for this application. rtems_configuration_get_milliseconds_per_tick() - Gets the number of milliseconds per clock tick configured for this application. rtems_configuration_get_nanoseconds_per_tick() - Gets the number of microseconds per clock tick configured for this application. rtems_configuration_get_number_of_initial_extensions() - Gets the number of initial extensions configured for this application. rtems_configuration_get_stack_allocate_for_idle_hook() - Gets the task stack allocator allocate hook used to allocate the stack of each IDLE task configured for this application. rtems_configuration_get_stack_allocate_hook() - Gets the task stack allocator allocate hook configured for this application. rtems_configuration_get_stack_allocate_init_hook() - Gets the task stack allocator initialization hook configured for this application. rtems_configuration_get_stack_allocator_avoids_work_space() - Indicates if the task stack allocator is configured to avoid the RTEMS Workspace for this application. rtems_configuration_get_stack_free_hook() - Gets the task stack allocator free hook configured for this application. rtems_configuration_get_stack_space_size() - Gets the configured size in bytes of the memory space used to allocate thread stacks for this application. rtems_configuration_get_ticks_per_timeslice() - Gets the clock ticks per timeslice configured for this application. rtems_configuration_get_unified_work_area() - Indicates if the RTEMS Workspace and C Program Heap are configured to be unified for this application. rtems_configuration_get_user_extension_table() - Gets the initial extensions table configured for this application. rtems_configuration_get_user_multiprocessing_table() - Gets the MPCI configuration table configured for this application. rtems_configuration_get_work_space_size() - Gets the RTEMS Workspace size in bytes configured for this application. rtems_configuration_get_rtems_api_configuration() - Gets the Classic API Configuration Table of this application. rtems_resource_is_unlimited() - Indicates if the resource is unlimited. rtems_resource_maximum_per_allocation() - Gets the maximum number per allocation of a resource number. rtems_resource_unlimited() - Augments the resource number so that it indicates an unlimited resource.
+config,rtems_get_build_label() - Gets the RTEMS build label.
+config,rtems_get_copyright_notice() - Gets the RTEMS copyright notice.
+config,rtems_get_target_hash() - Gets the RTEMS target hash.
+config,rtems_get_version_string() - Gets the RTEMS version string.
+config,rtems_configuration_get_do_zero_of_workspace() - Indicates if the RTEMS Workspace is configured to be zeroed during system initialization for this application.
+config,rtems_configuration_get_idle_task_stack_size() - Gets the IDLE task stack size in bytes of this application.
+config,rtems_configuration_get_idle_task() - Gets the IDLE task body of this application.
+config,rtems_configuration_get_interrupt_stack_size() - Gets the interrupt stack size in bytes of this application.
+config,rtems_configuration_get_maximum_barriers() - Gets the resource number of Barrier Manager objects configured for this application.
+config,rtems_configuration_get_maximum_extensions() - Gets the resource number of User Extensions Manager objects configured for this application.
+config,rtems_configuration_get_maximum_message_queues() - Gets the resource number of Message Manager objects configured for this application.
+config,rtems_configuration_get_maximum_partitions() - Gets the resource number of Partition Manager objects configured for this application.
+config,rtems_configuration_get_maximum_periods() - Gets the resource number of Rate Monotonic Manager objects configured for this application.
+config,rtems_configuration_get_maximum_ports() - Gets the resource number of Dual-Ported Memory Manager objects configured for this application.
+config,rtems_configuration_get_maximum_processors() - Gets the maximum number of processors configured for this application.
+config,rtems_configuration_get_maximum_regions() - Gets the resource number of Region Manager objects configured for this application.
+config,rtems_configuration_get_maximum_semaphores() - Gets the resource number of Semaphore Manager objects configured for this application.
+config,rtems_configuration_get_maximum_tasks() - Gets the resource number of Task Manager objects configured for this application.
+config,rtems_configuration_get_maximum_timers() - Gets the resource number of Timer Manager objects configured for this application.
+config,rtems_configuration_get_microseconds_per_tick() - Gets the number of microseconds per clock tick configured for this application.
+config,rtems_configuration_get_milliseconds_per_tick() - Gets the number of milliseconds per clock tick configured for this application.
+config,rtems_configuration_get_nanoseconds_per_tick() - Gets the number of microseconds per clock tick configured for this application.
+config,rtems_configuration_get_number_of_initial_extensions() - Gets the number of initial extensions configured for this application.
+config,rtems_configuration_get_stack_allocate_for_idle_hook() - Gets the task stack allocator allocate hook used to allocate the stack of each IDLE task configured for this application.
+config,rtems_configuration_get_stack_allocate_hook() - Gets the task stack allocator allocate hook configured for this application.
+config,rtems_configuration_get_stack_allocate_init_hook() - Gets the task stack allocator initialization hook configured for this application.
+config,rtems_configuration_get_stack_allocator_avoids_work_space() - Indicates if the task stack allocator is configured to avoid the RTEMS Workspace for this application.
+config,rtems_configuration_get_stack_free_hook() - Gets the task stack allocator free hook configured for this application.
+config,rtems_configuration_get_stack_space_size() - Gets the configured size in bytes of the memory space used to allocate thread stacks for this application.
+config,rtems_configuration_get_ticks_per_timeslice() - Gets the clock ticks per timeslice configured for this application.
+config,rtems_configuration_get_unified_work_area() - Indicates if the RTEMS Workspace and C Program Heap are configured to be unified for this application.
+config,rtems_configuration_get_user_extension_table() - Gets the initial extensions table configured for this application.
+config,rtems_configuration_get_user_multiprocessing_table() - Gets the MPCI configuration table configured for this application.
+config,rtems_configuration_get_work_space_size() - Gets the RTEMS Workspace size in bytes configured for this application.
+config,rtems_configuration_get_rtems_api_configuration() - Gets the Classic API Configuration Table of this application.
+config,rtems_resource_is_unlimited() - Indicates if the resource is unlimited.
+config,rtems_resource_maximum_per_allocation() - Gets the maximum number per allocation of a resource number.
+config,rtems_resource_unlimited() - Augments the resource number so that it indicates an unlimited resource.
+dual-ported-memory,The Dual-Ported Memory Manager provides a mechanism for converting addresses between internal and external representations for multiple dual-ported memory areas (DPMA). The directives provided by the Dual-Ported Memory Manager are:
+dual-ported-memory,rtems_port_create() - Creates a port. rtems_port_ident() - Identifies a port by the object name. rtems_port_delete() - Deletes the port. rtems_port_external_to_internal() - Converts the external address to the internal address. rtems_port_internal_to_external() - Converts the internal address to the external address.
+dual-ported-memory,rtems_port_create() - Creates a port.
+dual-ported-memory,rtems_port_ident() - Identifies a port by the object name.
+dual-ported-memory,rtems_port_delete() - Deletes the port.
+dual-ported-memory,rtems_port_external_to_internal() - Converts the external address to the internal address.
+dual-ported-memory,rtems_port_internal_to_external() - Converts the internal address to the external address.
+event,The Event Manager provides a high performance method of inter-task communication and synchronization. The directives provided by the Event Manager are:
+event,rtems_event_send() - Sends the event set to the task. rtems_event_receive() - Receives or gets an event set from the calling task.
+event,rtems_event_send() - Sends the event set to the task.
+event,rtems_event_receive() - Receives or gets an event set from the calling task.
+fatal-error,The Fatal Error Manager processes all fatal or irrecoverable errors and other sources of system termination (for example after exit()).  Fatal errors are identified by the fatal source and code pair. The directives provided by the Fatal Error Manager are:
+fatal-error,rtems_fatal() - Invokes the fatal error handler. rtems_panic() - Prints the message and invokes the fatal error handler. rtems_shutdown_executive() - Invokes the fatal error handler. rtems_exception_frame_print() - Prints the exception frame. rtems_fatal_source_text() - Returns a descriptive text for the fatal source. rtems_internal_error_text() - Returns a descriptive text for the internal error code. rtems_fatal_error_occurred() - Invokes the fatal error handler.
+fatal-error,rtems_fatal() - Invokes the fatal error handler.
+fatal-error,rtems_panic() - Prints the message and invokes the fatal error handler.
+fatal-error,rtems_shutdown_executive() - Invokes the fatal error handler.
+fatal-error,rtems_exception_frame_print() - Prints the exception frame.
+fatal-error,rtems_fatal_source_text() - Returns a descriptive text for the fatal source.
+fatal-error,rtems_internal_error_text() - Returns a descriptive text for the internal error code.
+fatal-error,rtems_fatal_error_occurred() - Invokes the fatal error handler.
+initialization,The Initialization Manager is responsible for initializing the system.
+initialization,"The system initialization includes the initialization of the Board Support Package, RTEMS, device drivers, the root filesystem, and the application. The Fatal Error Manager is responsible for the system shutdown. The directives provided by the Initialization Manager are:"
+initialization,rtems_initialize_executive() - Initializes the system and starts multitasking.
+initialization,rtems_initialize_executive() - Initializes the system and starts multitasking.
+interrupt,Any real-time executive must provide a mechanism for quick response to externally generated interrupts to satisfy the critical time constraints of the application.  The Interrupt Manager provides this mechanism for RTEMS. This manager permits quick interrupt response times by providing the critical ability to alter task execution which allows a task to be preempted upon exit from an ISR. The directives provided by the Interrupt Manager are:
+interrupt,rtems_interrupt_catch() - Establishes an interrupt service routine. rtems_interrupt_disable() - Disables the maskable interrupts on the current processor. rtems_interrupt_enable() - Restores the previous interrupt level on the current processor. rtems_interrupt_flash() - Flashes interrupts on the current processor. rtems_interrupt_local_disable() - Disables the maskable interrupts on the current processor. rtems_interrupt_local_enable() - Restores the previous interrupt level on the current processor. rtems_interrupt_is_in_progress() - Checks if an ISR is in progress on the current processor. rtems_interrupt_lock_initialize() - Initializes the ISR lock. rtems_interrupt_lock_destroy() - Destroys the ISR lock. rtems_interrupt_lock_acquire() - Acquires the ISR lock. rtems_interrupt_lock_release() - Releases the ISR lock. rtems_interrupt_lock_acquire_isr() - Acquires the ISR lock from within an ISR. rtems_interrupt_lock_release_isr() - Releases the ISR lock from within an ISR. rtems_interrupt_lock_interrupt_disable() - Disables maskable interrupts on the current processor. RTEMS_INTERRUPT_LOCK_DECLARE() - Declares an ISR lock object. RTEMS_INTERRUPT_LOCK_DEFINE() - Defines an ISR lock object. RTEMS_INTERRUPT_LOCK_INITIALIZER() - Statically initializes an ISR lock object. RTEMS_INTERRUPT_LOCK_MEMBER() - Defines an ISR lock member. RTEMS_INTERRUPT_LOCK_REFERENCE() - Defines an ISR lock object reference. RTEMS_INTERRUPT_ENTRY_INITIALIZER() - Statically initializes an interrupt entry object. rtems_interrupt_entry_initialize() - Initializes the interrupt entry. rtems_interrupt_entry_install() - Installs the interrupt entry at the interrupt vector. rtems_interrupt_entry_remove() - Removes the interrupt entry from the interrupt vector. rtems_interrupt_handler_install() - Installs the interrupt handler routine and argument at the interrupt vector. rtems_interrupt_handler_remove() - Removes the interrupt handler routine and argument from the interrupt vector. rtems_interrupt_vector_is_enabled() - Checks if the interrupt vector is enabled. rtems_interrupt_vector_enable() - Enables the interrupt vector. rtems_interrupt_vector_disable() - Disables the interrupt vector. rtems_interrupt_is_pending() - Checks if the interrupt is pending. rtems_interrupt_raise() - Raises the interrupt vector. rtems_interrupt_raise_on() - Raises the interrupt vector on the processor. rtems_interrupt_clear() - Clears the interrupt vector. rtems_interrupt_get_priority() - Gets the priority of the interrupt vector. rtems_interrupt_set_priority() - Sets the priority of the interrupt vector. rtems_interrupt_get_affinity() - Gets the processor affinity set of the interrupt vector. rtems_interrupt_set_affinity() - Sets the processor affinity set of the interrupt vector. rtems_interrupt_get_attributes() - Gets the attributes of the interrupt vector. rtems_interrupt_handler_iterate() - Iterates over all interrupt handler installed at the interrupt vector. rtems_interrupt_server_initialize() - Initializes the interrupt server tasks. rtems_interrupt_server_create() - Creates an interrupt server. rtems_interrupt_server_handler_install() - Installs the interrupt handler routine and argument at the interrupt vector on the interrupt server. rtems_interrupt_server_handler_remove() - Removes the interrupt handler routine and argument from the interrupt vector and the interrupt server. rtems_interrupt_server_set_affinity() - Sets the processor affinity of the interrupt server. rtems_interrupt_server_delete() - Deletes the interrupt server. rtems_interrupt_server_suspend() - Suspends the interrupt server. rtems_interrupt_server_resume() - Resumes the interrupt server. rtems_interrupt_server_move() - Moves the interrupt handlers installed at the interrupt vector and the source interrupt server to the destination interrupt server. rtems_interrupt_server_handler_iterate() - Iterates over all interrupt handler installed at the interrupt vector and interrupt server. rtems_interrupt_server_entry_initialize() - Initializes the interrupt server entry. rtems_interrupt_server_action_prepend() - Prepends the interrupt server action to the list of actions of the interrupt server entry. rtems_interrupt_server_entry_destroy() - Destroys the interrupt server entry. rtems_interrupt_server_entry_submit() - Submits the interrupt server entry to be serviced by the interrupt server. rtems_interrupt_server_entry_move() - Moves the interrupt server entry to the interrupt server. rtems_interrupt_server_request_initialize() - Initializes the interrupt server request. rtems_interrupt_server_request_set_vector() - Sets the interrupt vector in the interrupt server request. rtems_interrupt_server_request_destroy() - Destroys the interrupt server request. rtems_interrupt_server_request_submit() - Submits the interrupt server request to be serviced by the interrupt server.
+interrupt,rtems_interrupt_catch() - Establishes an interrupt service routine.
+interrupt,rtems_interrupt_disable() - Disables the maskable interrupts on the current processor.
+interrupt,rtems_interrupt_enable() - Restores the previous interrupt level on the current processor.
+interrupt,rtems_interrupt_flash() - Flashes interrupts on the current processor.
+interrupt,rtems_interrupt_local_disable() - Disables the maskable interrupts on the current processor.
+interrupt,rtems_interrupt_local_enable() - Restores the previous interrupt level on the current processor.
+interrupt,rtems_interrupt_is_in_progress() - Checks if an ISR is in progress on the current processor.
+interrupt,rtems_interrupt_lock_initialize() - Initializes the ISR lock.
+interrupt,rtems_interrupt_lock_destroy() - Destroys the ISR lock.
+interrupt,rtems_interrupt_lock_acquire() - Acquires the ISR lock.
+interrupt,rtems_interrupt_lock_release() - Releases the ISR lock.
+interrupt,rtems_interrupt_lock_acquire_isr() - Acquires the ISR lock from within an ISR.
+interrupt,rtems_interrupt_lock_release_isr() - Releases the ISR lock from within an ISR.
+interrupt,rtems_interrupt_lock_interrupt_disable() - Disables maskable interrupts on the current processor.
+interrupt,RTEMS_INTERRUPT_LOCK_DECLARE() - Declares an ISR lock object.
+interrupt,RTEMS_INTERRUPT_LOCK_DEFINE() - Defines an ISR lock object.
+interrupt,RTEMS_INTERRUPT_LOCK_INITIALIZER() - Statically initializes an ISR lock object.
+interrupt,RTEMS_INTERRUPT_LOCK_MEMBER() - Defines an ISR lock member.
+interrupt,RTEMS_INTERRUPT_LOCK_REFERENCE() - Defines an ISR lock object reference.
+interrupt,RTEMS_INTERRUPT_ENTRY_INITIALIZER() - Statically initializes an interrupt entry object.
+interrupt,rtems_interrupt_entry_initialize() - Initializes the interrupt entry.
+interrupt,rtems_interrupt_entry_install() - Installs the interrupt entry at the interrupt vector.
+interrupt,rtems_interrupt_entry_remove() - Removes the interrupt entry from the interrupt vector.
+interrupt,rtems_interrupt_handler_install() - Installs the interrupt handler routine and argument at the interrupt vector.
+interrupt,rtems_interrupt_handler_remove() - Removes the interrupt handler routine and argument from the interrupt vector.
+interrupt,rtems_interrupt_vector_is_enabled() - Checks if the interrupt vector is enabled.
+interrupt,rtems_interrupt_vector_enable() - Enables the interrupt vector.
+interrupt,rtems_interrupt_vector_disable() - Disables the interrupt vector.
+interrupt,rtems_interrupt_is_pending() - Checks if the interrupt is pending.
+interrupt,rtems_interrupt_raise() - Raises the interrupt vector.
+interrupt,rtems_interrupt_raise_on() - Raises the interrupt vector on the processor.
+interrupt,rtems_interrupt_clear() - Clears the interrupt vector.
+interrupt,rtems_interrupt_get_priority() - Gets the priority of the interrupt vector.
+interrupt,rtems_interrupt_set_priority() - Sets the priority of the interrupt vector.
+interrupt,rtems_interrupt_get_affinity() - Gets the processor affinity set of the interrupt vector.
+interrupt,rtems_interrupt_set_affinity() - Sets the processor affinity set of the interrupt vector.
+interrupt,rtems_interrupt_get_attributes() - Gets the attributes of the interrupt vector.
+interrupt,rtems_interrupt_handler_iterate() - Iterates over all interrupt handler installed at the interrupt vector.
+interrupt,rtems_interrupt_server_initialize() - Initializes the interrupt server tasks.
+interrupt,rtems_interrupt_server_create() - Creates an interrupt server.
+interrupt,rtems_interrupt_server_handler_install() - Installs the interrupt handler routine and argument at the interrupt vector on the interrupt server.
+interrupt,rtems_interrupt_server_handler_remove() - Removes the interrupt handler routine and argument from the interrupt vector and the interrupt server.
+interrupt,rtems_interrupt_server_set_affinity() - Sets the processor affinity of the interrupt server.
+interrupt,rtems_interrupt_server_delete() - Deletes the interrupt server.
+interrupt,rtems_interrupt_server_suspend() - Suspends the interrupt server.
+interrupt,rtems_interrupt_server_resume() - Resumes the interrupt server.
+interrupt,rtems_interrupt_server_move() - Moves the interrupt handlers installed at the interrupt vector and the source interrupt server to the destination interrupt server.
+interrupt,rtems_interrupt_server_handler_iterate() - Iterates over all interrupt handler installed at the interrupt vector and interrupt server.
+interrupt,rtems_interrupt_server_entry_initialize() - Initializes the interrupt server entry.
+interrupt,rtems_interrupt_server_action_prepend() - Prepends the interrupt server action to the list of actions of the interrupt server entry.
+interrupt,rtems_interrupt_server_entry_destroy() - Destroys the interrupt server entry.
+interrupt,rtems_interrupt_server_entry_submit() - Submits the interrupt server entry to be serviced by the interrupt server.
+interrupt,rtems_interrupt_server_entry_move() - Moves the interrupt server entry to the interrupt server.
+interrupt,rtems_interrupt_server_request_initialize() - Initializes the interrupt server request.
+interrupt,rtems_interrupt_server_request_set_vector() - Sets the interrupt vector in the interrupt server request.
+interrupt,rtems_interrupt_server_request_destroy() - Destroys the interrupt server request.
+interrupt,rtems_interrupt_server_request_submit() - Submits the interrupt server request to be serviced by the interrupt server.
+io,The Input/Output (I/O) Manager provides a well-defined mechanism for accessing device drivers and a structured methodology for organizing device drivers. The directives provided by the I/O Manager are:
+io,rtems_io_register_driver() - Registers and initializes the device with the specified device driver address table and device major number in the Device Driver Table. rtems_io_unregister_driver() - Removes a device driver specified by the device major number from the Device Driver Table. rtems_io_initialize() - Initializes the device specified by the device major and minor numbers. rtems_io_register_name() - Registers the device specified by the device major and minor numbers in the file system under the specified name. rtems_io_open() - Opens the device specified by the device major and minor numbers. rtems_io_close() - Closes the device specified by the device major and minor numbers. rtems_io_read() - Reads from the device specified by the device major and minor numbers. rtems_io_write() - Writes to the device specified by the device major and minor numbers. rtems_io_control() - Controls the device specified by the device major and minor numbers.
+io,rtems_io_register_driver() - Registers and initializes the device with the specified device driver address table and device major number in the Device Driver Table.
+io,rtems_io_unregister_driver() - Removes a device driver specified by the device major number from the Device Driver Table.
+io,rtems_io_initialize() - Initializes the device specified by the device major and minor numbers.
+io,rtems_io_register_name() - Registers the device specified by the device major and minor numbers in the file system under the specified name.
+io,rtems_io_open() - Opens the device specified by the device major and minor numbers.
+io,rtems_io_close() - Closes the device specified by the device major and minor numbers.
+io,rtems_io_read() - Reads from the device specified by the device major and minor numbers.
+io,rtems_io_write() - Writes to the device specified by the device major and minor numbers.
+io,rtems_io_control() - Controls the device specified by the device major and minor numbers.
+kernel-character-io,The kernel character input/output support is an extension of the I/O Manager to output characters to the kernel character output device and receive characters from the kernel character input device using a polled and non-blocking implementation.
+kernel-character-io,"The directives may be used to print debug and test information.  The kernel character input/output support should work even if no Console Driver is configured, see CONFIGURE_APPLICATION_NEEDS_CONSOLE_DRIVER.  The kernel character input and output device is provided by the BSP. Applications may change the device. The directives provided by the Kernel Character I/O Support are:"
+kernel-character-io,rtems_putc() - Outputs the character to the kernel character output device. rtems_put_char() - Puts the character using rtems_putc() putk() - Outputs the characters of the string and a newline character to the kernel character output device. printk() - Outputs the characters defined by the format string and the arguments to the kernel character output device. vprintk() - Outputs the characters defined by the format string and the variable argument list to the kernel character output device. rtems_printk_printer() - Outputs the characters defined by the format string and the variable argument list to the kernel character output device. getchark() - Tries to dequeue a character from the kernel character input device.
+kernel-character-io,rtems_putc() - Outputs the character to the kernel character output device.
+kernel-character-io,rtems_put_char() - Puts the character using rtems_putc()
+kernel-character-io,putk() - Outputs the characters of the string and a newline character to the kernel character output device.
+kernel-character-io,printk() - Outputs the characters defined by the format string and the arguments to the kernel character output device.
+kernel-character-io,vprintk() - Outputs the characters defined by the format string and the variable argument list to the kernel character output device.
+kernel-character-io,rtems_printk_printer() - Outputs the characters defined by the format string and the variable argument list to the kernel character output device.
+kernel-character-io,getchark() - Tries to dequeue a character from the kernel character input device.
+message,The Message Manager provides communication and synchronization capabilities using RTEMS message queues. The directives provided by the Message Manager are:
+message,rtems_message_queue_create() - Creates a message queue. rtems_message_queue_construct() - Constructs a message queue from the specified the message queue configuration. rtems_message_queue_ident() - Identifies a message queue by the object name. rtems_message_queue_delete() - Deletes the message queue. rtems_message_queue_send() - Puts the message at the rear of the queue. rtems_message_queue_urgent() - Puts the message at the front of the queue. rtems_message_queue_broadcast() - Broadcasts the messages to the tasks waiting at the queue. rtems_message_queue_receive() - Receives a message from the queue. rtems_message_queue_get_number_pending() - Gets the number of messages pending on the queue. rtems_message_queue_flush() - Flushes all messages on the queue. RTEMS_MESSAGE_QUEUE_BUFFER() - Defines a structure which can be used as a message queue buffer for messages of the specified maximum size.
+message,rtems_message_queue_create() - Creates a message queue.
+message,rtems_message_queue_construct() - Constructs a message queue from the specified the message queue configuration.
+message,rtems_message_queue_ident() - Identifies a message queue by the object name.
+message,rtems_message_queue_delete() - Deletes the message queue.
+message,rtems_message_queue_send() - Puts the message at the rear of the queue.
+message,rtems_message_queue_urgent() - Puts the message at the front of the queue.
+message,rtems_message_queue_broadcast() - Broadcasts the messages to the tasks waiting at the queue.
+message,rtems_message_queue_receive() - Receives a message from the queue.
+message,rtems_message_queue_get_number_pending() - Gets the number of messages pending on the queue.
+message,rtems_message_queue_flush() - Flushes all messages on the queue.
+message,RTEMS_MESSAGE_QUEUE_BUFFER() - Defines a structure which can be used as a message queue buffer for messages of the specified maximum size.
+multiprocessing,The Multiprocessing Manager provides support for heterogeneous multiprocessing systems based on message passing in a network of multiprocessing nodes.
+multiprocessing,"In multiprocessor real-time systems, new requirements, such as sharing data and global resources between processors, are introduced.  This requires an efficient and reliable communications vehicle which allows all processors to communicate with each other as necessary.  In addition, the ramifications of multiple processors affect each and every characteristic of a real-time system, almost always making them more complicated."
+multiprocessing,"RTEMS addresses these issues by providing simple and flexible real-time multiprocessing capabilities.  The executive easily lends itself to both tightly-coupled and loosely-coupled configurations of the target system hardware.  In addition, RTEMS supports systems composed of both homogeneous and heterogeneous mixtures of processors and target boards."
+multiprocessing,"A major design goal of the RTEMS executive was to transcend the physical boundaries of the target hardware configuration.  This goal is achieved by presenting the application software with a logical view of the target system where the boundaries between processor nodes are transparent.  As a result, the application developer may designate objects such as tasks, queues, events, signals, semaphores, and memory blocks as global objects.  These global objects may then be accessed by any task regardless of the physical location of the object and the accessing task.  RTEMS automatically determines that the object being accessed resides on another processor and performs the actions required to access the desired object.  Simply stated, RTEMS allows the entire system, both hardware and software, to be viewed logically as a single system. The directives provided by the Multiprocessing Manager are:"
+multiprocessing,rtems_multiprocessing_announce() - Announces the arrival of a packet.
+multiprocessing,rtems_multiprocessing_announce() - Announces the arrival of a packet.
+multiprocessing,"© Copyright 1988, 2024 RTEMS Project and contributors."
+object-services,RTEMS provides a collection of services to assist in the management and usage of the objects created and utilized via other managers.  These services assist in the manipulation of RTEMS objects independent of the API used to create them. The directives provided by the Object Services are:
+object-services,"rtems_build_id() - Builds the object identifier from the API, class, MPCI node, and index components. rtems_build_name() - Builds the object name composed of the four characters. rtems_object_get_classic_name() - Gets the object name associated with the object identifier. rtems_object_get_name() - Gets the object name associated with the object identifier as a string. rtems_object_set_name() - Sets the object name of the object associated with the object identifier. rtems_object_id_get_api() - Gets the API component of the object identifier. rtems_object_id_get_class() - Gets the class component of the object identifier. rtems_object_id_get_node() - Gets the MPCI node component of the object identifier. rtems_object_id_get_index() - Gets the index component of the object identifier. rtems_object_id_api_minimum() - Gets the lowest valid value for the API component of an object identifier. rtems_object_id_api_maximum() - Gets the highest valid value for the API component of an object identifier. rtems_object_api_minimum_class() - Gets the lowest valid class value of the object API. rtems_object_api_maximum_class() - Gets the highest valid class value of the object API. rtems_object_get_api_name() - Gets a descriptive name of the object API. rtems_object_get_api_class_name() - Gets a descriptive name of the object class of the object API. rtems_object_get_class_information() - Gets the object class information of the object class of the object API. rtems_object_get_local_node() - Gets the local MPCI node number. RTEMS_OBJECT_ID_INITIAL() - Builds the object identifier with the lowest index from the API, class, and MPCI node components."
+object-services,"rtems_build_id() - Builds the object identifier from the API, class, MPCI node, and index components."
+object-services,rtems_build_name() - Builds the object name composed of the four characters.
+object-services,rtems_object_get_classic_name() - Gets the object name associated with the object identifier.
+object-services,rtems_object_get_name() - Gets the object name associated with the object identifier as a string.
+object-services,rtems_object_set_name() - Sets the object name of the object associated with the object identifier.
+object-services,rtems_object_id_get_api() - Gets the API component of the object identifier.
+object-services,rtems_object_id_get_class() - Gets the class component of the object identifier.
+object-services,rtems_object_id_get_node() - Gets the MPCI node component of the object identifier.
+object-services,rtems_object_id_get_index() - Gets the index component of the object identifier.
+object-services,rtems_object_id_api_minimum() - Gets the lowest valid value for the API component of an object identifier.
+object-services,rtems_object_id_api_maximum() - Gets the highest valid value for the API component of an object identifier.
+object-services,rtems_object_api_minimum_class() - Gets the lowest valid class value of the object API.
+object-services,rtems_object_api_maximum_class() - Gets the highest valid class value of the object API.
+object-services,rtems_object_get_api_name() - Gets a descriptive name of the object API.
+object-services,rtems_object_get_api_class_name() - Gets a descriptive name of the object class of the object API.
+object-services,rtems_object_get_class_information() - Gets the object class information of the object class of the object API.
+object-services,rtems_object_get_local_node() - Gets the local MPCI node number.
+object-services,"RTEMS_OBJECT_ID_INITIAL() - Builds the object identifier with the lowest index from the API, class, and MPCI node components."
+partition,The Partition Manager provides facilities to dynamically allocate memory in fixed-size units. The directives provided by the Partition Manager are:
+partition,rtems_partition_create() - Creates a partition. rtems_partition_ident() - Identifies a partition by the object name. rtems_partition_delete() - Deletes the partition. rtems_partition_get_buffer() - Tries to get a buffer from the partition. rtems_partition_return_buffer() - Returns the buffer to the partition.
+partition,rtems_partition_create() - Creates a partition.
+partition,rtems_partition_ident() - Identifies a partition by the object name.
+partition,rtems_partition_delete() - Deletes the partition.
+partition,rtems_partition_get_buffer() - Tries to get a buffer from the partition.
+partition,rtems_partition_return_buffer() - Returns the buffer to the partition.
+rate-monotonic,"The Rate-Monotonic Manager provides facilities to implement tasks which execute in a periodic fashion.  Critically, it also gathers information about the execution of those periods and can provide important statistics to the user which can be used to analyze and tune the application. The directives provided by the Rate-Monotonic Manager are:"
+rate-monotonic,"rtems_rate_monotonic_create() - Creates a period. rtems_rate_monotonic_ident() - Identifies a period by the object name. rtems_rate_monotonic_cancel() - Cancels the period. rtems_rate_monotonic_delete() - Deletes the period. rtems_rate_monotonic_period() - Concludes the current period and start the next period, or gets the period status. rtems_rate_monotonic_get_status() - Gets the detailed status of the period. rtems_rate_monotonic_get_statistics() - Gets the statistics of the period. rtems_rate_monotonic_reset_statistics() - Resets the statistics of the period. rtems_rate_monotonic_reset_all_statistics() - Resets the statistics of all periods. rtems_rate_monotonic_report_statistics() - Reports the period statistics using the printk() printer. rtems_rate_monotonic_report_statistics_with_plugin() - Reports the period statistics using the printer plugin."
+rate-monotonic,rtems_rate_monotonic_create() - Creates a period.
+rate-monotonic,rtems_rate_monotonic_ident() - Identifies a period by the object name.
+rate-monotonic,rtems_rate_monotonic_cancel() - Cancels the period.
+rate-monotonic,rtems_rate_monotonic_delete() - Deletes the period.
+rate-monotonic,"rtems_rate_monotonic_period() - Concludes the current period and start the next period, or gets the period status."
+rate-monotonic,rtems_rate_monotonic_get_status() - Gets the detailed status of the period.
+rate-monotonic,rtems_rate_monotonic_get_statistics() - Gets the statistics of the period.
+rate-monotonic,rtems_rate_monotonic_reset_statistics() - Resets the statistics of the period.
+rate-monotonic,rtems_rate_monotonic_reset_all_statistics() - Resets the statistics of all periods.
+rate-monotonic,rtems_rate_monotonic_report_statistics() - Reports the period statistics using the printk() printer.
+rate-monotonic,rtems_rate_monotonic_report_statistics_with_plugin() - Reports the period statistics using the printer plugin.
+region,The Region Manager provides facilities to dynamically allocate memory in variable sized units. The directives provided by the Region Manager are:
+region,rtems_region_create() - Creates a region. rtems_region_ident() - Identifies a region by the object name. rtems_region_delete() - Deletes the region. rtems_region_extend() - Extends the region. rtems_region_get_segment() - Gets a segment from the region. rtems_region_return_segment() - Returns the segment to the region. rtems_region_resize_segment() - Changes the size of the segment. rtems_region_get_information() - Gets the region information. rtems_region_get_free_information() - Gets the region free information. rtems_region_get_segment_size() - Gets the size of the region segment.
+region,rtems_region_create() - Creates a region.
+region,rtems_region_ident() - Identifies a region by the object name.
+region,rtems_region_delete() - Deletes the region.
+region,rtems_region_extend() - Extends the region.
+region,rtems_region_get_segment() - Gets a segment from the region.
+region,rtems_region_return_segment() - Returns the segment to the region.
+region,rtems_region_resize_segment() - Changes the size of the segment.
+region,rtems_region_get_information() - Gets the region information.
+region,rtems_region_get_free_information() - Gets the region free information.
+region,rtems_region_get_segment_size() - Gets the size of the region segment.
+regulator,The Regulator Manager provides a set of directives to manage a data flow from a source to a destination. The focus is on regulating the bursty input so that it is delivered to the destination at a regular rate. The directives provided by the Regulator Manager are:
+regulator,rtems_regulator_create() - Creates a regulator. rtems_regulator_delete() - Deletes the regulator. rtems_regulator_obtain_buffer() - Obtain buffer from a regulator. rtems_regulator_release_buffer() - Release buffer to a regulator. rtems_regulator_send() - Send buffer to a regulator. rtems_regulator_get_statistics() - Obtain statistics for a regulator.
+regulator,rtems_regulator_create() - Creates a regulator.
+regulator,rtems_regulator_delete() - Deletes the regulator.
+regulator,rtems_regulator_obtain_buffer() - Obtain buffer from a regulator.
+regulator,rtems_regulator_release_buffer() - Release buffer to a regulator.
+regulator,rtems_regulator_send() - Send buffer to a regulator.
+regulator,rtems_regulator_get_statistics() - Obtain statistics for a regulator.
+scheduling-concepts,The scheduling concepts relate to the allocation of processing time for tasks.
+scheduling-concepts,"The concept of scheduling in real-time systems dictates the ability to provide an immediate response to specific external events, particularly the necessity of scheduling tasks to run within a specified time limit after the occurrence of an event. For example, software embedded in life-support systems used to monitor hospital patients must take instant action if a change in the patient’s status is detected."
+scheduling-concepts,The component of RTEMS responsible for providing this capability is appropriately called the scheduler. The scheduler’s sole purpose is to allocate the all important resource of processor time to the various tasks competing for attention. The directives provided by the Scheduler Manager are:
+scheduling-concepts,rtems_scheduler_ident() - Identifies a scheduler by the object name. rtems_scheduler_ident_by_processor() - Identifies a scheduler by the processor index. rtems_scheduler_ident_by_processor_set() - Identifies a scheduler by the processor set. rtems_scheduler_get_maximum_priority() - Gets the maximum task priority of the scheduler. rtems_scheduler_map_priority_to_posix() - Maps a Classic API task priority to the corresponding POSIX thread priority. rtems_scheduler_map_priority_from_posix() - Maps a POSIX thread priority to the corresponding Classic API task priority. rtems_scheduler_get_processor() - Returns the index of the current processor. rtems_scheduler_get_processor_maximum() - Returns the processor maximum supported by the system. rtems_scheduler_get_processor_set() - Gets the set of processors owned by the scheduler. rtems_scheduler_add_processor() - Adds the processor to the set of processors owned by the scheduler. rtems_scheduler_remove_processor() - Removes the processor from the set of processors owned by the scheduler.
+scheduling-concepts,rtems_scheduler_ident() - Identifies a scheduler by the object name.
+scheduling-concepts,rtems_scheduler_ident_by_processor() - Identifies a scheduler by the processor index.
+scheduling-concepts,rtems_scheduler_ident_by_processor_set() - Identifies a scheduler by the processor set.
+scheduling-concepts,rtems_scheduler_get_maximum_priority() - Gets the maximum task priority of the scheduler.
+scheduling-concepts,rtems_scheduler_map_priority_to_posix() - Maps a Classic API task priority to the corresponding POSIX thread priority.
+scheduling-concepts,rtems_scheduler_map_priority_from_posix() - Maps a POSIX thread priority to the corresponding Classic API task priority.
+scheduling-concepts,rtems_scheduler_get_processor() - Returns the index of the current processor.
+scheduling-concepts,rtems_scheduler_get_processor_maximum() - Returns the processor maximum supported by the system.
+scheduling-concepts,rtems_scheduler_get_processor_set() - Gets the set of processors owned by the scheduler.
+scheduling-concepts,rtems_scheduler_add_processor() - Adds the processor to the set of processors owned by the scheduler.
+scheduling-concepts,rtems_scheduler_remove_processor() - Removes the processor from the set of processors owned by the scheduler.
+semaphore,The Semaphore Manager utilizes standard Dijkstra counting semaphores to provide synchronization and mutual exclusion capabilities. The directives provided by the Semaphore Manager are:
+semaphore,rtems_semaphore_create() - Creates a semaphore. rtems_semaphore_ident() - Identifies a semaphore by the object name. rtems_semaphore_delete() - Deletes the semaphore. rtems_semaphore_obtain() - Obtains the semaphore. rtems_semaphore_release() - Releases the semaphore. rtems_semaphore_flush() - Flushes the semaphore. rtems_semaphore_set_priority() - Sets the priority by scheduler for the semaphore.
+semaphore,rtems_semaphore_create() - Creates a semaphore.
+semaphore,rtems_semaphore_ident() - Identifies a semaphore by the object name.
+semaphore,rtems_semaphore_delete() - Deletes the semaphore.
+semaphore,rtems_semaphore_obtain() - Obtains the semaphore.
+semaphore,rtems_semaphore_release() - Releases the semaphore.
+semaphore,rtems_semaphore_flush() - Flushes the semaphore.
+semaphore,rtems_semaphore_set_priority() - Sets the priority by scheduler for the semaphore.
+signal,The Signal Manager provides the capabilities required for asynchronous communication. The directives provided by the Signal Manager are:
+signal,rtems_signal_catch() - Establishes an asynchronous signal routine (ASR) for the calling task. rtems_signal_send() - Sends the signal set to the task.
+signal,rtems_signal_catch() - Establishes an asynchronous signal routine (ASR) for the calling task.
+signal,rtems_signal_send() - Sends the signal set to the task.
+task,"The Task Manager provides a comprehensive set of directives to create, delete, and administer tasks. The directives provided by the Task Manager are:"
+task,rtems_task_create() - Creates a task. rtems_task_construct() - Constructs a task from the specified task configuration. rtems_task_ident() - Identifies a task by the object name. rtems_task_self() - Gets the task identifier of the calling task. rtems_task_start() - Starts the task. rtems_task_restart() - Restarts the task. rtems_task_delete() - Deletes the task. rtems_task_exit() - Deletes the calling task. rtems_task_suspend() - Suspends the task. rtems_task_resume() - Resumes the task. rtems_task_is_suspended() - Checks if the task is suspended. rtems_task_set_priority() - Sets the real priority or gets the current priority of the task. rtems_task_get_priority() - Gets the current priority of the task with respect to the scheduler. rtems_task_mode() - Gets and optionally sets the mode of the calling task. rtems_task_wake_after() - Wakes up after a count of clock ticks have occurred or yields the processor. rtems_task_wake_when() - Wakes up when specified. rtems_task_get_scheduler() - Gets the home scheduler of the task. rtems_task_set_scheduler() - Sets the home scheduler for the task. rtems_task_get_affinity() - Gets the processor affinity of the task. rtems_task_set_affinity() - Sets the processor affinity of the task. rtems_task_iterate() - Iterates over all tasks and invokes the visitor routine for each task. RTEMS_TASK_STORAGE_SIZE() - Gets the recommended task storage area size for the size and task attributes.
+task,rtems_task_create() - Creates a task.
+task,rtems_task_construct() - Constructs a task from the specified task configuration.
+task,rtems_task_ident() - Identifies a task by the object name.
+task,rtems_task_self() - Gets the task identifier of the calling task.
+task,rtems_task_start() - Starts the task.
+task,rtems_task_restart() - Restarts the task.
+task,rtems_task_delete() - Deletes the task.
+task,rtems_task_exit() - Deletes the calling task.
+task,rtems_task_suspend() - Suspends the task.
+task,rtems_task_resume() - Resumes the task.
+task,rtems_task_is_suspended() - Checks if the task is suspended.
+task,rtems_task_set_priority() - Sets the real priority or gets the current priority of the task.
+task,rtems_task_get_priority() - Gets the current priority of the task with respect to the scheduler.
+task,rtems_task_mode() - Gets and optionally sets the mode of the calling task.
+task,rtems_task_wake_after() - Wakes up after a count of clock ticks have occurred or yields the processor.
+task,rtems_task_wake_when() - Wakes up when specified.
+task,rtems_task_get_scheduler() - Gets the home scheduler of the task.
+task,rtems_task_set_scheduler() - Sets the home scheduler for the task.
+task,rtems_task_get_affinity() - Gets the processor affinity of the task.
+task,rtems_task_set_affinity() - Sets the processor affinity of the task.
+task,rtems_task_iterate() - Iterates over all tasks and invokes the visitor routine for each task.
+task,RTEMS_TASK_STORAGE_SIZE() - Gets the recommended task storage area size for the size and task attributes.
+timer,The Timer Manager provides support for timer facilities. The directives provided by the Timer Manager are:
+timer,rtems_timer_create() - Creates a timer. rtems_timer_ident() - Identifies a timer by the object name. rtems_timer_cancel() - Cancels the timer. rtems_timer_delete() - Deletes the timer. rtems_timer_fire_after() - Fires the timer after the interval. rtems_timer_fire_when() - Fires the timer at the time of day. rtems_timer_initiate_server() - Initiates the Timer Server. rtems_timer_server_fire_after() - Fires the timer after the interval using the Timer Server. rtems_timer_server_fire_when() - Fires the timer at the time of day using the Timer Server. rtems_timer_reset() - Resets the timer. rtems_timer_get_information() - Gets information about the timer.
+timer,rtems_timer_create() - Creates a timer.
+timer,rtems_timer_ident() - Identifies a timer by the object name.
+timer,rtems_timer_cancel() - Cancels the timer.
+timer,rtems_timer_delete() - Deletes the timer.
+timer,rtems_timer_fire_after() - Fires the timer after the interval.
+timer,rtems_timer_fire_when() - Fires the timer at the time of day.
+timer,rtems_timer_initiate_server() - Initiates the Timer Server.
+timer,rtems_timer_server_fire_after() - Fires the timer after the interval using the Timer Server.
+timer,rtems_timer_server_fire_when() - Fires the timer at the time of day using the Timer Server.
+timer,rtems_timer_reset() - Resets the timer.
+timer,rtems_timer_get_information() - Gets information about the timer.
+user-extensions,The User Extensions Manager allows the application developer to augment the executive by allowing them to supply extension routines which are invoked at critical system events. The directives provided by the User Extensions Manager are:
+user-extensions,rtems_extension_create() - Creates an extension set. rtems_extension_delete() - Deletes the extension set. rtems_extension_ident() - Identifies an extension set by the object name.
+user-extensions,rtems_extension_create() - Creates an extension set.
+user-extensions,rtems_extension_delete() - Deletes the extension set.
+user-extensions,rtems_extension_ident() - Identifies an extension set by the object name.

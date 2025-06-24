@@ -1,0 +1,1 @@
+Mission Planning serves as a substitute for functions typically found in existing services like FMS (Fleet Management System). Adherence to defined interfaces in the high-level design facilitates easy integration with third-party services.

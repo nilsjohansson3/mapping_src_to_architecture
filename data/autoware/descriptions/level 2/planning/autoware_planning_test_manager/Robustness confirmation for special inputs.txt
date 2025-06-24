@@ -1,0 +1,3 @@
+After confirming normal operation, ensure that the test target node does not crash when given exceptional input. To do this, provide exceptional input from the test_node and confirm that the node does not crash.
+
+(WIP)

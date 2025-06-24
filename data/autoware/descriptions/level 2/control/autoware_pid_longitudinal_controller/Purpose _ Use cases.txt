@@ -1,0 +1,6 @@
+The longitudinal_controller computes the target acceleration to achieve the target velocity set at each point of the target trajectory using a feed-forward/back control.
+
+It also contains a slope force correction that takes into account road slope information, and a delay compensation function.
+It is assumed that the target acceleration calculated here will be properly realized by the vehicle interface.
+
+Note that the use of this module is not mandatory for Autoware if the vehicle supports the "target speed" interface.

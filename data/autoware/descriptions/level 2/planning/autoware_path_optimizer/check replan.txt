@@ -1,0 +1,12 @@
+When one of the following conditions are met, trajectory optimization will be executed.
+Otherwise, previously optimized trajectory is used with updating the velocity from the latest input path.
+
+max_path_shape_around_ego_lat_dist
+
+- Ego moves longer than `replan.max_ego_moving_dist` in one cycle. (default: 3.0 [m])
+  - This is for when the ego pose is set again in the simulation.
+- Trajectory's end, which is considered as the goal pose, moves longer than `replan.max_goal_moving_dist` in one cycle. (default: 15.0 [ms])
+  - When the goal pose is set again, the planning should be reset.
+- Time passes. (default: 1.0 [s])
+  - The optimization is skipped for a while sine the optimization is sometimes heavy.
+- The input path changes laterally longer than `replan.max_path_shape_around_ego_lat_dist` in one cycle. (default: 2.0)

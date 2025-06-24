@@ -1,0 +1,5 @@
+If a safe path cannot be generated from the current position, search backwards for a pull out start point at regular intervals(default: `2.0`).
+
+![pull_out_after_back](./images/pull_out_after_back.drawio.svg)
+
+[pull out after backward driving video](https://user-images.githubusercontent.com/39142679/181025149-8fb9fb51-9b8f-45c4-af75-27572f4fba78.mp4)

@@ -1,0 +1,9 @@
+| Name                                | Type     | Description                                            | Default value |
+| :---------------------------------- | :------- | :----------------------------------------------------- | :------------ |
+| `post_max_trajectory_length`        | `double` | max trajectory length for resampling [m]               | 300.0         |
+| `post_min_trajectory_length`        | `double` | min trajectory length for resampling [m]               | 30.0          |
+| `post_resample_time`                | `double` | resample total time for dense sampling [s]             | 10.0          |
+| `post_dense_dt`                     | `double` | resample time interval for dense sampling [s]          | 0.1           |
+| `post_dense_min_interval_distance`  | `double` | minimum points-interval length for dense sampling [m]  | 0.1           |
+| `post_sparse_dt`                    | `double` | resample time interval for sparse sampling [s]         | 0.1           |
+| `post_sparse_min_interval_distance` | `double` | minimum points-interval length for sparse sampling [m] | 1.0           |

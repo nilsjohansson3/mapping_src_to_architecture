@@ -1,0 +1,2 @@
+Calculate distance between ego vehicle and the nearest object.
+In this function, it calculates the minimum distance between the polygon of ego vehicle and all points in pointclouds and the polygons of dynamic objects.

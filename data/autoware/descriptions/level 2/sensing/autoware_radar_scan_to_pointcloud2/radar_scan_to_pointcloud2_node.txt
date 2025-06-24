@@ -1,0 +1,3 @@
+- Convert from `radar_msgs::msg::RadarScan` to `sensor_msgs::msg::PointCloud2`
+- Calculation cost O(n)
+  - n: The number of radar return

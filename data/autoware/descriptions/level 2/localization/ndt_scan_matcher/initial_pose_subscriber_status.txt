@@ -1,0 +1,7 @@
+<img src="./media/diagnostic_initial_pose_subscriber_status.png" alt="drawing" width="600"/>
+
+| Name                   | Description                                                        | Transition condition to Warning | Transition condition to Error |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------- | ----------------------------- |
+| `topic_time_stamp`     | the time stamp of input topic                                      | none                            | none                          |
+| `is_activated`         | whether the node is in the "activate" state or not                 | not "activate" state            | none                          |
+| `is_expected_frame_id` | whether the input frame_id is the same as `frame.map_frame` or not | none                            | not the same                  |

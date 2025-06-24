@@ -1,0 +1,1 @@
+To select a safe one from the path candidates, a collision check with obstacles is performed.

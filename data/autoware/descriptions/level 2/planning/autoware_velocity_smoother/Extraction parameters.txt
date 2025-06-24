@@ -1,0 +1,5 @@
+| Name                  | Type     | Description                                                     | Default value |
+| :-------------------- | :------- | :-------------------------------------------------------------- | :------------ |
+| `extract_ahead_dist`  | `double` | Forward trajectory distance used for planning [m]               | 200.0         |
+| `extract_behind_dist` | `double` | backward trajectory distance used for planning [m]              | 5.0           |
+| `delta_yaw_threshold` | `double` | Allowed delta yaw between ego pose and trajectory pose [radian] | 1.0472        |

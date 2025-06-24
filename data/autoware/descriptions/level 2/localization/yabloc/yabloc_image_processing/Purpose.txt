@@ -1,0 +1,1 @@
+This node visualize classified line segments on the camera image

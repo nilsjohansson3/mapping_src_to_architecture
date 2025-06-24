@@ -1,0 +1,3 @@
+A significant feature of the Planning Component design is its ability to integrate with external modules. The diagram below shows various methods for incorporating external functionalities.
+
+![how-to-add-new-modules](image/how-to-add-new-modules.drawio.svg)

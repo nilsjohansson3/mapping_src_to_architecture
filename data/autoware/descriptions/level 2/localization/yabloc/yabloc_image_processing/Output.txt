@@ -1,0 +1,3 @@
+| Name                                      | Type                      | Description                          |
+| ----------------------------------------- | ------------------------- | ------------------------------------ |
+| `output/image_with_colored_line_segments` | `sensor_msgs::msg::Image` | image with highlighted line segments |

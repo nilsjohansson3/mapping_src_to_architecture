@@ -1,0 +1,3 @@
+```c++
+autoware::rtc_interface::removeCooperateStatus(const unique_identifier_msgs::msg::UUID & uuid)
+```

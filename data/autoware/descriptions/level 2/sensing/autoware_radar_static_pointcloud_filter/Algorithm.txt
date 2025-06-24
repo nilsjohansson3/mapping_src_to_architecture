@@ -1,0 +1,1 @@
+![algorithm](docs/radar_static_pointcloud_filter.drawio.svg)

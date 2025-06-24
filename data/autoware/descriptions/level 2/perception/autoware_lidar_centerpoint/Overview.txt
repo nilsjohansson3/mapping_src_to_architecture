@@ -1,0 +1,2 @@
+This guide provides instructions on training a CenterPoint model using the **mmdetection3d** repository
+and seamlessly deploying it within Autoware.

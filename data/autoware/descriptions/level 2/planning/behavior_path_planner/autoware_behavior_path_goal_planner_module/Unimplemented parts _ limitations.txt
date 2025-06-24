@@ -1,0 +1,10 @@
+- Only shift pull over can be executed concurrently with other modules
+- Parking in tight spots and securing margins are traded off. A mode is needed to reduce the margin by using a slower speed depending on the situation, but there is no mechanism for dynamic switching of speeds.
+- Parking space available depends on visibility of objects, and sometimes parking decisions cannot be made properly.
+- Margin to unrecognized objects(Not even unknown objects) depends on the occupancy grid. May get too close to unrecognized ground objects because the objects that are allowed to approach (e.g., grass, leaves) are indistinguishable.
+
+Unimplemented parts / limitations for freespace parking
+
+- When a short path is generated, the ego does can not drive with it.
+- Complex cases take longer to generate or fail.
+- The drivable area is not guaranteed to fit in the parking_lot.

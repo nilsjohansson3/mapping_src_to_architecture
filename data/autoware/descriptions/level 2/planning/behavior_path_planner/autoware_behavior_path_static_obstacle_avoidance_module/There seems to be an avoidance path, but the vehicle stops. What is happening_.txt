@@ -1,0 +1,3 @@
+This situation occurs when the module is operating in AUTO mode and the target object is ambiguous or when operating in MANUAL mode.
+The generated avoidance path is presented as a candidate and requires operator approval before execution.
+If the operator does not approve the path the ego vehicle would stop where it is possible to generate an avoidance path.

@@ -1,0 +1,6 @@
+```bash
+cd ~/mmpretrain
+python tools/train.py configs/mobilenet_v2/mobilenet-v2_8xb32_custom.py
+```
+
+Training logs and weights will be saved in the `work_dirs/mobilenet-v2_8xb32_custom` folder.

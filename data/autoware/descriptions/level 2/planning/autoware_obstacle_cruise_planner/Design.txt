@@ -1,0 +1,36 @@
+Design for the following functions is defined here.
+
+- Behavior determination against obstacles
+- Stop planning
+- Cruise planning
+- Slow down planning
+
+A data structure for cruise and stop planning is as follows.
+This planner data is created first, and then sent to the planning algorithm.
+
+```cpp
+struct PlannerData
+{
+  rclcpp::Time current_time;
+  autoware_planning_msgs::msg::Trajectory traj;
+  geometry_msgs::msg::Pose current_pose;
+  double ego_vel;
+  double current_acc;
+  std::vector<Obstacle> target_obstacles;
+};
+```
+
+```cpp
+struct Obstacle
+{
+  rclcpp::Time stamp;  // This is not the current stamp, but when the object was observed.
+  geometry_msgs::msg::Pose pose;  // interpolated with the current stamp
+  bool orientation_reliable;
+  Twist twist;
+  bool twist_reliable;
+  ObjectClassification classification;
+  std::string uuid;
+  Shape shape;
+  std::vector<PredictedPath> predicted_paths;
+};
+```

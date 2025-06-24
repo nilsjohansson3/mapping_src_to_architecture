@@ -1,0 +1,4 @@
+For parameters used e.g. to calculate threshold.
+
+| `parameters.forward_trajectory_length_acceleration` | double | This value is used to calculate required trajectory length. | -5.0 |
+| `parameters.forward_trajectory_length_margin` | double | A margin of the required trajectory length not to raise an error when the ego slightly exceeds the trajectory end point. | 2.0 |

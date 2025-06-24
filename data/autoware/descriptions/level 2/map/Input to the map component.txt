@@ -1,0 +1,4 @@
+- **From file system**
+  - Point cloud map and its metadata file
+  - Vector map
+  - Projection information

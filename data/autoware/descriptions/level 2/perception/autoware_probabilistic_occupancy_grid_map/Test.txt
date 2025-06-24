@@ -1,0 +1,13 @@
+This package provides unit tests using `gtest`.
+You can run the test by the following command.
+
+```bash
+colcon test --packages-select autoware_probabilistic_occupancy_grid_map --event-handlers console_direct+
+```
+
+Test contains the following.
+
+- Unit test for cost value conversion function
+- Unit test for utility functions
+- Unit test for occupancy grid map fusion functions
+- Input/Output test for pointcloud based occupancy grid map

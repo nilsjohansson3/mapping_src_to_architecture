@@ -1,0 +1,8 @@
+The nodes in this package broadcast the `viewer` frame for visualization of the map in RViz.
+
+Note that there is no module to need the `viewer` frame and this is used only for visualization.
+
+The following are the supported methods to calculate the position of the `viewer` frame:
+
+- `pcd_map_tf_generator_node` outputs the geometric center of all points in the PCD.
+- `vector_map_tf_generator_node` outputs the geometric center of all points in the point layer.

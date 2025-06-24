@@ -1,0 +1,13 @@
+- Pedestrian
+- Bicycle
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Filtering flow for non-vehicle type objects
+start
+
+partition isSatisfiedWithNonVehicleCodition() {
+if(isWithinCrosswalk()) then (yes)

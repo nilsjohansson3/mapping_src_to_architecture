@@ -1,0 +1,1 @@
+YabLoc monitor is a node that monitors the status of the YabLoc localization system. It is a wrapper node that monitors the status of the YabLoc localization system and publishes the status as diagnostics.

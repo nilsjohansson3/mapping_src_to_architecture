@@ -1,0 +1,4 @@
+Rule helpers are auxiliary tools for describing switching rules.
+
+- [PCD occupancy](pcd-occupancy)
+- [Pose estimator area](pose-estimator-area)

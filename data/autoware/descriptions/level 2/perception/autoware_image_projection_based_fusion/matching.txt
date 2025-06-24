@@ -1,0 +1,6 @@
+The offset between each camera and the lidar is set according to their shutter timing.
+After applying the offset to the timestamp, if the interval between the timestamp of pointcloud topic and the roi message is less than the match threshold, the two messages are matched.
+
+![roi_sync_image1](./docs/images/roi_sync_1.png)
+
+current default value at autoware.universe for TIER IV Robotaxi are: - input_offset_ms: [61.67, 111.67, 45.0, 28.33, 78.33, 95.0] - match_threshold_ms: 30.0

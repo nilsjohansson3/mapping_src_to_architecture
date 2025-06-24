@@ -1,0 +1,6 @@
+| Name                       | Type                                   | Description                                   |
+| -------------------------- | -------------------------------------- | --------------------------------------------- |
+| `output/ll2_bounding_box`  | `sensor_msgs::msg::PointCloud2`        | bounding boxes extracted from lanelet2        |
+| `output/ll2_road_marking`  | `sensor_msgs::msg::PointCloud2`        | road surface markings extracted from lanelet2 |
+| `output/ll2_sign_board`    | `sensor_msgs::msg::PointCloud2`        | traffic sign boards extracted from lanelet2   |
+| `output/sign_board_marker` | `visualization_msgs::msg::MarkerArray` | visualized traffic sign boards                |

@@ -1,0 +1,2 @@
+Extract static/dynamic radar pointcloud by using doppler velocity and ego motion.
+Calculation cost is O(n). `n` is the number of radar pointcloud.

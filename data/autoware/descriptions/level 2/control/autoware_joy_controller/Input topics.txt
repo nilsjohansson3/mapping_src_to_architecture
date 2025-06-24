@@ -1,0 +1,4 @@
+| Name               | Type                    | Description                       |
+| ------------------ | ----------------------- | --------------------------------- |
+| `~/input/joy`      | sensor_msgs::msg::Joy   | joy controller command            |
+| `~/input/odometry` | nav_msgs::msg::Odometry | ego vehicle odometry to get twist |

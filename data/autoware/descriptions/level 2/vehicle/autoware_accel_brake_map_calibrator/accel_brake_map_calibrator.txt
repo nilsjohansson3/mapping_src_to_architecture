@@ -1,0 +1,3 @@
+The role of this node is to automatically calibrate `accel_map.csv` / `brake_map.csv` used in the `autoware_raw_vehicle_cmd_converter` node.
+
+The base map, which is lexus's one by default, is updated iteratively with the loaded driving data.

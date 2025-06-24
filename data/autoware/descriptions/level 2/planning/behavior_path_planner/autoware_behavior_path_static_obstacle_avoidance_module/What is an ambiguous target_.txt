@@ -1,0 +1,2 @@
+An ambiguous target refers to objects that may not be clearly identifiable as avoidance target due to limitations of current Autoware (ex. parked vehicle in the center of a lane).
+This module will avoid clearly defined static objects automatically, whereas ambiguous targets would need some operator intervention.

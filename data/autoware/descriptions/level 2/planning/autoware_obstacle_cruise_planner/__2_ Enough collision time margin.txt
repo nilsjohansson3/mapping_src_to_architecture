@@ -1,0 +1,7 @@
+We predict the collision area and its time by the ego with a constant velocity motion and the obstacle with its predicted path.
+Then, we calculate a collision time margin which is the difference of the time when the ego will be inside the collision area and the obstacle will be inside the collision area.
+When this time margin is smaller than `behavior_determination.stop.crossing_obstacle.collision_time_margin`, the margin is not enough.
+
+| Parameter                                                             | Type   | Description                                           |
+| --------------------------------------------------------------------- | ------ | ----------------------------------------------------- |
+| `behavior_determination.stop.crossing_obstacle.collision_time_margin` | double | maximum collision time margin of the ego and obstacle |

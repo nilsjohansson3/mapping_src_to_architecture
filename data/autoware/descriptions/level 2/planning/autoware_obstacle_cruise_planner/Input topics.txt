@@ -1,0 +1,5 @@
+| Name                 | Type                                       | Description      |
+| -------------------- | ------------------------------------------ | ---------------- |
+| `~/input/trajectory` | autoware_planning_msgs::Trajectory         | input trajectory |
+| `~/input/objects`    | autoware_perception_msgs::PredictedObjects | dynamic objects  |
+| `~/input/odometry`   | nav_msgs::msg::Odometry                    | ego odometry     |

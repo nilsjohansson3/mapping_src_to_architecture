@@ -1,0 +1,8 @@
+The autoware_lidar_centerpoint implementation requires two ONNX models as input the voxel encoder and the backbone-neck-head of the CenterPoint model, other aspects of the network,
+such as preprocessing operations, are implemented externally. Under the fork of the mmdetection3d repository,
+we have included a script that converts the CenterPoint model to Autoware compatible ONNX format.
+You can find it in `mmdetection3d/projects/AutowareCenterPoint` file.
+
+```bash
+python projects/AutowareCenterPoint/centerpoint_onnx_converter.py --cfg projects/AutowareCenterPoint/configs/centerpoint_custom.py --ckpt work_dirs/centerpoint_custom/YOUR_BEST_MODEL.pth --work-dir ./work_dirs/onnx_models
+```

@@ -1,0 +1,26 @@
+Two callbacks (goal and check points) are a trigger for route planning.
+Routing graph, which plans route in Lanelet2, must be created before those callbacks, and this routing graph is created in vector map callback.
+
+`plan route` is explained in detail in the following section.
+
+```plantuml
+@startuml
+title goal callback
+start
+
+:clear previously memorized check points;
+
+:memorize ego and goal pose as check points;
+
+if (routing graph is ready?) then (yes)
+else (no)
+  stop
+endif
+
+:plan route;
+
+:publish route;
+
+stop
+@enduml
+```

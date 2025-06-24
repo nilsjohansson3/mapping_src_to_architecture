@@ -1,0 +1,3 @@
+| Name         | Type                         | Description               |
+| ------------ | ---------------------------- | ------------------------- |
+| output/radar | radar_msgs/msg/RadarScan.msg | Filtered radar pointcloud |

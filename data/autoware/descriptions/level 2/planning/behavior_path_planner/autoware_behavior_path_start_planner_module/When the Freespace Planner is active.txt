@@ -1,0 +1,1 @@
+- If the end point of the freespace path is reached, the module transitions to the success state.

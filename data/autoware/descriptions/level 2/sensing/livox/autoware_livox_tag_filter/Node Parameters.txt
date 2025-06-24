@@ -1,0 +1,3 @@
+| Name          | Type            | Description                            |
+| ------------- | --------------- | -------------------------------------- |
+| `ignore_tags` | vector<int64_t> | ignored tags (See the following table) |

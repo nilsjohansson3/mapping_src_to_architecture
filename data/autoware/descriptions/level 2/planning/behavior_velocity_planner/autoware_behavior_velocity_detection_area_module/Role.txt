@@ -1,0 +1,3 @@
+If pointcloud is detected in a detection area defined on a map, the stop planning will be executed at the predetermined point.
+
+![brief](./docs/detection_area.svg)

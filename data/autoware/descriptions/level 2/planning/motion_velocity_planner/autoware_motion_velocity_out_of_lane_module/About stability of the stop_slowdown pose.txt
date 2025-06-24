@@ -1,0 +1,5 @@
+As the input trajectory can change significantly between iterations,
+it is expected that the decisions of this module will also change.
+To make the decision more stable, a stop or slowdown pose is used for a minimum duration set by the `action.min_duration` parameter.
+If during that time a new pose closer to the ego vehicle is generated, then it replaces the previous one.
+Otherwise, the stop or slowdown pose will only be discarded after no out of lane collision is detection for the set duration.

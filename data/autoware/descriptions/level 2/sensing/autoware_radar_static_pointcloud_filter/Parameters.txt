@@ -1,0 +1,3 @@
+| Name                | Type   | Description                                          |
+| ------------------- | ------ | ---------------------------------------------------- |
+| doppler_velocity_sd | double | Standard deviation for radar doppler velocity. [m/s] |

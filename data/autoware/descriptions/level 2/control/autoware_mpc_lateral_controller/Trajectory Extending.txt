@@ -1,0 +1,3 @@
+| Name                                  | Type    | Description                                   | Default value |
+| :------------------------------------ | :------ | :-------------------------------------------- | :------------ |
+| extend_trajectory_for_end_yaw_control | boolean | trajectory extending flag for end yaw control | true          |

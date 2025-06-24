@@ -1,0 +1,4 @@
+| Name          | Type                                             | Description           |
+| ------------- | ------------------------------------------------ | --------------------- |
+| `input/odom`  | `nav_msgs::msg::Odometry`                        | localization odometry |
+| `input/twist` | `geometry_msgs::msg::TwistWithCovarianceStamped` | twist                 |

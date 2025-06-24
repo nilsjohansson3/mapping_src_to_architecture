@@ -1,0 +1,3 @@
+`gyro_bias_validator` is a node that validates the bias of the gyroscope. It subscribes to the `sensor_msgs::msg::Imu` topic and validate if the bias of the gyroscope is within the specified range.
+
+Note that the node calculates bias from the gyroscope data by averaging the data only when the vehicle is stopped.

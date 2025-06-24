@@ -1,0 +1,6 @@
+| Name                                | Type                                            | Description                                                                                                            |
+| ----------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `output_pose_with_covariance_topic` | `geometry_msgs::msg::PoseWithCovarianceStamped` | Output pose topic. This topic is used by the ekf_localizer package.                                                    |
+| `selected_pose_type`                | `std_msgs::msg::String`                         | Declares which pose sources are used in the output of this package                                                     |
+| `output/ndt_position_stddev`        | `std_msgs::msg::Float64`                        | Output pose ndt average standard deviation in position xy. It is published only when the enable_debug_topics is true.  |
+| `output/gnss_position_stddev`       | `std_msgs::msg::Float64`                        | Output pose gnss average standard deviation in position xy. It is published only when the enable_debug_topics is true. |

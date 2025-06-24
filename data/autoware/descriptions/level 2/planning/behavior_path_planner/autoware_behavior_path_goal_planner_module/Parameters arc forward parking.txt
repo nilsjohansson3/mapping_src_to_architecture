@@ -1,0 +1,6 @@
+| Name                                    | Unit  | Type   | Description                                                                     | Default value |
+| :-------------------------------------- | :---- | :----- | :------------------------------------------------------------------------------ | :------------ |
+| enable_arc_forward_parking              | [-]   | bool   | flag whether to enable arc forward parking                                      | true          |
+| after_forward_parking_straight_distance | [m]   | double | straight line distance after pull over end point                                | 2.0           |
+| forward_parking_velocity                | [m/s] | double | velocity when forward parking                                                   | 1.38          |
+| forward_parking_lane_departure_margin   | [m/s] | double | lane departure margin for front left corner of ego-vehicle when forward parking | 0.0           |

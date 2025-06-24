@@ -1,0 +1,71 @@
+There are several behaviors depending on the scene.
+
+| behavior                 | scene                                                                                             | action                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Safe                     | Ego detected no occlusion and collision                                                           | Ego passes the intersection                                                         |
+| StuckStop                | The exit of the intersection is blocked by traffic jam                                            | Ego stops before the intersection or the boundary of attention area                 |
+| YieldStuck               | Another vehicle stops to yield ego                                                                | Ego stops before the intersection or the boundary of attention area                 |
+| NonOccludedCollisionStop | Ego detects no occlusion but detects collision                                                    | Ego stops at default_stopline                                                       |
+| FirstWaitBeforeOcclusion | Ego detected occlusion when entering the intersection                                             | Ego stops at default_stopline at first                                              |
+| PeekingTowardOcclusion   | Ego detected occlusion and but no collision within the FOV (after FirstWaitBeforeOcclusion)       | Ego approaches the boundary of the attention area slowly                            |
+| OccludedCollisionStop    | Ego detected both occlusion and collision (after FirstWaitBeforeOcclusion)                        | Ego stops immediately                                                               |
+| FullyPrioritized         | Ego is fully prioritized by the RED/Arrow signal                                                  | Ego only cares vehicles still running inside the intersection. Occlusion is ignored |
+| OverPassJudgeLine        | Ego is already inside the attention area and/or cannot stop before the boundary of attention area | Ego does not detect collision/occlusion anymore and passes the intersection         |
+
+```plantuml
+@startuml
+
+state begin <<choice>>
+[*] --> begin
+begin --> OverPassJudgeLine: IF over_pass_judge
+
+state "Before pass judge line" as NotOverPassJudgeLine {
+state check_stuck <<choice>>
+begin --> check_stuck: ELSE
+
+check_stuck --> StuckStop: IF stuck vehicle detected
+
+state check_yield_stuck <<choice>>
+check_stuck --> check_yield_stuck: ELSE
+check_yield_stuck --> YieldStuck: IF yield stuck vehicle detected
+
+state check_tl_priority <<choice>>
+check_yield_stuck --> check_tl_priority: ELSE
+
+state check_occlusion <<choice>>
+check_tl_priority --> check_occlusion: IF not prioritized
+
+state Safe
+State "Prioritized by traffic light" as Prioritized {
+state check_collision_prioritized <<choice>>
+check_tl_priority --> check_collision_prioritized: IF prioritized
+State FullyPrioritized
+check_collision_prioritized --> FullyPrioritized: IF collision detected
+check_collision_prioritized --> Safe: ELSE
+}
+
+check_occlusion --> Occlusion: IF occlusion is detected
+
+State "Occlusion is not detected" as NoOcclusion {
+state check_collision <<choice>>
+check_occlusion --> check_collision: ELSE
+State NonOccludedCollisionStop
+check_collision --> Safe: ELSE
+check_collision --> NonOccludedCollisionStop: IF collision detected
+}
+
+State "Occlusion is detected" as Occlusion {
+state FirstWaitBeforeOcclusion
+FirstWaitBeforeOcclusion --> Peeking: after termporal stop
+state Peeking {
+State PeekingTowardOcclusion
+State OccludedCollisionStop
+PeekingTowardOcclusion --> OccludedCollisionStop : IF collision detected
+OccludedCollisionStop --> PeekingTowardOcclusion: IF not collision detected
+}
+}
+
+}
+
+@enduml
+```

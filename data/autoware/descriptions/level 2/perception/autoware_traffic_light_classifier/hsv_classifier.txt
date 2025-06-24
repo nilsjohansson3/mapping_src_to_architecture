@@ -1,0 +1,20 @@
+| Name           | Type | Description                                    |
+| -------------- | ---- | ---------------------------------------------- |
+| `green_min_h`  | int  | the minimum hue of green color                 |
+| `green_min_s`  | int  | the minimum saturation of green color          |
+| `green_min_v`  | int  | the minimum value (brightness) of green color  |
+| `green_max_h`  | int  | the maximum hue of green color                 |
+| `green_max_s`  | int  | the maximum saturation of green color          |
+| `green_max_v`  | int  | the maximum value (brightness) of green color  |
+| `yellow_min_h` | int  | the minimum hue of yellow color                |
+| `yellow_min_s` | int  | the minimum saturation of yellow color         |
+| `yellow_min_v` | int  | the minimum value (brightness) of yellow color |
+| `yellow_max_h` | int  | the maximum hue of yellow color                |
+| `yellow_max_s` | int  | the maximum saturation of yellow color         |
+| `yellow_max_v` | int  | the maximum value (brightness) of yellow color |
+| `red_min_h`    | int  | the minimum hue of red color                   |
+| `red_min_s`    | int  | the minimum saturation of red color            |
+| `red_min_v`    | int  | the minimum value (brightness) of red color    |
+| `red_max_h`    | int  | the maximum hue of red color                   |
+| `red_max_s`    | int  | the maximum saturation of red color            |
+| `red_max_v`    | int  | the maximum value (brightness) of red color    |

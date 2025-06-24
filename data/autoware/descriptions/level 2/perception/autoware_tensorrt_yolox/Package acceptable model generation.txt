@@ -1,0 +1,4 @@
+To convert users' own model that saved in PyTorch's `pth` format into ONNX,
+users can exploit the converter offered by the official repository.
+For the convenience, only procedures are described below.
+Please refer [the official document](https://github.com/Megvii-BaseDetection/YOLOX/tree/main/demo/ONNXRuntimeconvert-your-model-to-onnx) for more detail.

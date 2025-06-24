@@ -1,0 +1,46 @@
+```plantuml
+@startuml
+!theme cerulean-outline
+start
+
+if (before start line?) then (yes)
+  stop
+else (no)
+endif
+
+if (after end line?) then (yes)
+  stop
+else (no)
+endif
+
+:send command to infrastructure;
+
+if (no stop line?) then (yes)
+  stop
+else (no)
+endif
+
+:check infrastructure state;
+
+if (timeout or not received?) then (yes)
+  :stop at stop line;
+  stop
+else (no)
+endif
+
+if (no right of way?) then (yes)
+  :stop at stop line;
+else (no)
+endif
+
+if (finalization is requested?) then (yes)
+  if (not finalized?) then (yes)
+    :stop at end line;
+  else (no)
+  endif
+else (no)
+endif
+
+stop
+@enduml
+```

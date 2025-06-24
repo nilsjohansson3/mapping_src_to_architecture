@@ -1,0 +1,3 @@
+| Name                  | Type                                  | Description                                                       |
+| --------------------- | ------------------------------------- | ----------------------------------------------------------------- |
+| `~/output/trajectory` | autoware_planning_msgs/msg/Trajectory | generated trajectory that is feasible to drive and collision-free |

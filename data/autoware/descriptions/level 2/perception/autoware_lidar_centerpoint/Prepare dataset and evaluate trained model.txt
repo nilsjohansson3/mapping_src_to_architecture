@@ -1,0 +1,18 @@
+Create `.pkl` files for training, evaluation, and testing.
+
+The dataset was formatted according to T4Dataset specifications, with 'sample_dataset' designated as one of its versions.
+
+```bash
+python tools/create_data.py T4Dataset --root-path data/sample_dataset/ --out-dir data/sample_dataset/ --extra-tag T4Dataset --version sample_dataset --annotation-hz 2
+```
+
+Run evaluation
+
+```bash
+python tools/test.py projects/AutowareCenterPoint/configs/centerpoint_custom_test.py /PATH/OF/THE/CHECKPOINT  --task lidar_det
+```
+
+Evaluation results could be relatively low because of the e to variations in sensor modalities between the sample dataset
+and the training dataset. The model's training parameters are originally tailored to the NuScenes dataset, which employs a single lidar
+sensor positioned atop the vehicle. In contrast, the provided sample dataset comprises concatenated point clouds positioned at
+the base link location of the vehicle.

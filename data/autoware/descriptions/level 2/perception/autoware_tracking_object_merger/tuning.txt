@@ -1,0 +1,7 @@
+As explained in [tracklet management](tracklet-management), this tracker merger tend to maintain the both input tracking objects.
+
+If there are many false positive tracking objects,
+
+- decrease `default_<sensor>_existence_probability` of that sensor
+- increase `decay_rate`
+- increase `publish_probability_threshold` to publish only reliable tracking objects

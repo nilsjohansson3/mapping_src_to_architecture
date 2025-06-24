@@ -1,0 +1,12 @@
+The E2E (end-to-end) component is used to interact with the application as a whole with Web browsers. Its primary function is for E2E tests.
+  - `Selenium (Java)` is used to automate E2E testing with actual Web browsers.
+The E2E component has no knowledge of the internal workings of the application and can only interact either with Web browser (as a whole application) or REST API calls (for the back-end logic). Its primary function is for E2E tests.
+
+<puml src="diagrams/E2EComponent.puml"/>
+
+Package overview:
+
+- **`e2e.util`**: Contains helpers needed for running E2E tests. Also contains the test cases for the said infrastructure/helpers.
+- **`e2e.pageobjects`**: Contains abstractions of the pages as they appear on a Browser (i.e. SUTs).
+- **`e2e.cases`**: Contains system test cases for testing the application as a whole.
+

@@ -1,0 +1,3 @@
+| Name         | Type                     | Description                               |
+| ------------ | ------------------------ | ----------------------------------------- |
+| `switch_srv` | `std_srvs::srv::SetBool` | activation and deactivation of correction |

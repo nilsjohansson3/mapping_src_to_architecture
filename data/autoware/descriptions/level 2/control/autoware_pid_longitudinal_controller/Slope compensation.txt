@@ -1,0 +1,14 @@
+Based on the slope information, a compensation term is added to the target acceleration.
+
+There are two sources of the slope information, which can be switched by a parameter.
+
+- Pitch of the estimated ego-pose (default)
+  - Calculates the current slope from the pitch angle of the estimated ego-pose
+  - Pros: Easily available
+  - Cons: Cannot extract accurate slope information due to the influence of vehicle vibration.
+- Z coordinate on the trajectory
+  - Calculates the road slope from the difference of z-coordinates between the front and rear wheel positions in the target trajectory
+  - Pros: More accurate than pitch information, if the z-coordinates of the route are properly maintained
+  - Pros: Can be used in combination with delay compensation (not yet implemented)
+  - Cons: z-coordinates of high-precision map is needed.
+  - Cons: Does not support free space planning (for now)

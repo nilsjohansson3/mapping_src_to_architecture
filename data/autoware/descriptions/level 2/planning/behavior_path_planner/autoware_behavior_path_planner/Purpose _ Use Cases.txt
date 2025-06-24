@@ -1,0 +1,5 @@
+Essentially, the module has three primary responsibilities:
+
+1. Creating a **path based** on the traffic situation.
+2. Generating **drivable area**, i.e. the area within which the vehicle can maneuver.
+3. Generating **turn signal** commands to be relayed to the vehicle interface.

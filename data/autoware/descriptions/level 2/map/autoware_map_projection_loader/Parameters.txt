@@ -1,0 +1,3 @@
+Note that these parameters are assumed to be passed from launch arguments, and it is not recommended to directly write them in `map_projection_loader.param.yaml`.
+
+{{ json_to_markdown("map/autoware_map_projection_loader/schema/map_projection_loader.schema.json") }}

@@ -1,0 +1,6 @@
+<!-- Required -->
+<!-- Things to consider:
+    - Why did we implement this feature? -->
+
+This package provides the interface of longitudinal and lateral controllers used by the node of the `autoware_trajectory_follower_node` package.
+We can implement a detailed controller by deriving the longitudinal and lateral base interfaces.

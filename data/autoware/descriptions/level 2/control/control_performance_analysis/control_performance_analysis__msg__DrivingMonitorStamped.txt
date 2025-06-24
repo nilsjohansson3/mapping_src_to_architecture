@@ -1,0 +1,8 @@
+| Name                         | Type  | Description                                              |
+| ---------------------------- | ----- | -------------------------------------------------------- |
+| `longitudinal_acceleration`  | float | [m / s^2]                                                |
+| `longitudinal_jerk`          | float | [m / s^3]                                                |
+| `lateral_acceleration`       | float | [m / s^2]                                                |
+| `lateral_jerk`               | float | [m / s^3]                                                |
+| `desired_steering_angle`     | float | [rad]                                                    |
+| `controller_processing_time` | float | Timestamp between last two control command messages [ms] |

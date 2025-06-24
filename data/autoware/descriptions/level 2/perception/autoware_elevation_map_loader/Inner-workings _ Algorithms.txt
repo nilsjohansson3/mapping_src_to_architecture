@@ -1,0 +1,9 @@
+Generate elevation_map from subscribed pointcloud_map and vector_map and publish it.
+Save the generated elevation_map locally and load it from next time.
+
+The elevation value of each cell is the average value of z of the points of the lowest cluster.  
+Cells with No elevation value can be inpainted using the values of neighboring cells.
+
+<p align="center">
+  <img src="./media/elevation_map.png" width="1500">
+</p>

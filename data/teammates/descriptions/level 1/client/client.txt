@@ -1,0 +1,10 @@
+The Client component can connect to the back end directly without using a Web browser. It is used for administrative purposes, e.g. migrating data to a new schema.
+The Client component contains scripts that can connect directly to the application back-end for administrative purposes, such as migrating data to a new schema and calculating statistics.
+
+<puml src="diagrams/ClientComponent.puml"/>
+
+Package overview:
+
+- **`client.util`**: Contains helpers needed for client scripts.
+- **`client.connector`**: Classes needed to connect to the back end directly.
+- **`client.scripts`**: Scripts that deal with the back end data for administrative purposes.

@@ -1,0 +1,1 @@
+<!-- In the future, you can add details about planned extensions or unimplemented parts of this package. -->

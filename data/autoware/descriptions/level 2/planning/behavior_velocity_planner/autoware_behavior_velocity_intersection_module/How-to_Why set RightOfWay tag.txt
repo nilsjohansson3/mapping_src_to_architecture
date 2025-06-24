@@ -1,0 +1,37 @@
+Ideally RightOfWay tag is unnecessary if ego has perfect knowledge of all traffic signal information because:
+
+- it can distinguish which conflicting lanes should be checked because they are GREEN currently and possible collision occur with the vehicles on those lanes
+- it can distinguish which conflicting lanes can be ignored because they are RED currently and there is no chance of collision with the vehicles on those lanes unless they violate the traffic rule
+
+That allows ego to generate the attention area dynamically using the real time traffic signal information. However this ideal condition rarely holds unless the traffic signal information is provided through the infrastructure. Also there maybe be very complicated/bad intersection maps where multiple lanes overlap in a complex manner.
+
+- If there is an perfect access to entire traffic light signal, then you can set `common.use_map_right_of_way` to false and there is no need to set RightOfWay tag on the map. The intersection module will generate the attention area by checking traffic signal and corresponding conflicting lanes. This feature is not implemented yet.
+- If traffic signal information is not perfect, then set `common.use_map_right_of_way` to true. If you do not want to detect vehicles on the anti-phase signal group lanes, set them as yield_lane for ego lane.
+- Even if there are no traffic lights if the intersection lanes are overlapped in a ugly manner, you may need to set RightOfWay tag. For example if adjacent intersection lanes of the same in-phase group are not sharing the boundary line and overlapped a little bit, you may need to set RightOfWay to each other for them in order to avoid unnecessary stop for vehicle on such unrelated lane.
+
+To help the intersection module care only a set of limited lanes, RightOfWay tag needs to be properly set.
+
+Following table shows an **example** of how to set yield_lanes to each lane in a intersection w/o traffic lights. Since it is not apparent how to uniquely determine signal phase group for a set of intersection lanes in geometric/topological manner, yield_lane needs to be set manually. Straight lanes with traffic lights are exceptionally handled to detect no lanes because commonly it has priority over all the other lanes, so no RightOfWay setting is required.
+
+| turn direction of right_of_way | yield_lane(with traffic light)                                                              | yield_lane(without traffic light)              |
+| ------------------------------ | ------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| straight                       | not need to set yield_lane(this case is special)                                            | left/right conflicting lanes of in-phase group |
+| left(Left hand traffic)        | all conflicting lanes of the anti-phase group and right conflicting lanes of in-phase group | right conflicting lanes of in-phase group      |
+| right(Left hand traffic)       | all conflicting lanes of the anti-phase group                                               | no yield_lane                                  |
+| left(Right hand traffic)       | all conflicting lanes of the anti-phase group                                               | no yield_lane                                  |
+| right(Right hand traffic)      | all conflicting lanes of the anti-phase group and right conflicting lanes of in-phase group | left conflicting lanes of in-phase group       |
+
+This setting gives the following `attention_area` configurations.
+
+![attention_area_straight](./docs/intersection-attention-straight.drawio.svg)
+![attention_area_ll_rr](./docs/intersection-attention-ll-rr.drawio.svg)
+![attention_area_lr_rl](./docs/intersection-attention-lr-rl.drawio.svg)
+
+For complex/bad intersection map like the one illustrated below, additional RightOfWay setting maybe necessary.
+
+![bad-map](./docs/ugly-intersection.drawio.svg)
+
+The bad points are:
+
+1. ego lane is overlapped with adjacent lane of the in-phase group. In this case you need to set this lane as yield_lane additionally because otherwise attention area is generated for its preceding lanes as well, which may cause unwanted stop.
+2. ego lane is overlapped with unrelated lane. In this case the lane is right-turn only and there is no chance of collision in theory. But you need to set this lane as yield_lane additionally for the same reason as (1).

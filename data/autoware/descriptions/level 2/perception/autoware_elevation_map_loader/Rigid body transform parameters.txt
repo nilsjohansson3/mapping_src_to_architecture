@@ -1,0 +1,6 @@
+Rigid body transform that is applied to the point cloud before computing elevation.
+
+| Name                                                | Type  | Description                                                                                                             | Default value |
+| :-------------------------------------------------- | :---- | :---------------------------------------------------------------------------------------------------------------------- | :------------ |
+| pcl_grid_map_extraction/cloud_transform/translation | float | Translation (xyz) that is applied to the input point cloud before computing elevation.                                  | 0.0           |
+| pcl_grid_map_extraction/cloud_transform/rotation    | float | Rotation (intrinsic rotation, convention X-Y'-Z'') that is applied to the input point cloud before computing elevation. | 0.0           |

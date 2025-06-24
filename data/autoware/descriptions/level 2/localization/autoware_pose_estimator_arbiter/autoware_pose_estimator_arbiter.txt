@@ -1,0 +1,9 @@
+Table of contents:
+
+- [Abstract](abstract)
+- [Interface](interfaces)
+- [Architecture](architecture)
+- [How to launch](how-to-launch)
+- [Switching Rules](switching-rules)
+- [Pose Initialization](pose-initialization)
+- [Future Plans](future-plans)

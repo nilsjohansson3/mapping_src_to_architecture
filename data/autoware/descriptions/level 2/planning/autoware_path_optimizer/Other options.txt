@@ -1,0 +1,3 @@
+- `option.enable_skip_optimization` skips MPT optimization.
+- `option.enable_calculation_time_info` enables showing each calculation time for functions and total calculation time on the terminal.
+- `option.enable_outside_drivable_area_stop` enables stopping just before the generated trajectory point will be outside the drivable area.

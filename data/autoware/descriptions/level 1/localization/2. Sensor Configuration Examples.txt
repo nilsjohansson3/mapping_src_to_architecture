@@ -1,0 +1,2 @@
+This section shows example sensor configurations and their expected performances.
+Each sensor has its own advantages and disadvantages, but overall performance can be improved by fusing multiple sensors.

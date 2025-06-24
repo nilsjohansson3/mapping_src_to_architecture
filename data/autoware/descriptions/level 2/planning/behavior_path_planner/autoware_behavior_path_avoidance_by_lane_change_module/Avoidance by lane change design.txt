@@ -1,0 +1,1 @@
+This is a sub-module to avoid obstacles by lane change maneuver.

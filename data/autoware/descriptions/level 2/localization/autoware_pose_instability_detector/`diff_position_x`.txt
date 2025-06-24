@@ -1,0 +1,14 @@
+This threshold examines the difference in the longitudinal axis between the two poses, and check whether the vehicle goes beyond the expected error.
+This threshold is a sum of "maximum longitudinal error due to velocity scale factor error" and "pose estimation error tolerance".
+
+$$
+\tau_x = v_{\rm max}\frac{\beta_v}{100} \Delta t + \epsilon_x\\
+$$
+
+| Symbol        | Description                                                                      | Unit  |
+| ------------- | -------------------------------------------------------------------------------- | ----- |
+| $\tau_x$      | Threshold for the difference in the longitudinal axis                            | $m$   |
+| $v_{\rm max}$ | Maximum velocity                                                                 | $m/s$ |
+| $\beta_v$     | Scale factor tolerance for the maximum velocity                                  | $\%$  |
+| $\Delta t$    | Time interval                                                                    | $s$   |
+| $\epsilon_x$  | Pose estimator (e. g. ndt_scan_matcher) error tolerance in the longitudinal axis | $m$   |

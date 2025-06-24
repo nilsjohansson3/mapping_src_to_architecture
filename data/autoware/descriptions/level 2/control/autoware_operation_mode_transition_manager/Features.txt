@@ -1,0 +1,9 @@
+- Transit mode between `Autonomous`, `Local`, `Remote` and `Stop` based on the indication command.
+- Check whether the each transition is available (safe or not).
+- Limit some sudden motion control in `In Transition` mode (this is done with `vehicle_cmd_gate` feature).
+- Check whether the transition is completed.
+
+- Transition between the `Autonomous`, `Local`, `Remote`, and `Stop` modes based on the indicated command.
+- Determine whether each transition is safe to execute.
+- Restrict certain sudden motion controls during the `In Transition` mode (using the `vehicle_cmd_gate` feature).
+- Verify that the transition is complete.

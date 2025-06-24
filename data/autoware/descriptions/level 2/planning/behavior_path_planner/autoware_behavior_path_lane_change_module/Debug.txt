@@ -1,0 +1,5 @@
+The following parameters are configurable in `lane_change.param.yaml`.
+
+| Name                   | Unit | Type    | Description                  | Default value |
+| :--------------------- | ---- | ------- | ---------------------------- | ------------- |
+| `publish_debug_marker` | [-]  | boolean | Flag to publish debug marker | false         |

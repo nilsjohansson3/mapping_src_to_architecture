@@ -1,0 +1,21 @@
+The role of the Perception Component is to recognize the surrounding environment based on the data obtained through Sensing and acquire sufficient information (such as the presence of dynamic objects, stationary obstacles, blind spots, and traffic signal information) to enable autonomous driving.
+
+In our overall design, we emphasize the concept of [microautonomy architecture](https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts). This term refers to a design approach that focuses on the proper modularization of functions, clear definition of interfaces between these modules, and as a result, high expandability of the system. Given this context, the goal of the Perception Component is set not to solve every conceivable complex use case (although we do aim to support basic ones), but rather to provide a platform that can be customized to the user's needs and can facilitate the development of additional features.
+
+To clarify the design concepts, the following points are listed as goals and non-goals.
+
+**Goals:**
+
+- To provide the basic functions so that a simple ODD can be defined.
+- To achieve a design that can provide perception functionality to every autonomous vehicle.
+- To be extensible with the third-party components.
+- To provide a platform that enables Autoware users to develop the complete functionality and capability.
+- To provide a platform that enables Autoware users to develop the autonomous driving system which always outperforms human drivers.
+- To provide a platform that enables Autoware users to develop the autonomous driving system achieving "100% accuracy" or "error-free recognition".
+
+**Non-goals:**
+
+- To develop the perception component architecture specialized for specific / limited ODDs.
+- To achieve the complete functionality and capability.
+- To outperform the recognition capability of human drivers.
+- To achieve "100% accuracy" or "error-free recognition".

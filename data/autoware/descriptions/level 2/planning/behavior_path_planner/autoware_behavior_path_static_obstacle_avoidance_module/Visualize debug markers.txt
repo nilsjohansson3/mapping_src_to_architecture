@@ -1,0 +1,15 @@
+User can enable publishing of debug markers with the following parameters.
+
+```yaml
+debug:
+  enable_other_objects_marker: false
+  enable_other_objects_info: false
+  enable_detection_area_marker: false
+  enable_drivable_bound_marker: false
+  enable_safety_check_marker: false
+  enable_shift_line_marker: false
+  enable_lane_marker: false
+  enable_misc_marker: false
+```
+
+![fig](./images/debug/debug_marker_rviz.png)

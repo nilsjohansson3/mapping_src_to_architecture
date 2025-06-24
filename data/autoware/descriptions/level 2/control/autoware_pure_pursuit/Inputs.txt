@@ -1,0 +1,4 @@
+Set the following from the [controller_node](../autoware_trajectory_follower_node/README.md)
+
+- `autoware_planning_msgs/Trajectory` : reference trajectory to follow.
+- `nav_msgs/Odometry`: current ego pose and velocity information

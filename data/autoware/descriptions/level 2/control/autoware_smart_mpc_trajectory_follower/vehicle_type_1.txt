@@ -1,0 +1,10 @@
+This vehicle type is intended for a heavy bus.
+
+| Parameter           | value |
+| ------------------- | ----- |
+| wheel_base          | 4.76  |
+| acc_time_delay      | 1.0   |
+| steer_time_delay    | 1.0   |
+| acc_time_constant   | 1.0   |
+| steer_time_constant | 1.0   |
+| acc_scaling         | 0.2   |

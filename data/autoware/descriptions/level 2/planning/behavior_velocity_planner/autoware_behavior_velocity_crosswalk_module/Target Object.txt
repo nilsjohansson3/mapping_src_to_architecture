@@ -1,0 +1,20 @@
+The crosswalk module handles objects of the types defined by the following parameters in the `object_filtering.target_object` namespace.
+
+| Parameter    | Unit | Type | Description                                    |
+| ------------ | ---- | ---- | ---------------------------------------------- |
+| `unknown`    | [-]  | bool | whether to look and stop by UNKNOWN objects    |
+| `pedestrian` | [-]  | bool | whether to look and stop by PEDESTRIAN objects |
+| `bicycle`    | [-]  | bool | whether to look and stop by BICYCLE objects    |
+| `motorcycle` | [-]  | bool | whether to look and stop by MOTORCYCLE objects |
+
+In order to handle the crosswalk users crossing the neighborhood but outside the crosswalk, the crosswalk module creates an attention area around the crosswalk, shown as the yellow polygon in the figure. If the object's predicted path collides with the attention area, the object will be targeted for yield.
+
+<figure markdown>
+  ![crosswalk_attention_range](docs/crosswalk_attention_range.svg){width=600}
+</figure>
+
+The neighborhood is defined by the following parameter in the `object_filtering.target_object` namespace.
+
+| Parameter                   | Unit | Type   | Description                                                                                       |
+| --------------------------- | ---- | ------ | ------------------------------------------------------------------------------------------------- |
+| `crosswalk_attention_range` | [m]  | double | the detection area is defined as -X meters before the crosswalk to +X meters behind the crosswalk |

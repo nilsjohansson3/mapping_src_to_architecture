@@ -1,0 +1,3 @@
+pip install mmdeploy-runtime==1.2.0
+pip install mmdeploy-runtime-gpu==1.2.0
+pip install onnxruntime-gpu==1.8.1

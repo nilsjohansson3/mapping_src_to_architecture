@@ -1,0 +1,1 @@
+Input topics is defined by the parameter of `input_topics` (List[string]). The type of input topics is `std::vector<autoware_perception_msgs/msg/DetectedObjects.msg>`.

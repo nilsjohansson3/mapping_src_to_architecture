@@ -1,0 +1,14 @@
+At first, the function `isSatisfiedWithCommonCondition()` includes conditions used for all object classes.
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Common filtering flow
+start
+
+partition isSatisfiedWithCommonCondition() {
+if(Is object within detection area? (filtering roughly by position.)) then (yes)
+if(Is object an avoidance target type?) then (yes)
+if(Is moving object?) then (yes)

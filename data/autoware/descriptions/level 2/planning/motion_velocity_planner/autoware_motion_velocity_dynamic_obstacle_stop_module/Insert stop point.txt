@@ -1,0 +1,7 @@
+![Stop point example](docs/DynamicObstacleStop-StopPoint.drawio.svg)
+
+Before inserting a stop point, we calculate the range of trajectory arc lengths where it can be inserted.
+The minimum is calculated to satisfy the acceleration and jerk constraints of the vehicle.
+If a stop point was inserted in the previous iteration of the module, its arc length is used as the maximum.
+Finally,
+the stop point arc length is calculated to be the arc length of the previously found collision point minus the `stop_distance_buffer` and the ego vehicle longitudinal offset, clamped between the minimum and maximum values.

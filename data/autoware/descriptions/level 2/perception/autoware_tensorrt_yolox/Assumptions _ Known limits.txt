@@ -1,0 +1,32 @@
+The label contained in detected 2D bounding boxes (i.e., `out/objects`) will be either one of the followings:
+
+- CAR
+- PEDESTRIAN ("PERSON" will also be categorized as "PEDESTRIAN")
+- BUS
+- TRUCK
+- BICYCLE
+- MOTORCYCLE
+
+If other labels (case insensitive) are contained in the file specified via the `label_file` parameter,
+those are labeled as `UNKNOWN`, while detected rectangles are drawn in the visualization result (`out/image`).
+
+The semantic segmentation mask is a gray image whose each pixel is index of one following class:
+
+| index | semantic name    |
+| ----- | ---------------- |
+| 0     | road             |
+| 1     | building         |
+| 2     | wall             |
+| 3     | obstacle         |
+| 4     | traffic_light    |
+| 5     | traffic_sign     |
+| 6     | person           |
+| 7     | vehicle          |
+| 8     | bike             |
+| 9     | road             |
+| 10    | sidewalk         |
+| 11    | roadPaint        |
+| 12    | curbstone        |
+| 13    | crosswalk_others |
+| 14    | vegetation       |
+| 15    | sky              |

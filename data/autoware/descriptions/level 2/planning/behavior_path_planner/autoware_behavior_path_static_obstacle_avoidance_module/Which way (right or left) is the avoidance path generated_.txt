@@ -1,0 +1,3 @@
+The behavior of avoiding depends on the target vehicle's center of gravity.
+If the target object is on the left side of the ego lane the avoidance would be generated on the right side.
+Currently, avoiding left-shifted obstacles from the left side is not supported (same for right-shifted objects).

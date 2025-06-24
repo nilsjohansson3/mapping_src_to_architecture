@@ -1,0 +1,13 @@
+In the `pid_based_planner` namespace,
+
+| Parameter                   | Type   | Description                                                                                              |
+| --------------------------- | ------ | -------------------------------------------------------------------------------------------------------- |
+| `kp`                        | double | p gain for pid control [-]                                                                               |
+| `ki`                        | double | i gain for pid control [-]                                                                               |
+| `kd`                        | double | d gain for pid control [-]                                                                               |
+| `output_ratio_during_accel` | double | The output velocity will be multiplied by the ratio during acceleration to follow the front vehicle. [-] |
+| `vel_to_acc_weight`         | double | target acceleration is target velocity \* `vel_to_acc_weight` [-]                                        |
+| `min_cruise_target_vel`     | double | minimum target velocity during cruise [m/s]                                                              |
+
+In order to keep the safe distance, the target velocity and acceleration is calculated and sent as an external velocity limit to the velocity smoothing package (`motion_velocity_smoother` by default).
+The target velocity and acceleration is respectively calculated with the PID controller according to the error between the reference safe distance and the actual distance.

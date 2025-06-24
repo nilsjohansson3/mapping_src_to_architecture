@@ -1,0 +1,6 @@
+<!-- Write links you referred to when you implemented.
+
+Example:
+  [1] {link_to_a_thesis}
+  [2] {link_to_an_issue}
+-->

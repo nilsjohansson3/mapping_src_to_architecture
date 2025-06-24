@@ -1,0 +1,9 @@
+- The distance required to stop after collision detection depends on the ego vehicle's speed and deceleration performance. To avoid collisions, it's necessary to increase the detection distance and set a higher deceleration rate. However, this creates a trade-off as it may also increase the number of unnecessary activations. Therefore, it's essential to consider what role this module should play and adjust the parameters accordingly.
+
+- AEB might not be able to react with obstacles that are close to the ground. It depends on the performance of the pre-processing methods applied to the point cloud.
+
+- Longitudinal acceleration information obtained from sensors is not used due to the high amount of noise.
+
+- The accuracy of the predicted path created from sensor data depends on the accuracy of sensors attached to the ego vehicle.
+
+![aeb_range](./image/range.drawio.svg)

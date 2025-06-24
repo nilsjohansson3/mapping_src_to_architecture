@@ -1,0 +1,2 @@
+- Monitors and guarantees the stability and reliability of pose estimation by fusing information obtained from multiple localization modules
+- Reports error status to the error monitor

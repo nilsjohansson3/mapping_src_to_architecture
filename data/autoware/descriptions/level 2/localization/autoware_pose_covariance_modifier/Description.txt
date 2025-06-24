@@ -1,0 +1,13 @@
+GNSS and NDT nodes provide the pose with covariance data utilized in an Extended Kalman Filter (EKF).
+
+Accurate covariance values are crucial for the effectiveness of the EKF in estimating the state.
+
+The GNSS system generates reliable standard deviation values, which can be transformed into covariance measures.
+
+But we currently don't have a reliable way to determine the covariance values for the NDT poses.
+And the NDT matching system in Autoware outputs poses with preset covariance values.
+
+For this reason, this package is designed to manage the selection of the pose source,
+based on the standard deviation values provided by the GNSS system.
+
+It also tunes the covariance values of the NDT poses, based on the GNSS standard deviation values.

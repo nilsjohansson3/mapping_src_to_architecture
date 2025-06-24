@@ -1,0 +1,8 @@
+When launching the path planning server, rviz is launched as well as follows.
+![rviz](./media/rviz.png)
+
+- The yellow footprints are the original ones from the osm map file.
+  - FYI: Footprints are generated based on the centerline and vehicle size.
+- The red footprints are the optimized ones.
+- The gray area is the drivable area.
+- You can see that the red footprints are inside the drivable area although the yellow ones are outside.

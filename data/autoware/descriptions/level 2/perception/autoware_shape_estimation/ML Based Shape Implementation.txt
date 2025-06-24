@@ -1,0 +1,14 @@
+The model takes a point cloud and object label(provided by camera detections/Apollo instance segmentation) as an input and outputs the 3D bounding box of the object.
+
+ML based shape estimation algorithm uses a PointNet model as a backbone to estimate the 3D bounding box of the object. The model is trained on the NuScenes dataset with vehicle labels (Car, Truck, Bus, Trailer).
+
+The implemented model is concatenated with STN (Spatial Transformer Network) to learn the transformation of the input point cloud to the canonical space and PointNet to predict the 3D bounding box of the object.
+Bounding box estimation part of _Frustum PointNets for 3D Object Detection from RGB-D Data_ paper used as a reference.
+
+The model predicts the following outputs for each object:
+
+- x,y,z coordinates of the object center
+- object heading angle classification result(Uses 12 bins for angle classification - 30 degrees each)
+- object heading angle residuals
+- object size classification result
+- object size residuals

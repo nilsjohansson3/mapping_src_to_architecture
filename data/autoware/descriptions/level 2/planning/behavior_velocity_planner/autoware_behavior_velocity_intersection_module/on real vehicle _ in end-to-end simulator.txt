@@ -1,0 +1,12 @@
+On real vehicle or in end-to-end simulator like [AWSIM](https://tier4.github.io/AWSIM/) the following pointcloud_based_occupancy_grid_map configuration is highly recommended:
+
+```yaml
+scan_origin_frame: "velodyne_top"
+
+grid_map_type: "OccupancyGridMapProjectiveBlindSpot"
+OccupancyGridMapProjectiveBlindSpot:
+  projection_dz_threshold: 0.01  [m] for avoiding null division
+  obstacle_separation_threshold: 1.0  [m] fill the interval between obstacles with unknown for this length
+```
+
+You should set the top lidar link as the `scan_origin_frame`. In the example it is `velodyne_top`. The method `OccupancyGridMapProjectiveBlindSpot` estimates the FOV by running projective ray-tracing from `scan_origin` to obstacle or up to the ground and filling the cells on the "shadow" of the object as UNKNOWN.

@@ -1,0 +1,5 @@
+```bash
+cd /YOUR/AUTOWARE/PATH/Autoware
+source install/setup.bash
+ros2 launch autoware_lidar_centerpoint lidar_centerpoint.launch.xml  model_name:=centerpoint_custom  model_path:=/PATH/TO/ONNX/FILE/
+```

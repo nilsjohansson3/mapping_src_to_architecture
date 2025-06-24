@@ -1,0 +1,16 @@
+Along the ego vehicle path, determine the points where collision detection is to be performed for each `detection_span`.
+
+The travel times to the each points are calculated from [the expected target velocity](.Calculate-the-expected-target-velocity-for-ego-vehicle).
+
+![brief](./docs/create_polygon_on_path_point.svg)
+
+For the each points, collision detection is performed using the footprint polygon of the ego vehicle and the polygon of the predicted location of the obstacles.
+The predicted location of the obstacles is described as rectangle or polygon that has the range calculated by min velocity, max velocity and the ego vehicle's travel time to the point.
+If the input type of the dynamic obstacle is `Points`, the obstacle shape is defined as a small cylinder.
+
+![brief](./docs/collision_detection_for_shape.svg)
+
+Multiple points are detected as collision points because collision detection is calculated between two polygons.
+So we select the point that is on the same side as the obstacle and close to ego vehicle as the collision point.
+
+![brief](./docs/collision_points.svg)

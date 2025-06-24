@@ -1,0 +1,6 @@
+In the second step, we calculate the lanelets followed by the ego trajectory.
+We select all lanelets crossed by the trajectory linestring (sequence of trajectory points), as well as their preceding lanelets.
+
+![ego_lane](./docs/ego_lane.png)
+
+In the debug visualization the combination of all ego lanelets is shown as a blue polygon.

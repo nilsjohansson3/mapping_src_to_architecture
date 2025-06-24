@@ -1,0 +1,3 @@
+In rough filtering step, we select target obstacle with simple filter. Create a search area up to a certain distance (default is half of the ego vehicle width plus the `path_footprint_extra_margin` parameter) away from the predicted path of the ego vehicle and ignore the point cloud that are not within it. The rough filtering step is illustrated below.
+
+![rough_filtering](./image/obstacle_filtering_1.drawio.svg)

@@ -1,0 +1,57 @@
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+:get obstacle point cloud in detection area;
+
+if (no obstacle point cloud in detection area?) then (yes)
+else (no)
+  :set last time obstacle found;
+endif
+
+:get clear stop state duration;
+
+if (clear stop state duration is more than state_clear_time?) then (yes)
+  :set current state GO;
+  :reset clear stop state duration;
+  stop
+else (no)
+endif
+
+if (use dead line?) then (yes)
+  :create dead line point;
+  if (Is there dead line point?) then (yes)
+    if (Is over dead line point?) then (yes)
+      stop
+    endif
+  endif
+endif
+
+:calculate stop point;
+
+if (stop point?) then (yes)
+else (no)
+  stop
+endif
+
+
+if (state is not stop and ego vehicle over line?) then (yes)
+  stop
+endif
+
+if (use pass judge line?) then (yes)
+  if (state is not STOP and not enough braking distance?) then (yes)
+    stop
+  endif
+endif
+
+:set state STOP;
+
+:inset stop point;
+
+:append stop reason and stop factor;
+
+stop
+@enduml
+```

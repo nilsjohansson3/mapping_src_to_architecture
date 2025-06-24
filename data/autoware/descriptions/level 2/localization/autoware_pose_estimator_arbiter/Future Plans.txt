@@ -1,0 +1,2 @@
+<details>
+<summary>Click to show details</summary>

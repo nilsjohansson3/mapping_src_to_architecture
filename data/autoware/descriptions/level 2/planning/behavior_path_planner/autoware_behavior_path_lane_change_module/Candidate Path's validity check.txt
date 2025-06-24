@@ -1,0 +1,20 @@
+A candidate path is considered valid if it meets the following criteria:
+
+1. The distance from the ego vehicle's current position to the end of the current lanes is sufficient to perform a single lane change.
+2. The distance from the ego vehicle's current position to the goal along the current lanes is adequate to complete multiple lane changes.
+3. The distance from the ego vehicle's current position to the end of the target lanes is adequate for completing multiple lane changes.
+4. Intersection requirements are met (conditions are parameterized).
+5. Crosswalk requirements are satisfied (conditions are parameterized).
+6. Traffic light regulations are adhered to (conditions are parameterized).
+7. The lane change can be completed after passing a parked vehicle.
+8. The lane change is deemed safe to execute.
+
+The following flow chart illustrates the validity check.
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam backgroundColor White
+
+start
+if (Check if start point is valid by check if it is covered by neighbour lanes polygon) then (not covered)

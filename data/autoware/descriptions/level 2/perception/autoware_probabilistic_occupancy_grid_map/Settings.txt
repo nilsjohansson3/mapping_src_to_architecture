@@ -1,0 +1,5 @@
+Occupancy grid map is generated on `map_frame`, and grid orientation is fixed.
+
+You may need to choose `scan_origin_frame` and `gridmap_origin_frame` which means sensor origin and gridmap origin respectively. Especially, set your main LiDAR sensor frame (e.g. `velodyne_top` in sample_vehicle) as a `scan_origin_frame` would result in better performance.
+
+![image_for_frame_parameter_visualization](./image/gridmap_frame_settings.drawio.svg)

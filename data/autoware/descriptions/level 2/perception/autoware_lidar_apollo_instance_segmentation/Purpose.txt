@@ -1,0 +1,2 @@
+This node segments 3D pointcloud data from lidar sensors into obstacles, e.g., cars, trucks, bicycles, and pedestrians
+based on CNN based model and obstacle clustering method.

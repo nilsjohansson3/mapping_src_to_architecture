@@ -1,0 +1,4 @@
+This module plans the velocity of the related part of the path in case there is speed bump
+regulatory element referring to it.
+
+![speed_bump_design.svg](docs/speed_bump_design.svg)

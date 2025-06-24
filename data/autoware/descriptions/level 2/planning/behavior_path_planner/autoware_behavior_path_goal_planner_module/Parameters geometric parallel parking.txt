@@ -1,0 +1,4 @@
+| Name                    | Unit  | Type   | Description                                                                                                                         | Default value |
+| :---------------------- | :---- | :----- | :---------------------------------------------------------------------------------------------------------------------------------- | :------------ |
+| arc_path_interval       | [m]   | double | interval between arc path points                                                                                                    | 1.0           |
+| pull_over_max_steer_rad | [rad] | double | maximum steer angle for path generation. it may not be possible to control steer up to max_steer_angle in vehicle_info when stopped | 0.35          |

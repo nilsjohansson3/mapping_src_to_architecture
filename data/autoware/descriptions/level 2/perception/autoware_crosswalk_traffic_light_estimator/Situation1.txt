@@ -1,0 +1,9 @@
+- crosswalk conflicts **STRAIGHT** lanelet
+- the lanelet refers **GREEN** or **AMBER** traffic signal (The following pictures show only **GREEN** case)
+
+<div align="center">
+  <img src="images/straight.drawio.svg" width=80%>
+</div>
+<div align="center">
+  <img src="images/intersection1.svg" width=80%>
+</div>

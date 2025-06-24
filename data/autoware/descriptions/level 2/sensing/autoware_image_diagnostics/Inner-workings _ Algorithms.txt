@@ -1,0 +1,11 @@
+Below figure shows the flowchart of image diagnostics node. Each image is divided into small blocks for block state assessment.
+
+![image diagnostics flowchart ](./image/image_diagnostics_overview.svg)
+
+Each small image block state is assessed as below figure.
+
+![block status decision tree ](./image/block_state_decision.svg)
+
+After all image's blocks state are evaluated, the whole image status is summarized as below.
+
+![whole image state decision tree](./image/image_status_decision.svg)

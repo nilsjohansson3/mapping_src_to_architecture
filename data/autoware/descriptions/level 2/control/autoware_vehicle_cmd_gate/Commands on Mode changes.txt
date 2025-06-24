@@ -1,0 +1,2 @@
+Output commands' topics: `turn_indicators_cmd`, `hazard_light` and `gear_cmd` are selected based on `gate_mode`.
+However, to ensure the continuity of commands, these commands will not change until the topics of new input commands arrive, even if a mode change occurs.

@@ -1,0 +1,10 @@
+This vehicle type is intended for a light bus.
+
+| Parameter           | value |
+| ------------------- | ----- |
+| wheel_base          | 4.76  |
+| acc_time_delay      | 0.5   |
+| steer_time_delay    | 0.5   |
+| acc_time_constant   | 0.5   |
+| steer_time_constant | 0.5   |
+| acc_scaling         | 0.5   |

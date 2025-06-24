@@ -1,0 +1,3 @@
+| Name                                           | Type | Description                                                                                                  | Default value |
+| :--------------------------------------------- | :--- | :----------------------------------------------------------------------------------------------------------- | :------------ |
+| pcl_grid_map_extraction/num_processing_threads | int  | Number of threads for processing grid map cells. Filtering of the raw input point cloud is not parallelized. | 12            |

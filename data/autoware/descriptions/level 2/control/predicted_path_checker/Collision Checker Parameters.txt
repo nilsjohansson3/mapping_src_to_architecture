@@ -1,0 +1,6 @@
+| Name                               | Type     | Description                                                       | Default value |
+| :--------------------------------- | :------- | :---------------------------------------------------------------- | :------------ |
+| `width_margin`                     | `double` | The width margin for collision checking [Hz]                      | 0.2           |
+| `chattering_threshold`             | `double` | The chattering threshold for collision detection [s]              | 0.2           |
+| `z_axis_filtering_buffer`          | `double` | The Z-axis filtering buffer [m]                                   | 0.3           |
+| `enable_z_axis_obstacle_filtering` | `bool`   | A boolean flag indicating if Z-axis obstacle filtering is enabled | false         |

@@ -1,0 +1,3 @@
+| Name       | Type                | Description     |
+| ---------- | ------------------- | --------------- |
+| `in/image` | `sensor_msgs/Image` | The input image |

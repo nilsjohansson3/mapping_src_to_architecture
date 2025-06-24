@@ -1,0 +1,9 @@
+The configuration file that illustrates how to train the CenterPoint model with the NuScenes dataset is
+located at `mmdetection3d/projects/AutowareCenterPoint/configs`. This configuration file is a derived version of
+[this centerpoint configuration file](https://github.com/autowarefoundation/mmdetection3d/blob/5c0613be29bd2e51771ec5e046d89ba3089887c7/configs/centerpoint/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py)
+from mmdetection3D.
+In this custom configuration, the **use_voxel_center_z parameter** is set as **False** to deactivate the z coordinate of the voxel center,
+aligning with the original paper's specifications and making the model compatible with Autoware. Additionally, the filter size is set as **[32, 32]**.
+
+The CenterPoint model can be tailored to your specific requirements by modifying various parameters within the configuration file.
+This includes adjustments related to preprocessing operations, training, testing, model architecture, dataset, optimizer, learning rate scheduler, and more.

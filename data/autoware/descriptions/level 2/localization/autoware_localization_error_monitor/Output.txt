@@ -1,0 +1,4 @@
+| Name                   | Type                                    | Description         |
+| ---------------------- | --------------------------------------- | ------------------- |
+| `debug/ellipse_marker` | `visualization_msgs::msg::Marker`       | ellipse marker      |
+| `diagnostics`          | `diagnostic_msgs::msg::DiagnosticArray` | diagnostics outputs |

@@ -1,0 +1,5 @@
+Give an typical example of how path generation is executed. Showing example of path generation starts from shoulder lane, but also from side of road lane can be generated.
+
+<figure markdown>
+  ![shift_pull_out_from_road_lane](images/shift_pull_out_path_from_road_lane.drawio.svg){width=1100}
+</figure>

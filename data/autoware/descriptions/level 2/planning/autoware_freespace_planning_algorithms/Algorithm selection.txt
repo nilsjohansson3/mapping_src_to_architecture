@@ -1,0 +1,9 @@
+There is a trade-off between algorithm speed and resulting solution quality.
+When we sort the algorithms by the spectrum of (high quality solution/ slow) -> (low quality solution / fast) it would be
+A\* -> informed RRT\* -> RRT. Note that in almost all case informed RRT\* is
+better than RRT\* for solution quality given the same computational time budget. So, RRT\* is omitted in the comparison.
+
+Some selection criteria would be:
+
+- If obstacle geometry is complex: -> avoid RRT and RRT\*. The resulting path could be too messy.
+- If goal location is far from the start: -> avoid A\*. Take too long time because it based on grid discretization.

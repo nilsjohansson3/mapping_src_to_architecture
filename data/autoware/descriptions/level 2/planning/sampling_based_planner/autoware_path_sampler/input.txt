@@ -1,0 +1,5 @@
+| Name               | Type                                          | Description                                        |
+| ------------------ | --------------------------------------------- | -------------------------------------------------- |
+| `~/input/path`     | autoware_planning_msgs/msg/Path               | Reference path and the corresponding drivable area |
+| `~/input/odometry` | nav_msgs/msg/Odometry                         | Current state of the ego vehicle                   |
+| `~/input/objects`  | autoware_perception_msgs/msg/PredictedObjects | objects to avoid                                   |

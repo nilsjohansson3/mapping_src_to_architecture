@@ -1,0 +1,11 @@
+![tf-tree](../image/localization/tf-tree.png)
+
+|   frame   | meaning                                                                                        |
+| :-------: | :--------------------------------------------------------------------------------------------- |
+|   earth   | ECEF (Earth Centered Earth Fixed）                                                             |
+|    map    | Origin of the map coordinate (ex. MGRS origin)                                                 |
+|  viewer   | User-defined frame for rviz                                                                    |
+| base_link | Reference pose of the ego-vehicle (projection of the rear-axle center onto the ground surface) |
+|  sensor   | Reference pose of each sensor                                                                  |
+
+Developers can optionally add other frames such as odom or base_footprint as long as the tf structure above is maintained.

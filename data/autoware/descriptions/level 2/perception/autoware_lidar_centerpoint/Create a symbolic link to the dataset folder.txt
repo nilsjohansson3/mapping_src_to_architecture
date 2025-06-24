@@ -1,0 +1,2 @@
+ln -s /PATH/TO/DATASET/ /PATH/TO/mmdetection3d/data/tier4_dataset/
+```

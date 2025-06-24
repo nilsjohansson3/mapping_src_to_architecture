@@ -1,0 +1,10 @@
+| Name                       | Unit | Type    | Description                                 | Default value |
+| :------------------------- | ---- | ------- | ------------------------------------------- | ------------- |
+| `target_object.car`        | [-]  | boolean | Include car objects for safety check        | true          |
+| `target_object.truck`      | [-]  | boolean | Include truck objects for safety check      | true          |
+| `target_object.bus`        | [-]  | boolean | Include bus objects for safety check        | true          |
+| `target_object.trailer`    | [-]  | boolean | Include trailer objects for safety check    | true          |
+| `target_object.unknown`    | [-]  | boolean | Include unknown objects for safety check    | true          |
+| `target_object.bicycle`    | [-]  | boolean | Include bicycle objects for safety check    | true          |
+| `target_object.motorcycle` | [-]  | boolean | Include motorcycle objects for safety check | true          |
+| `target_object.pedestrian` | [-]  | boolean | Include pedestrian objects for safety check | true          |

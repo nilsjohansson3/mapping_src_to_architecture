@@ -1,0 +1,65 @@
+The abort process may result in three different outcome; Cancel, Abort and Stop/Cruise.
+
+The following depicts the flow of the abort lane change check.
+
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+title Abort Lane Change
+
+while(Lane Following)
+  if (Lane Change required) then (**YES**)
+    if (Safe to change lane) then (**SAFE**)
+      while(Lane Changing)
+        if (Lane Change Completed) then (**YES**)
+        break
+        else (**NO**)
+          if (Is Abort Condition Satisfied) then (**NO**)
+          else (**YES**)
+            if (Is Enough margin to retry lane change) then (**YES**)
+              if (Ego is on lane change prepare phase) then (**YES**)
+              :Cancel lane change;
+              break
+              else (**NO**)
+              if (Will the overhang to target lane be less than threshold?) then (**YES**)
+              :Perform abort maneuver;
+              break
+              else (NO)
+              :Stop or Cruise depending on the situation;
+              endif
+            endif
+          else (**NO**)
+          endif
+        endif
+        endif
+      :Stop and wait;
+      endwhile
+    else (**UNSAFE**)
+    endif
+  else (**NO**)
+  endif
+endwhile
+-[hidden]->
+detach
+@enduml
+```
+
+During a lane change, a safety check is made in consideration of the deceleration of the ego vehicle, and a safety check is made for `cancel.deceleration_sampling_num` deceleration patterns, and the lane change will be canceled if the abort condition is satisfied for all deceleration patterns.
+
+To preventive measure for lane change path oscillations caused by alternating safe and unsafe conditions, an additional hysteresis count check is implemented before executing an abort or cancel maneuver. If unsafe, the `unsafe_hysteresis_count_` is incremented and compared against `unsafe_hysteresis_threshold`; exceeding it prompts an abort condition check, ensuring decisions are made with consideration to recent safety assessments as shown in flow chart above. This mechanism stabilizes decision-making, preventing abrupt changes due to transient unsafe conditions.
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam backgroundColor WHITE
+
+title Abort Lane Change
+
+if (Perform collision check?) then (<color:green><b>SAFE</b></color>)
+  :Reset unsafe_hysteresis_count_;
+else (<color:red><b>UNSAFE</b></color>)
+  :Increase unsafe_hysteresis_count_;
+  if (unsafe_hysteresis_count_ > unsafe_hysteresis_threshold?) then (<color:green><b>FALSE</b></color>)
+  else (<color:red><b>TRUE</b></color>)

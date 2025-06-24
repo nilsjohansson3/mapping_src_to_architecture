@@ -1,0 +1,20 @@
+A sample model (named `yolox-tiny.onnx`) is downloaded by ansible script on env preparation stage, if not, please, follow [Manual downloading of artifacts](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/artifacts).
+To accelerate Non-maximum-suppression (NMS), which is one of the common post-process after object detection inference,
+`EfficientNMS_TRT` module is attached after the ordinal YOLOX (tiny) network.
+The `EfficientNMS_TRT` module contains fixed values for `score_threshold` and `nms_threshold` in it,
+hence these parameters are ignored when users specify ONNX models including this module.
+
+This package accepts both `EfficientNMS_TRT` attached ONNXs and [models published from the official YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX/tree/main/demo/ONNXRuntimedownload-onnx-models) (we referred to them as "plain" models).
+
+In addition to `yolox-tiny.onnx`, a custom model named `yolox-sPlus-opt-pseudoV2-T4-960x960-T4-seg16cls` is either available.
+This model is multi-header structure model which is based on YOLOX-s and tuned to perform more accurate detection with almost comparable execution speed with `yolox-tiny`.
+To get better results with this model, users are recommended to use some specific running arguments
+such as `precision:=int8`, `calibration_algorithm:=Entropy`, `clip_value:=6.0`.
+Users can refer `launch/yolox_sPlus_opt.launch.xml` to see how this model can be used.
+Beside detection result, this model also output image semantic segmentation result for pointcloud filtering purpose.
+
+All models are automatically converted to TensorRT format.
+These converted files will be saved in the same directory as specified ONNX files
+with `.engine` filename extension and reused from the next run.
+The conversion process may take a while (**typically 10 to 20 minutes**) and the inference process is blocked
+until complete the conversion, so it will take some time until detection results are published (**even until appearing in the topic list**) on the first run

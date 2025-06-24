@@ -1,0 +1,1 @@
+This package provides a radar object tracking node that processes sequences of detected objects to assign consistent identities to them and estimate their velocities.

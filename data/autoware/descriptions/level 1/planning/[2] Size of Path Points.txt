@@ -1,0 +1,1 @@
+Some functions do not support paths with only one point. Therefore, each modules should generate the path with more than two path points. -->

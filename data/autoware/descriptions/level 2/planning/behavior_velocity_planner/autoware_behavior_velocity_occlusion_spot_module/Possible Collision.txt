@@ -1,0 +1,3 @@
+obstacle that can run out from occlusion is interrupted by moving vehicle.
+
+![brief](./docs/raycast_shadow.drawio.svg)

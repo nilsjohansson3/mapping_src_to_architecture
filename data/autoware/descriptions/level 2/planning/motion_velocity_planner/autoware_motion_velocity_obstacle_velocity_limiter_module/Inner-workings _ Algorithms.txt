@@ -1,0 +1,5 @@
+Using a parameter `min_ttc` (minimum time to collision), the node set velocity limits such that
+no collision with an obstacle would occur, even without new control inputs for a duration of `min_ttc`.
+
+To achieve this, the motion of the ego vehicle is simulated forward in time at each point of the trajectory to create a corresponding footprint.
+If the footprint collides with some obstacle, the velocity at the trajectory point is reduced such that the new simulated footprint do not have any collision.

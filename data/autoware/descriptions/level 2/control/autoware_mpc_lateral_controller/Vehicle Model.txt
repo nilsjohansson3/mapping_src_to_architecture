@@ -1,0 +1,11 @@
+| Name                                 | Type     | Description                                                                        | Default value        |
+| :----------------------------------- | :------- | :--------------------------------------------------------------------------------- | :------------------- |
+| vehicle_model_type                   | string   | vehicle model type for mpc prediction                                              | "kinematics"         |
+| input_delay                          | double   | steering input delay time for delay compensation                                   | 0.24                 |
+| vehicle_model_steer_tau              | double   | steering dynamics time constant (1d approximation) [s]                             | 0.3                  |
+| steer_rate_lim_dps_list_by_curvature | [double] | steering angle rate limit list depending on curvature [deg/s]                      | [40.0, 50.0, 60.0]   |
+| curvature_list_for_steer_rate_lim    | [double] | curvature list for steering angle rate limit interpolation in ascending order [/m] | [0.001, 0.002, 0.01] |
+| steer_rate_lim_dps_list_by_velocity  | [double] | steering angle rate limit list depending on velocity [deg/s]                       | [60.0, 50.0, 40.0]   |
+| velocity_list_for_steer_rate_lim     | [double] | velocity list for steering angle rate limit interpolation in ascending order [m/s] | [10.0, 15.0, 20.0]   |
+| acceleration_limit                   | double   | acceleration limit for trajectory velocity modification [m/ss]                     | 2.0                  |
+| velocity_time_constant               | double   | velocity dynamics time constant for trajectory velocity modification [s]           | 0.3                  |

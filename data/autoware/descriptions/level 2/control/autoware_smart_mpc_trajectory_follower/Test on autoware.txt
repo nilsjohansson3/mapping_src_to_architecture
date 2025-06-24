@@ -1,0 +1,25 @@
+To perform a control test on autoware with the nominal model before training, make sure that `trained_model_parameter:control_application:use_trained_model` in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml) is `false` and launch autoware in the manner described in "Trajectory following control based on iLQR/MPPI". This time, the following route will be used for the test:
+
+<p><img src="images/test_route.png" width=712pix></p>
+
+Record rosbag and train the model in the manner described in "Training of model and reflection in control", and move the generated files `model_for_test_drive.pth` and `polynomial_reg_info.npz` to the home directory.
+Sample models, which work under the condition that`trained_model_parameter:memory_for_training:use_memory_for_training` in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml) is set to `true`, can be obtained at [sample_models/wheel_base_changed](./sample_models/wheel_base_changed/).
+
+> [!NOTE]
+> Although the data used for training is small, for the sake of simplicity, we will see how much performance can be improved with this amount of data.
+
+To control using the trained model obtained here, set `trained_model_parameter:control_application:use_trained_model` to `true`, start autoware in the same way, and drive the same route recording rosbag.
+After the driving is complete, convert the rosbag file to CSV format using the method described in "Training of model and reflection in control".
+A plot of the lateral deviation is obtained by running the `lateral_error_visualize` function in `control/autoware_smart_mpc_trajectory_follower/autoware_smart_mpc_trajectory_follower/training_and_data_check/data_checker.ipynb` for the nominal and training model rosbag files `rosbag_nominal` and `rosbag_trained`, respectively, as follows:
+
+```python
+lateral_error_visualize(dir_name=rosbag_nominal,ylim=[-1.2,1.2])
+lateral_error_visualize(dir_name=rosbag_trained,ylim=[-1.2,1.2])
+```
+
+The following results were obtained.
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="images/lateral_error_nominal_model.png">
+    <img src="images/lateral_error_trained_model.png">
+</div>

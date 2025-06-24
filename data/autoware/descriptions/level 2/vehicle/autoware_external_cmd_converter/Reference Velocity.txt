@@ -1,0 +1,12 @@
+A reference velocity is calculated based on a current velocity and a reference acceleration:
+
+$$
+v_{ref} =
+    v_{x,current} + k_{v_{ref}} \cdot \text{sign}_{gear} \cdot acc_{ref}.
+$$
+
+| Parameter            | Description                                                           |
+| -------------------- | --------------------------------------------------------------------- |
+| $acc_{ref}$          | reference acceleration                                                |
+| $k_{v_{ref}}$        | reference velocity gain                                               |
+| $\text{sign}_{gear}$ | gear command (`~/in/shift_cmd`) (Drive/Low: 1, Reverse: -1, Other: 0) |

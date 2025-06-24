@@ -1,0 +1,16 @@
+The nominal parameters of vehicle model can be changed by editing the file [nominal_param.yaml](./autoware_smart_mpc_trajectory_follower/param/nominal_param.yaml).
+After changing the nominal parameters, the cache must be deleted by running the following command:
+
+```bash
+python3 -m smart_mpc_trajectory_follower.clear_pycache
+```
+
+The nominal parameters include the following:
+
+| Parameter                                        | Type  | Description                    |
+| ------------------------------------------------ | ----- | ------------------------------ |
+| nominal_parameter:vehicle_info:wheel_base        | float | wheel base [m]                 |
+| nominal_parameter:acceleration:acc_time_delay    | float | acceleration time delay [s]    |
+| nominal_parameter:acceleration:acc_time_constant | float | acceleration time constant [s] |
+| nominal_parameter:steering:steer_time_delay      | float | steer time delay [s]           |
+| nominal_parameter:steering:steer_time_constant   | float | steer time constant [s]        |

@@ -1,0 +1,1 @@
+- This node estimates the initial position using the camera at the request of ADAPI.

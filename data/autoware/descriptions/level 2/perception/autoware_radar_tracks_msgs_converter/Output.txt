@@ -1,0 +1,6 @@
+- `~/output/radar_detected_objects` (`autoware_perception_msgs/msg/DetectedObject.idl`)
+  - DetectedObject topic converted to Autoware message.
+  - This is used for radar sensor fusion detection and radar detection.
+- `~/output/radar_tracked_objects` (`autoware_perception_msgs/msg/TrackedObject.idl`)
+  - TrackedObject topic converted to Autoware message.
+  - This is used for tracking layer sensor fusion.

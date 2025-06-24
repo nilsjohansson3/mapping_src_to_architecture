@@ -1,0 +1,82 @@
+WIP
+
+```plantuml
+@startuml
+title modifyPathVelocity
+start
+
+:get object polygon;
+
+partition get_objective_polygon {
+
+:get "right-of-way" lanelets from ego lanelet;
+
+:get previous and following ego lanelet from routing graph;
+
+:get all conflicting lanelets with ego lane;
+
+:exclude yield and ego lanelets from conflicting lanelets;
+
+:update conflicting and objective polygon;
+}
+
+:get external Input;
+
+:generate stop line;
+
+if (not generate stop line) then (yes)
+  stop
+else (no)
+endif
+
+if (stop line index or pass judge index is same lane as ego?) then (yes)
+  stop
+else (no)
+endif
+
+if (not found closest index?) then (yes)
+  stop
+else (no)
+endif
+
+if (state is GO and over pass judge line and no external stop) then (yes)
+  stop
+else (no)
+endif
+
+if (has collision or is stuck vehicle in intersection?) then (yes)
+  :set is_entry_prohibited true;
+  :set state from external input;
+else (no)
+endif
+
+:set state with margin time;
+
+if (current state is same as previous state) then (yes)
+  :reset timer;
+else if (state is GO->STOP) then (yes)
+  :set state as STOP;
+  :reset timer;
+else if (state is STOP -> GO) then (yes)
+  if (start time is not set) then (yes)
+    :set start time;
+  else(no)
+   :calculate duration;
+   if(duration is more than margin time)then (yes)
+    :set state GO;
+    :reset timer;
+   endif
+  endif
+endif
+
+if (state is STOP?) then (yes)
+  :set velocity;
+  if (stop required?) then (yes)
+    :publish stop reason and stop factor;
+  endif
+else(no)
+endif
+stop
+
+@enduml
+```

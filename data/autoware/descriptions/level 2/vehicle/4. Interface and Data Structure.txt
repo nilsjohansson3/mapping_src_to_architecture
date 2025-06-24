@@ -1,0 +1,43 @@
+The interface of the Vehicle Interface component for other components running in the same process space to access the functionality and capability of the Vehicle Interface component is defined as follows.
+
+From Control
+
+- Actuation Command
+  - target acceleration, braking, and steering angle
+
+From Planning
+
+- Vehicle Specific Commands (optional and a separate message for each type)
+  - Shift
+  - Door
+  - Wiper
+  - etc
+
+From the vehicle
+
+- Vehicle status messages
+  - Vehicle-specific format messages for conversion into Autoware-specific format messages
+    - Velocity status
+    - Steering status (optional)
+    - Shift status (optional)
+    - Turn signal status (optional)
+    - Actuation status (optional)
+
+The output interface of the Vehicle Interface component:
+
+- Vehicle control messages to the vehicle
+  - Control signals to drive the vehicle
+  - Depends on the vehicle type/protocol, but should include steering and velocity commands at a minimum
+- Vehicle status messages to Autoware
+- Actuation Status
+  - Acceleration, brake, steering status
+- Vehicle odometry (output to Localization)
+  - Vehicle twist information
+- Control mode
+  - Information about whether the vehicle is under autonomous control or manual control
+- Shift status (optional)
+  - Vehicle shift status
+- Turn signal status (optional)
+  - Vehicle turn signal status
+
+The data structure for the internal representation of semantics for the objects and trajectories used in the Vehicle Interface component is defined as follows:

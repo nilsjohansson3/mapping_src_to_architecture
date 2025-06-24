@@ -1,0 +1,1 @@
+This module only acts on target obstacles defined by the `target_obstacle_types` parameter. If an obstacle of a type not specified by said parameter is detected, it will be ignored by this module.

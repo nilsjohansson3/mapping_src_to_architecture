@@ -1,0 +1,6 @@
+The `autoware_path_optimizer` uses an optimization based approach,
+finding the optimal solution of a mathematical problem if it exists.
+When no solution can be found, it is often hard to identify the issue due to the intermediate mathematical representation of the problem.
+
+In comparison, the sampling based approach cannot guarantee an optimal solution but is much more straightforward,
+making it easier to debug and tune.

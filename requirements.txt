@@ -1,0 +1,16 @@
+tensorflow
+numpy
+matplotlib
+pytest
+pandas
+nltk
+scikit-learn
+sentence_transformers
+datetime
+openai==1.42.0
+azure-ai-formrecognizer==3.3.2
+azure-common==1.1.28
+azure-core==1.30.0
+azure-identity==1.15.0
+azure-search-documents==11.4.0b11
+azure-storage-blob==12.19.1

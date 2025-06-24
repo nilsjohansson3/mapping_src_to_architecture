@@ -1,0 +1,10 @@
+This vehicle type matches the default vehicle type used in the control.
+
+| Parameter           | value |
+| ------------------- | ----- |
+| wheel_base          | 2.79  |
+| acc_time_delay      | 0.1   |
+| steer_time_delay    | 0.27  |
+| acc_time_constant   | 0.1   |
+| steer_time_constant | 0.24  |
+| acc_scaling         | 1.0   |

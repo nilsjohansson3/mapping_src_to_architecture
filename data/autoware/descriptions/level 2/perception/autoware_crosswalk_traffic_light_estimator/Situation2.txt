@@ -1,0 +1,6 @@
+- crosswalk conflicts different turn direction lanelets (STRAIGHT and LEFT, LEFT and RIGHT, RIGHT and STRAIGHT)
+- the lanelets refer **GREEN** or **AMBER** traffic signal (The following pictures show only **GREEN** case)
+
+<div align="center">
+  <img src="images/intersection2.svg" width=80%>
+</div>

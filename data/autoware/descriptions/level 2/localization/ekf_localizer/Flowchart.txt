@@ -1,0 +1,5 @@
+The overall flowchart of the ekf_localizer is described below.
+
+<p align="center">
+  <img src="./media/ekf_flowchart.png" width="800">
+</p>

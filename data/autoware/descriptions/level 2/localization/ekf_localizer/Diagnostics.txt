@@ -1,0 +1,10 @@
+<p align="center">
+<img src="./media/ekf_diagnostics.png" width="320">
+</p>
+
+<p align="center">
+<img src="./media/ekf_diagnostics_callback_pose.png" width="320">
+</p>
+<p align="center">
+<img src="./media/ekf_diagnostics_callback_twist.png" width="320">
+</p>

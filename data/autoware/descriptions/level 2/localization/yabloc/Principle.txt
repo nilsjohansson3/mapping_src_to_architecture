@@ -1,0 +1,6 @@
+The diagram below illustrates the basic principle of YabLoc.
+It extracts road surface markings by extracting the line segments using the road area obtained from graph-based segmentation.
+The red line at the center-top of the diagram represents the line segments identified as road surface markings.
+YabLoc transforms these segments for each particle and determines the particle's weight by comparing them with the cost map generated from Lanelet2.
+
+![principle](docs/yabloc_principle.png)

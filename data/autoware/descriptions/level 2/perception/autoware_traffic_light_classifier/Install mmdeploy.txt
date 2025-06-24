@@ -1,0 +1,1 @@
+pip install mmdeploy==1.2.0

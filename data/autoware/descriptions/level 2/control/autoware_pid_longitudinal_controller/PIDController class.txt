@@ -1,0 +1,3 @@
+The `PIDController` class is straightforward to use.
+First, gains and limits must be set (using `setGains()` and `setLimits()`) for the proportional (P), integral (I), and derivative (D) components.
+Then, the velocity can be calculated by providing the current error and time step duration to the `calculate()` function.

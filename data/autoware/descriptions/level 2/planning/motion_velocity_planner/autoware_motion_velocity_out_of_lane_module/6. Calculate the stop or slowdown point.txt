@@ -1,0 +1,15 @@
+First, the minimum stopping distance of the ego vehicle is calculated based on the jerk and deceleration constraints set by the velocity smoother parameters.
+
+We then search for the furthest pose along the trajectory where the ego footprint stays inside of the ego lane (calculate in step 2) and constraint the search to be between the minimum stopping distance and the 1st trajectory point with a collision to avoid (as determined in the previous step).
+The search is done by moving backward along the trajectory with a distance step set by the `action.precision` parameter.
+
+We first do this search for a footprint expanded with the `ego.extra_..._offset`, `action.longitudinal_distance_buffer` and `action.lateral_distance_buffer` parameters.
+If no valid pose is found, we search again while only considering the extra offsets but without considering the distance buffers.
+If still no valid pose is found, we use the base ego footprint without any offset.
+In case no pose is found, we fallback to using the pose before the detected collision without caring if it is out of lane or not.
+
+Whether it is decided to slow down or stop is determined by the distance between the ego vehicle and the trajectory point to avoid.
+If this distance is bellow the `actions.slowdown.threshold`, a velocity of `actions.slowdown.velocity` will be used.
+If the distance is bellow the `actions.stop.threshold`, a velocity of `0`m/s will be used.
+
+![avoid_collision](./docs/ttcs_avoid.png)

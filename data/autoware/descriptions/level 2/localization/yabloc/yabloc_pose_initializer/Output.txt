@@ -1,0 +1,3 @@
+| Name                | Type                                   | Description             |
+| ------------------- | -------------------------------------- | ----------------------- |
+| `output/candidates` | `visualization_msgs::msg::MarkerArray` | initial pose candidates |

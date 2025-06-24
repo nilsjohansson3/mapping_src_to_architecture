@@ -1,0 +1,3 @@
+Autoware uses [radar_msgs/msg/RadarTracks.msg](https://github.com/ros-perception/radar_msgs/blob/ros2/msg/RadarTracks.msg) as radar objects input data.
+To use radar objects data for Autoware perception module easily, `radar_tracks_msgs_converter` converts message type from `radar_msgs/msg/RadarTracks.msg` to `autoware_perception_msgs/msg/DetectedObject`.
+In addition, because many detection module have an assumption on base_link frame, `radar_tracks_msgs_converter` provide the functions of transform frame_id.

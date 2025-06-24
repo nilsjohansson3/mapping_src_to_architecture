@@ -1,0 +1,24 @@
+User can select the safety check area with the following parameters. Basically, we recommend the following configuration to check only the shift side lane. If users want to confirm safety strictly, please set `check_current_lane` and/or `check_other_side_lane` to `true`.
+
+```yaml
+      safety_check:
+      ...
+        check_current_lane: false                        [-]
+        check_shift_side_lane: true                      [-]
+        check_other_side_lane: false                     [-]
+```
+
+In the avoidance module, the function `path_safety_checker::isCentroidWithinLanelet` is used for filtering objects by lane.
+
+```c++
+bool isCentroidWithinLanelet(const PredictedObject & object, const lanelet::ConstLanelet & lanelet)
+{
+  const auto & object_pos = object.kinematics.initial_pose_with_covariance.pose.position;
+  lanelet::BasicPoint2d object_centroid(object_pos.x, object_pos.y);
+  return boost::geometry::within(object_centroid, lanelet.polygon2d().basicPolygon());
+}
+```
+
+!!! info
+
+    If `check_current_lane` and/or `check_other_side_lane` are set to `true`, the possibility of false positives and unnecessary yield maneuvers increase.

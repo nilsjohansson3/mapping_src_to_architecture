@@ -1,0 +1,11 @@
+These topics are not visualized by default.
+
+<img src="docs/yabloc_image_description.png" width=800>
+
+| index | topic name                                                              | description                                                                   |
+| ----- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| 1     | `/localization/yabloc/pf/cost_map_image`                                | cost map made from lanelet2                                                   |
+| 2     | `/localization/yabloc/pf/match_image`                                   | projected line segments                                                       |
+| 3     | `/localization/yabloc/image_processing/image_with_colored_line_segment` | classified line segments. green line segments are used in particle correction |
+| 4     | `/localization/yabloc/image_processing/lanelet2_overlay_image`          | overlay of lanelet2                                                           |
+| 5     | `/localization/yabloc/image_processing/segmented_image`                 | graph based segmentation result                                               |

@@ -1,0 +1,1 @@
+There is no training code for CNN model.

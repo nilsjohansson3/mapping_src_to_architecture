@@ -1,0 +1,1 @@
+When Autoware is launched, the default parameters are loaded, and the Reference Implementation is started. For more details, please refer to [the Reference Implementation](./reference_implementation.md).

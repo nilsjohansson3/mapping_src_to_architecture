@@ -1,0 +1,4 @@
+| Name                        | Type                                              | Description                                        |
+| --------------------------- | ------------------------------------------------- | -------------------------------------------------- |
+| `~/output/trajectory`       | autoware_planning_msgs::msg::Trajectory           | Ego trajectory with updated velocity profile       |
+| `~/output/velocity_factors` | autoware_adapi_v1_msgs::msg::VelocityFactorsArray | factors causing change in the ego velocity profile |

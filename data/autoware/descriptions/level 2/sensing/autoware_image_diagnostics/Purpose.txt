@@ -1,0 +1,1 @@
+The `image_diagnostics` is a node that check the status of the input raw image.

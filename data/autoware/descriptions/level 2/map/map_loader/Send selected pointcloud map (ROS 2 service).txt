@@ -1,0 +1,4 @@
+Here, we assume that the pointcloud maps are divided into grids.
+
+Given IDs query from a client node, the node sends a set of pointcloud maps (each of which attached with unique ID) specified by query.
+Please see [the description of `GetSelectedPointCloudMap.srv`](https://github.com/autowarefoundation/autoware_msgs/tree/main/autoware_map_msgsgetselectedpointcloudmapsrv) for details.

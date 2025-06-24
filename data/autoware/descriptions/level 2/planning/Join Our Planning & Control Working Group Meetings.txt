@@ -1,0 +1,10 @@
+The Planning & Control working group is an integral part of our community. We meet bi-weekly to discuss our current progress, upcoming challenges, and brainstorm new ideas. These meetings are a fantastic opportunity to directly contribute to our discussions and decision-making processes.
+
+Meeting Details:
+
+- **Frequency:** Bi-weekly
+- **Day:** Thursday
+- **Time:** 08:00 AM UTC (05:00 PM JST)
+- **Agenda:** Discuss current progress, plan future developments. You can view and comment on the minutes of past meetings [here](https://github.com/orgs/autowarefoundation/discussions?discussions_q=is%3Aopen+label%3Ameeting%3Aplanning-control-wg+).
+
+Interested in joining our meetings? We’d love to have you! For more information on how to participate, visit the following link: [How to participate in the working group](https://github.com/autowarefoundation/autoware-projects/wiki/Autoware-Planning-Control-Working-Grouphow-to-participate-in-the-working-group).

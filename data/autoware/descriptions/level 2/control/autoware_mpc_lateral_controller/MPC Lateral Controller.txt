@@ -1,0 +1,2 @@
+This is the design document for the lateral controller node
+in the `autoware_trajectory_follower_node` package.

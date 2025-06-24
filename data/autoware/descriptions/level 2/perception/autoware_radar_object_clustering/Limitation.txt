@@ -1,0 +1,2 @@
+For now, size estimation for clustered object is not implemented.
+So `is_fixed_size` parameter is recommended to set `true`, and size parameters is recommended to set to value near to average size of vehicles.

@@ -1,0 +1,1 @@
+This module avoids static (stopped) objects and does not support dynamic (moving) objects avoidance. Dynamic objects are handled within the [dynamic obstacle avoidance module](../autoware_behavior_path_dynamic_obstacle_avoidance_module/README.md).

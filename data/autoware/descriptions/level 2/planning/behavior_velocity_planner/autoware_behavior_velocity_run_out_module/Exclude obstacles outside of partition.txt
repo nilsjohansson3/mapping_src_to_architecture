@@ -1,0 +1,6 @@
+This module can exclude the obstacles outside of partition such as guardrail, fence, and wall.
+We need lanelet map that has the information of partition to use this feature.
+By this feature, we can reduce unnecessary deceleration by obstacles that are unlikely to jump out to the lane.
+You can choose whether to use this feature by parameter of `use_partition_lanelet`.
+
+![brief](./docs/exclude_obstacles_by_partition.svg)

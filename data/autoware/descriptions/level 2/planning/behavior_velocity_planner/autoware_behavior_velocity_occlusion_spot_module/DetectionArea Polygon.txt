@@ -1,0 +1,5 @@
+This module considers TTV from pedestrian velocity and lateral distance to occlusion spot.
+TTC is calculated from ego velocity and acceleration and longitudinal distance until collision point using motion velocity smoother.
+To compute fast this module only consider occlusion spot whose TTV is less than TTC and only consider area within "max lateral distance".
+
+![brief](./docs/da.drawio.svg)

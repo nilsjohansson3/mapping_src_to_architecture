@@ -1,0 +1,35 @@
+When using multiple pose_estimators, it is necessary to appropriately adjust the parameters provided to the `pose_initializer`.
+
+<details>
+<summary>Click to show details</summary>
+
+The following table is based on the runtime argument "pose_source" indicating which initial pose estimation methods are available and the parameters that should be provided to the pose_initialization node.
+To avoid making the application too complicated, a priority is established so that NDT is always used when it is available.
+(The pose_initializer will only perform NDT-based initial pose estimation when `ndt_enabled` and `yabloc_enabled` are both `true`).
+
+This table's usage is described from three perspectives:
+
+- **Autoware Users:** Autoware users do not need to consult this table.
+  They simply provide the desired combinations of pose_estimators, and the appropriate parameters are automatically provided to the pose_initializer.
+- **Autoware Developers:** Autoware developers can consult this table to know which parameters are assigned.
+- **Who implements New Pose Estimator Switching:**
+  Developers must extend this table and implement the assignment of appropriate parameters to the pose_initializer.
+
+|         pose_source         | invoked initialization method | `ndt_enabled` | `yabloc_enabled` | `gnss_enabled` | `sub_gnss_pose_cov`                          |
+| :-------------------------: | ----------------------------- | ------------- | ---------------- | -------------- | -------------------------------------------- |
+|             ndt             | ndt                           | true          | false            | true           | /sensing/gnss/pose_with_covariance           |
+|           yabloc            | yabloc                        | false         | true             | true           | /sensing/gnss/pose_with_covariance           |
+|           eagleye           | vehicle needs run for a while | false         | false            | true           | /localization/pose_estimator/eagleye/...     |
+|            artag            | 2D Pose Estimate (RViz)       | false         | false            | true           | /sensing/gnss/pose_with_covariance           |
+|         ndt, yabloc         | ndt                           | true          | true             | true           | /sensing/gnss/pose_with_covariance           |
+|        ndt, eagleye         | ndt                           | true          | false            | true           | /sensing/gnss/pose_with_covariance           |
+|         ndt, artag          | ndt                           | true          | false            | true           | /sensing/gnss/pose_with_covariance           |
+|       yabloc, eagleye       | yabloc                        | false         | true             | true           | /sensing/gnss/pose_with_covariance           |
+|        yabloc, artag        | yabloc                        | false         | true             | true           | /sensing/gnss/pose_with_covariance           |
+|       eagleye, artag        | vehicle needs run for a while | false         | false            | true           | /localization/pose_estimator/eagleye/pose... |
+|    ndt, yabloc, eagleye     | ndt                           | true          | true             | true           | /sensing/gnss/pose_with_covariance           |
+|     ndt, eagleye, artag     | ndt                           | true          | false            | true           | /sensing/gnss/pose_with_covariance           |
+|   yabloc, eagleye, artag    | yabloc                        | false         | true             | true           | /sensing/gnss/pose_with_covariance           |
+| ndt, yabloc, eagleye, artag | ndt                           | true          | true             | true           | /sensing/gnss/pose_with_covariance           |
+
+</details>

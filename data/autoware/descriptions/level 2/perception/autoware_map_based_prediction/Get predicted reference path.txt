@@ -1,0 +1,25 @@
+- Get reference path:
+  - Create a reference path for the object from the associated lanelet.
+- Predict object maneuver:
+  - Generate predicted paths for the object.
+  - Assign probability to each maneuver of `Lane Follow`, `Left Lane Change`, and `Right Lane Change` based on the object history and the reference path obtained in the first step.
+  - Lane change decision is based on two domains:
+    - Geometric domain: the lateral distance between the center of gravity of the object and left/right boundaries of the lane.
+    - Time domain: estimated time margin for the object to reach the left/right bound.
+
+The conditions for left lane change detection are:
+
+- Check if the distance to the left lane boundary is less than the distance to the right lane boundary.
+- Check if the distance to the left lane boundary is less than a `dist_threshold_to_bound_`.
+- Check if the lateral velocity direction is towards the left lane boundary.
+- Check if the time to reach the left lane boundary is less than `time_threshold_to_bound_`.
+
+Lane change logics is illustrated in the figure below.An example of how to tune the parameters is described later.
+
+![lane change detection](./media/lane_change_detection.drawio.svg)
+
+- Calculate object probability:
+  - The path probability obtained above is calculated based on the current position and angle of the object.
+- Refine predicted paths for smooth movement:
+  - The generated predicted paths are recomputed to take the vehicle dynamics into account.
+  - The path is calculated with minimum jerk trajectory implemented by 4th/5th order spline for lateral/longitudinal motion.

@@ -1,0 +1,2 @@
+- Abstraction of data formats to enable usage of sensors from various vendors
+- Perform common/primitive sensor data processing required by each component

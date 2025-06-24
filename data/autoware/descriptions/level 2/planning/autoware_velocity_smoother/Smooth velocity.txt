@@ -1,0 +1,3 @@
+It plans the velocity.
+The algorithm of velocity planning is chosen from `JerkFiltered`, `L2` and `Linf`, and it is set in the launch file.
+In these algorithms, they use OSQP[1] as the solver of the optimization.

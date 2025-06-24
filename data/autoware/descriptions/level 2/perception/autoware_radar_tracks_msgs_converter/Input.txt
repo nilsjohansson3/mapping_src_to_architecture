@@ -1,0 +1,4 @@
+- `~/input/radar_objects` (`radar_msgs/msg/RadarTracks.msg`)
+  - Input radar topic
+- `~/input/odometry` (`nav_msgs/msg/Odometry.msg`)
+  - Ego vehicle odometry topic

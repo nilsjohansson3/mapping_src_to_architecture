@@ -1,0 +1,1 @@
+{{ json_to_markdown("perception/autoware_multi_object_tracker/schema/input_channels.schema.json") }}

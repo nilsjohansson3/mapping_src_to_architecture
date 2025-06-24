@@ -1,0 +1,1 @@
+<!-- In the future, you can add details about how this package detects and handles errors. -->

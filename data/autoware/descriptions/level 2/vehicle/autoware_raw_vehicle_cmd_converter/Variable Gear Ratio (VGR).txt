@@ -1,0 +1,18 @@
+This is a gear ratio for converting tire angle to steering angle. Generally, to improve operability, the gear ratio becomes dynamically larger as the speed increases or the steering angle becomes smaller. For a certain vehicle, data was acquired and the gear ratio was approximated by the following formula.
+
+$$
+a + b \times v^2 - c \times \lvert \delta \rvert
+$$
+
+For that vehicle, the coefficients were as follows.
+
+```yaml
+vgr_coef_a: 15.713
+vgr_coef_b: 0.053
+vgr_coef_c: 0.042
+```
+
+![vgr](./figure/vgr.svg)
+
+When `convert_steer_cmd_method: "vgr"` is selected, the node receives the control command from the controller as the desired tire angle and calculates the desired steering angle to output.
+Also, when `convert_actuation_to_steering_status: true`, this node receives the `actuation_status` topic and calculates the steer tire angle from the `steer_wheel_angle` and publishes it.

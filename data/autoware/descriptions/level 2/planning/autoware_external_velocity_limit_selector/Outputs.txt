@@ -1,0 +1,3 @@
+| Name                   | Type                               | Description                                       |
+| ---------------------- | ---------------------------------- | ------------------------------------------------- |
+| `~output/max_velocity` | tier4_planning_msgs::VelocityLimit | current information of the hardest velocity limit |

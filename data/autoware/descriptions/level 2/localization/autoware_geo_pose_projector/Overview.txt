@@ -1,0 +1,1 @@
+This node is a simple node that subscribes to the geo-referenced pose topic and publishes the pose in the map frame.

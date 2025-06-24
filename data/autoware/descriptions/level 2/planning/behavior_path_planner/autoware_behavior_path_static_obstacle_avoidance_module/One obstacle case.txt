@@ -1,0 +1,3 @@
+The lateral shift distance to the obstacle is calculated, and then the shift point is generated from the ego vehicle speed and the given lateral jerk as shown in the figure below. A smooth avoidance path is then calculated based on the shift point.
+
+Additionally, the following processes are executed in special cases.

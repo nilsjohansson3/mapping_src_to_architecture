@@ -1,0 +1,6 @@
+<!-- Required -->
+<!-- Things to consider:
+    - Why did we implement this feature? -->
+
+This node is used to general lateral control commands (steering angle and steering rate)
+when following a path.

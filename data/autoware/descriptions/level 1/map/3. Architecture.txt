@@ -1,0 +1,9 @@
+This diagram describes the high-level architecture of Map component in Autoware.
+
+![map component architecture](image/high-level-map-diagram.drawio.svg){width="800"}
+
+The Map component consists of the following sub-components:
+
+- **Point Cloud Map Loading**: Load and publish point cloud map
+- **Vector Map Loading**: Load and publish vector map
+- **Projection Loading**: Load and publish projection information for conversion between local coordinate (x, y, z) and geodetic coordinate (latitude, longitude, altitude)

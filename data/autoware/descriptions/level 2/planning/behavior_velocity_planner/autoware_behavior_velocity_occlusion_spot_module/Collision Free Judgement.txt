@@ -1,0 +1,3 @@
+obstacle that can run out from occlusion should have free space until intersection from ego vehicle
+
+![brief](./docs/collision_free.drawio.svg)

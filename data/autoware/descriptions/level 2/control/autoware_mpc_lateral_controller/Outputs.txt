@@ -1,0 +1,5 @@
+Return LateralOutput which contains the following to the controller node
+
+- `autoware_control_msgs/Lateral`
+- LateralSyncData
+  - steer angle convergence

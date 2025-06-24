@@ -1,0 +1,3 @@
+| Name              | Type   | Description                          | Default value |
+| :---------------- | :----- | :----------------------------------- | :------------ |
+| `output_frame_id` | string | The header frame_id of output topic. | base_link     |

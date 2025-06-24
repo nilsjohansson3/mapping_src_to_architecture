@@ -1,0 +1,16 @@
+- `convert_doppler_to_twist` (bool)
+  - Default parameter is false.
+
+This parameter is the flag whether convert doppler velocity to twist using the yaw information of a detected object.
+
+- `threshold_probability` (float)
+  - Default parameter is 0.4.
+
+This parameter is the threshold to filter output objects.
+If the probability of an output object is lower than this parameter, and the output object does not have radar points/objects, then delete the object.
+
+- `compensate_probability` (bool)
+  - Default parameter is false.
+
+This parameter is the flag to use probability compensation.
+If this parameter is true, compensate probability of objects to threshold probability.

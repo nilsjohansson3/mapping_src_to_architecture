@@ -1,0 +1,2 @@
+- The number of consecutive no measurement update via the Pose/Twist topic exceeds the `pose_no_update_count_threshold_error`/`twist_no_update_count_threshold_error`.
+- The covariance ellipse is bigger than threshold `error_ellipse_size` for long axis or `error_ellipse_size_lateral_direction` for lateral_direction.

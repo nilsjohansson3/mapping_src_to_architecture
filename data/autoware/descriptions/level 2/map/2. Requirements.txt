@@ -1,0 +1,10 @@
+Map should provide two types of information to the rest of the stack:
+
+- Semantic information about roads as a vector map
+- Geometric information about the environment as a point cloud map (optional)
+
+A vector map contains highly accurate information about a road network, lane geometry, and traffic lights. It is required for route planning, traffic light detection, and predicting the trajectories of other vehicles and pedestrians.
+
+A 3D point cloud map is primarily used for LiDAR-based localization and part of perception in Autoware. In order to determine the current position and orientation of the vehicle, a live scan captured from one or more LiDAR units is matched against a pre-generated 3D point cloud map. Therefore, an accurate point cloud map is crucial for good localization results. However, if the vehicle has an alternate localization method with enough accuracy, for example using camera-based localization, point cloud map may not be required to use Autoware.
+
+In addition to above two types of maps, Autoware also requires a supplemental file for specifying the coordinate system of the map in geodetic system.

@@ -1,0 +1,4 @@
+| Name           | Type   | Description        |
+| :------------- | :----- | :----------------- |
+| `input_topic`  | string | input topic name.  |
+| `output_topic` | string | output topic name. |

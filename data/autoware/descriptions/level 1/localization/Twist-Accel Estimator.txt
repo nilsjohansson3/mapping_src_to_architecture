@@ -1,0 +1,4 @@
+- Produces the vehicle velocity, angular velocity, acceleration, angular acceleration, and their covariances
+  - It is possible to create a single module for both twist and acceleration or to create two separate modules - the choice of architecture is up to the developer
+- The twist estimator produces velocity and angular velocity from internal sensor observation
+- The accel estimator produces acceleration and angular acceleration from internal sensor observations

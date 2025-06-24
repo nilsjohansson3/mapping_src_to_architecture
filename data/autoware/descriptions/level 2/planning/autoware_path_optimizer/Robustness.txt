@@ -1,0 +1,4 @@
+- Check if the trajectory before or after MPT is not robust
+  - if the trajectory before MPT is not robust
+  - if the trajectory after MPT is not robust
+    - make `mpt.weight.steer_input_weight` or `mpt.weight.steer_rate_weight` larger, which are stability of steering wheel along the trajectory.

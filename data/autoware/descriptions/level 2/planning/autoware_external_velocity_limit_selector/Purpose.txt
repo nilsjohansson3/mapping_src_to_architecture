@@ -1,0 +1,8 @@
+The `external_velocity_limit_selector_node` is a node that keeps consistency of external velocity limits. This module subscribes
+
+1. velocity limit command sent by **API**,
+2. velocity limit command sent by **Autoware internal modules**.
+
+VelocityLimit.msg contains not only **max velocity** but also information about the **acceleration/jerk constraints** on deceleration. The `external_velocity_limit_selector_node` integrates the lowest velocity limit and the highest jerk constraint to calculate the **hardest velocity limit** that protects all the deceleration points and max velocities sent by API and Autoware internal modules.
+
+![selector algorithm](./image/external_velocity_limit_selector.png)

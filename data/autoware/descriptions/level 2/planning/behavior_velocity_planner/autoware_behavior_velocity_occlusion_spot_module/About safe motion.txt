@@ -1,0 +1,1 @@
+![brief](./docs/velocity_planning.drawio.svg)

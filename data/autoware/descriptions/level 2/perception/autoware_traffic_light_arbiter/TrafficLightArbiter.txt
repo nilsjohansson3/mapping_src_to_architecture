@@ -1,0 +1,1 @@
+A node that merges traffic light/signal state from image recognition and external (e.g., V2X) systems to provide to a planning component.

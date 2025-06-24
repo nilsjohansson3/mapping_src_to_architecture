@@ -1,0 +1,3 @@
+The module generates detection area for target filtering based on the following parameters:
+
+```yaml

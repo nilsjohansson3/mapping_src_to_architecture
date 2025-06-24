@@ -1,0 +1,7 @@
+By using lanelet information of "guard_rail", "fence", "wall" tag, it's possible to remove unwanted occlusion spot.
+
+By using static object information, it is possible to make occupancy grid more accurate.
+
+To make occupancy grid for planning is one of the TODOs.
+
+![brief](./docs/object_info_partition.drawio.svg)

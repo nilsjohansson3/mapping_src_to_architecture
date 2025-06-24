@@ -1,0 +1,5 @@
+| Name       | Type                                                 | Description                                               |
+| ---------- | ---------------------------------------------------- | --------------------------------------------------------- |
+| `in/image` | `sensor_msgs/Image` or `sensor_msgs/CompressedImage` | The input image on which object detection is performed    |
+| `in/rect`  | `tier4_perception_msgs/DetectedObjectsWithFeature`   | The detected objects with 2D bounding boxes               |
+| `in/uuid`  | `tier4_perception_msgs/DynamicObjectArray`           | The universally unique identifiers (UUID) for each object |

@@ -1,0 +1,4 @@
+| Name                      | Type                                                     | Description     |
+| ------------------------- | -------------------------------------------------------- | --------------- |
+| `~/input/initial_objects` | `tier4_perception_msgs::msg::DetectedObjectsWithFeature` | unknown objects |
+| `~/input/tracked_objects` | `tier4_perception_msgs::msg::TrackedObjects`             | trackers        |

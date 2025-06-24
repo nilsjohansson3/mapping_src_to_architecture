@@ -1,0 +1,12 @@
+We filter objects and their predicted paths with the following conditions:
+
+- ignore objects with a speed bellow the `minimum_velocity` parameter;
+- ignore objects coming from behind the ego vehicle if parameter `ignore_behind_ego` is set to true;
+- ignore predicted paths whose confidence value is bellow the `predicted_path_min_confidence` parameter;
+- cut the points of predicted paths going beyond the stop line of a red traffic light if parameter `cut_predicted_paths_beyond_red_lights` is set to `true`.
+
+| `cut_predicted_paths_beyond_red_lights = false` | `cut_predicted_paths_beyond_red_lights = true` |
+| :---------------------------------------------: | :--------------------------------------------: |
+|        ![](./docs/path_green_light.png)         |         ![](./docs/path_red_light.png)         |
+
+In the debug visualization, the filtered predicted paths are shown in green and the stop lines of red traffic lights are shown in red.

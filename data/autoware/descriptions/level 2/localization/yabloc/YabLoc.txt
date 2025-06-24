@@ -1,0 +1,7 @@
+**YabLoc** is vision-based localization with vector map. [https://youtu.be/Eaf6r_BNFfk](https://youtu.be/Eaf6r_BNFfk)
+
+[![thumbnail](docs/yabloc_thumbnail.jpg)](https://youtu.be/Eaf6r_BNFfk)
+
+It estimates position by matching road surface markings extracted from images with a vector map.
+Point cloud maps and LiDAR are not required.
+YabLoc enables users localize vehicles that are not equipped with LiDAR and in environments where point cloud maps are not available.

@@ -1,0 +1,6 @@
+- The GNSS/INS module must provide standard deviation values (its error / RMSE) for the position and orientation.
+- It probably needs RTK support to provide accurate position and orientation information.
+- You need to have a geo-referenced map.
+- GNSS/INS module and the base_link frame must be calibrated well enough.
+- In an environment where GNSS/INS and NDT systems work well, the `base_link` poses from both systems should be close to
+  each other.

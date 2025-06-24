@@ -1,0 +1,3 @@
+The `calculate_new_self_pose` function in the `LandmarkManager` class includes a boolean argument named `consider_orientation`. This argument determines the method used to calculate the new self pose based on detected and mapped landmarks. The following image illustrates the difference between the two methods.
+
+![consider_orientation_figure](./doc_image/consider_orientation.drawio.svg)

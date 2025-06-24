@@ -1,0 +1,2 @@
+- Estimates the vehicle pose on the map coordinate by matching external sensor observation to the map
+- Provides the obtained pose and its covariance to `PoseTwistFusionFilter`

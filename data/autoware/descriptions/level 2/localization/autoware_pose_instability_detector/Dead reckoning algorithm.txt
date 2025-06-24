@@ -1,0 +1,6 @@
+Dead reckoning is a method of estimating the position of a vehicle based on its previous position and velocity.
+The procedure for dead reckoning is as follows:
+
+1. Capture the necessary twist values from the `/input/twist` topic.
+2. Integrate the twist values to calculate the pose transition.
+3. Apply the pose transition to the previous pose to obtain the current pose.

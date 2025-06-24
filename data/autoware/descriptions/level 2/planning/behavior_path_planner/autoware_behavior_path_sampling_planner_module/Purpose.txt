@@ -1,0 +1,1 @@
+This package implements a node that uses sampling based planning to generate a drivable trajectory for the behavior path planner. It is heavily based off the [sampling_based_planner module](https://github.com/autowarefoundation/autoware.universe/tree/main/planning/sampling_based_planner).

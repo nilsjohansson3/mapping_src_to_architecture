@@ -1,0 +1,9 @@
+Concerns
+
+- Architectural trade-offs and scalability
+
+Assumptions
+
+-
+
+Limitations

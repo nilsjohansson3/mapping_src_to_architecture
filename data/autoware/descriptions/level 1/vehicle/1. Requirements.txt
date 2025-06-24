@@ -1,0 +1,10 @@
+Goals:
+
+- The Vehicle Interface component converts Autoware commands to a vehicle-specific format and converts vehicle status in a vehicle-specific format to Autoware messages.
+- The interface between Autoware and the Vehicle component is abstracted and independent of hardware.
+- The interface is extensible such that additional vehicle-specific commands can be easily added. For example, headlight control.
+
+Non-goals:
+
+- Accuracy of responses from the vehicle will not be defined, but example accuracy requirements from reference designs are provided as examples.
+- Response speed will not be defined.

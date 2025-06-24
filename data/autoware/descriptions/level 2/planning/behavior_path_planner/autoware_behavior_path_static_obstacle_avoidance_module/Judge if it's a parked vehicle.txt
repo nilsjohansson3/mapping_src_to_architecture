@@ -1,0 +1,13 @@
+Not only the length from the centerline, but also the length from the road shoulder is calculated and used for the filtering process. In this logic, it calculates ratio of **actual shift length** to **shiftable shift length** as follows. If the result is larger than threshold `th_shiftable_ratio`, the module judges the vehicle is a parked vehicle.
+
+$$
+L_{d} = \frac{W_{lane} - W_{obj}}{2}, \\
+ratio =  \frac{L_{a}}{L_{d}}
+$$
+
+- $L_{d}$ : shiftable length.
+- $L_{a}$ : actual shift length.
+- $W_{lane}$ : lane width.
+- $W_{obj}$ : object width.
+
+![fig2](./images/target_filter/parked_vehicle.svg)

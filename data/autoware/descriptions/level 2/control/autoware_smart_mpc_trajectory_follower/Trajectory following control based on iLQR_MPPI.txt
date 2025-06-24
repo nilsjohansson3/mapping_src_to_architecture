@@ -1,0 +1,14 @@
+The control mode can be selected from "ilqr", "mppi", or "mppi_ilqr", and can be set as `mpc_parameter:system:mode` in [mpc_param.yaml](./autoware_smart_mpc_trajectory_follower/param/mpc_param.yaml).
+In "mppi_ilqr" mode, the initial value of iLQR is given by the MPPI solution.
+
+> [!NOTE]
+> With the default settings, the performance of "mppi" mode is limited due to an insufficient number of samples. This issue is being addressed with ongoing work to introduce GPU support.
+
+To perform a simulation, run the following command:
+
+```bash
+ros2 launch autoware_launch planning_simulator.launch.xml map_path:=$HOME/autoware_map/sample-map-planning vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit trajectory_follower_mode:=smart_mpc_trajectory_follower
+```
+
+> [!NOTE]
+> When running with the nominal model set in [nominal_param.yaml](./autoware_smart_mpc_trajectory_follower/param/nominal_param.yaml), set `trained_model_parameter:control_application:use_trained_model` to `false` in [trained_model_param.yaml](./autoware_smart_mpc_trajectory_follower/param/trained_model_param.yaml). To run using the trained model, set `trained_model_parameter:control_application:use_trained_model` to `true`, but the trained model must have been generated according to the following procedure.

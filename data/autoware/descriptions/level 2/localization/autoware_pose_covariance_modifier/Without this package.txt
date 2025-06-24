@@ -1,0 +1,11 @@
+Only NDT pose is used in localization. GNSS pose is only used for initialization.
+
+```mermaid
+graph TD
+    ndt_scan_matcher["ndt_scan_matcher"] --> |"/localization/pose_estimator/pose_with_covariance"| ekf_localizer["ekf_localizer"]
+
+classDef cl_node fill:FFF2CC,stroke-width:3px,stroke:D6B656;
+
+class ndt_scan_matcher cl_node;
+class ekf_localizer cl_node;
+```

@@ -1,0 +1,9 @@
+This module supports drivable area expansion for following polygons defined in HDMap.
+
+- Intersection area
+- Hatched road marking
+- Freespace area
+
+Please set the flags to `true` when user wants to make it possible to use those areas in avoidance maneuvers.
+
+```yaml

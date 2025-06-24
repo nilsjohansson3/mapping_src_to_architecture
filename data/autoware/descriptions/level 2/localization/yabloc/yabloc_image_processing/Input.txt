@@ -1,0 +1,4 @@
+| Name                        | Type                            | Description              |
+| --------------------------- | ------------------------------- | ------------------------ |
+| `input/line_segments_cloud` | `sensor_msgs::msg::PointCloud2` | classified line segments |
+| `input/image_raw`           | `sensor_msgs::msg::Image`       | undistorted camera image |

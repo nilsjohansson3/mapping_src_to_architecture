@@ -1,0 +1,4 @@
+This radar object tracker is a combination of data association and tracking algorithms.
+
+<!-- In the future, you can add an overview image here -->
+<!-- ![radar_object_tracker_overview](image/radar_object_tracker_overview.svg) -->

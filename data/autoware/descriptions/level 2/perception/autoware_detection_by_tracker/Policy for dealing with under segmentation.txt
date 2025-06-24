@@ -1,0 +1,3 @@
+1. Compare the tracker and unknown objects, and determine that those with large recall and small precision are under segmented objects.
+2. In order to divide the cluster of under segmented objects, it iterate the parameters to make small clusters.
+3. Adjust the parameters several times and adopt the one with the highest IoU.

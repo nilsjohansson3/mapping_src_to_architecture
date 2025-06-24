@@ -1,0 +1,1 @@
+After the twist values are collected, the node calculates the linear transition and angular transition based on the twist values and add them to the previous pose.

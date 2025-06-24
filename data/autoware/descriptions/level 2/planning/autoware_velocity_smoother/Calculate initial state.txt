@@ -1,0 +1,9 @@
+Calculate initial values for velocity planning.
+The initial values are calculated according to the situation as shown in the following table.
+
+| Situation                                                     | Initial velocity       | Initial acceleration   |
+| ------------------------------------------------------------- | ---------------------- | ---------------------- |
+| First calculation                                             | Current velocity       | 0.0                    |
+| Engaging                                                      | `engage_velocity`      | `engage_acceleration`  |
+| Deviate between the planned velocity and the current velocity | Current velocity       | Previous planned value |
+| Normal                                                        | Previous planned value | Previous planned value |

@@ -1,0 +1,8 @@
+intersection_occlusion feature is **not recommended** for use in planning_simulator because the laserscan_based_occupancy_grid_map generates unnatural UNKNOWN cells in 2D manner:
+
+- all the cells behind pedestrians are UNKNOWN
+- no ground point clouds are generated
+
+Also many users do not set traffic light information frequently although it is very critical for intersection_occlusion (and in real traffic environment too).
+
+For these reasons, `occlusion.enable` is false by default.

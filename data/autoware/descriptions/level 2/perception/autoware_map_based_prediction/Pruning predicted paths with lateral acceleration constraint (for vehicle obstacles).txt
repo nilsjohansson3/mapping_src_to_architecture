@@ -1,0 +1,15 @@
+It is possible to apply a maximum lateral acceleration constraint to generated vehicle paths. This check verifies if it is possible for the vehicle to perform the predicted path without surpassing a lateral acceleration threshold `max_lateral_accel` when taking a curve. If it is not possible, it checks if the vehicle can slow down on time to take the curve with a deceleration of `min_acceleration_before_curve` and comply with the constraint. If that is also not possible, the path is eliminated.
+
+Currently we provide three parameters to tune the lateral acceleration constraint:
+
+- `check_lateral_acceleration_constraints_`: to enable the constraint check.
+- `max_lateral_accel_`: max acceptable lateral acceleration for predicted paths (absolute value).
+- `min_acceleration_before_curve_`: the minimum acceleration the vehicle would theoretically use to slow down before a curve is taken (must be negative).
+
+You can change these parameters in rosparam in the table below.
+
+| param name                               | default value  |
+| ---------------------------------------- | -------------- |
+| `check_lateral_acceleration_constraints` | `false` [bool] |
+| `max_lateral_accel`                      | `2.0` [m/s^2]  |
+| `min_acceleration_before_curve`          | `-2.0` [m/s^2] |

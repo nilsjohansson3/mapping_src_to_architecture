@@ -1,0 +1,15 @@
+The Planner Manager's responsibilities include:
+
+1. Activating the relevant scene module in response to the specific situation faced by the autonomous vehicle. For example, when a parked vehicle blocks the ego vehicle's driving lane, the manager would engage the avoidance module.
+2. Managing the execution order when multiple modules are running simultaneously. For instance, if both the lane-changing and avoidance modules are operational, the manager decides which should take precedence.
+3. Merging paths from multiple modules when they are activated simultaneously and each generates its own path, thereby creating a single functional path.
+
+!!! note
+
+    To check the scene module's transition, i.e.: registered, approved and candidate modules, set `verbose: true` in the [behavior path planner configuration file](https://github.com/autowarefoundation/autoware_launch/blob/0cd5d891a36ac34a32a417205905c109f2bafe7b/autoware_launch/config/planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/behavior_path_planner.param.yamlL3).
+
+    ![Scene module's transition table](./image/checking_module_transition.png)
+
+!!! note
+
+    For more in-depth information, refer to [Manager design](./docs/behavior_path_planner_manager_design.md) document.

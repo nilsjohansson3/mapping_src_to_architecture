@@ -1,0 +1,5 @@
+The attention area in the intersection is defined as the set of lanes that are conflicting with ego path and their preceding lanes up to `common.attention_area_length` meters. By default RightOfWay tag is not set, so the attention area covers all the conflicting lanes and its preceding lanes as shown in the first row. RightOfWay tag is used to rule out the lanes that each lane has priority given the traffic light relation and turn_direction priority. In the second row, purple lanes are set as the yield_lane of the ego_lane in the RightOfWay tag.
+
+![attention_area](./docs/intersection-attention.drawio.svg)
+
+intersection_area, which is supposed to be defined on the HDMap, is an area converting the entire intersection.

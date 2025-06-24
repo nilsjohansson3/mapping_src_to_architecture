@@ -1,0 +1,10 @@
+In the data association, we use the following rules to determine whether two tracking objects are the same object.
+
+- gating
+  - `distance gate`: distance between two tracking objects
+  - `angle gate`: angle between two tracking objects
+  - `mahalanobis_distance_gate`: Mahalanobis distance between two tracking objects
+  - `min_iou_gate`: minimum IoU between two tracking objects
+  - `max_velocity_gate`: maximum velocity difference between two tracking objects
+- score
+  - score used in matching is equivalent to the distance between two tracking objects

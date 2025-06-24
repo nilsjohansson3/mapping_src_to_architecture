@@ -1,0 +1,6 @@
+```mermaid
+flowchart LR
+  A{PCD is enough dense }
+  A --true--> B[enable NDT]
+  A --false--> C[enable YabLoc]
+```

@@ -1,0 +1,2 @@
+Velocity is assigned in the optimized trajectory from the velocity in the behavior path.
+The shapes of the optimized trajectory and the path are different, therefore the each nearest trajectory point to the path is searched and the velocity is interpolated with zero-order hold.

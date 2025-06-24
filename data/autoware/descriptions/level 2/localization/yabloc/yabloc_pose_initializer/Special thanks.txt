@@ -1,0 +1,2 @@
+- [openvinotoolkit/open_model_zoo](https://github.com/openvinotoolkit/open_model_zoo)
+- [PINTO0309](https://github.com/PINTO0309)

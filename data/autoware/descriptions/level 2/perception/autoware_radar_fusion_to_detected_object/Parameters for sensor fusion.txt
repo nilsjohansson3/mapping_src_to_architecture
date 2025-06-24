@@ -1,0 +1,17 @@
+- `bounding_box_margin` (double) [m]
+  - Default parameter is 2.0.
+
+This parameter is the distance to extend the 2D bird's-eye view bounding box on each side.
+This parameter is used as a threshold to find radar centroids falling inside the extended box.
+
+- `split_threshold_velocity` (double) [m/s]
+  - Default parameter is 5.0.
+
+This parameter is the object's velocity threshold to decide to split for two objects from radar information.
+Note that this feature is not currently implemented.
+
+- `threshold_yaw_diff` (double) [rad]
+  - Default parameter is 0.35.
+
+This parameter is the yaw orientation threshold.
+If the difference of yaw degree between from a LiDAR-based detection object and radar velocity, radar information is attached to output objects.

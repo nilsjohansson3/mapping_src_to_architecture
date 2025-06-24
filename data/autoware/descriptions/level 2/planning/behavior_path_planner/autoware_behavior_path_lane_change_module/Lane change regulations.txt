@@ -1,0 +1,5 @@
+| Name                       | Unit | Type    | Description                                                | Default value |
+| :------------------------- | ---- | ------- | ---------------------------------------------------------- | ------------- |
+| `regulation.crosswalk`     | [-]  | boolean | Allow lane change in between crosswalks                    | true          |
+| `regulation.intersection`  | [-]  | boolean | Allow lane change in between intersections                 | true          |
+| `regulation.traffic_light` | [-]  | boolean | Allow lane change to be performed in between traffic light | true          |

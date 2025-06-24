@@ -1,0 +1,18 @@
+stop
+}
+
+@enduml
+```
+
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+
+title Filter vehicle which is obviously an avoidance target
+start
+
+partition isObviousAvoidanceTarget() {
+if(Is object within freespace?) then (yes)
+if(Is object on ego lane?) then (no)
+if(Is object stopping longer than threshold?) then (yes)

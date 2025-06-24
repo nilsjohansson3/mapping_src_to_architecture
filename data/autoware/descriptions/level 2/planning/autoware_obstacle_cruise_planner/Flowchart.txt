@@ -1,0 +1,44 @@
+Successive functions consist of `autoware_obstacle_cruise_planner` as follows.
+
+Various algorithms for stop and cruise planning will be implemented, and one of them is designated depending on the use cases.
+The core algorithm implementation `generateTrajectory` depends on the designated algorithm.
+
+```plantuml
+@startuml
+title onTrajectory
+start
+
+group convertToObstacles
+  :check obstacle's label;
+  :check obstacle is in front of ego;
+  :check obstacle's lateral deviation to trajectory;
+  :create obstacle instance;
+end group
+
+group determineEgoBehaviorAgainstObstacles
+  :resampleExtendedTrajectory;
+  group for each obstacle
+    :createCruiseObstacle;
+    :createStopObstacle;
+    :createSlowDownObstacle;
+  end group
+  :update previous obstacles;
+end group
+
+:createPlannerData;
+
+:generateStopTrajectory;
+
+:generateCruiseTrajectory;
+
+:generateSlowDownTrajectory;
+
+:publish trajectory;
+
+:publishDebugData;
+
+:publish and print calculation time;
+
+stop
+@enduml
+```

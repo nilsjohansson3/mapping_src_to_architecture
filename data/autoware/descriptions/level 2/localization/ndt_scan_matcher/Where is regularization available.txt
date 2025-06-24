@@ -1,0 +1,7 @@
+This feature is effective on feature-less roads where GNSS is available, such as
+
+- bridges
+- highways
+- farm roads
+
+By remapping the base position topic to something other than GNSS, as described below, it can be valid outside of these.

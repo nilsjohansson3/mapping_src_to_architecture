@@ -1,0 +1,3 @@
+Each data structure is defined in `util_type.hpp`.
+
+![data-structure](./docs/data-structure.drawio.svg)

@@ -1,0 +1,20 @@
+The `pose_instability_detector` is a node designed to monitor the stability of `/localization/kinematic_state`, which is an output topic of the Extended Kalman Filter (EKF).
+
+This node triggers periodic timer callbacks to compare two poses:
+
+- The pose calculated by dead reckoning starting from the pose of `/localization/kinematic_state` obtained `timer_period` seconds ago.
+- The latest pose from `/localization/kinematic_state`.
+
+The results of this comparison are then output to the `/diagnostics` topic.
+
+![overview](./media/pose_instability_detector_overview.png)
+
+![rqt_runtime_monitor](./media/rqt_runtime_monitor.png)
+
+If this node outputs WARN messages to `/diagnostics`, it means that the EKF output is significantly different from the integrated twist values.
+In other words, WARN outputs indicate that the vehicle has moved to a place outside the expected range based on the twist values.
+This discrepancy suggests that there may be an issue with either the estimated pose or the input twist.
+
+The following diagram provides an overview of how the procedure looks like:
+
+![procedure](./media/pose_instabilty_detector_procedure.svg)

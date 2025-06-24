@@ -1,0 +1,1 @@
+The raw_vehicle_command_converter is a crucial node in vehicle automation systems, responsible for translating desired steering and acceleration inputs into specific vehicle control commands. This process is achieved through a combination of a lookup table and an optional feedback control system.

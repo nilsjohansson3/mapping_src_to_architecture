@@ -1,0 +1,1 @@
+`ros2 run map_loader lanelet2_map_visualization`

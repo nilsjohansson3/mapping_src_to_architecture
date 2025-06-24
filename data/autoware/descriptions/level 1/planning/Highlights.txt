@@ -1,0 +1,1 @@
+Key aspects of this high-level design include:

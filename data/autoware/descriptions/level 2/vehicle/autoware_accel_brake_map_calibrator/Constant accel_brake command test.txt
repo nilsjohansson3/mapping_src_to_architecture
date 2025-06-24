@@ -1,0 +1,15 @@
+These scripts are useful to test for accel brake map calibration. These generate an `ActuationCmd` with a constant accel/brake value given interactively by a user through CLI.
+
+- accel_tester.py
+- brake_tester.py
+- actuation_cmd_publisher.py
+
+The `accel/brake_tester.py` receives a target accel/brake command from CLI. It sends a target value to `actuation_cmd_publisher.py` which generates the `ActuationCmd`. You can run these scripts by the following commands in the different terminals, and it will be as in the screenshot below.
+
+```bash
+ros2 run autoware_accel_brake_map_calibrator accel_tester.py
+ros2 run autoware_accel_brake_map_calibrator brake_tester.py
+ros2 run autoware_accel_brake_map_calibrator actuation_cmd_publisher.py
+```
+
+![actuation_cmd_publisher_util](./media/actuation_cmd_publisher_util.png)

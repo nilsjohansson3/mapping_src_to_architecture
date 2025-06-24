@@ -1,0 +1,7 @@
+| Parameter                 | Type   | Description                                           |
+| ------------------------- | ------ | ----------------------------------------------------- |
+| `ref_vel_gain_`           | double | reference velocity gain                               |
+| `timer_rate`              | double | timer's update rate                                   |
+| `wait_for_first_topic`    | double | if time out check is done after receiving first topic |
+| `control_command_timeout` | double | time out check for control command                    |
+| `emergency_stop_timeout`  | double | time out check for emergency stop command             |

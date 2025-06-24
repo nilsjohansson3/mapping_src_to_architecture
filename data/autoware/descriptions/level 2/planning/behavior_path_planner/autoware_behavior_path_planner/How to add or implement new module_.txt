@@ -1,0 +1,5 @@
+All scene modules are implemented by inheriting base class `scene_module_interface.hpp`.
+
+!!! Warning
+
+    The remainder of this subsection is work in progress (WIP).

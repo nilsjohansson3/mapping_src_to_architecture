@@ -1,0 +1,18 @@
+These thresholds examine the difference in the lateral and vertical axes between the two poses, and check whether the vehicle goes beyond the expected error.
+The `pose_instability_detector` calculates the possible range where the vehicle goes, and get the maximum difference between the nominal dead reckoning pose and the maximum limit pose.
+
+![lateral_threshold_calculation](./media/lateral_threshold_calculation.png)
+
+Addition to this, the `pose_instability_detector` node considers the pose estimation error tolerance to determine the threshold.
+
+$$
+\tau_y = l + \epsilon_y
+$$
+
+| Symbol       | Description                                                                                     | Unit |
+| ------------ | ----------------------------------------------------------------------------------------------- | ---- |
+| $\tau_y$     | Threshold for the difference in the lateral axis                                                | $m$  |
+| $l$          | Maximum lateral distance described in the image above (See the appendix how this is calculated) | $m$  |
+| $\epsilon_y$ | Pose estimator (e. g. ndt_scan_matcher) error tolerance in the lateral axis                     | $m$  |
+
+Note that `pose_instability_detector` sets the threshold for the vertical axis as the same as the lateral axis. Only the pose estimator error tolerance is different.

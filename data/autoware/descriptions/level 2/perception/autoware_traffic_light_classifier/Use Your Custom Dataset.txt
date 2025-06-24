@@ -1,0 +1,31 @@
+To train a traffic light classifier, adopt a structured subfolder format where each
+subfolder represents a distinct class. Below is an illustrative dataset structure example;
+
+```python
+DATASET_ROOT
+    ├── TRAIN
+    │    ├── RED
+    │    │   ├── 001.png
+    │    │   ├── 002.png
+    │    │   └── ...
+    │    │
+    │    ├── GREEN
+    │    │    ├── 001.png
+    │    │    ├── 002.png
+    │    │    └──...
+    │    │
+    │    ├── YELLOW
+    │    │    ├── 001.png
+    │    │    ├── 002.png
+    │    │    └──...
+    │    └── ...
+    │
+    ├── VAL
+    │       └──...
+    │
+    │
+    └── TEST
+           └── ...
+
+
+```

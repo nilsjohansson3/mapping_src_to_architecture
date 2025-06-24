@@ -1,0 +1,5 @@
+We do not activate AEB module if it satisfies the following conditions.
+
+- Ego vehicle is not in autonomous driving state
+
+- When the ego vehicle is not moving (Current Velocity is very low)

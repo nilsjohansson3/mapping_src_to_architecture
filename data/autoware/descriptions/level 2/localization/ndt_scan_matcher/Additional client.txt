@@ -1,0 +1,3 @@
+| Name                | Type                                                   | Description        |
+| ------------------- | ------------------------------------------------------ | ------------------ |
+| `client_map_loader` | `autoware_map_msgs::srv::GetDifferentialPointCloudMap` | map loading client |

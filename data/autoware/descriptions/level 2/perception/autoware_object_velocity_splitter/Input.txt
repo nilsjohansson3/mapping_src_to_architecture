@@ -1,0 +1,2 @@
+- `~/input/objects` (`autoware_perception_msgs/msg/DetectedObjects.msg`)
+  - 3D detected objects

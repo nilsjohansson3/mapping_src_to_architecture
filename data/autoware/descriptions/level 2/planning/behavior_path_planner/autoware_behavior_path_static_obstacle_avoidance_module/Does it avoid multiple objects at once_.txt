@@ -1,0 +1,3 @@
+Yes, the module is capable of avoiding multiple static objects simultaneously.
+It generates multiple shift lines and calculates an avoidance path that navigates around each object.
+Details are explained in the [How to decide path shape section](multiple-obstacle-case-one-direction).
